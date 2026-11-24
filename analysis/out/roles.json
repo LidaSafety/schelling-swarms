@@ -1,0 +1,1873 @@
+{
+ "writes": {
+  "Qwen3-4B": {
+   "holders own value": 95.1,
+   "holders wrong": 1.3,
+   "seekers wrong": 86.2,
+   "seekers words": 10.0,
+   "seekers skip": 2.8
+  },
+  "Qwen3-8B": {
+   "holders own value": 87.7,
+   "holders wrong": 1.7,
+   "seekers wrong": 3.2,
+   "seekers words": 59.7,
+   "seekers skip": 36.4
+  },
+  "Qwen3-14B": {
+   "holders own value": 42.9,
+   "holders wrong": 0.0,
+   "seekers wrong": 41.5,
+   "seekers words": 45.8,
+   "seekers skip": 12.0
+  },
+  "Qwen3-32B": {
+   "holders own value": 4.1,
+   "holders wrong": 0,
+   "seekers wrong": 6.4,
+   "seekers words": 8.4,
+   "seekers skip": 85.0
+  },
+  "Gemma 3 27B": {
+   "holders own value": 59.1,
+   "holders wrong": 0,
+   "seekers wrong": 1.9,
+   "seekers words": 96.8,
+   "seekers skip": 0.1
+  }
+ },
+ "seekers N16": {
+  "Qwen3-4B": {
+   "N": 16,
+   "cr": [
+    38.2,
+    34.3,
+    42.2
+   ],
+   "wrong taken": [
+    22.4,
+    19.8,
+    25.1
+   ],
+   "anything taken": [
+    60.7,
+    57.6,
+    63.9
+   ],
+   "own guess": 20.5,
+   "post a wrong number": 86.2
+  },
+  "Qwen3-8B": {
+   "N": 16,
+   "cr": [
+    58.4,
+    54.2,
+    62.1
+   ],
+   "wrong taken": [
+    1.8,
+    1.0,
+    2.8
+   ],
+   "anything taken": [
+    60.2,
+    56.6,
+    63.7
+   ],
+   "own guess": 1.4,
+   "post a wrong number": 3.0
+  },
+  "Qwen3-14B": {
+   "N": 16,
+   "cr": [
+    22.0,
+    18.9,
+    24.8
+   ],
+   "wrong taken": [
+    20.2,
+    17.5,
+    23.0
+   ],
+   "anything taken": [
+    42.2,
+    38.6,
+    45.6
+   ],
+   "own guess": 18.8,
+   "post a wrong number": 40.5
+  },
+  "Qwen3-32B": {
+   "N": 16,
+   "cr": [
+    3.1,
+    1.8,
+    4.7
+   ],
+   "wrong taken": [
+    8.4,
+    6.2,
+    10.8
+   ],
+   "anything taken": [
+    11.6,
+    8.4,
+    14.8
+   ],
+   "own guess": 5.0,
+   "post a wrong number": 6.4
+  },
+  "Gemma 3 27B": {
+   "N": 8,
+   "cr": [
+    61.8,
+    57.1,
+    66.2
+   ],
+   "wrong taken": [
+    1.1,
+    0.2,
+    2.1
+   ],
+   "anything taken": [
+    62.8,
+    58.3,
+    67.3
+   ],
+   "own guess": 0.4,
+   "post a wrong number": 1.6
+  }
+ },
+ "seekers by N": {
+  "Qwen3-4B | N=2": [
+   24.0,
+   0.0,
+   24.0
+  ],
+  "Qwen3-4B | N=4": [
+   27.5,
+   15.8,
+   43.2
+  ],
+  "Qwen3-4B | N=8": [
+   33.7,
+   19.4,
+   53.1
+  ],
+  "Qwen3-4B | N=16": [
+   38.2,
+   22.4,
+   60.7
+  ],
+  "Qwen3-4B | N=32": [
+   41.5,
+   24.1,
+   65.6
+  ],
+  "Qwen3-8B | N=2": [
+   21.2,
+   0.2,
+   21.5
+  ],
+  "Qwen3-8B | N=4": [
+   36.9,
+   1.8,
+   38.6
+  ],
+  "Qwen3-8B | N=8": [
+   49.2,
+   2.3,
+   51.5
+  ],
+  "Qwen3-8B | N=16": [
+   58.4,
+   1.8,
+   60.2
+  ],
+  "Qwen3-8B | N=32": [
+   70.0,
+   4.1,
+   74.1
+  ],
+  "Qwen3-14B | N=2": [
+   6.5,
+   0.0,
+   6.5
+  ],
+  "Qwen3-14B | N=4": [
+   9.9,
+   8.2,
+   18.1
+  ],
+  "Qwen3-14B | N=8": [
+   17.0,
+   13.9,
+   30.9
+  ],
+  "Qwen3-14B | N=16": [
+   22.0,
+   20.2,
+   42.2
+  ],
+  "Qwen3-14B | N=32": [
+   29.8,
+   23.1,
+   52.9
+  ],
+  "Qwen3-32B | N=2": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "Qwen3-32B | N=4": [
+   1.5,
+   1.8,
+   3.2
+  ],
+  "Qwen3-32B | N=8": [
+   0.6,
+   2.9,
+   3.5
+  ],
+  "Qwen3-32B | N=16": [
+   3.1,
+   8.4,
+   11.6
+  ],
+  "Qwen3-32B | N=32": [
+   8.6,
+   12.6,
+   21.3
+  ],
+  "Gemma 3 27B | N=2": [
+   33.5,
+   0.0,
+   33.5
+  ],
+  "Gemma 3 27B | N=4": [
+   52.0,
+   0.8,
+   52.8
+  ],
+  "Gemma 3 27B | N=8": [
+   61.8,
+   1.1,
+   62.8
+  ]
+ },
+ "seekers by page": {
+  "Qwen3-4B": {
+   "lone true, no guess": 79.6,
+   "lone true, guessed": 72.0,
+   "wrong only, no guess": 77.8,
+   "n wrong only": 239,
+   "both: uses": 53.6,
+   "both: wrong": 35.7
+  },
+  "Qwen3-8B": {
+   "lone true, no guess": 100.0,
+   "lone true, guessed": 85.9,
+   "wrong only, no guess": 91.4,
+   "n wrong only": 257,
+   "both: uses": 84.1,
+   "both: wrong": 14.7
+  },
+  "Qwen3-14B": {
+   "lone true, no guess": 99.9,
+   "lone true, guessed": 66.1,
+   "wrong only, no guess": 95.8,
+   "n wrong only": 1059,
+   "both: uses": 40.9,
+   "both: wrong": 41.5
+  },
+  "Qwen3-32B": {
+   "lone true, no guess": 98.6,
+   "lone true, guessed": 58.8,
+   "wrong only, no guess": 90.6,
+   "n wrong only": 1143,
+   "both: uses": 43.2,
+   "both: wrong": 21.6
+  },
+  "Gemma 3 27B": {
+   "lone true, no guess": 99.1,
+   "lone true, guessed": 96.6,
+   "wrong only, no guess": 85.0,
+   "n wrong only": 20,
+   "both: uses": 87.5,
+   "both: wrong": 10.7
+  }
+ },
+ "holders N16": {
+  "Qwen3-4B": {
+   "shown wrong": 68.2,
+   "ends wrong": [
+    12.8,
+    9.9,
+    15.6
+   ],
+   "gives shown wrong": [
+    12.2,
+    9.6,
+    14.9
+   ]
+  },
+  "Qwen3-8B": {
+   "shown wrong": 6.0,
+   "ends wrong": [
+    0.8,
+    0.4,
+    1.2
+   ],
+   "gives shown wrong": [
+    0.5,
+    0.2,
+    0.8
+   ]
+  },
+  "Qwen3-14B": {
+   "shown wrong": 30.7,
+   "ends wrong": [
+    10.2,
+    7.8,
+    12.9
+   ],
+   "gives shown wrong": [
+    10.1,
+    7.8,
+    12.7
+   ]
+  },
+  "Qwen3-32B": {
+   "shown wrong": 8.7,
+   "ends wrong": [
+    6.4,
+    4.5,
+    8.4
+   ],
+   "gives shown wrong": [
+    5.6,
+    4.0,
+    7.5
+   ]
+  },
+  "Gemma 3 27B": {
+   "shown wrong": 3.2,
+   "ends wrong": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gives shown wrong": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "holders by N": {
+  "Qwen3-4B | N=2": [
+   24.5,
+   21.2,
+   24.0
+  ],
+  "Qwen3-4B | N=4": [
+   38.8,
+   18.6,
+   27.5
+  ],
+  "Qwen3-4B | N=8": [
+   56.8,
+   16.5,
+   33.7
+  ],
+  "Qwen3-4B | N=16": [
+   68.2,
+   12.8,
+   38.2
+  ],
+  "Qwen3-4B | N=32": [
+   75.3,
+   11.4,
+   41.5
+  ],
+  "Qwen3-8B | N=2": [
+   0.5,
+   2.0,
+   21.2
+  ],
+  "Qwen3-8B | N=4": [
+   0.6,
+   1.8,
+   36.9
+  ],
+  "Qwen3-8B | N=8": [
+   2.9,
+   1.3,
+   49.2
+  ],
+  "Qwen3-8B | N=16": [
+   6.0,
+   0.8,
+   58.4
+  ],
+  "Qwen3-8B | N=32": [
+   8.6,
+   0.7,
+   70.0
+  ],
+  "Qwen3-14B | N=2": [
+   6.8,
+   5.2,
+   6.5
+  ],
+  "Qwen3-14B | N=4": [
+   10.1,
+   5.0,
+   9.9
+  ],
+  "Qwen3-14B | N=8": [
+   21.8,
+   10.3,
+   17.0
+  ],
+  "Qwen3-14B | N=16": [
+   30.7,
+   10.2,
+   22.0
+  ],
+  "Qwen3-14B | N=32": [
+   44.0,
+   9.4,
+   29.8
+  ],
+  "Qwen3-32B | N=2": [
+   1.5,
+   1.5,
+   0.0
+  ],
+  "Qwen3-32B | N=4": [
+   1.6,
+   1.6,
+   1.5
+  ],
+  "Qwen3-32B | N=8": [
+   4.5,
+   3.4,
+   0.6
+  ],
+  "Qwen3-32B | N=16": [
+   8.7,
+   6.4,
+   3.1
+  ],
+  "Qwen3-32B | N=32": [
+   14.0,
+   9.2,
+   8.6
+  ],
+  "Gemma 3 27B | N=2": [
+   1.8,
+   0.0,
+   33.5
+  ],
+  "Gemma 3 27B | N=4": [
+   2.4,
+   0.2,
+   52.0
+  ],
+  "Gemma 3 27B | N=8": [
+   3.2,
+   0.0,
+   61.8
+  ]
+ },
+ "holders by page": {
+  "Qwen3-4B": {
+   "nothing": 96.8,
+   "wrong only, own on page": 48.2,
+   "wrong only, own not on page": 7.7,
+   "gives a shown wrong": 88.5,
+   "n own not on page": 26
+  },
+  "Qwen3-8B": {
+   "nothing": 98.7,
+   "wrong only, own on page": 47.0,
+   "wrong only, own not on page": 42.9,
+   "gives a shown wrong": 57.1,
+   "n own not on page": 7
+  },
+  "Qwen3-14B": {
+   "nothing": 99.8,
+   "wrong only, own on page": 75.8,
+   "wrong only, own not on page": 34.0,
+   "gives a shown wrong": 64.9,
+   "n own not on page": 1419
+  },
+  "Qwen3-32B": {
+   "nothing": 99.7,
+   "wrong only, own on page": 82.4,
+   "wrong only, own not on page": 27.9,
+   "gives a shown wrong": 69.5,
+   "n own not on page": 1141
+  },
+  "Gemma 3 27B": {
+   "nothing": 99.9,
+   "wrong only, own on page": 100.0,
+   "wrong only, own not on page": 100.0,
+   "gives a shown wrong": 0.0,
+   "n own not on page": 22
+  }
+ },
+ "gained and lost": {
+  "Qwen3-4B | N=2": [
+   12.0,
+   8.8
+  ],
+  "Qwen3-4B | N=4": [
+   13.8,
+   7.4
+  ],
+  "Qwen3-4B | N=8": [
+   16.8,
+   7.3
+  ],
+  "Qwen3-4B | N=16": [
+   19.1,
+   6.1
+  ],
+  "Qwen3-4B | N=32": [
+   20.8,
+   5.5
+  ],
+  "Qwen3-8B | N=2": [
+   10.6,
+   0.0
+  ],
+  "Qwen3-8B | N=4": [
+   18.4,
+   0.1
+  ],
+  "Qwen3-8B | N=8": [
+   24.6,
+   0.2
+  ],
+  "Qwen3-8B | N=16": [
+   29.2,
+   0.2
+  ],
+  "Qwen3-8B | N=32": [
+   35.0,
+   0.3
+  ],
+  "Qwen3-14B | N=2": [
+   3.2,
+   2.6
+  ],
+  "Qwen3-14B | N=4": [
+   4.9,
+   2.5
+  ],
+  "Qwen3-14B | N=8": [
+   8.5,
+   5.1
+  ],
+  "Qwen3-14B | N=16": [
+   11.0,
+   5.0
+  ],
+  "Qwen3-14B | N=32": [
+   14.9,
+   4.5
+  ],
+  "Qwen3-32B | N=2": [
+   0.0,
+   0.8
+  ],
+  "Qwen3-32B | N=4": [
+   0.8,
+   0.8
+  ],
+  "Qwen3-32B | N=8": [
+   0.3,
+   1.7
+  ],
+  "Qwen3-32B | N=16": [
+   1.6,
+   2.8
+  ],
+  "Qwen3-32B | N=32": [
+   4.3,
+   4.2
+  ],
+  "Gemma 3 27B | N=2": [
+   16.8,
+   0.0
+  ],
+  "Gemma 3 27B | N=4": [
+   26.0,
+   0.0
+  ],
+  "Gemma 3 27B | N=8": [
+   30.9,
+   0.0
+  ]
+ },
+ "rule": {
+  "Qwen3-4B | N=16 | Holders that post their value": [
+   94.6,
+   88.1,
+   -6.4,
+   -8.8,
+   -4.3
+  ],
+  "Qwen3-4B | N=16 | Seekers that post a wrong number": [
+   86.2,
+   81.0,
+   -5.3,
+   -8.0,
+   -2.7
+  ],
+  "Qwen3-4B | N=16 | Seekers shown the true value only that use it": [
+   71.2,
+   72.3,
+   1.1,
+   -12.6,
+   13.6
+  ],
+  "Qwen3-4B | N=16 | Seekers shown wrong numbers only that take one": [
+   80.7,
+   74.6,
+   -6.0,
+   -13.7,
+   0.9
+  ],
+  "Qwen3-4B | N=16 | Holders shown wrong numbers only that give one": [
+   41.6,
+   52.7,
+   11.1,
+   -5.0,
+   25.6
+  ],
+  "Qwen3-4B | N=16 | CR": [
+   38.2,
+   39.4,
+   1.1,
+   -3.9,
+   5.8
+  ],
+  "Qwen3-4B | N=16 | Anything taken by seekers": [
+   60.7,
+   62.4,
+   1.7,
+   -2.1,
+   5.3
+  ],
+  "Qwen3-4B | N=16 | Holders that end wrong": [
+   12.8,
+   21.2,
+   8.5,
+   4.7,
+   12.4
+  ],
+  "Qwen3-8B | N=16 | Holders that post their value": [
+   88.9,
+   97.2,
+   8.3,
+   6.2,
+   10.6
+  ],
+  "Qwen3-8B | N=16 | Seekers that post a wrong number": [
+   2.9,
+   4.3,
+   1.5,
+   0.0,
+   2.9
+  ],
+  "Qwen3-8B | N=16 | Seekers shown the true value only that use it": [
+   99.8,
+   100.0,
+   0.2,
+   0.0,
+   0.6
+  ],
+  "Qwen3-8B | N=16 | Seekers shown wrong numbers only that take one": [
+   87.0,
+   95.3,
+   8.4,
+   -8.4,
+   25.7
+  ],
+  "Qwen3-8B | N=16 | Holders shown wrong numbers only that give one": [
+   34.8,
+   7.1,
+   -27.6,
+   -53.9,
+   6.7
+  ],
+  "Qwen3-8B | N=16 | CR": [
+   61.6,
+   78.3,
+   16.8,
+   13.4,
+   20.1
+  ],
+  "Qwen3-8B | N=16 | Anything taken by seekers": [
+   62.9,
+   79.6,
+   16.7,
+   13.7,
+   19.9
+  ],
+  "Qwen3-8B | N=16 | Holders that end wrong": [
+   0.7,
+   0.2,
+   -0.5,
+   -0.9,
+   -0.1
+  ],
+  "Qwen3-14B | N=16 | Holders that post their value": [
+   42.4,
+   60.9,
+   18.6,
+   15.8,
+   21.3
+  ],
+  "Qwen3-14B | N=16 | Seekers that post a wrong number": [
+   40.5,
+   58.5,
+   18.0,
+   13.9,
+   22.1
+  ],
+  "Qwen3-14B | N=16 | Seekers shown the true value only that use it": [
+   91.5,
+   78.6,
+   -12.9,
+   -19.8,
+   -6.5
+  ],
+  "Qwen3-14B | N=16 | Seekers shown wrong numbers only that take one": [
+   79.7,
+   81.2,
+   1.5,
+   -3.5,
+   7.2
+  ],
+  "Qwen3-14B | N=16 | Holders shown wrong numbers only that give one": [
+   57.4,
+   58.0,
+   0.6,
+   -9.0,
+   10.1
+  ],
+  "Qwen3-14B | N=16 | CR": [
+   22.0,
+   20.0,
+   -2.0,
+   -5.6,
+   1.7
+  ],
+  "Qwen3-14B | N=16 | Anything taken by seekers": [
+   42.2,
+   44.3,
+   2.2,
+   -1.5,
+   6.1
+  ],
+  "Qwen3-14B | N=16 | Holders that end wrong": [
+   10.2,
+   10.9,
+   0.7,
+   -2.1,
+   3.3
+  ],
+  "Qwen3-32B | N=4 | Holders that post their value": [
+   6.5,
+   23.4,
+   16.9,
+   11.9,
+   21.7
+  ],
+  "Qwen3-32B | N=4 | Seekers that post a wrong number": [
+   8.1,
+   32.1,
+   24.0,
+   19.5,
+   28.9
+  ],
+  "Qwen3-32B | N=4 | Seekers shown the true value only that use it": [
+   100.0,
+   93.9,
+   -6.1,
+   -16.0,
+   0.0
+  ],
+  "Qwen3-32B | N=4 | Seekers shown wrong numbers only that take one": [
+   77.8,
+   81.6,
+   3.9,
+   -27.3,
+   28.9
+  ],
+  "Qwen3-32B | N=4 | Holders shown wrong numbers only that give one": [
+   92.3,
+   66.7,
+   -25.6,
+   -46.3,
+   -1.0
+  ],
+  "Qwen3-32B | N=4 | CR": [
+   1.5,
+   8.0,
+   6.5,
+   3.2,
+   9.8
+  ],
+  "Qwen3-32B | N=4 | Anything taken by seekers": [
+   3.2,
+   12.8,
+   9.5,
+   5.0,
+   14.0
+  ],
+  "Qwen3-32B | N=4 | Holders that end wrong": [
+   1.6,
+   6.1,
+   4.5,
+   1.9,
+   7.3
+  ],
+  "Qwen3-32B | N=8 | Holders that post their value": [
+   3.8,
+   24.0,
+   20.2,
+   16.6,
+   23.7
+  ],
+  "Qwen3-32B | N=8 | Seekers that post a wrong number": [
+   6.3,
+   28.4,
+   22.1,
+   18.7,
+   25.3
+  ],
+  "Qwen3-32B | N=8 | Seekers shown the true value only that use it": [
+   83.3,
+   97.4,
+   14.0,
+   -6.3,
+   64.3
+  ],
+  "Qwen3-32B | N=8 | Seekers shown wrong numbers only that take one": [
+   81.8,
+   85.1,
+   3.2,
+   -15.0,
+   23.7
+  ],
+  "Qwen3-32B | N=8 | Holders shown wrong numbers only that give one": [
+   78.6,
+   72.8,
+   -5.7,
+   -22.2,
+   16.3
+  ],
+  "Qwen3-32B | N=8 | CR": [
+   0.6,
+   12.4,
+   11.8,
+   8.8,
+   15.1
+  ],
+  "Qwen3-32B | N=8 | Anything taken by seekers": [
+   3.5,
+   22.2,
+   18.8,
+   15.1,
+   22.8
+  ],
+  "Qwen3-32B | N=8 | Holders that end wrong": [
+   3.4,
+   11.7,
+   8.2,
+   5.0,
+   11.5
+  ],
+  "Qwen3-32B | N=16 | Holders that post their value": [
+   3.4,
+   21.9,
+   18.4,
+   16.6,
+   20.4
+  ],
+  "Qwen3-32B | N=16 | Seekers that post a wrong number": [
+   6.4,
+   24.2,
+   17.8,
+   15.6,
+   20.2
+  ],
+  "Qwen3-32B | N=16 | Seekers shown the true value only that use it": [
+   98.0,
+   94.8,
+   -3.1,
+   -7.2,
+   2.5
+  ],
+  "Qwen3-32B | N=16 | Seekers shown wrong numbers only that take one": [
+   84.6,
+   78.5,
+   -6.2,
+   -16.9,
+   6.4
+  ],
+  "Qwen3-32B | N=16 | Holders shown wrong numbers only that give one": [
+   69.2,
+   58.0,
+   -11.2,
+   -25.6,
+   3.5
+  ],
+  "Qwen3-32B | N=16 | CR": [
+   3.1,
+   20.2,
+   17.1,
+   13.8,
+   20.6
+  ],
+  "Qwen3-32B | N=16 | Anything taken by seekers": [
+   11.6,
+   37.9,
+   26.3,
+   21.4,
+   30.8
+  ],
+  "Qwen3-32B | N=16 | Holders that end wrong": [
+   6.4,
+   12.1,
+   5.7,
+   2.5,
+   8.6
+  ],
+  "Qwen3-32B | N=32 | Holders that post their value": [
+   4.2,
+   21.5,
+   17.3,
+   15.6,
+   19.0
+  ],
+  "Qwen3-32B | N=32 | Seekers that post a wrong number": [
+   6.1,
+   23.2,
+   17.0,
+   15.0,
+   18.9
+  ],
+  "Qwen3-32B | N=32 | Seekers shown the true value only that use it": [
+   97.8,
+   94.8,
+   -3.0,
+   -6.8,
+   1.4
+  ],
+  "Qwen3-32B | N=32 | Seekers shown wrong numbers only that take one": [
+   83.2,
+   75.1,
+   -8.1,
+   -15.9,
+   0.3
+  ],
+  "Qwen3-32B | N=32 | Holders shown wrong numbers only that give one": [
+   66.9,
+   40.6,
+   -26.2,
+   -35.1,
+   -15.9
+  ],
+  "Qwen3-32B | N=32 | CR": [
+   8.6,
+   30.2,
+   21.6,
+   17.6,
+   25.7
+  ],
+  "Qwen3-32B | N=32 | Anything taken by seekers": [
+   21.3,
+   54.6,
+   33.4,
+   28.2,
+   38.0
+  ],
+  "Qwen3-32B | N=32 | Holders that end wrong": [
+   9.2,
+   12.2,
+   3.1,
+   0.2,
+   5.9
+  ]
+ },
+ "post by round": {
+  "Qwen3-4B": [
+   96.1,
+   92.5,
+   98.3,
+   93.4
+  ],
+  "Qwen3-8B": [
+   93.3,
+   79.1,
+   97.9,
+   80.5
+  ],
+  "Qwen3-14B": [
+   52.9,
+   30.1,
+   58.6,
+   30.1
+  ],
+  "Qwen3-32B": [
+   1.1,
+   7.0,
+   1.2,
+   7.0
+  ],
+  "Gemma 3 27B": [
+   99.4,
+   22.0,
+   92.9,
+   22.0
+  ]
+ },
+ "cr by block": {
+  "Qwen3-4B": {
+   "N": 16,
+   "rounds 1,3": 50.6,
+   "rounds 2,4": 25.9,
+   "diff": [
+    -24.6,
+    -31.9,
+    -17.6
+   ],
+   "holders wrong": [
+    4.9,
+    20.6
+   ]
+  },
+  "Qwen3-8B": {
+   "N": 16,
+   "rounds 1,3": 63.4,
+   "rounds 2,4": 53.4,
+   "diff": [
+    -10.1,
+    -15.6,
+    -4.6
+   ],
+   "holders wrong": [
+    1.4,
+    0.1
+   ]
+  },
+  "Qwen3-14B": {
+   "N": 16,
+   "rounds 1,3": 28.6,
+   "rounds 2,4": 15.3,
+   "diff": [
+    -13.3,
+    -20.1,
+    -6.4
+   ],
+   "holders wrong": [
+    8.7,
+    11.8
+   ]
+  },
+  "Qwen3-32B": {
+   "N": 16,
+   "rounds 1,3": 0.9,
+   "rounds 2,4": 5.3,
+   "diff": [
+    4.4,
+    1.5,
+    7.7
+   ],
+   "holders wrong": [
+    5.4,
+    7.4
+   ]
+  },
+  "Gemma 3 27B": {
+   "N": 8,
+   "rounds 1,3": 91.5,
+   "rounds 2,4": 32.0,
+   "diff": [
+    -59.5,
+    -66.9,
+    -51.9
+   ],
+   "holders wrong": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "random halves": {
+  "round 2": {
+   "began holder": 100.0,
+   "began seeker": 80.3,
+   "diff": [
+    -19.7,
+    -22.4,
+    -17.4
+   ]
+  },
+  "round 3": {
+   "began holder": 97.6,
+   "began seeker": 78.1,
+   "diff": [
+    -19.4,
+    -22.2,
+    -16.8
+   ]
+  },
+  "round 4": {
+   "began holder": 97.9,
+   "began seeker": 79.2,
+   "diff": [
+    -18.7,
+    -21.7,
+    -15.7
+   ]
+  }
+ },
+ "round 2 by round 1": {
+  "Qwen3-4B": [
+   "97.7 (n = 2,626)",
+   "80.9 (n = 356)",
+   "0.0 (n = 105)",
+   "92.9 (n = 1,630)",
+   "90.7 (n = 364)"
+  ],
+  "Qwen3-8B": [
+   "72.4 (n = 174)",
+   "79.2 (n = 2,583)",
+   "81.5 (n = 340)",
+   "76.8 (n = 1,939)",
+   "86.8 (n = 931)"
+  ],
+  "Qwen3-14B": [
+   "58.4 (n = 862)",
+   "26.5 (n = 1,602)",
+   "0.0 (n = 627)",
+   "23.9 (n = 943)",
+   "35.0 (n = 1,386)"
+  ],
+  "Qwen3-32B": [
+   "49.2 (n = 303)",
+   "14.5 (n = 470)",
+   "0.0 (n = 2,325)",
+   "–",
+   "6.4 (n = 2,569)"
+  ],
+  "Gemma 3 27B": [
+   "–",
+   "20.4 (n = 680)",
+   "–",
+   "20.0 (n = 604)",
+   "29.1 (n = 86)"
+  ]
+ },
+ "habit": {
+  "Qwen3-4B": {
+   "again": 99.3,
+   "after not posting": 39.5,
+   "same title form": 100.0
+  },
+  "Qwen3-8B": {
+   "again": 99.0,
+   "after not posting": 28.2,
+   "same title form": 100.0
+  },
+  "Qwen3-14B": {
+   "again": 100.0,
+   "after not posting": 4.9,
+   "same title form": 100.0
+  },
+  "Qwen3-32B": {
+   "again": 99.2,
+   "after not posting": 0.1,
+   "same title form": 100.0
+  },
+  "Gemma 3 27B": {
+   "again": 94.5,
+   "after not posting": 0.2,
+   "same title form": 100.0
+  }
+ },
+ "off question": {
+  "Qwen3-4B": 0.0,
+  "Qwen3-8B": 0.19,
+  "Qwen3-14B": 0.0,
+  "Qwen3-32B": 0.1,
+  "Gemma 3 27B": 0.5
+ },
+ "titles": {
+  "Qwen3-4B": {
+   "read-read": 0.38,
+   "write-write": 0.39,
+   "read-write": 0.31,
+   "top read": "<S>",
+   "top read share": 49.0,
+   "top write": "<S> construction employment share",
+   "top write share": 58.3,
+   "writes on the top read form, any case": 17.5
+  },
+  "Qwen3-8B": {
+   "read-read": 0.3,
+   "write-write": 0.26,
+   "read-write": 0.26,
+   "top read": "<S> construction occupation share",
+   "top read share": 51.3,
+   "top write": "<S> construction occupation share",
+   "top write share": 44.4,
+   "writes on the top read form, any case": 44.4
+  },
+  "Qwen3-14B": {
+   "read-read": 0.28,
+   "write-write": 0.24,
+   "read-write": 0.14,
+   "top read": "<S> construction employment share",
+   "top read share": 45.5,
+   "top write": "<S> Construction Employment Share",
+   "top write share": 33.1,
+   "writes on the top read form, any case": 42.3
+  },
+  "Qwen3-32B": {
+   "read-read": 0.36,
+   "write-write": 0.36,
+   "read-write": 0.09,
+   "top read": "<S> construction employment share",
+   "top read share": 56.8,
+   "top write": "<S> Construction Employment Share",
+   "top write share": 51.4,
+   "writes on the top read form, any case": 54.3
+  },
+  "Gemma 3 27B": {
+   "read-read": 0.84,
+   "write-write": 0.53,
+   "read-write": 0.59,
+   "top read": "<S> Construction Employment Share",
+   "top read share": 91.4,
+   "top write": "<S> Construction Employment Share",
+   "top write share": 61.4,
+   "writes on the top read form, any case": 61.4
+  }
+ },
+ "f_inv": {
+  "main": {
+   "seekers words": 59.7,
+   "seekers skip": 36.4
+  },
+  "comp": {
+   "seekers words": 83.5,
+   "seekers skip": 12.6
+  }
+ },
+ "f_inv by round": {
+  "h=2": [
+   [
+    42.0,
+    52.8
+   ],
+   [
+    30.5,
+    49.3
+   ],
+   [
+    44.5,
+    53.7
+   ],
+   [
+    30.5,
+    51.8
+   ]
+  ],
+  "h=4": [
+   [
+    53.8,
+    65.7
+   ],
+   [
+    43.0,
+    65.5
+   ],
+   [
+    57.0,
+    65.3
+   ],
+   [
+    43.0,
+    68.7
+   ]
+  ],
+  "h=8": [
+   [
+    61.8,
+    73.8
+   ],
+   [
+    53.2,
+    75.4
+   ],
+   [
+    65.1,
+    76.8
+   ],
+   [
+    53.5,
+    79.0
+   ]
+  ]
+ },
+ "f_inv post by round": {
+  "main": [
+   93.3,
+   79.1,
+   97.9,
+   80.5
+  ],
+  "comp": [
+   93.9,
+   84.4,
+   87.4,
+   91.1
+  ]
+ },
+ "f_inv gap by round": {
+  "round 1": "11 to 12",
+  "round 2": "19 to 22",
+  "round 3": "8 to 12",
+  "round 4": "21 to 26"
+ },
+ "cr by block, intervals": {
+  "Qwen3-4B": {
+   "N": 16,
+   "rounds 1,3": [
+    50.6,
+    44.7,
+    56.7
+   ],
+   "rounds 2,4": [
+    25.9,
+    21.2,
+    31.1
+   ]
+  },
+  "Qwen3-8B": {
+   "N": 16,
+   "rounds 1,3": [
+    63.4,
+    58.6,
+    67.9
+   ],
+   "rounds 2,4": [
+    53.4,
+    48.1,
+    58.5
+   ]
+  },
+  "Qwen3-14B": {
+   "N": 16,
+   "rounds 1,3": [
+    28.6,
+    23.6,
+    34.1
+   ],
+   "rounds 2,4": [
+    15.3,
+    11.5,
+    19.3
+   ]
+  },
+  "Qwen3-32B": {
+   "N": 16,
+   "rounds 1,3": [
+    0.9,
+    0.1,
+    2.2
+   ],
+   "rounds 2,4": [
+    5.3,
+    2.7,
+    8.2
+   ]
+  },
+  "Gemma 3 27B": {
+   "N": 8,
+   "rounds 1,3": [
+    91.5,
+    87.1,
+    95.4
+   ],
+   "rounds 2,4": [
+    32.0,
+    25.5,
+    39.0
+   ]
+  }
+ },
+ "card, counted": {
+  "Qwen3-4B": {
+   "pi": 94.8,
+   "iota": 85.0,
+   "use, true only": 74.2,
+   "used": 395,
+   "n": 532
+  },
+  "Qwen3-8B": {
+   "pi": 86.4,
+   "iota": 3.5,
+   "use, true only": 99.5,
+   "used": 1136,
+   "n": 1142
+  },
+  "Qwen3-14B": {
+   "pi": 45.9,
+   "iota": 45.5,
+   "use, true only": 88.4,
+   "used": 334,
+   "n": 378
+  },
+  "Qwen3-32B": {
+   "pi": 4.6,
+   "iota": 7.0,
+   "use, true only": 91.7,
+   "used": 22,
+   "n": 24
+  },
+  "Gemma 3 27B": {
+   "pi": 59.1,
+   "iota": 1.9,
+   "use, true only": 99.1,
+   "used": 1484,
+   "n": 1498
+  }
+ },
+ "rule, by own number": {
+  "Qwen3-4B | N=16 | Had posted a number of their own": [
+   72.9,
+   177,
+   57.4,
+   202,
+   -15.5,
+   -30.3,
+   1.7
+  ],
+  "Qwen3-4B | N=16 | Use it, having posted no number": [
+   83.3,
+   48,
+   88.4,
+   86,
+   5.0,
+   -21.0,
+   33.2
+  ],
+  "Qwen3-4B | N=16 | Use it, having posted a number": [
+   66.7,
+   129,
+   60.3,
+   116,
+   -6.3,
+   -19.8,
+   7.2
+  ],
+  "Qwen3-8B | N=16 | Had posted a number of their own": [
+   1.3,
+   1818,
+   1.7,
+   2128,
+   0.5,
+   -0.8,
+   1.8
+  ],
+  "Qwen3-8B | N=16 | Use it, having posted no number": [
+   100.0,
+   1795,
+   100.0,
+   2091,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "Qwen3-8B | N=16 | Use it, having posted a number": [
+   82.6,
+   23,
+   100.0,
+   37,
+   17.4,
+   0.0,
+   37.5
+  ],
+  "Qwen3-14B | N=16 | Had posted a number of their own": [
+   25.7,
+   602,
+   46.2,
+   468,
+   20.4,
+   11.6,
+   30.4
+  ],
+  "Qwen3-14B | N=16 | Use it, having posted no number": [
+   100.0,
+   447,
+   98.8,
+   252,
+   -1.2,
+   -3.2,
+   0.0
+  ],
+  "Qwen3-14B | N=16 | Use it, having posted a number": [
+   67.1,
+   155,
+   55.1,
+   216,
+   -12.0,
+   -25.9,
+   1.7
+  ],
+  "Qwen3-32B | N=16 | Had posted a number of their own": [
+   6.1,
+   99,
+   15.8,
+   581,
+   9.8,
+   0.2,
+   17.0
+  ],
+  "Qwen3-32B | N=16 | Use it, having posted no number": [
+   100.0,
+   93,
+   100.0,
+   489,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "Qwen3-32B | N=16 | Use it, having posted a number": [
+   66.7,
+   6,
+   67.4,
+   92,
+   0.7,
+   -43.5,
+   74.7
+  ],
+  "Qwen3-32B | N=32 | Had posted a number of their own": [
+   1.7,
+   535,
+   10.8,
+   1728,
+   9.1,
+   6.4,
+   11.9
+  ],
+  "Qwen3-32B | N=32 | Use it, having posted no number": [
+   98.3,
+   526,
+   97.8,
+   1542,
+   -0.5,
+   -4.3,
+   4.4
+  ],
+  "Qwen3-32B | N=32 | Use it, having posted a number": [
+   66.7,
+   9,
+   69.9,
+   186,
+   3.2,
+   -27.8,
+   51.1
+  ]
+ },
+ "unseen baseline": {
+  "Qwen3-4B": {
+   "shown, one": [
+    61.8,
+    57.4,
+    66.5,
+    828
+   ],
+   "unseen, one": [
+    0.0,
+    0.0,
+    0.0,
+    267
+   ],
+   "shown, any": [
+    55.3,
+    52.6,
+    58.2,
+    2309
+   ],
+   "unseen, any": [
+    1.5,
+    0.7,
+    2.3,
+    1245
+   ]
+  },
+  "Qwen3-8B": {
+   "shown, one": [
+    90.1,
+    83.5,
+    95.5,
+    223
+   ],
+   "unseen, one": [
+    5.4,
+    2.8,
+    8.3,
+    354
+   ],
+   "shown, any": [
+    83.4,
+    74.1,
+    90.9,
+    331
+   ],
+   "unseen, any": [
+    6.5,
+    4.2,
+    8.9,
+    570
+   ]
+  },
+  "Qwen3-14B": {
+   "shown, one": [
+    74.6,
+    70.9,
+    78.0,
+    1594
+   ],
+   "unseen, one": [
+    7.7,
+    5.7,
+    9.8,
+    1078
+   ],
+   "shown, any": [
+    61.9,
+    58.7,
+    64.8,
+    2914
+   ],
+   "unseen, any": [
+    10.5,
+    8.9,
+    12.2,
+    3433
+   ]
+  },
+  "Qwen3-32B": {
+   "shown, one": [
+    90.1,
+    86.7,
+    93.1,
+    1059
+   ],
+   "unseen, one": [
+    5.7,
+    4.4,
+    7.1,
+    2067
+   ],
+   "shown, any": [
+    82.5,
+    76.7,
+    87.9,
+    1362
+   ],
+   "unseen, any": [
+    6.1,
+    5.0,
+    7.3,
+    3112
+   ]
+  },
+  "Gemma 3 27B": {
+   "shown, one": [
+    84.2,
+    61.5,
+    96.4,
+    19
+   ],
+   "unseen, one": [
+    0.0,
+    0.0,
+    0.0,
+    3
+   ],
+   "shown, any": [
+    77.3,
+    53.3,
+    94.7,
+    22
+   ],
+   "unseen, any": [
+    0.0,
+    0.0,
+    0.0,
+    5
+   ]
+  }
+ },
+ "gained less lost": {
+  "Qwen3-4B | N=2": [
+   3.2,
+   1.6,
+   5.1
+  ],
+  "Qwen3-4B | N=4": [
+   6.3,
+   4.4,
+   8.2
+  ],
+  "Qwen3-4B | N=8": [
+   9.5,
+   7.5,
+   11.7
+  ],
+  "Qwen3-4B | N=16": [
+   13.0,
+   10.9,
+   15.2
+  ],
+  "Qwen3-4B | N=32": [
+   15.2,
+   13.2,
+   17.2
+  ],
+  "Qwen3-8B | N=2": [
+   10.6,
+   7.1,
+   14.4
+  ],
+  "Qwen3-8B | N=4": [
+   18.4,
+   15.1,
+   21.6
+  ],
+  "Qwen3-8B | N=8": [
+   24.3,
+   21.8,
+   26.8
+  ],
+  "Qwen3-8B | N=16": [
+   29.0,
+   27.0,
+   30.8
+  ],
+  "Qwen3-8B | N=32": [
+   34.7,
+   33.1,
+   36.2
+  ],
+  "Qwen3-14B | N=2": [
+   0.6,
+   -1.4,
+   2.6
+  ],
+  "Qwen3-14B | N=4": [
+   2.4,
+   1.0,
+   3.8
+  ],
+  "Qwen3-14B | N=8": [
+   3.4,
+   1.6,
+   5.2
+  ],
+  "Qwen3-14B | N=16": [
+   6.0,
+   4.0,
+   7.8
+  ],
+  "Qwen3-14B | N=32": [
+   10.4,
+   8.3,
+   12.4
+  ],
+  "Qwen3-32B | N=2": [
+   -0.8,
+   -1.8,
+   0.0
+  ],
+  "Qwen3-32B | N=4": [
+   0.0,
+   -0.8,
+   0.8
+  ],
+  "Qwen3-32B | N=8": [
+   -1.4,
+   -2.4,
+   -0.6
+  ],
+  "Qwen3-32B | N=16": [
+   -1.2,
+   -2.3,
+   -0.2
+  ],
+  "Qwen3-32B | N=32": [
+   0.1,
+   -1.5,
+   1.7
+  ],
+  "Gemma 3 27B | N=2": [
+   16.8,
+   14.0,
+   19.4
+  ],
+  "Gemma 3 27B | N=4": [
+   26.0,
+   23.4,
+   28.7
+  ],
+  "Gemma 3 27B | N=8": [
+   30.9,
+   28.6,
+   33.1
+  ]
+ },
+ "seeds": {
+  "Qwen3-4B": {
+   "per size": [
+    100
+   ],
+   "common": 100
+  },
+  "Qwen3-8B": {
+   "per size": [
+    100
+   ],
+   "common": 100
+  },
+  "Qwen3-14B": {
+   "per size": [
+    100
+   ],
+   "common": 100
+  },
+  "Qwen3-32B": {
+   "per size": [
+    100
+   ],
+   "common": 100
+  },
+  "Gemma 3 27B": {
+   "per size": [
+    100
+   ],
+   "common": 100
+  }
+ }
+}

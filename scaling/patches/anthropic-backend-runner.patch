@@ -1,0 +1,78 @@
+diff --git a/scb/llm.py b/scb/llm.py
+index 0679dd2..220ba6c 100644
+--- a/scb/llm.py
++++ b/scb/llm.py
+@@ -6,6 +6,10 @@ Settings come from the environment, which `scripts/sweep.py` sets for each serve
+   SB_EXTRA_BODY   JSON merged into every request, e.g. '{"chat_template_kwargs": {"enable_thinking": false}}' for
+                   Qwen3 on vLLM, or '{"reasoning_effort": "low"}' for gpt-oss
+   SB_TOKEN_MULT   multiplier on every max_tokens, for reasoning models that spend tokens thinking
++  SB_BACKEND      "openai" (default) or "anthropic": Claude through Anthropic's Messages API with the official SDK
++                  (key from SB_API_KEY, else ANTHROPIC_API_KEY). It sends the model, max_tokens, the system prompt and
++                  the messages, and no thinking or sampling options: temperature 1.0 is the API default, and the
++                  current API version rejects sampling parameters. No sampling seed: the API has none.
+ Every call can carry a sampling seed (vLLM and Ollama honour it), so a run can be repeated with the same seeds.
+ """
+ from __future__ import annotations
+@@ -23,6 +27,7 @@ DEFAULT_BASE_URL = os.environ.get("SB_BASE_URL", "http://localhost:11434/v1")
+ DEFAULT_API_KEY = os.environ.get("SB_API_KEY", "ollama")
+ DEFAULT_EXTRA_BODY = json.loads(os.environ.get("SB_EXTRA_BODY", "{}"))
+ TOKEN_MULT = float(os.environ.get("SB_TOKEN_MULT", "1"))
++BACKEND = os.environ.get("SB_BACKEND", "openai")
+ _THINK_RE = re.compile(r"<think>(.*?)</think>", re.DOTALL)
+ 
+ 
+@@ -37,9 +42,30 @@ class LLM:
+     retries: int = 3
+     extra_body: dict[str, Any] = field(default_factory=lambda: dict(DEFAULT_EXTRA_BODY))
+     token_mult: float = TOKEN_MULT
++    backend: str = BACKEND
+ 
+     def __post_init__(self) -> None:
+-        self._client = OpenAI(base_url=self.base_url, api_key=self.api_key, timeout=self.timeout)
++        if self.backend == "anthropic":
++            import anthropic
++            key = self.api_key if self.api_key != "ollama" else os.environ.get("ANTHROPIC_API_KEY")
++            self._client = anthropic.Anthropic(api_key=key, timeout=self.timeout)
++        else:
++            self._client = OpenAI(base_url=self.base_url, api_key=self.api_key, timeout=self.timeout)
++
++    def _anthropic_call(self, merged: list[dict[str, str]], kw: dict[str, Any]) -> tuple[str, str | None, dict]:
++        system = "\n\n".join(m["content"] for m in merged if m["role"] == "system")
++        msgs = [m for m in merged if m["role"] != "system"]
++        req: dict[str, Any] = dict(model=self.model, max_tokens=kw["max_tokens"], messages=msgs)
++        if system:
++            req["system"] = system
++        if kw.get("temperature", 1.0) != 1.0:
++            raise ValueError("the anthropic backend sends no sampling options; use temperature 1.0 (the default)")
++        resp = self._client.messages.create(**req)
++        text = "".join(b.text for b in resp.content if b.type == "text")
++        reasoning = "".join(getattr(b, "thinking", "") or "" for b in resp.content if b.type == "thinking") or None
++        usage = resp.usage.model_dump() if resp.usage else {}
++        usage["stop_reason"] = resp.stop_reason
++        return text, reasoning, usage
+ 
+     def chat(self, messages: list[dict[str, str]], **overrides: Any) -> dict[str, Any]:
+         """Return {'text', 'usage', 'latency_s', 'raw_reasoning'} for one chat call."""
+@@ -62,6 +88,10 @@ class LLM:
+         for attempt in range(self.retries):
+             t0 = time.time()
+             try:
++                if self.backend == "anthropic":
++                    text, reasoning, usage = self._anthropic_call(merged, kw)
++                    return {"text": text, "usage": usage, "latency_s": round(time.time() - t0, 3),
++                            "raw_reasoning": reasoning}
+                 resp = self._client.chat.completions.create(**kw)
+                 msg = resp.choices[0].message
+                 text = msg.content or ""
+diff --git a/scb/swarm.py b/scb/swarm.py
+index d7c7b81..da0c7ca 100644
+--- a/scb/swarm.py
++++ b/scb/swarm.py
+@@ -335,6 +335,7 @@ def run_swarm(llm: LLM | list[LLM], rule: str, awareness: str, listing: str, see
+            "sampling": {"temperature": getattr(llms[0], "temperature", None), "max_tokens_per_call": MAX_TOKENS,
+                         "token_mult": getattr(llms[0], "token_mult", None),
+                         "extra_body": getattr(llms[0], "extra_body", None),
++                        "backend": getattr(llms[0], "backend", None),
+                         "model_id_in_log": model_id if log != "none" else None},
+            "questions": qs, "holds": {n: [qs[i] for i in held[k]] for k, n in enumerate(names)},
+            "coverage": sum(any(i in h for h in held) for i in range(Q)) / Q,

@@ -1,0 +1,29 @@
+# Models reached through OpenRouter (https://openrouter.ai/api/v1, OpenAI-compatible, so scb/llm.py LLM), for the
+# rule ablation at N = 16 beside the Qwen3 sizes and Claude (entry 23 of experiments.yaml). Run with
+#   bash results/logs/openrouter/run.sh <name> <tag> <games>
+# name is the OpenRouter slug, used as the model name in the results. Each entry's extra_body is merged into every
+# request: the reasoning setting, provider.require_parameters (route only to hosts that honour every parameter
+# sent, the reasoning setting and the seed among them) and usage.include (cost per call in the usage log).
+# Reasoning is off where the model allows it, as for Qwen3 on vLLM. Where it is mandatory, the lowest effort, with
+# max_tokens multiplied by token_mult so the reasoning does not use up the 250-token answer, as configs/models.yaml
+# does for gpt-oss on vLLM. Prices and reasoning options from OpenRouter's model list, 19 November 2026.
+# host pins one OpenRouter host (provider.order, no fallbacks): the pilot was spread over up to 13 hosts per model,
+# with weights from fp4 to bf16. Each pin is the highest precision listed that honours seed and reasoning:
+# gpt-oss-120b and Gemma 4 bf16; GLM 5.3 Flash, DeepSeek V4.1 Flash, Qwen3-235B and Qwen3-32B fp8 (our own
+# Qwen3-32B runs are bf16 on vLLM).
+models:
+  # requested
+  - {name: openai/gpt-oss-120b, host: Crusoe, reasoning: {effort: low}, token_mult: 6}            # $0.15 / $0.60; reasoning mandatory
+  # Parasail rate-limited the first full run (53 of 200 games failed on 429): rerun with retries 8 and --workers 2
+  - {name: z-ai/glm-5.3-flash, host: Parasail, reasoning: {effort: low}, token_mult: 6, retries: 8, workers: 2}             # $0.15 / $0.50; reasoning mandatory
+  - {name: deepseek/deepseek-v4.1-flash, host: DeepInfra, reasoning: {effort: none}}                 # $0.30 / $1.20; reasoning optional
+  # suggested: the Qwen3 family above 32B (instruct, no reasoning), Gemma's successor, and Qwen3-32B as a check of
+  # OpenRouter's hosts against our own vLLM runs (rule 3.1%, no rule 20.2% at N = 16)
+  - {name: qwen/qwen3-235b-a22b-2507, host: DeepInfra}                                               # $0.14 / $0.80; no reasoning
+  # Crusoe rate-limited the first full run (175 of 200 games failed on 429): rerun with retries 8 and --workers 1
+  - {name: google/gemma-4-31b-it, host: Crusoe, reasoning: {enabled: false}, retries: 8, workers: 1}                       # $0.20 / $0.40; reasoning off by default
+  - {name: qwen/qwen3-32b, host: DeepInfra, reasoning: {enabled: false}}                              # $0.08 / $0.28
+  # requested 19 November: the next Qwen generation at a size near Qwen3-32B (dense, reasoning optional)
+  # Novita (bf16) and Alibaba reject any seed above 2^31 with a bare 400, and the game's per-call seeds at N = 16 are
+  # about 1.6e10 (scb/swarm.py call_seed), so DeepInfra (fp8), which takes them
+  - {name: qwen/qwen3.5-27b, host: DeepInfra, reasoning: {enabled: false}, retries: 8}                            # $0.26 / $2.60 on DeepInfra (fp8)

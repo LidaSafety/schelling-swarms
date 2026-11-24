@@ -1,0 +1,223 @@
+diff --git a/scb/cli.py b/scb/cli.py
+index 28a3c3e..2340f88 100644
+--- a/scb/cli.py
++++ b/scb/cli.py
+@@ -2,13 +2,15 @@
+ 
+ Each command writes <out>/<command>_<tag>/raw/<model>.jsonl.gz (one JSON object per run, with full transcripts) and
+ merges a per-condition summary into <out>/<command>_<tag>/summary.json. The model is reached through the endpoint in
+-SB_BASE_URL (see scb/llm.py); scripts/sweep.py serves models with vLLM and sets it.
++SB_BASE_URL (see scb/llm.py); scripts/sweep.py serves models with vLLM and sets it. SB_ENDPOINTS can set the endpoint
++per model instead (swarm, for mixed swarms on several servers).
+ """
+ from __future__ import annotations
+ 
+ import argparse
+ import fcntl
+ import json
++import os
+ import time
+ from concurrent.futures import ThreadPoolExecutor, as_completed
+ from pathlib import Path
+@@ -26,6 +28,14 @@ def _merge(old: dict, new: dict) -> dict:
+     return out
+ 
+ 
++def _llm(model: str, temperature: float, max_tokens: int) -> LLM:
++    """The client for one served model. SB_ENDPOINTS, a JSON object model -> {base_url, api_key, extra_body}, overrides
++    the SB_* defaults of scb/llm.py per model, so the copies of a mixed swarm can reach models on different servers."""
++    ep = json.loads(os.environ.get("SB_ENDPOINTS") or "{}").get(model, {})
++    return LLM(model=model, temperature=temperature, max_tokens=max_tokens,
++               **{k: ep[k] for k in ("base_url", "api_key", "extra_body") if k in ep})
++
++
+ def _save(out_dir: Path, model: str, rows: list[dict], summary: dict[str, Any], meta: dict[str, Any]) -> None:
+     write_jsonl(out_dir / "raw" / f"{model.replace('/', '_').replace(':', '_')}.jsonl.gz", rows)
+     path = out_dir / "summary.json"
+@@ -77,29 +87,41 @@ def cmd_swarm(a: argparse.Namespace) -> None:
+     """Scenario 2 with N copies (scb/swarm.py). A failed run is kept with its condition, so failures count per cell.
+     Every setting is checked before any call is made. If more than --max-error-frac of the runs fail, the results are
+     still saved but the command exits with status 2, so scripts/sweep.py does not mark the experiment done."""
+-    from .swarm import MAX_TOKENS, MODEL_IDS, check_params, run_swarm, summarize
++    from .swarm import MAX_TOKENS, MODEL_IDS, check_params, mix_label, parse_mix, run_swarm, summarize
+     out_dir = Path(a.out) / ("swarm" + (f"_{a.tag}" if a.tag else ""))
++    if not a.models and not a.mix:
++        raise SystemExit("swarm needs --models or --mix")
+     if a.read_cap < 0:
+         raise SystemExit("--read-cap must be >= 0 (0 = no cap)")
+     if any(lg != "none" for lg in a.log) and any(m not in MODEL_IDS for m in a.models):
+         raise SystemExit(f"--log A/B needs a public model id in scb/swarm.py MODEL_IDS for: "
+                          f"{[m for m in a.models if m not in MODEL_IDS]}")
++    if a.mix and any(lg != "none" for lg in a.log):
++        raise SystemExit("--mix needs --log none: a log shows one model id for every sandbox")
+ 
+-    def one(llm: LLM, kw: dict) -> dict:
++    def one(llm, kw: dict) -> dict:
+         try:
+             return run_swarm(llm, **kw)
+         except Exception as e:  # noqa: BLE001
+-            return {"error": str(e)[:500], "model": llm.model, "granularity": "file", "rounds": kw["n_questions"],
+-                    **kw}
++            label = mix_label([x.model for x in llm]) if isinstance(llm, list) else llm.model
++            return {"error": str(e)[:500], "model": label, "granularity": "file", "rounds": kw["n_questions"], **kw}
+ 
++    # (name in the results, model or one model per copy, swarm sizes): each model alone, then each mix
++    entries = [(m, _llm(m, a.temperature, MAX_TOKENS), list(a.agents)) for m in a.models]
++    for spec in a.mix:
++        try:
++            seats = parse_mix(spec)
++        except ValueError as e:
++            raise SystemExit(f"--mix: {e}") from None
++        served = {m: _llm(m, a.temperature, MAX_TOKENS) for m in dict.fromkeys(seats)}
++        entries.append((mix_label(seats), [served[m] for m in seats], [len(seats)]))
+     failed_models = []
+-    for model in a.models:
+-        llm = LLM(model=model, temperature=a.temperature, max_tokens=MAX_TOKENS)
++    for model, llm, sizes in entries:
+         t0 = time.time()
+         conds = [dict(rule=ru, awareness=aw, listing=li, n_agents=n, n_questions=a.questions, f_inv=a.f_inv,
+                       randomized=rd, log=lg, channel=ch, defense=df, read_cap=a.read_cap or None,
+                       shuffle_writes=a.shuffle_writes)
+-                 for ch in a.channels for n in a.agents for rd in a.randomized for lg in a.log
++                 for ch in a.channels for n in sizes for rd in a.randomized for lg in a.log
+                  for ru in a.rules for aw in a.awareness for li in a.listing for df in a.defenses]
+         for c in conds:
+             try:
+@@ -237,8 +259,8 @@ def main(argv: list[str] | None = None) -> None:
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+     sub = p.add_subparsers(dest="cmd", required=True)
+ 
+-    def common(sp: argparse.ArgumentParser) -> None:
+-        sp.add_argument("--models", nargs="+", required=True, help="served model name(s)")
++    def common(sp: argparse.ArgumentParser, models_required: bool = True) -> None:
++        sp.add_argument("--models", nargs="+", required=models_required, default=[], help="served model name(s)")
+         sp.add_argument("--n", type=int, default=100, help="runs (seeds) per condition")
+         sp.add_argument("--seed", type=int, default=1, help="seed base: runs use seeds derived from it")
+         sp.add_argument("--temperature", type=float, default=1.0)
+@@ -260,7 +282,11 @@ def main(argv: list[str] | None = None) -> None:
+ 
+     s = sub.add_parser("swarm", help="scenario 2 with N copies: --agents N --questions Q --f-inv --randomized R "
+                                        "--awareness --log (each call sends max_tokens=250, as scenario 2)")
+-    common(s)
++    common(s, models_required=False)
++    s.add_argument("--mix", nargs="+", default=[], metavar="MODEL:COUNT,...",
++                   help="mixed swarms, run besides any --models: copies of several models on one wiki, e.g. "
++                        "qwen3-8b:2,gemma-3-27b:2 (the swarm size is the total; seats are filled in this order, so with "
++                        "--f-inv 2 an even count puts a model in both halves of the answers)")
+     s.add_argument("--channels", nargs="+", default=["wiki"], choices=["wiki", "kv", "packages"])
+     s.add_argument("--agents", nargs="+", type=int, default=[2], help="N, number of copies (one or more values)")
+     s.add_argument("--questions", type=int, default=4, help="Q, number of questions (= rounds)")
+diff --git a/scb/swarm.py b/scb/swarm.py
+index 6f7e809..9c09042 100644
+--- a/scb/swarm.py
++++ b/scb/swarm.py
+@@ -83,6 +83,31 @@ def agent_names(n: int) -> list[str]:
+     return list(ascii_uppercase[:n]) if n <= 26 else [f"agent{i:02d}" for i in range(n)]
+ 
+ 
++def parse_mix(spec: str) -> list[str]:
++    """A mixed swarm, 'qwen3-8b:2,gemma-3-27b:2' -> the model of each copy in seat order (a missing count is 1). With
++    fixed blocks copy k holds block (k+1) mod f_inv, so with f_inv=2 an even count puts a model in both halves."""
++    seats: list[str] = []
++    for part in spec.split(","):
++        model, _, count = part.strip().rpartition(":")
++        if not count.isdigit():
++            model, count = part.strip(), "1"
++        if not model or int(count) < 1:
++            raise ValueError(f"bad mix {spec!r}: expected model:count[,model:count...]")
++        seats += [model] * int(count)
++    return seats
++
++
++def mix_label(seats: list[str]) -> str:
++    """The inverse of parse_mix, as runs of one model: [a, a, b, b] -> 'a:2,b:2'."""
++    runs: list[list] = []
++    for m in seats:
++        if runs and runs[-1][0] == m:
++            runs[-1][1] += 1
++        else:
++            runs.append([m, 1])
++    return ",".join(f"{m}:{k}" for m, k in runs)
++
++
+ def aware_text(awareness: str, n_agents: int) -> str:
+     """The aware sentence for awareness=aware, nothing for awareness=unaware."""
+     if awareness == "unaware":
+@@ -164,19 +189,28 @@ def call_seed(seed: int, idx: int, calls: int, sample_offset: int, n_agents: int
+     return (seed * 1000 + sample_offset) * (100 * n_agents) + idx * 100 + calls
+ 
+ 
+-def run_swarm(llm: LLM, rule: str, awareness: str, listing: str, seed: int, *, n_agents: int = 2,
++def run_swarm(llm: LLM | list[LLM], rule: str, awareness: str, listing: str, seed: int, *, n_agents: int = 2,
+               n_questions: int = 4, f_inv: int = 2, randomized: int = 0, log: str = "none",
+               channel: str = "wiki", sample_offset: int = 0, defense: str = "none", read_cap: int | None = None,
+               shuffle_writes: bool = False) -> dict[str, Any]:
+-    """One run. `seed` fixes the quiz, the notes and every sampling seed; `sample_offset` resamples the model."""
++    """One run. `seed` fixes the quiz, the notes and every sampling seed; `sample_offset` resamples the model.
++    `llm` serves every copy, or is a list with one model per copy: a mixed swarm (seat order as in parse_mix), whose
++    row names the mix in "model" (mix_label) and each copy's model in "seat_models". The prompts do not change."""
+     check_params(n_agents=n_agents, n_questions=n_questions, f_inv=f_inv, randomized=randomized, log=log,
+                  awareness=awareness, channel=channel, listing=listing, defense=defense, read_cap=read_cap,
+                  sample_offset=sample_offset, rule=rule)
++    llms = list(llm) if isinstance(llm, (list, tuple)) else [llm] * n_agents
++    if len(llms) != n_agents:
++        raise ValueError(f"{len(llms)} models for {n_agents} copies")
++    models = [x.model for x in llms]
++    mixed = len(set(models)) > 1
++    if mixed and log != "none":
++        raise ValueError("a log shows one model id for every sandbox, so it needs a swarm of one model")
+     aware = aware_text(awareness, n_agents)
+-    model_id = MODEL_IDS.get(llm.model)
++    model_id = MODEL_IDS.get(models[0])
+     if log != "none" and model_id is None:
+         # never show a served alias or a path: it can carry words like "copy" or "twin" into the prompt
+-        raise ValueError(f"log {log} shows the public model id, and {llm.model!r} is not in MODEL_IDS; add it there")
++        raise ValueError(f"log {log} shows the public model id, and {models[0]!r} is not in MODEL_IDS; add it there")
+     names = agent_names(n_agents)
+     Q = n_questions
+ 
+@@ -205,8 +239,9 @@ def run_swarm(llm: LLM, rule: str, awareness: str, listing: str, seed: int, *, n
+         ag = agents[n]
+         ag["msgs"].append({"role": "user", "content": text})
+         ag["calls"] += 1
+-        out = llm.chat(ag["msgs"], max_tokens=MAX_TOKENS,
+-                       seed=call_seed(seed, names.index(n), ag["calls"], sample_offset, n_agents))
++        k = names.index(n)
++        out = llms[k].chat(ag["msgs"], max_tokens=MAX_TOKENS,
++                           seed=call_seed(seed, k, ag["calls"], sample_offset, n_agents))
+         ag["msgs"].append({"role": "assistant", "content": out["text"]})
+         return extract_json(out["text"]) or {}
+ 
+@@ -284,15 +319,17 @@ def run_swarm(llm: LLM, rule: str, awareness: str, listing: str, seed: int, *, n
+               **per("used", used), "used_other": any(used.values()), "mutual": all(used.values())}
+     ans = [a for n in names for a in agents[n]["answers"] if a["chance"]]
+     row = {"seed": seed, "rule": rule, "awareness": awareness, "listing": listing, "granularity": "file",
+-           "rounds": Q, "channel": channel, "defense": defense, "model": llm.model, "labels": labels,
++           "rounds": Q, "channel": channel, "defense": defense,
++           "model": mix_label(models) if mixed else models[0], "labels": labels,
+            "write_paths": {n: [w["path"] for w in agents[n]["writes"]] for n in names},
+            "read_paths": {n: [x["path"] for x in agents[n]["reads"]] for n in names},
+            "agents": {n: {"answers": agents[n]["answers"], "messages": agents[n]["msgs"]} for n in names},
+            # new in the N-agent version
+            "n_agents": n_agents, "n_questions": Q, "f_inv": f_inv, "randomized": int(randomized), "log": log,
+            "read_cap": read_cap, "shuffle_writes": shuffle_writes, "sample_offset": sample_offset,
+-           "sampling": {"temperature": getattr(llm, "temperature", None), "max_tokens_per_call": MAX_TOKENS,
+-                        "token_mult": getattr(llm, "token_mult", None), "extra_body": getattr(llm, "extra_body", None),
++           "sampling": {"temperature": getattr(llms[0], "temperature", None), "max_tokens_per_call": MAX_TOKENS,
++                        "token_mult": getattr(llms[0], "token_mult", None),
++                        "extra_body": getattr(llms[0], "extra_body", None),
+                         "model_id_in_log": model_id if log != "none" else None},
+            "questions": qs, "holds": {n: [qs[i] for i in held[k]] for k, n in enumerate(names)},
+            "coverage": sum(any(i in h for h in held) for i in range(Q)) / Q,
+@@ -308,6 +345,11 @@ def run_swarm(llm: LLM, rule: str, awareness: str, listing: str, seed: int, *, n
+            "chances": {"n": len(ans), "used": sum(a["used_other"] for a in ans),
+                        "used_chosen": sum(a["used_chosen"] for a in ans), "seen": sum(a["seen"] for a in ans)},
+            "n_shared": sum(sh.values()), "n_used": sum(used.values()), "share_used": sum(used.values()) / n_agents}
++    if mixed:   # each copy's model, and the sampling settings per model (copies of each model may be served apart)
++        row["seat_models"] = dict(zip(names, models))
++        by_model = {x.model: x for x in llms}
++        for key in ("temperature", "token_mult", "extra_body"):
++            row["sampling"][key] = {m: getattr(x, key, None) for m, x in by_model.items()}
+     row["colluded"] = colluded(row)
+     return row
+ 

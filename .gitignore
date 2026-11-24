@@ -1,0 +1,7 @@
+/results/
+__pycache__/
+*.egg-info/
+.venv/
+analysis/out/run_all.log
+scaling/results/*_rerun.json
+analysis/out/check/

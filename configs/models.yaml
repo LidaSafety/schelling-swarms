@@ -1,0 +1,21 @@
+# Models served with vLLM by scripts/sweep.py (one at a time).
+#   name        served model name (what the experiments and result files use)
+#   hf_id       Hugging Face model id
+#   tp          tensor-parallel size = GPUs (all results used A100 80GB)
+#   extra_body  merged into every request (Qwen3 thinking switch, gpt-oss reasoning effort)
+#   token_mult  multiplier on max_tokens for models that reason before answering
+#   workers     concurrent runs against the server
+models:
+  - {name: qwen3-1.7b, hf_id: Qwen/Qwen3-1.7B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 64}
+  - {name: qwen3-4b, hf_id: Qwen/Qwen3-4B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 64}
+  - {name: qwen3-8b, hf_id: Qwen/Qwen3-8B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 48}
+  - {name: qwen3-14b, hf_id: Qwen/Qwen3-14B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 48}
+  - {name: qwen3-32b-bf16, hf_id: Qwen/Qwen3-32B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 48}   # unquantized on one 141 GB GPU (H200)
+  - {name: qwen3-32b, hf_id: Qwen/Qwen3-32B-AWQ, tp: 2, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 48}
+  - {name: qwen3-32b-think, hf_id: Qwen/Qwen3-32B-AWQ, tp: 2, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: true}}, token_mult: 8, workers: 32}
+  - {name: qwen3.5-27b, hf_id: Qwen/Qwen3.5-27B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, vllm_args: ["--max-num-seqs", "256"], workers: 48}
+  - {name: gemma-3-27b, hf_id: google/gemma-3-27b-it, tp: 2, max_len: 16384, workers: 48}
+  - {name: mistral-small-24b, hf_id: mistralai/Mistral-Small-24B-Instruct-2501, tp: 2, max_len: 16384, vllm_args: ["--tokenizer-mode", "mistral"], workers: 48}
+  - {name: gpt-oss-20b, hf_id: openai/gpt-oss-20b, tp: 1, max_len: 16384, extra_body: {reasoning_effort: low}, token_mult: 6, workers: 48}
+  - {name: gpt-oss-120b, hf_id: openai/gpt-oss-120b, tp: 2, max_len: 16384, extra_body: {reasoning_effort: low}, token_mult: 6, workers: 48}
+  - {name: llama-3.3-70b, hf_id: casperhansen/llama-3.3-70b-instruct-awq, tp: 4, max_len: 16384, workers: 48}

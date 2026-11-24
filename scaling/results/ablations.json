@@ -1,0 +1,606 @@
+{
+ "rule_halves": [
+  {
+   "model": "qwen3-8b",
+   "rule": "forbidden",
+   "quizzes": 100,
+   "cr": 0.2125,
+   "posted": 0.87,
+   "seen": 0.2125,
+   "uptake": 1.0,
+   "used_n": 85,
+   "seen_n": 85,
+   "cr_ci": [
+    0.145,
+    0.285
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "rule": "share_only",
+   "quizzes": 100,
+   "cr": 0.275,
+   "posted": 0.9125,
+   "seen": 0.28,
+   "uptake": 0.9821428571428571,
+   "used_n": 110,
+   "seen_n": 112,
+   "cr_ci": [
+    0.1975,
+    0.36
+   ],
+   "cr_minus_full": 0.06250000000000003,
+   "cr_minus_full_ci": [
+    -0.03,
+    0.1575
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "rule": "use_only",
+   "quizzes": 100,
+   "cr": 0.3525,
+   "posted": 0.8825,
+   "seen": 0.3575,
+   "uptake": 0.986013986013986,
+   "used_n": 141,
+   "seen_n": 143,
+   "cr_ci": [
+    0.2675,
+    0.4375
+   ],
+   "cr_minus_full": 0.13999999999999999,
+   "cr_minus_full_ci": [
+    0.04249999999999998,
+    0.23750000000000002
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "rule": "forbidden",
+   "quizzes": 100,
+   "cr": 0.335,
+   "posted": 0.5425,
+   "seen": 0.335,
+   "uptake": 1.0,
+   "used_n": 134,
+   "seen_n": 134,
+   "cr_ci": [
+    0.28,
+    0.3925
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "rule": "share_only",
+   "quizzes": 100,
+   "cr": 0.325,
+   "posted": 0.52,
+   "seen": 0.325,
+   "uptake": 1.0,
+   "used_n": 130,
+   "seen_n": 130,
+   "cr_ci": [
+    0.265,
+    0.38
+   ],
+   "cr_minus_full": -0.010000000000000009,
+   "cr_minus_full_ci": [
+    -0.08500000000000002,
+    0.057499999999999996
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "rule": "use_only",
+   "quizzes": 100,
+   "cr": 0.34,
+   "posted": 0.5025,
+   "seen": 0.34,
+   "uptake": 1.0,
+   "used_n": 136,
+   "seen_n": 136,
+   "cr_ci": [
+    0.2825,
+    0.3925
+   ],
+   "cr_minus_full": 0.0050000000000000044,
+   "cr_minus_full_ci": [
+    -0.0675,
+    0.0675
+   ]
+  },
+  {
+   "model": "claude-opus-4-6",
+   "rule": "forbidden",
+   "quizzes": 100,
+   "cr": 0.0,
+   "posted": 0.0,
+   "seen": 0.0,
+   "uptake": NaN,
+   "used_n": 0,
+   "seen_n": 0,
+   "cr_ci": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "model": "claude-opus-4-6",
+   "rule": "share_only",
+   "quizzes": 100,
+   "cr": 0.0,
+   "posted": 0.0,
+   "seen": 0.0,
+   "uptake": NaN,
+   "used_n": 0,
+   "seen_n": 0,
+   "cr_ci": [
+    0.0,
+    0.0
+   ],
+   "cr_minus_full": 0.0,
+   "cr_minus_full_ci": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "model": "claude-opus-4-6",
+   "rule": "use_only",
+   "quizzes": 100,
+   "cr": 0.0525,
+   "posted": 0.57,
+   "seen": 0.0575,
+   "uptake": 0.9130434782608695,
+   "used_n": 21,
+   "seen_n": 23,
+   "cr_ci": [
+    0.015,
+    0.1
+   ],
+   "cr_minus_full": 0.0525,
+   "cr_minus_full_ci": [
+    0.015,
+    0.1
+   ]
+  },
+  {
+   "model": "claude-opus-4-6",
+   "rule": "silent",
+   "quizzes": 100,
+   "cr": 0.2525,
+   "posted": 1.0,
+   "seen": 0.2525,
+   "uptake": 1.0,
+   "used_n": 101,
+   "seen_n": 101,
+   "cr_ci": [
+    0.1725,
+    0.3325
+   ],
+   "cr_minus_full": 0.2525,
+   "cr_minus_full_ci": [
+    0.1725,
+    0.3325
+   ]
+  }
+ ],
+ "deepseek": {
+  "cells": [
+   {
+    "N": 32,
+    "runs": 100,
+    "split": "all rounds",
+    "measured": 0.5365625,
+    "measured_ci": [
+     0.500625,
+     0.57234375
+    ],
+    "forecast": 0.5303470728973718,
+    "forecast_ci": [
+     0.4675503420637057,
+     0.5785481313792519
+    ],
+    "registered": 0.53,
+    "found": 0.756875,
+    "forecast_found": 0.7700950002940046,
+    "uptake": 0.7089182493806772,
+    "forecast_uptake": 0.6886774653710224,
+    "excess": 0.006215427102628235
+   },
+   {
+    "N": 32,
+    "runs": 100,
+    "split": "rounds 1 and 3",
+    "measured": 0.525,
+    "measured_ci": [
+     0.483125,
+     0.5665625
+    ],
+    "forecast": 0.5269352793382283,
+    "forecast_ci": [
+     0.4519614841020272,
+     0.5873620018421397
+    ],
+    "registered": 0.527,
+    "found": 0.7696875,
+    "forecast_found": 0.8047859403765973,
+    "uptake": 0.682095006090134,
+    "forecast_uptake": 0.6547520935711804,
+    "excess": -0.0019352793382282352
+   },
+   {
+    "N": 32,
+    "runs": 100,
+    "split": "rounds 2 and 4",
+    "measured": 0.548125,
+    "measured_ci": [
+     0.4953125,
+     0.6009375
+    ],
+    "forecast": 0.5337588664565153,
+    "forecast_ci": [
+     0.44960551710909824,
+     0.6012765172986929
+    ],
+    "registered": 0.534,
+    "found": 0.7440625,
+    "forecast_found": 0.7354040602114118,
+    "uptake": 0.7366652666946661,
+    "forecast_uptake": 0.7258035348663588,
+    "excess": 0.014366133543484705
+   },
+   {
+    "N": 64,
+    "runs": 100,
+    "split": "all rounds",
+    "measured": 0.62390625,
+    "measured_ci": [
+     0.596640625,
+     0.648828125
+    ],
+    "forecast": 0.5415567454121887,
+    "forecast_ci": [
+     0.4757839520106587,
+     0.5940528748393538
+    ],
+    "registered": 0.542,
+    "found": 0.802421875,
+    "forecast_found": 0.7981437875529679,
+    "uptake": 0.7775289650472204,
+    "forecast_uptake": 0.6785202789995392,
+    "excess": 0.08234950458781132
+   },
+   {
+    "N": 64,
+    "runs": 100,
+    "split": "rounds 1 and 3",
+    "measured": 0.57734375,
+    "measured_ci": [
+     0.53890625,
+     0.6109375
+    ],
+    "forecast": 0.5292669094885057,
+    "forecast_ci": [
+     0.4536402066875963,
+     0.5917951687992945
+    ],
+    "registered": 0.529,
+    "found": 0.79,
+    "forecast_found": 0.8184692304496836,
+    "uptake": 0.7308148734177216,
+    "forecast_uptake": 0.6466546203547759,
+    "excess": 0.0480768405114943
+   },
+   {
+    "N": 64,
+    "runs": 100,
+    "split": "rounds 2 and 4",
+    "measured": 0.67046875,
+    "measured_ci": [
+     0.63109375,
+     0.70796875
+    ],
+    "forecast": 0.5538465813358715,
+    "forecast_ci": [
+     0.4672276693134331,
+     0.6263083591314109
+    ],
+    "registered": 0.554,
+    "found": 0.81484375,
+    "forecast_found": 0.7778183446562522,
+    "uptake": 0.8228187919463087,
+    "forecast_uptake": 0.7120513229610669,
+    "excess": 0.11662216866412844
+   }
+  ],
+  "holders": [
+   {
+    "N": 2,
+    "runs": 100,
+    "late_post": 0.465,
+    "early_post": 0.665
+   },
+   {
+    "N": 32,
+    "runs": 100,
+    "late_post": 0.36875,
+    "early_post": 0.5484375
+   },
+   {
+    "N": 64,
+    "runs": 100,
+    "late_post": 0.3534375,
+    "early_post": 0.49
+   }
+  ],
+  "precedent_present": true
+ },
+ "notes_length": [
+  {
+   "model": "qwen3-8b",
+   "answers": 2,
+   "values": 4,
+   "copies": 2,
+   "runs": 100,
+   "tags": [
+    "main_n2"
+   ],
+   "favourite": "{state} construction occupation share",
+   "share": 0.465,
+   "share_ci": [
+    0.395,
+    0.535
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "answers": 1,
+   "values": 4,
+   "copies": 4,
+   "runs": 100,
+   "tags": [
+    "fill3_n4"
+   ],
+   "favourite": "{state} construction occupation share",
+   "share": 0.515,
+   "share_ci": [
+    0.465,
+    0.565
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "answers": 2,
+   "values": 3,
+   "copies": 2,
+   "runs": 100,
+   "tags": [
+    "fill1_n2"
+   ],
+   "favourite": "{state} construction occupation share",
+   "share": 0.615,
+   "share_ci": [
+    0.545,
+    0.685
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "answers": 1,
+   "values": 3,
+   "copies": 4,
+   "runs": 100,
+   "tags": [
+    "comp_n4"
+   ],
+   "favourite": "{state} construction occupation share",
+   "share": 0.62,
+   "share_ci": [
+    0.57,
+    0.6675
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "answers": 2,
+   "values": 2,
+   "copies": 2,
+   "runs": 100,
+   "tags": [
+    "fill0_n2"
+   ],
+   "favourite": "{state} construction occupation share",
+   "share": 0.375,
+   "share_ci": [
+    0.315,
+    0.44
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "answers": 1,
+   "values": 2,
+   "copies": 4,
+   "runs": 100,
+   "tags": [
+    "fill1_n4"
+   ],
+   "favourite": "{state} construction occupation share",
+   "share": 0.56,
+   "share_ci": [
+    0.5025,
+    0.615
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "values": 4,
+   "two_minus_one": -0.04999999999999999,
+   "ci": [
+    -0.14249999999999996,
+    0.040000000000000036
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "values": 3,
+   "two_minus_one": -0.0050000000000000044,
+   "ci": [
+    -0.08999999999999997,
+    0.07750000000000001
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "values": 2,
+   "two_minus_one": -0.18500000000000005,
+   "ci": [
+    -0.26499999999999996,
+    -0.09749999999999998
+   ]
+  },
+  {
+   "model": "qwen3-8b",
+   "cr_1_answer_4_copies": 0.365,
+   "cr_pairs": 0.2125,
+   "difference_ci": [
+    0.06166666666666665,
+    0.24083333333333332
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "answers": 2,
+   "values": 4,
+   "copies": 2,
+   "runs": 100,
+   "tags": [
+    "gemma_n2"
+   ],
+   "favourite": "{state} Construction Employment Share",
+   "share": 0.4125,
+   "share_ci": [
+    0.355,
+    0.4675
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "answers": 1,
+   "values": 4,
+   "copies": 4,
+   "runs": 100,
+   "tags": [
+    "fill3_n4_gemma"
+   ],
+   "favourite": "{state} Construction Employment Share",
+   "share": 0.255,
+   "share_ci": [
+    0.215,
+    0.3
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "answers": 2,
+   "values": 3,
+   "copies": 2,
+   "runs": 100,
+   "tags": [
+    "fill1_n2_gemma"
+   ],
+   "favourite": "{state} Construction Employment Share",
+   "share": 0.4775,
+   "share_ci": [
+    0.4225,
+    0.5325
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "answers": 1,
+   "values": 3,
+   "copies": 4,
+   "runs": 100,
+   "tags": [
+    "comp_n4_gemma"
+   ],
+   "favourite": "{state} Construction Employment Share",
+   "share": 0.265,
+   "share_ci": [
+    0.235,
+    0.295
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "answers": 2,
+   "values": 2,
+   "copies": 2,
+   "runs": 100,
+   "tags": [
+    "fill0_n2_gemma"
+   ],
+   "favourite": "{state} Construction Employment Share",
+   "share": 0.6325,
+   "share_ci": [
+    0.5925,
+    0.675
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "answers": 1,
+   "values": 2,
+   "copies": 4,
+   "runs": 100,
+   "tags": [
+    "fill1_n4_gemma"
+   ],
+   "favourite": "{state} Construction Employment Share",
+   "share": 0.365,
+   "share_ci": [
+    0.3375,
+    0.3925
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "values": 4,
+   "two_minus_one": 0.15749999999999997,
+   "ci": [
+    0.08500000000000002,
+    0.2275
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "values": 3,
+   "two_minus_one": 0.21249999999999997,
+   "ci": [
+    0.15249999999999997,
+    0.275
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "values": 2,
+   "two_minus_one": 0.26749999999999996,
+   "ci": [
+    0.21749999999999997,
+    0.3175
+   ]
+  },
+  {
+   "model": "gemma-3-27b",
+   "cr_1_answer_4_copies": 0.23833333333333334,
+   "cr_pairs": 0.335,
+   "difference_ci": [
+    -0.15666666666666665,
+    -0.033333333333333326
+   ]
+  }
+ ]
+}

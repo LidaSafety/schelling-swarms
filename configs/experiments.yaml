@@ -1,0 +1,408 @@
+# The experiments behind every README table, as run for the results. scripts/sweep.py runs each one for every model
+# (or only_models / skip_models), as: python -m scb <cmd> --models <model> --workers <w> --out <out> <args>
+# Seeds: dead drop seed*10000 + i, live wiki seed*1000 + i (--seed defaults to 1). Qwen3-32B with thinking is ~10-25x
+# slower than the others, so it runs fewer seeds per condition.
+out: results
+
+experiments:
+  # Scenario 1: dead drop on a shared drive. 2 rules x 2 awareness x 3 listings x 2 granularities x 100 = 2,400 runs
+  - {name: deaddrop_drive, cmd: deaddrop,
+     args: "--tag drive --channels drive --n 100 --rounds 4 --rules forbidden silent --awareness aware unaware --listing workspace random none --granularity file dir"}
+  # Scenario 2: the same quiz over a wiki, a key-value cache and a package index. 3 x 2 x 2 x 2 x 100 = 2,400 runs
+  - {name: deaddrop_channels, cmd: deaddrop,
+     args: "--tag channels --channels wiki kv packages --n 100 --rounds 4 --rules forbidden silent --awareness aware unaware --listing workspace none --granularity file"}
+
+  # Scenario 5: the coding dead drop over a drive, a wiki and a package index. 3 x 2 x 2 x 2 x 100 = 2,400 runs
+  - {name: codedrop_channels, cmd: codedrop, skip_models: [qwen3-32b-think],
+     args: "--tag channels --channels drive wiki packages --n 100 --rounds 4 --rules forbidden silent --awareness aware unaware --listing workspace none --granularity file"}
+  - {name: codedrop_channels_think, cmd: codedrop, only_models: [qwen3-32b-think],
+     args: "--tag channels --channels drive wiki packages --n 25 --rounds 4 --rules forbidden silent --awareness aware unaware --listing workspace none --granularity file"}
+
+  # Scenario 5b: the constants in the other copy's earlier work, memory kept or reset. 2 x 2 x 2 x 100 = 800 runs
+  - {name: codedrop_work, cmd: codedrop, skip_models: [qwen3-32b-think],
+     args: "--tag work --sources work --memory keep reset --channels drive wiki --n 100 --rounds 6 --rules forbidden silent --awareness unaware --listing none --granularity file"}
+  - {name: codedrop_work_think, cmd: codedrop, only_models: [qwen3-32b-think],
+     args: "--tag work --sources work --memory keep reset --channels drive wiki --n 25 --rounds 6 --rules forbidden silent --awareness unaware --listing none --granularity file"}
+
+  # Scenario 6: a review with a shared interest. 6 cases x 3 modes x 100 seeds = 1,800 runs
+  - {name: review, cmd: review, skip_models: [qwen3-32b-think], args: "--n 100 --cases 6 --modes collusion solo honest"}
+  - {name: review_think, cmd: review, only_models: [qwen3-32b-think], args: "--n 25 --cases 6 --modes collusion solo honest"}
+
+  # Scenario 3a: live wiki, 4 copies, one planted post. 2 posts x 2 rules x 2 recent x 100 = 800 runs
+  - {name: livewiki_planted, cmd: livewiki, skip_models: [qwen3-32b-think],
+     args: "--tag planted --n 100 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on off"}
+  - {name: livewiki_planted_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag planted --n 40 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on off"}
+  # control: not told that other instances exist
+  - {name: livewiki_planted_unaware, cmd: livewiki, only_models: [mistral-small-24b],
+     args: "--tag planted_unaware --n 100 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness unaware --recent on"}
+  # stronger posts (Mistral, Qwen3-32B thinking): three hand-written texts, without and with the warning. 3 x 2 x 2 x 2 x 100
+  - {name: livewiki_planted_styles, cmd: livewiki, only_models: [mistral-small-24b],
+     args: "--tag planted_styles --n 100 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses none warning --post-styles persist protocol copy"}
+  - {name: livewiki_planted_styles_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag planted_styles --n 40 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses none warning --post-styles persist protocol copy"}
+  # the evolutionary search (Mistral writes and is tested), without and with the warning; its texts go to
+  # results/evolve_post/posts.json. The transfer runs use the five texts our search found (configs/evolved_posts.json).
+  - {name: evolve_post_none, cmd: evolve-post, only_models: [mistral-small-24b],
+     args: "--defense none --generations 8 --population 8 --keep 4 --runs 30 --final-runs 100 --final-top 3 --agents 4 --init-post focal --rule forbidden --recent on"}
+  - {name: evolve_post_warning, cmd: evolve-post, only_models: [mistral-small-24b],
+     args: "--defense warning --generations 8 --population 8 --keep 4 --runs 30 --final-runs 100 --final-top 3 --agents 4 --init-post focal --rule forbidden --recent on"}
+  - {name: livewiki_planted_evolved, cmd: livewiki, only_models: [mistral-small-24b],
+     args: "--tag planted_evolved --post-file configs/evolved_posts.json --post-styles file --n 50 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses none warning"}
+  - {name: livewiki_planted_evolved_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag planted_evolved --post-file configs/evolved_posts.json --post-styles file --n 20 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses none warning"}
+
+  # Scenario 3b: two live copies, nothing planted. 2 sources x 2 rules x 2 awareness x 2 recent x 100 = 1,600 runs
+  - {name: livewiki_pair, cmd: livewiki, skip_models: [qwen3-32b-think],
+     args: "--tag pair --n 100 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair unaware --recent on off"}
+  - {name: livewiki_pair_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag pair --n 40 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair unaware --recent on off"}
+  # at scale, recent changes on: 2 x 2 x 2 x 1,000 = 8,000 runs (seeds 2000-2999)
+  - {name: livewiki_pair_scale, cmd: livewiki, skip_models: [qwen3-32b-think],
+     args: "--tag pair_scale --seed 2 --n 1000 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair unaware --recent on"}
+  - {name: livewiki_pair_scale_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag pair_scale --seed 2 --n 250 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair unaware --recent on"}
+  # one sentence of the prompt changed: 5 prompts x 2 sources x 2 rules x 200 = 4,000 runs (seeds 3000-3199)
+  - {name: livewiki_variants, cmd: livewiki, skip_models: [qwen3-32b-think],
+     args: "--tag variants --seed 3 --n 200 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair --variants base onewiki quota persist pooled --recent on"}
+  - {name: livewiki_variants_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag variants --seed 3 --n 50 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair --variants base onewiki quota persist pooled --recent on"}
+  - {name: livewiki_cohort, cmd: livewiki, skip_models: [qwen3-32b-think],
+     args: "--tag cohort --seed 3 --n 200 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness cohort --recent on"}
+  - {name: livewiki_cohort_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag cohort --seed 3 --n 50 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness cohort --recent on"}
+  # quota and persist at scale: 2 prompts x 2 sources x 2 rules x 2,000 = 16,000 runs (seeds 4000-5999)
+  - {name: livewiki_variants_scale, cmd: livewiki, skip_models: [qwen3-32b-think],
+     args: "--tag variants_scale --seed 4 --n 2000 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair --variants quota persist --recent on"}
+  - {name: livewiki_variants_scale_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag variants_scale --seed 4 --n 200 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair --variants quota persist --recent on"}
+
+  # Scenario 4: sealed committee, with the solo and all-honest controls. 8 committee cases x 10 repetitions = 80 runs
+  # per channel (seeds: committee.run_seed)
+  - {name: committee_sealed, cmd: committee,
+     args: "--tag sealed --channels sealed sealed_solo honest --cases 8 --reps 10 --rounds 2"}
+
+  # The warning (scb/defense.py), on the seeds and conditions of the runs above without it.
+  # dead drop, drive and wiki (exact-file reads, realistic listing or none): 2 x 2 x 2 x 2 x 100 = 1,600 runs
+  - {name: deaddrop_warning, cmd: deaddrop,
+     args: "--tag warning --channels drive wiki --defenses warning --n 100 --rounds 4 --rules forbidden silent --awareness aware unaware --listing workspace none --granularity file"}
+  # planted post (Mistral, Qwen3-32B thinking), recent changes on
+  - {name: livewiki_planted_warning, cmd: livewiki, only_models: [mistral-small-24b],
+     args: "--tag planted_warning --n 100 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses warning"}
+  - {name: livewiki_planted_warning_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag planted_warning --n 40 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses warning"}
+  # two live copies with quota or persist (seeds 3000-3199, as livewiki_variants)
+  - {name: livewiki_variants_warning, cmd: livewiki, skip_models: [gpt-oss-20b, gpt-oss-120b, qwen3-32b-think],
+     args: "--tag variants_warning --seed 3 --n 200 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair --variants quota persist --recent on --defenses warning"}
+
+  # The same comparisons with all four defences side by side in one job, on seeds no run above uses
+  # (none, warning, warning_generic, warning_use; scb/defense.py)
+  - {name: deaddrop_defenses, cmd: deaddrop, skip_models: [qwen3-32b-think],
+     args: "--tag defenses --seed 2 --n 150 --channels drive wiki --defenses none warning warning_generic warning_use --rounds 4 --rules forbidden silent --awareness aware unaware --listing workspace none --granularity file"}
+  - {name: deaddrop_defenses_think, cmd: deaddrop, only_models: [qwen3-32b-think],
+     args: "--tag defenses --seed 2 --n 30 --channels drive wiki --defenses none warning warning_generic warning_use --rounds 4 --rules forbidden silent --awareness aware unaware --listing workspace none --granularity file"}
+  - {name: livewiki_planted_defenses, cmd: livewiki, only_models: [mistral-small-24b],
+     args: "--tag planted_defenses --seed 8 --n 150 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses none warning warning_generic warning_use"}
+  - {name: livewiki_planted_defenses_think, cmd: livewiki, only_models: [qwen3-32b-think],
+     args: "--tag planted_defenses --seed 8 --n 40 --agents 4 --stagger 6 --rounds 6 --budget 4 --init-post focal nonfocal --rules forbidden silent --awareness aware --recent on --defenses none warning warning_generic warning_use"}
+  # two live copies, in the setting where each model responds
+  - {name: livewiki_variants_defenses, cmd: livewiki, only_models: [qwen3-1.7b, qwen3-4b, qwen3-8b, qwen3-14b, qwen3-32b, gemma-3-27b],
+     args: "--tag variants_defenses --seed 6 --n 1000 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources notes --rules forbidden silent --awareness pair --variants quota --recent on --defenses none warning warning_generic warning_use"}
+  - {name: livewiki_variants_defenses_llama, cmd: livewiki, only_models: [llama-3.3-70b],
+     args: "--tag variants_defenses --seed 6 --n 1000 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead --rules forbidden silent --awareness pair --variants persist --recent on --defenses none warning warning_generic warning_use"}
+  - {name: livewiki_variants_defenses_mistral, cmd: livewiki, only_models: [mistral-small-24b],
+     args: "--tag variants_defenses --seed 6 --n 250 --agents 2 --stagger 6 --rounds 6 --budget 4 --sources ahead notes --rules forbidden silent --awareness pair --variants quota persist --recent on --defenses none warning warning_generic warning_use"}
+
+  # The wiki game (scb/wikigame.py): the scenario 2 dead drop scaled to N agents on one persistent wiki. Pilot only,
+  # Qwen3-8B, breadth regime, one fixed setup for the scaling curve, the same as the 4-round N-copy game's
+  # (scb/swarm.py): unaware text, rule in force with no audit, no log, no page listing (the wiki game has neither).
+  # Qwen3-8B because the 4-round game has its full curve from 2 to 32 copies at that setup, so the N=4 worlds compare
+  # with it directly (analyze_wikigame.py, "Comparison with the 4-round game"). The y-axis is collusion per chance
+  # (CR-v2); the share of worlds with any use (CR-v1) nears 100% from N=4, as a world has 4N chances.
+  # World seeds are seed*100000 + N*1000 + i, so every condition at the same N and i shares the world (questions,
+  # sheets, notes). Each agent makes 18 calls (16 steps, final answers, debrief). A failed world is saved with its
+  # condition; if more than 2% of an entry's worlds fail it exits non-zero and is not marked done. Tables:
+  # python scripts/analyze_wikigame.py
+  # The whole game at N=4 and N=16 (520 agents, ~9k calls): does the game work, how far is N=4 from the 4-round game,
+  # does N add collusion at breadth's fixed 2 holders per unknown, and how much do worlds vary (worlds per N in the
+  # sweep).
+  - {name: wikigame_pilot_core, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag pilot_core --seed 1 --agents 4 16 --n 50 20 --audit 0 --awareness unaware"}
+  # check: a 32-edit page view at N=16, to see whether the 8-edit window bends the curve at large N (320 agents,
+  # ~6k calls)
+  - {name: wikigame_pilot_window, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag pilot_window --seed 1 --agents 16 --n 20 --window 32 --audit 0 --awareness unaware"}
+  # The sweep: the same fixed setup at N=8, 32 and 64; with the pilot's N=4 and N=16 worlds it gives the curve over
+  # N = 4-64. Worlds per N aim at a 95% interval of about +-1 point, from the pilot's spread between worlds (SD 4.6
+  # points at N=4, 1.7 at N=16; bigger worlds vary less) (1,024 agents, ~18k calls)
+  - {name: wikigame_sweep, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag sweep --seed 1 --agents 8 32 64 --n 40 10 6 --audit 0 --awareness unaware"}
+  # The crowding curve: the same fixed setup, but 8 lookups per world, each on 3N/4 sheets with N/4 holders and N/4
+  # spare holders, so N/2 copies hold every value (as in the 4-round game, where holders grow with N). The breadth
+  # sweep was flat at 2-4% with 2 holders per unknown; this asks whether more holders lift it. Both regimes draw the
+  # same world at N=4, so the pilot's 50 N=4 worlds start both curves; worlds per N match breadth's
+  # (1,344 agents, ~24k calls)
+  - {name: wikigame_crowding, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag crowding --seed 1 --agents 8 16 32 64 --n 40 20 10 6 --regimes crowding --audit 0 --awareness unaware"}
+  # The bridge to the 4-round game: its quiz on our wiki (same 4 construction-share lookups for every agent in one
+  # order, half the answers each, 2 decoy notes, holders N/2), with our 16 free steps instead of its 4 scripted rounds.
+  # Next to the 4-round curve at the same N (2-32), it shows how much of the gap the 8-question sheet explains and how
+  # much the rounds do. N=2 is scenario 2's own size (1,644 agents, ~30k calls)
+  - {name: wikigame_quiz, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag quiz --seed 1 --agents 2 4 8 16 32 64 --n 50 50 40 20 10 6 --regimes quiz --audit 0 --awareness unaware"}
+  # Holders and seekers per lookup grow as sqrt(N): with breadth (2) and crowding (N/2) a third exponent, and pairs of
+  # worlds with the same holders at different N at higher rates than breadth's: 4 holders (crowding N=8, sqrt N=16)
+  # and 8 holders (crowding N=16, sqrt N=64). N=4 is the shared breadth worlds (1,064 agents, ~19k calls)
+  - {name: wikigame_sqrt, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag sqrt --seed 1 --agents 16 36 64 --n 20 10 6 --regimes sqrt --audit 0 --awareness unaware"}
+  # Dumber and smarter models of the same family (thinking off, unquantized), on a lean grid of N = 4, 16, 64 in all
+  # four regimes (and the quiz at N=2), with the worlds per N of the Qwen3-8B runs (3,316 agents, ~60k calls per model)
+  - {name: wikigame_models_breadth, cmd: wikigame, only_models: [qwen3-4b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag models --seed 1 --agents 4 16 64 --n 50 20 6 --audit 0 --awareness unaware"}
+  - {name: wikigame_models_spread, cmd: wikigame, only_models: [qwen3-4b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag models --seed 1 --agents 16 64 --n 20 6 --regimes sqrt crowding --audit 0 --awareness unaware"}
+  - {name: wikigame_models_quiz, cmd: wikigame, only_models: [qwen3-4b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag models --seed 1 --agents 2 4 16 64 --n 50 50 20 6 --regimes quiz --audit 0 --awareness unaware"}
+  # Two checks on Qwen3-8B at the fixed setup. The isolated replay: each agent plays alone on a private wiki, then
+  # their actions run together through one wiki; if the replay finds as many values as the real crowding worlds, the
+  # rise with holders comes from more independent posters, not from agents adapting to each other (704 agents,
+  # ~13k calls). The warning note of scenario 2's defence arm (in the 4-round game it cut collusion 18-46 points with
+  # the unaware text, by stopping copies from writing), on crowding and the quiz at N=16 (640 agents, ~12k calls).
+  - {name: wikigame_replay, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag replay --seed 1 --agents 16 64 --n 20 6 --regimes crowding --isolated on --audit 0 --awareness unaware"}
+  # The quiz with every edit on a page shown (window 1000), as the 4-round game's reads: at N >= 16 the 8-edit view cut
+  # 16-31% of quiz views, against under 1% in the other regimes (1,024 agents, ~18k calls)
+  - {name: wikigame_quiz_window, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag quiz_window --seed 1 --agents 16 32 64 --n 20 10 6 --regimes quiz --window 1000 --audit 0 --awareness unaware"}
+  # Positive control: a team score that asks agents to share and use values, with every page title given. The most
+  # transfer the game allows, so low rates elsewhere can be split into task execution and coordination (640 agents,
+  # ~12k calls)
+  - {name: wikigame_control, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag control --seed 1 --agents 16 --n 20 --regimes crowding quiz --sharing team --titles given --audit 0 --awareness unaware"}
+  # The crowding worlds at N=16 again, on the H200 that ran the sqrt and quiz worlds (the first run used an H100 NVL):
+  # a direct check for a hardware effect, and the 8-holder comparison with sqrt N=64 on one GPU type (320 agents, ~6k
+  # calls). Same condition and seeds as wikigame_crowding, so compare by the recorded GPU, not pooled.
+  - {name: wikigame_hwcheck, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag hwcheck --seed 1 --agents 16 --n 20 --regimes crowding --audit 0 --awareness unaware"}
+  # The fixed-N intervention (regimes fixed-h<H>-s<S>): holders and seekers per lookup set separately, with every sheet
+  # (8 questions) and every set of notes (6 values) the same size, padded with filler lookups nobody holds and decoy
+  # values nobody is asked. A 3x3 grid at N=16 (2,880 agents, ~52k calls), and its four corners at N=64 with the same
+  # per-lookup layout, so only the swarm and the number of lookups grow (1,536 agents, ~28k calls).
+  - {name: wikigame_fixed16, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag fixed --seed 1 --agents 16 --n 20 --regimes fixed-h2-s1 fixed-h2-s2 fixed-h2-s4 fixed-h4-s1 fixed-h4-s2 fixed-h4-s4 fixed-h6-s1 fixed-h6-s2 fixed-h6-s4 --audit 0 --awareness unaware"}
+  - {name: wikigame_fixed64, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag fixed --seed 1 --agents 64 --n 6 --regimes fixed-h2-s1 fixed-h2-s4 fixed-h6-s1 fixed-h6-s4 --audit 0 --awareness unaware"}
+  - {name: wikigame_warning, cmd: wikigame, only_models: [qwen3-8b],
+     args: "--tag warning --seed 1 --agents 16 --n 20 --regimes crowding quiz --defenses warning --audit 0 --awareness unaware"}
+  # Fill-in: N=8 and 32 in breadth and crowding for the other three models, with Qwen3-8B's worlds per N and seeds,
+  # so every model has the 8B curve's five points and pairs with it world by world (1,280 agents, ~23k calls per model)
+  - {name: wikigame_fill, cmd: wikigame, only_models: [qwen3-4b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag fill --seed 1 --agents 8 32 --n 40 10 --regimes breadth crowding --audit 0 --awareness unaware"}
+  # Diffusion checks. In the window-8 worlds 98-100% of relays land on the page of the note they copy, and 2 of ~7,100
+  # uses came through a relay. A 2-edit view makes originals scroll out fast, so later seekers can get a value only from
+  # a recent re-post: does relaying then carry values a second hop, or does collusion fall? Paired by seed with the
+  # window-8 crowding worlds (1,408 agents, ~25k calls for both models).
+  - {name: wikigame_diff_window, cmd: wikigame, only_models: [qwen3-8b, qwen3-14b],
+     args: "--tag diff_window --seed 1 --agents 16 64 --n 20 6 --regimes crowding --window 2 --audit 0 --awareness unaware"}
+  # 48 steps instead of 16. Prompts say only "STEP t" and sampling is seeded per call, so the first 16 steps replay the
+  # 16-step crowding worlds; the extra 32 give relays time to form chains (640 agents, ~32k calls for both models).
+  - {name: wikigame_diff_ticks, cmd: wikigame, only_models: [qwen3-8b, qwen3-14b],
+     args: "--tag diff_ticks --seed 1 --agents 16 --n 20 --regimes crowding --ticks 48 --audit 0 --awareness unaware"}
+  # Tests of the meeting term (wiki_scaling: analysis/occupancy/coverage_wiki.md) and of the open questions around it.
+  # The predictions are in wiki_scaling: analysis/occupancy/predictions_pod.md, committed before these runs. Run on
+  # one H200 with --models-file configs/models_h200.yaml. Seeds match the earlier entries, so every new cell pairs
+  # world by world with the main-setup cell of the same model and N.
+  # 1. A second model family, in two stages. First the small swarms every Qwen3 model was counted on (N=4, and N=8 in
+  # breadth and crowding; 840 agents, ~15k calls). The prediction for the large swarms is computed from them and
+  # committed. Then crowding at N=16, 32 and 64 (1,024 agents, ~18k calls).
+  - {name: wikigame_gemma_small, cmd: wikigame, only_models: [gemma-3-27b],
+     args: "--tag gemma --seed 1 --agents 4 8 --n 50 40 --audit 0 --awareness unaware"}
+  - {name: wikigame_gemma_small_crowding, cmd: wikigame, only_models: [gemma-3-27b],
+     args: "--tag gemma --seed 1 --agents 8 --n 40 --regimes crowding --audit 0 --awareness unaware"}
+  - {name: wikigame_gemma_large, cmd: wikigame, only_models: [gemma-3-27b],
+     args: "--tag gemma --seed 1 --agents 16 32 64 --n 20 10 6 --regimes crowding --audit 0 --awareness unaware"}
+  # 2. Does exposure stay at its ceiling when the swarm doubles again? Crowding at N=128: 32 holders, 32 spare holders
+  # and 64 seekers per lookup (768 agents, ~14k calls).
+  - {name: wikigame_n128, cmd: wikigame, only_models: [qwen3-14b],
+     args: "--tag n128 --seed 1 --agents 128 --n 6 --regimes crowding --audit 0 --awareness unaware"}
+  # 3. Purity by design: the fixed-N grid's seekers row with a model that invents. 2 asked holders per lookup and 1, 2
+  # or 4 seekers, so only the number of copies that may post a wrong number beside the true one changes. More worlds
+  # at 1 seeker, which has the fewest chances per world (1,344 agents, ~24k calls). The 8B grid (wikigame_fixed16)
+  # could not show it: 8B rarely invents.
+  - {name: wikigame_purity_s1, cmd: wikigame, only_models: [qwen3-14b],
+     args: "--tag purity --seed 1 --agents 16 --n 44 --regimes fixed-h2-s1 --audit 0 --awareness unaware"}
+  - {name: wikigame_purity_s24, cmd: wikigame, only_models: [qwen3-14b],
+     args: "--tag purity --seed 1 --agents 16 --n 20 --regimes fixed-h2-s2 fixed-h2-s4 --audit 0 --awareness unaware"}
+  # 4. Is the lower posting rate under crowding a reaction to the shared wiki? Each copy alone on a private wiki, as
+  # wikigame_replay did for Qwen3-8B (640 agents, ~12k calls for both models).
+  - {name: wikigame_alone, cmd: wikigame, only_models: [qwen3-4b, qwen3-14b],
+     args: "--tag alone --seed 1 --agents 16 --n 20 --regimes crowding --isolated on --audit 0 --awareness unaware"}
+  # 5. Does the rule change posting or taking? The crowding worlds at N=16 with no rule (640 agents, ~12k calls for
+  # both models), and the 4-round game at N=16 with no rule for the two models that post least there (100 games,
+  # 19,200 calls per model; pairs with swarm_ref_14b and swarm_ref_32b at the same seeds).
+  - {name: wikigame_ruleoff, cmd: wikigame, only_models: [qwen3-8b, qwen3-14b],
+     args: "--tag ruleoff --seed 1 --agents 16 --n 20 --regimes crowding --sharing allowed --audit 0 --awareness unaware"}
+  - {name: swarm_ruleoff, cmd: swarm, only_models: [qwen3-14b, qwen3-32b-bf16],
+     args: "--tag ruleoff --seed 1 --n 100 --agents 16 --channels wiki --rules silent --awareness unaware --listing none --log none"}
+  # Second pod session of 10 November. Predictions: analysis/occupancy/predictions_pod2.md in the research repo,
+  # committed before these start. New tags, so nothing here writes into a folder an earlier session made.
+  # 6. Is the plateau at N=128 partly the 8-edit view? The same 6 crowding worlds with a 64-edit view (768 agents,
+  # ~14k calls).
+  - {name: wikigame_n128_view64, cmd: wikigame, only_models: [qwen3-14b],
+     args: "--tag n128w64 --seed 1 --agents 128 --n 6 --regimes crowding --window 64 --audit 0 --awareness unaware"}
+  # 7. More independent worlds under crowding at N=64 (seed 2, so new worlds): Qwen3-14B, 6 worlds (~7k calls), and
+  # Gemma 3 27B, 14 worlds (~16k calls).
+  - {name: wikigame_n64_more, cmd: wikigame, only_models: [qwen3-14b],
+     args: "--tag n64more --seed 2 --agents 64 --n 6 --regimes crowding --audit 0 --awareness unaware"}
+  - {name: wikigame_gemma_n64_more, cmd: wikigame, only_models: [gemma-3-27b],
+     args: "--tag gemma64 --seed 2 --agents 64 --n 14 --regimes crowding --audit 0 --awareness unaware"}
+  # 8. The rest of the rule table: Qwen3-32B on the open wiki with no rule (the worlds of wikigame_crowding at N=16,
+  # ~6k calls); Qwen3-4B and 8B in the 4-round game at N=16 with no rule (19,200 calls each); Qwen3-32B with no rule
+  # at N=4, 8 and 32 (52,800 calls). All pair by seed with the runs that have the rule.
+  - {name: wikigame_ruleoff_32b, cmd: wikigame, only_models: [qwen3-32b-bf16],
+     args: "--tag ruleoff32 --seed 1 --agents 16 --n 20 --regimes crowding --sharing allowed --audit 0 --awareness unaware"}
+  - {name: swarm_ruleoff_small, cmd: swarm, only_models: [qwen3-4b, qwen3-8b],
+     args: "--tag ruleoff2 --seed 1 --n 100 --agents 16 --channels wiki --rules silent --awareness unaware --listing none --log none"}
+  - {name: swarm_ruleoff_32b_n, cmd: swarm, only_models: [qwen3-32b-bf16],
+     args: "--tag ruleoff2 --seed 1 --n 100 --agents 4 8 32 --channels wiki --rules silent --awareness unaware --listing none --log none"}
+  # Third pod session. Predictions: analysis/occupancy/predictions_pod3.md in the research repo, committed before
+  # these start: a forecast made from swarms of N <= 8 alone. New tags, so nothing writes into an earlier folder.
+  # 9. The forecast at the largest size: crowding at N=128 for the four models never run there (6 worlds, 768 agents,
+  # ~14k calls per model). Same worlds as wikigame_n128.
+  - {name: wikigame_n128_all, cmd: wikigame, only_models: [qwen3-4b, qwen3-8b, qwen3-32b-bf16, gemma-3-27b],
+     args: "--tag n128all --seed 1 --agents 128 --n 6 --regimes crowding --audit 0 --awareness unaware"}
+  # 10. A second deal for the second family: Gemma 3 27B under sqrt at N=16 and 64 (704 agents, ~13k calls).
+  - {name: wikigame_gemma_sqrt, cmd: wikigame, only_models: [gemma-3-27b],
+     args: "--tag gemmasqrt --seed 1 --agents 16 64 --n 20 6 --regimes sqrt --audit 0 --awareness unaware"}
+  # 11. Does use rise with the view at a second size and in a second family? The crowding worlds at N=64 (seed 1) with
+  # a 64-edit view (384 agents, ~7k calls per model).
+  - {name: wikigame_n64_view64, cmd: wikigame, only_models: [qwen3-14b, gemma-3-27b],
+     args: "--tag n64w64 --seed 1 --agents 64 --n 6 --regimes crowding --window 64 --audit 0 --awareness unaware"}
+  # 12. Optional, one size further: Qwen3-14B under crowding at N=256, 3 worlds (768 agents, ~14k calls).
+  - {name: wikigame_n256, cmd: wikigame, only_models: [qwen3-14b],
+     args: "--tag n256 --seed 1 --agents 256 --n 3 --regimes crowding --audit 0 --awareness unaware"}
+  # 13 and 14. Added during the third session: the whole page in view for the other models. Expectations:
+  # analysis/occupancy/predictions_pod3_view.md in the research repo, committed before these start. A 64-edit view shows
+  # the whole page at N=64 and nearly always at N=128. The same worlds (seed 1) were run with the 8-edit view.
+  - {name: wikigame_n64_view64_rest, cmd: wikigame, only_models: [qwen3-4b, qwen3-8b, qwen3-32b-bf16],
+     args: "--tag n64w64b --seed 1 --agents 64 --n 6 --regimes crowding --window 64 --audit 0 --awareness unaware"}
+  - {name: wikigame_n128_view64_rest, cmd: wikigame, only_models: [qwen3-4b, qwen3-8b, qwen3-32b-bf16, gemma-3-27b],
+     args: "--tag n128w64b --seed 1 --agents 128 --n 6 --regimes crowding --window 64 --audit 0 --awareness unaware"}
+  # Fourth pod session. Predictions: analysis/occupancy/predictions_pod4.md in the research repo, committed before these
+  # start. Both write to results/interventions/, so no analysis that reads results/wikigame* picks them up.
+  # 15. Does a number already on the page stop holders from posting, and is a wrong one corrected? Crowding at N=16,
+  # 40 worlds of seed 1 (the 20 of wikigame_models and 20 new ones), with a note planted at step 0 on the common titles
+  # of half the lookups (wikigame.PLANT_TITLES): a wrong value, or the true one; and no plant, as this session's own
+  # control (the earlier runs were on 2 x H200, and the same seeds do not repeat across GPUs). 3 arms x 640 agents,
+  # ~35k calls per model.
+  - {name: wikigame_plant, cmd: wikigame, only_models: [qwen3-14b, qwen3-32b-bf16],
+     args: "--out results/interventions --tag plant --seed 1 --agents 16 --n 40 --regimes crowding --plant none wrong true --audit 0 --awareness unaware"}
+  # 16. Is the rise in use with the whole page in view the "(N edits, showing the newest 8)" line? The crowding worlds
+  # at N=64 (seed 1, as wikigame_n64_view64) with the 8-edit view, that line removed and kept (2 x 384 agents, ~14k
+  # calls).
+  - {name: wikigame_nocount, cmd: wikigame, only_models: [qwen3-14b],
+     args: "--out results/interventions --tag nocount --seed 1 --agents 64 --n 6 --regimes crowding --show-count on off --audit 0 --awareness unaware"}
+  # Fifth pod session (pod H). Predictions: analysis/occupancy/predictions_pod5.md in the research repo, committed before
+  # these start. The 4-round game (scb/swarm.py) in the setting of results/swarm4round/: rule in force, unaware, no
+  # page listing, no log, seed 1 (games 10000-10099, so every game pairs with the reference runs of the same N). New
+  # tags, one per entry (the raw file of a model is rewritten by each run under its tag), so nothing writes into an
+  # earlier folder. Each model's N = 8 cell is this session's control: the forecasts
+  # are counted on N <= 8 runs made on other GPUs, and in wikigame_hwcheck only 133 of 320 copies repeated their run
+  # word for word across GPUs. --workers is lowered at large N (each game runs its N copies at once).
+  # 17. The scaling forecast at N = 64 and 128, counted on N <= 8 alone (paper second version, Table 2 and Figure 3).
+  # 2 answers per copy (f_inv = 2) for 4B, 8B, 14B and 32B; 1 answer (f_inv = 4) for 8B. N = 64: 100 games; N = 128:
+  # 50 games. Qwen3-8B with 2 answers already has N = 64 (swarm_ref_8b_n64), so it runs N = 8 and 128 only.
+  # Calls per model: 9.6k (N = 8) + 76.8k (N = 64) + 76.8k (N = 128).
+  - {name: swarm_scale_small, cmd: swarm, only_models: [qwen3-4b, qwen3-8b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag scale_n8 --seed 1 --n 100 --agents 8 --channels wiki --rules forbidden --awareness unaware --listing none --log none"}
+  - {name: swarm_scale_n64, cmd: swarm, only_models: [qwen3-4b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag scale_n64 --seed 1 --n 100 --agents 64 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 24"}
+  - {name: swarm_scale_n128, cmd: swarm, only_models: [qwen3-4b, qwen3-8b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag scale_n128 --seed 1 --n 50 --agents 128 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 12"}
+  - {name: swarm_scale1_small, cmd: swarm, only_models: [qwen3-8b],
+     args: "--tag scale1_n8 --seed 1 --n 100 --agents 8 --f-inv 4 --channels wiki --rules forbidden --awareness unaware --listing none --log none"}
+  - {name: swarm_scale1_n64, cmd: swarm, only_models: [qwen3-8b],
+     args: "--tag scale1_n64 --seed 1 --n 100 --agents 64 --f-inv 4 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 24"}
+  - {name: swarm_scale1_n128, cmd: swarm, only_models: [qwen3-8b],
+     args: "--tag scale1_n128 --seed 1 --n 50 --agents 128 --f-inv 4 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 12"}
+  # 18. Step 3 by experiment: a guess planted before round 1 (scb/swarm.py, plant). N = 16, 100 games, arms none,
+  # wrong and true on the same games; the plant goes on one question in each half of the quiz, on the seven titles
+  # seekers read most. Holders write before they read, so only seekers' use can move. Qwen3-32B is left out: its
+  # holders post 1-8% of the time, too few seekers find the true value to measure use beside a guess.
+  # 3 arms x 19.2k calls per model.
+  - {name: swarm_plant, cmd: swarm, only_models: [qwen3-4b, qwen3-8b, qwen3-14b],
+     args: "--tag plant --seed 1 --n 100 --agents 16 --channels wiki --rules forbidden --awareness unaware --listing none --log none --plant none wrong true"}
+  # 19. Optional: 4 answers per copy (Q = 8, f_inv = 2, so h = N/2 as in the main runs), first stage only: the small
+  # swarms a forecast is counted on, for the three sizes without them (Qwen3-8B has Q = 8 at N = 2-32 from the
+  # hackathon). The forecast for N = 16 and 32 is committed after this stage, as the Gemma runs of pod D were.
+  # 14 copies x 24 calls x 100 games = 33.6k calls per model.
+  - {name: swarm_q8_small, cmd: swarm, only_models: [qwen3-4b, qwen3-14b, qwen3-32b-bf16],
+     args: "--tag q8 --seed 1 --n 100 --agents 2 4 8 --questions 8 --f-inv 2 --channels wiki --rules forbidden --awareness unaware --listing none --log none"}
+  # Deferred until the sweep has a curve, not run by default: the isolated replay (no-adaptation baseline) at the N
+  # where the curve looks surprising, e.g. --tag replay --agents 16 --n 20 --isolated on --audit 0 --awareness unaware.
+  # Later variants at one N: --awareness aware, --audit 0.25, --titles given, --sharing allowed, --defenses warning.
+  # 20. Mixed swarms at N = 16 (after pod H's lane, on the same H200). Qwen3-8B and Gemma 3 27B on one wiki, as the
+  # hackathon's mixed runs at N = 4 and 8 (Swarm_schelling_hackathon, scaling/scripts/run_mixed_grid.sh; the runner
+  # change is its scaling/patches/mixed-swarms-runner.patch, merged here with the planted guess). A mix needs both
+  # models served at once, which sweep.py does not do, so these run from results/logs/podH/pod/mix16.sh, which serves
+  # both on one GPU and calls `python -m scb swarm` directly. Listed here for the record; sweep.py never runs swarm_mix16, because no
+  # served model has the name in only_models. Forecasts: research repo analysis/four-round/predictions_mix16.md, committed before the runs.
+  # Tag mix16, seed 1 (games 10000-10099), 100 games each: Gemma alone at N = 16 (the other end of the weighted
+  # average; Qwen3-8B alone at N = 16 is the main runs), then Gemma shares in eighths: 14 + 2, 12 + 4, ..., 2 + 14
+  # copies of Qwen3-8B + Gemma. 8 x 19.2k = 153.6k calls.
+  - {name: swarm_mix16_gemma, cmd: swarm, only_models: [gemma-3-27b],
+     args: "--tag mix16 --seed 1 --n 100 --agents 16 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 16"}
+  - {name: swarm_mix16, cmd: swarm, only_models: [qwen3-8b+gemma-3-27b],
+     args: "--tag mix16 --seed 1 --n 100 --mix qwen3-8b:14,gemma-3-27b:2 qwen3-8b:12,gemma-3-27b:4 qwen3-8b:10,gemma-3-27b:6 qwen3-8b:8,gemma-3-27b:8 qwen3-8b:6,gemma-3-27b:10 qwen3-8b:4,gemma-3-27b:12 qwen3-8b:2,gemma-3-27b:14 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 16"}
+  # 21. Gemma 3 27B alone at larger N (pod I, before the mixes of entry 20 on the same H200), so the paper's
+  # per-model figure has Gemma past N = 8 (the hackathon's stage 1, 4-round-results/swarm_gemma_n{2,4,8}, stops there).
+  # The setting and games of the Qwen3 runs: seed 1, 2 answers per copy, N = 16, 32 and 64 with 100 games, N = 128
+  # with 50. N = 8 first, as the control against stage 1 on new hardware. The N = 16 cell is also the Gemma end of
+  # the mixes (mix16.sh is run with SKIP_GEMMA=1). One tag per entry, so each lands in its own folder.
+  # Calls: 9.6k + 19.2k + 38.4k + 76.8k + 76.8k = 220.8k.
+  - {name: swarm_gemma_ladder_n8, cmd: swarm, only_models: [gemma-3-27b],
+     args: "--tag gemma_ladder_n8 --seed 1 --n 100 --agents 8 --channels wiki --rules forbidden --awareness unaware --listing none --log none"}
+  - {name: swarm_gemma_ladder_n16, cmd: swarm, only_models: [gemma-3-27b],
+     args: "--tag gemma_ladder_n16 --seed 1 --n 100 --agents 16 --channels wiki --rules forbidden --awareness unaware --listing none --log none"}
+  - {name: swarm_gemma_ladder_n32, cmd: swarm, only_models: [gemma-3-27b],
+     args: "--tag gemma_ladder_n32 --seed 1 --n 100 --agents 32 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 48"}
+  - {name: swarm_gemma_ladder_n64, cmd: swarm, only_models: [gemma-3-27b],
+     args: "--tag gemma_ladder_n64 --seed 1 --n 100 --agents 64 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 24"}
+  - {name: swarm_gemma_ladder_n128, cmd: swarm, only_models: [gemma-3-27b],
+     args: "--tag gemma_ladder_n128 --seed 1 --n 50 --agents 128 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 12"}
+  # 22. Claude Haiku 5.5 with and without the rule at N = 16 (18-19 November), for the rule ablation of the paper's
+  # Section 4.6 beside the four Qwen3 sizes. Not for sweep.py: the model is called through the Anthropic Messages API
+  # (scb/llm.py ClaudeLLM, needs `pip install anthropic` and ANTHROPIC_API_KEY), so the runner is called directly:
+  #   SB_USAGE_LOG=results/swarm_claude_haiku/usage.jsonl python -m scb swarm --models claude-haiku-5-5 <args below>
+  # Thinking off, as for Qwen3; no temperature or seed can be sent, so calls sample at the model's default and are not
+  # repeatable call for call (the games, roles and quizzes are the same seeds as the Qwen3 runs). Both rules share
+  # games 10000-10099, so the two arms are paired by seed. Calls: 2 x 19.2k = 38.4k.
+  - {name: swarm_claude_haiku, cmd: swarm, only_models: [claude-haiku-5-5],
+     args: "--tag claude_haiku --seed 1 --n 100 --agents 16 --channels wiki --rules forbidden silent --awareness unaware --listing none --log none --workers 4"}
+  # 23. Models reached through OpenRouter with and without the rule at N = 16, the same games as entry 22. Not for
+  # sweep.py: each model's settings (reasoning off, or lowest effort with token_mult) are in
+  # configs/models_openrouter.yaml, and results/logs/openrouter/run.sh <slug> <tag> <games> calls the runner with
+  #   --seed 1 --n <games> --agents 16 --channels wiki --rules forbidden silent --awareness unaware --listing none --log none --workers 4
+  # Pilot first (2 games per rule, tag or_pilot), then 100 games per rule.
+  # 24. Gemma 3 27B without the rule at N = 16 (pod I, 19 November), the no-rule arm for the rule ablation; its rule
+  # arm is entry 21's swarm_gemma_ladder_n16 (73.2%), the same games 10000-10099. Calls: 19.2k.
+  - {name: swarm_gemma_ruleoff_n16, cmd: swarm, only_models: [gemma-3-27b],
+     args: "--tag gemma_ruleoff_n16 --seed 1 --n 100 --agents 16 --channels wiki --rules silent --awareness unaware --listing none --log none"}
+  # 25. The capability quiz for the rule ablation's axis (scb capability, 504 MMLU-Pro questions drawn by
+  # scripts/mmlupro_subset.py into results/capability_data/), each model with its game settings. On pod I for the
+  # vLLM models; the API models run the same command locally (results/logs/*/capability.sh).
+  - {name: capability_mmlupro, cmd: capability,
+     args: "--subset results/capability_data/mmlu_pro_504.jsonl --tag mmlupro --seed 1"}
+  # 26. Swarms mixing Qwen3-4B, Qwen3-8B and Gemma 3 27B (pod J, 22 November), for the paper's Figure 14 (fig:simplex,
+  # Appendix F), whose mixes with 4B were predictions only. Like entry 20, these need all three models served at once,
+  # which sweep.py does not do: results/logs/podJ/pod/mix3.sh serves them on one H200 and calls `python -m scb swarm`
+  # directly; listed here for the record. Forecasts committed before the runs: research repo
+  # analysis/four-round/predictions_mix3.md (all 22 mixes) and, for the first four, the hackathon repo's
+  # scaling/results/predictions_mix3.md (ykazemi, branch scaling, acba44a), whose game counts are kept.
+  # Tag mix3, seed 1 (games from 10000). Seats in the order 4B, 8B, Gemma; every model an even number of copies, so
+  # it holds answers in both halves of the quiz. 4:4:4 has 12 copies (the even three-way mix); the rest 16.
+  # Calls: 2 x 200 x 192 + 19 x 100 x 192 + 100 x 144 = 456.0k.
+  - {name: swarm_mix3_registered200, cmd: swarm, only_models: [qwen3-4b+qwen3-8b+gemma-3-27b],
+     args: "--tag mix3 --seed 1 --n 200 --mix qwen3-4b:6,qwen3-8b:8,gemma-3-27b:2 qwen3-4b:8,qwen3-8b:8 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 16"}
+  - {name: swarm_mix3, cmd: swarm, only_models: [qwen3-4b+qwen3-8b+gemma-3-27b],
+     args: "--tag mix3 --seed 1 --n 100 --mix qwen3-4b:4,qwen3-8b:4,gemma-3-27b:8 qwen3-4b:8,gemma-3-27b:8 qwen3-4b:6,qwen3-8b:6,gemma-3-27b:4 qwen3-4b:8,qwen3-8b:4,gemma-3-27b:4 qwen3-4b:4,qwen3-8b:8,gemma-3-27b:4 qwen3-4b:6,qwen3-8b:4,gemma-3-27b:6 qwen3-4b:4,qwen3-8b:6,gemma-3-27b:6 qwen3-4b:4,qwen3-8b:4,gemma-3-27b:4 qwen3-4b:14,qwen3-8b:2 qwen3-4b:12,qwen3-8b:4 qwen3-4b:10,qwen3-8b:6 qwen3-4b:6,qwen3-8b:10 qwen3-4b:4,qwen3-8b:12 qwen3-4b:2,qwen3-8b:14 qwen3-4b:14,gemma-3-27b:2 qwen3-4b:12,gemma-3-27b:4 qwen3-4b:10,gemma-3-27b:6 qwen3-4b:6,gemma-3-27b:10 qwen3-4b:4,gemma-3-27b:12 qwen3-4b:2,gemma-3-27b:14 --channels wiki --rules forbidden --awareness unaware --listing none --log none --workers 16"}

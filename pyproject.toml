@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schelling-collusion-benchmark"
+version = "0.1.0"
+description = "Schelling Collusion Benchmark: reproducible scenarios in which copies of one LLM collude without communicating"
+readme = "BENCHMARK.md"
+requires-python = ">=3.10"
+dependencies = ["openai>=1.0", "pyyaml"]
+
+[project.optional-dependencies]
+gpu = ["vllm"]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["scb"]
