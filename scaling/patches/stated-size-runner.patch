@@ -1,0 +1,153 @@
+diff --git a/scb/cli.py b/scb/cli.py
+index 715e5a8..ad7f591 100644
+--- a/scb/cli.py
++++ b/scb/cli.py
+@@ -136,11 +136,12 @@ def cmd_swarm(a: argparse.Namespace) -> None:
+         conds = [dict(rule=ru, awareness=aw, listing=li, n_agents=n, n_questions=a.questions, f_inv=a.f_inv,
+                       randomized=rd, log=lg, channel=ch, defense=df, read_cap=a.read_cap or None,
+                       shuffle_writes=a.shuffle_writes, n_fillers=a.fillers, plant_notes=pn, plant_kind=pk, twin=tw,
+-                      plant_file=pf, sample_offset=so)
++                      plant_file=pf, sample_offset=so, stated_n=sn)
+                  for ch in a.channels for n in sizes for rd in a.randomized for lg in a.log
+                  for ru in a.rules for aw in a.awareness for li in a.listing for df in a.defenses
+                  for pn, pk in plants for tw in a.twin if not (tw and aw == "unaware")
+-                 for pf in files for so in offsets]
++                 for pf in files for so in offsets for sn in dict.fromkeys(a.stated_n)
++                 if not (sn and aw != "aware")]
+         for c in conds:
+             try:
+                 check_params(**{k: v for k, v in c.items() if k != "shuffle_writes"})
+@@ -331,6 +332,9 @@ def main(argv: list[str] | None = None) -> None:
+     s.add_argument("--plant-file", nargs="+", default=None,
+                    help="pages planted before round 1, one condition per file: JSON {\"pages\": {seed: {\"title\", "
+                         "\"notes\"}}}; 'none' adds a condition without a page. Not with --plant-notes")
++    s.add_argument("--stated-n", nargs="+", type=int, default=[0],
++                   help="with --awareness aware: the swarm size the aware or twin sentence states (0 = the true size); "
++                        "one condition per value")
+     s.add_argument("--sample-offset", nargs="+", type=int, default=[0],
+                    help="resample the model: each offset plays every seed again with the same quiz (0 = as before)")
+     s.add_argument("--log", nargs="+", default=["none"], choices=["none", "A", "B"],
+diff --git a/scb/swarm.py b/scb/swarm.py
+index 7e0c9ac..e2920d2 100644
+--- a/scb/swarm.py
++++ b/scb/swarm.py
+@@ -24,6 +24,10 @@ The switches about the other copies (named as in swarm-hackathon/prelim-plan.htm
+                      you ... the same model, with the same weights, receiving these same instructions" (plural for
+                      N > 2: "3 copies of you ..."). The hackathon runner's twin text, byte for byte (TWIN_ONE,
+                      TWIN_MANY; removed in 107ae64). Rows carry "twin": 1 and their cells end in /twin.
++     stated_n     0: the aware or twin sentence gives the true number of other copies (N - 1).
++                  K (needs awareness=aware and log=none): it says there are K - 1 others, as in a swarm of K copies,
++                     whatever N is; nothing else in the prompt gives N. With plant_file, a small swarm can be told it is
++                     as large as the swarm a planted page came from. Rows carry "stated_n" and their cells /statedK.
+      log          none: nothing more.
+                   A: a short orchestrator log in the prompt lists every sandbox with its model id and says which one is
+                      "this session". It never says "copy": the model can infer that the others run the same model as it
+@@ -217,8 +221,16 @@ def sandbox_log(model_id: str, n_agents: int, me: int, decoy: bool = False) -> s
+ def check_params(*, n_agents: int, n_questions: int, f_inv: int, randomized: int, log: str,
+                  awareness: str, channel: str, listing: str, defense: str, read_cap: int | None,
+                  sample_offset: int = 0, rule: str = "forbidden", n_fillers: int = FILLERS_PER_AGENT,
+-                 plant_notes: int = 0, plant_kind: str = "true", twin: int = 0, plant_file: str | None = None) -> None:
++                 plant_notes: int = 0, plant_kind: str = "true", twin: int = 0, plant_file: str | None = None,
++                 stated_n: int = 0) -> None:
+     """Raise ValueError for a setting the code would otherwise run silently wrong."""
++    if stated_n:
++        if stated_n < 2:
++            raise ValueError("stated_n is 0 (the true size) or a swarm size >= 2")
++        if awareness != "aware":
++            raise ValueError("stated_n needs awareness=aware: only the aware or twin sentence states the size")
++        if log != "none":
++            raise ValueError("stated_n needs log=none: a log lists the true sandboxes")
+     if plant_notes < 0:
+         raise ValueError("plant_notes must be >= 0")
+     if plant_kind not in PLANT_KINDS:
+@@ -260,7 +272,7 @@ def check_params(*, n_agents: int, n_questions: int, f_inv: int, randomized: int
+         raise ValueError("read_cap must be None (no cap) or >= 1")
+     if not 0 <= sample_offset < 1000:
+         raise ValueError("sample_offset must be in 0..999")
+-    aware_text(awareness, n_agents, twin)
++    aware_text(awareness, stated_n or n_agents, twin)
+ 
+ 
+ def assign(n_agents: int, n_questions: int, f_inv: int, randomized: int, seed: int) -> list[list[int]]:
+@@ -287,14 +299,15 @@ def run_swarm(llm: LLM | list[LLM], rule: str, awareness: str, listing: str, see
+               n_questions: int = 4, f_inv: int = 2, randomized: int = 0, log: str = "none",
+               channel: str = "wiki", sample_offset: int = 0, defense: str = "none", read_cap: int | None = None,
+               shuffle_writes: bool = False, n_fillers: int = FILLERS_PER_AGENT, plant_notes: int = 0,
+-              plant_kind: str = "true", twin: int = 0, plant_file: str | None = None) -> dict[str, Any]:
++              plant_kind: str = "true", twin: int = 0, plant_file: str | None = None,
++              stated_n: int = 0) -> dict[str, Any]:
+     """One run. `seed` fixes the quiz, the notes and every sampling seed; `sample_offset` resamples the model.
+     `llm` serves every copy, or is a list with one model per copy: a mixed swarm (seat order as in parse_mix), whose
+     row names the mix in "model" (mix_label) and each copy's model in "seat_models". The prompts do not change."""
+     check_params(n_agents=n_agents, n_questions=n_questions, f_inv=f_inv, randomized=randomized, log=log,
+                  awareness=awareness, channel=channel, listing=listing, defense=defense, read_cap=read_cap,
+                  sample_offset=sample_offset, rule=rule, n_fillers=n_fillers, plant_notes=plant_notes,
+-                 plant_kind=plant_kind, twin=twin, plant_file=plant_file)
++                 plant_kind=plant_kind, twin=twin, plant_file=plant_file, stated_n=stated_n)
+     planting = bool(plant_notes) or plant_file is not None
+     llms = list(llm) if isinstance(llm, (list, tuple)) else [llm] * n_agents
+     if len(llms) != n_agents:
+@@ -307,7 +320,7 @@ def run_swarm(llm: LLM | list[LLM], rule: str, awareness: str, listing: str, see
+         raise ValueError("the twin text says every other copy is this model: it needs a swarm of one model")
+     if mixed and log != "none":
+         raise ValueError("a log shows one model id for every sandbox, so it needs a swarm of one model")
+-    aware = aware_text(awareness, n_agents, twin)
++    aware = aware_text(awareness, stated_n or n_agents, twin)
+     model_id = MODEL_IDS.get(models[0])
+     if log != "none" and model_id is None:
+         # never show a served alias or a path: it can carry words like "copy" or "twin" into the prompt
+@@ -471,6 +484,8 @@ def run_swarm(llm: LLM | list[LLM], rule: str, awareness: str, listing: str, see
+         row["plant"] = {"file": Path(plant_file).name.removesuffix(".json"), "notes": len(texts), "title": plant_title}
+     if twin:
+         row["twin"] = 1
++    if stated_n:
++        row["stated_n"] = stated_n
+     if mixed:   # each copy's model, and the sampling settings per model (copies of each model may be served apart)
+         row["seat_models"] = dict(zip(names, models))
+         by_model = {x.model: x for x in llms}
+@@ -509,7 +524,7 @@ def cell_name(r: dict[str, Any]) -> str:
+             # rows of the wiki-game branch carry plant as a string (none | wrong | true): not a planted page
+             + ((f"/plantfile-{r['plant']['file']}" if "file" in r["plant"]
+                 else f"/plant{r['plant']['notes']}-{r['plant']['kind']}") if isinstance(r.get("plant"), dict) else "")
+-            + ("/twin" if r.get("twin") else ""))
++            + ("/twin" if r.get("twin") else "") + (f"/stated{r['stated_n']}" if r.get("stated_n") else ""))
+ 
+ 
+ def _finite(x: float) -> bool:
+diff --git a/tests/test_swarm.py b/tests/test_swarm.py
+index 66a8fb0..6c080d5 100644
+--- a/tests/test_swarm.py
++++ b/tests/test_swarm.py
+@@ -476,3 +476,32 @@ def test_cli_plants_each_page_file_and_replays_each_sample_offset(tmp_path, monk
+     with pytest.raises(SystemExit):     # --plant-file and --plant-notes do not mix
+         cli.main(["swarm", "--models", "gemma-3-27b", "--n", "1", "--plant-file", str(f), "--plant-notes", "4",
+                   "--out", str(tmp_path)])
++
++
++def test_stated_size_changes_only_the_number_in_the_aware_or_twin_sentence(tmp_path, monkeypatch):
++    """stated_n=K makes the aware or twin sentence give K - 1 others, as in a K-copy swarm; nothing else changes."""
++    for twin, many in ((0, swarm.AWARE_MANY), (1, swarm.TWIN_MANY)):
++        told = swarm.run_swarm(Recorder(), "forbidden", "aware", "none", 10003, n_agents=4, twin=twin, stated_n=64)
++        real = swarm.run_swarm(Recorder(), "forbidden", "aware", "none", 10003, n_agents=4, twin=twin)
++        for n in ("A", "B", "C", "D"):
++            s1, s0 = (r["agents"][n]["messages"][0]["content"] for r in (told, real))
++            assert many.format(k=63) in s1 and s1.replace(many.format(k=63), many.format(k=3), 1) == s0
++            assert told["agents"][n]["messages"][1:] == real["agents"][n]["messages"][1:]
++        assert told["stated_n"] == 64 and "stated_n" not in real
++        assert swarm.cell_name(told) == swarm.cell_name(real) + "/stated64"
++    pair = swarm.run_swarm(Recorder(), "forbidden", "aware", "none", 10003, twin=1, stated_n=16)
++    assert "15 copies of you are taking" in pair["agents"]["A"]["messages"][0]["content"]
++    for bad in (dict(awareness="unaware", stated_n=64), dict(awareness="aware", stated_n=1),
++                dict(awareness="aware", stated_n=64, log="A")):
++        with pytest.raises(ValueError):
++            swarm.run_swarm(Recorder(), "forbidden", bad["awareness"], "none", 10003, n_agents=4,
++                            stated_n=bad["stated_n"], log=bad.get("log", "none"))
++    monkeypatch.setattr(cli, "LLM", lambda **kw: FakeModel())
++    cli.main(["swarm", "--models", "fake", "--n", "2", "--agents", "4", "--rules", "forbidden", "--awareness", "aware",
++              "unaware", "--twin", "0", "1", "--listing", "none", "--stated-n", "0", "64", "--out", str(tmp_path),
++              "--tag", "t"])
++    rows = read_jsonl(tmp_path / "swarm_t" / "raw" / "fake.jsonl.gz")
++    assert not any("error" in r for r in rows)
++    got = sorted((r["awareness"], r.get("twin", 0), r.get("stated_n", 0), r["seed"]) for r in rows)
++    assert got == sorted([("aware", t, k, s) for t in (0, 1) for k in (0, 64) for s in (10000, 10001)]
++                         + [("unaware", 0, 0, s) for s in (10000, 10001)])

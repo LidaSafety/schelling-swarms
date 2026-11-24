@@ -1,7 +1,7 @@
 # Numbers of the green text (tests on the scaling branch of the hackathon repository)
 
 The green text of `swarm_paper_aaai.tex` (`\addedg`, `addedgblock`) reports the tests that the scaling branch of
-LidaSafety/Swarm_schelling_hackathon ran after the AAAI-27 version: its README items 19-25 and `docs/findings.html`.
+LidaSafety/Swarm_schelling_hackathon ran after the AAAI-27 version: its README items 19-27 and `docs/findings.html`.
 Every number comes from a result file on that branch, written by the script named beside it (run from its `scaling/`
 folder; the README there gives the commands and the patched runner each needs). Each test was registered in
 `scaling/results/predictions_*.md` and committed before its first run.
@@ -16,6 +16,8 @@ folder; the README there gives the commands and the patched runner each needs). 
 | Gemma's notes length in app:finv | `results/ablations.json`, `notes_length` | the same | not registered |
 | app:twin, tab:twin; the twin sentence in sec:discussion | `results/twin.json` (d266b23) | `scripts/analyze_twin.py results` | `predictions_twin.md` (5530308) |
 | tab:registered, mixes of three models | scored in `sources/results_mix3.md` section 4, on the runs of app:mix | - | `predictions_mix3.md` (acba44a) |
+| app:precedent "What on the page matters", tab:pagecontent; the Gemma and 8B sentences in sec:law; the future-work sentence in sec:discussion | `results/page_content.json` (277f629) | `scripts/analyze_page_content.py results --source aaai` | `predictions_page_content.md` (f9a1c4c) |
+| app:twin "Why the effect fades", tab:twinpage; the twin sentence in sec:discussion | `results/twin_page.json` (5cf6fa8) | `scripts/analyze_twin_page.py results --reference` | `predictions_twin_page.md` (467a167) |
 
 ## 1. Swarms by notes on the page (fig:precedent, gray line)
 
@@ -108,3 +110,53 @@ rounds, intervals resampling quizzes; late holders posting by their answer's rou
 Round-1 notes on the run's most common title: 91-95% under both texts with the rule. Qwen3-8B, 64 copies: rounds 2
 and 4 +8.5 [5.3, 11.9], rounds 1 and 3 -8.5 [-12.2, -4.7]; the slope on notes seen -0.7 [-2.6, 1.6]. Qwen3-8B, 2-32
 copies (the hackathon runs): late holders post 14.5-21.5 points more with the twin text. Registered H1-H5: none met.
+
+## 8. Page content (item 26; app:precedent, tab:pagecontent)
+
+Pairs on the fixed prompt; before round 1, notes built from the model's own 64-copy round-1 page for the same quiz
+(Gemma: `gemma_ladder_n64`, `aaai` branch; Qwen3-8B: `swarm_ref_8b_n64`), as many as that page held less one, sit on
+the pair's usual title for question 1. Late holders that read the planted title (nothing planted: the same title),
+posting their round-2 answer in round 2 (%), 95% intervals resampling quizzes jointly across arms and both models.
+Gemma 300 games per arm (about 270 late holders read the title), Qwen3-8B 400 (about 195).
+
+| Planted | Gemma | Qwen3-8B |
+|---|---|---|
+| nothing | 18.8 [14.4, 23.3] | 79.5 [73.0, 85.8] |
+| answers to question 1 | 42.0 [34.5, 50.0] | 59.0 [49.7, 68.1] |
+| the same answers about another state | 65.0 [57.9, 71.9] (unasked 66.7, question 3 63.3) | 82.7 [76.0, 88.6] (unasked) |
+| answers to question 1 as bare numbers | 12.8 [8.7, 17.3] | - |
+| requests for question 1 | 10.3 [7.0, 14.2] | 86.9 [81.1, 92.1] |
+| requests for question 2 | 88.3 [83.3, 92.8] | 48.0 [38.5, 57.3] |
+| answers to question 2 | 96.6 [94.1, 98.8] | 93.6 [88.8, 97.4] |
+
+Registered: (a) Gemma, answers to question 1 minus the same answers about another state: -23.0 [-29.9, -16.4], not met
+(reversed). (b) Answers about another state minus nothing: +46.2 [38.3, 53.9], met. (c) Gemma's own wording minus bare
+numbers: +29.2 [20.9, 38.1], met. (d) Qwen3-8B, requests for question 2 minus requests for question 1: -38.9 [-48.4,
+-30.1], not met (reversed). (e) Nothing minus answers to question 2: -14.1 [-20.2, -8.0], not met (reversed). (f) The
+unasked state's answers minus answers to question 2: -10.9 [-17.1, -5.7], not met (reversed). Qwen3-8B's late holders
+that read requests for their own answer wrote that it is not known in 34.5% of cases (9.4% with nothing planted); at
+least 95% of them wrote their round-2 note under their own question's title in every arm. Seeds where question 2's or
+3's value equals question 1's (4 and 3 of 100) are left out of those arms.
+
+## 9. The stated swarm size (item 27; app:twin, tab:twinpage)
+
+Swarms of 4 Gemma copies with the aware or twin text, rule in force; the text states the true number of copies or 64
+(`swarm --stated-n`); with 64 stated, nothing or one of item 25's pages (64-copy page, its holders' notes, its seekers'
+notes) on the usual title before round 1. 200 games per cell (seeds 10000-10099, sample offsets 1-2). Late holders
+that read the title, posting their round-2 answer in round 2 (%); twin minus aware with 95% intervals resampling
+quizzes jointly across cells.
+
+| Stated | Planted | Aware | Twin | Twin - aware |
+|---|---|---|---|---|
+| 4 (true) | nothing | 20.2 | 41.2 | +21.0 [14.3, 28.0] |
+| 64 | nothing | 18.3 | 23.2 | +4.8 [-0.8, 10.5] |
+| 64 | the 64-copy page | 60.7 | 57.6 | -3.1 [-9.2, 3.0] |
+| 64 | its answers only | 43.0 | 36.4 | -6.5 [-13.1, 0.2] |
+| 64 | its requests only | 38.5 | 47.4 | +8.8 [2.3, 15.0] |
+| twin grid, 4 copies | - | 15.1 | 45.2 | +30.2 [22.5, 37.4] |
+| twin grid, 64 copies | - | 63.9 | 52.7 | -11.1 [-16.9, -5.3] |
+
+Registered: (a) +21.0, met. (b) stated 64 minus true, nothing planted: -16.2 [-24.5, -7.7], met. (c) the 64-copy page
+minus nothing, stated 64: -8.0 [-15.4, -0.9], met. (d) its answers only minus nothing: -11.4 [-19.5, -3.6], met. (e) its
+requests only minus nothing: +4.0 [-3.6, 11.4], not met. Reported: answers only minus requests only -15.3 [-23.4,
+-7.1].

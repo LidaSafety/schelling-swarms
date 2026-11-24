@@ -1,0 +1,1753 @@
+{
+ "arm": "answers_q1",
+ "model": "q8",
+ "source": "wiki_game/data/swarm4round/swarm_ref_8b_n64/raw/qwen3-8b.jsonl.gz",
+ "sha256": "cbc831e5332d1223d13ee1b88f454ca0ea33b81b8cb4edb6df4d1caf843e2dcc",
+ "pages": {
+  "10000": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 4.8",
+    "Montana: 4.8",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "Montana: 4.8",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "Montana: 4.8"
+   ]
+  },
+  "10001": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "Iowa: 4.2",
+    "Iowa: 4.2",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "Iowa: 4.2",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "Iowa: 4.2",
+    "Iowa: 4.2",
+    "Iowa: 4.2",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "Iowa: 4.2",
+    "Iowa: 4.2",
+    "The share of employed workers in construction occupations in Iowa is 4.2%.",
+    "Iowa: 4.2",
+    "Iowa: 4.2",
+    "Iowa: 4.2"
+   ]
+  },
+  "10002": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "The share of employed workers in construction occupations in Kansas is 9.1%.",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1",
+    "Kansas: 9.1"
+   ]
+  },
+  "10003": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 7.8",
+    "Maine: 7.8",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "Maine: 7.8",
+    "Maine: 7.8",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "The share of employed workers in construction occupations in Maine is 7.8%.",
+    "The share of employed workers in construction occupations in Maine is 7.8%."
+   ]
+  },
+  "10004": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 6.9",
+    "Montana: 6.9"
+   ]
+  },
+  "10005": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "Vermont: 4.6",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "Vermont: 4.6",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "Vermont: 4.6",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "The share of employed workers in construction occupations in Vermont is 4.6%.",
+    "Vermont: 4.6"
+   ]
+  },
+  "10006": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is 7.3%.",
+    "The share of employed workers in construction occupations in Maine is 7.3%.",
+    "Maine: 7.3",
+    "Maine: 7.3",
+    "Maine: 7.3",
+    "Maine: 7.3",
+    "Maine: 7.3",
+    "Maine: 7.3",
+    "Maine: 7.3",
+    "Maine: 7.3",
+    "Maine: 7.3"
+   ]
+  },
+  "10007": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "Utah: 11.9",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "Utah: 11.9",
+    "Utah: 11.9",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "Utah: 11.9",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "Utah: 11.9",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%.",
+    "The share of employed workers in construction occupations in Utah is 11.9%."
+   ]
+  },
+  "10008": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%."
+   ]
+  },
+  "10009": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 8.7",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "Iowa: 8.7",
+    "Iowa: 8.7",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "Iowa: 8.7",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "Iowa: 8.7",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "Iowa: 8.7",
+    "Iowa: 8.7",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "Iowa: 8.7",
+    "Iowa: 8.7",
+    "The share of employed workers in construction occupations in Iowa is 8.7%.",
+    "Iowa: 8.7"
+   ]
+  },
+  "10010": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%.",
+    "The share of employed workers in construction occupations in Vermont is 10.8%."
+   ]
+  },
+  "10011": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%.",
+    "The share of employed workers in construction occupations in Ohio is 6.9%."
+   ]
+  },
+  "10012": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1",
+    "Idaho: 5.1"
+   ]
+  },
+  "10013": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7",
+    "Iowa: 7.7"
+   ]
+  },
+  "10014": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 10.1",
+    "Kansas: 10.1",
+    "The share of employed workers in construction occupations in Kansas is 10.1%.",
+    "Kansas: 10.1",
+    "The share of employed workers in construction occupations in Kansas is 10.1%.",
+    "Kansas: 10.1",
+    "Kansas: 10.1",
+    "Kansas: 10.1",
+    "Kansas: 10.1",
+    "The share of employed workers in construction occupations in Kansas is 10.1%.",
+    "Kansas: 10.1",
+    "Kansas: 10.1",
+    "Kansas: 10.1",
+    "Kansas: 10.1",
+    "Kansas: 10.1"
+   ]
+  },
+  "10015": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is 6.4%.",
+    "The share of employed workers in construction occupations in Ohio is 6.4%.",
+    "The share of employed workers in construction occupations in Ohio is 6.4%.",
+    "The share of employed workers in construction occupations in Ohio is 6.4%.",
+    "The share of employed workers in construction occupations in Ohio is 6.4%.",
+    "The share of employed workers in construction occupations in Ohio is 6.4%.",
+    "Ohio: 6.4",
+    "Ohio: 6.4"
+   ]
+  },
+  "10016": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "The share of employed workers in construction occupations in Idaho is 10.1%.",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1",
+    "Idaho: 10.1"
+   ]
+  },
+  "10017": {
+   "title": "Montana construction occupation share",
+   "notes": []
+  },
+  "10018": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%.",
+    "The share of employed workers in construction occupations in Vermont is 8.9%."
+   ]
+  },
+  "10019": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0",
+    "Idaho: 6.0"
+   ]
+  },
+  "10020": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "The share of employed workers in construction occupations in Arizona is 6.9%.",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "The share of employed workers in construction occupations in Arizona is 6.9%.",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "The share of employed workers in construction occupations in Arizona is 6.9%.",
+    "Arizona: 6.9",
+    "Arizona: 6.9",
+    "Arizona: 6.9"
+   ]
+  },
+  "10021": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "Montana: 4.8",
+    "Montana: 4.8",
+    "The share of employed workers in construction occupations in Montana is 4.8%.",
+    "Montana: 4.8"
+   ]
+  },
+  "10022": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4",
+    "Arizona: 5.4"
+   ]
+  },
+  "10023": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4",
+    "Alabama: 9.4"
+   ]
+  },
+  "10024": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%.",
+    "The share of employed workers in construction occupations in Ohio is 4.7%."
+   ]
+  },
+  "10025": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4",
+    "Idaho: 9.4"
+   ]
+  },
+  "10026": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 5.9",
+    "The share of employed workers in construction occupations in Montana is 5.9%.",
+    "The share of employed workers in construction occupations in Montana is 5.9%.",
+    "The share of employed workers in construction occupations in Montana is 5.9%."
+   ]
+  },
+  "10027": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "The share of employed workers in construction occupations in Maine is 4.6%.",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "Maine: 4.6",
+    "The share of employed workers in construction occupations in Maine is 4.6%.",
+    "Maine: 4.6"
+   ]
+  },
+  "10028": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1",
+    "Iowa: 6.1"
+   ]
+  },
+  "10029": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is 8.0%.",
+    "The share of employed workers in construction occupations in Ohio is 8.0%.",
+    "The share of employed workers in construction occupations in Ohio is 8.0%.",
+    "The share of employed workers in construction occupations in Ohio is 8.0%.",
+    "Ohio: 8.0",
+    "The share of employed workers in construction occupations in Ohio is 8.0%.",
+    "Ohio: 8.0",
+    "Ohio: 8.0"
+   ]
+  },
+  "10030": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "The share of employed workers in construction occupations in Montana is 9.4%.",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "The share of employed workers in construction occupations in Montana is 9.4%.",
+    "Montana: 9.4",
+    "Montana: 9.4",
+    "Montana: 9.4"
+   ]
+  },
+  "10031": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "The share of employed workers in construction occupations in Iowa is 10.6%.",
+    "Iowa: 10.6",
+    "Iowa: 10.6",
+    "Iowa: 10.6"
+   ]
+  },
+  "10032": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 5.3%.",
+    "Nevada: 5.3",
+    "The share of employed workers in construction occupations in Nevada is 5.3%.",
+    "Nevada: 5.3",
+    "Nevada: 5.3",
+    "Nevada: 5.3",
+    "Nevada: 5.3"
+   ]
+  },
+  "10033": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%.",
+    "The share of employed workers in construction occupations in Vermont is 8.7%."
+   ]
+  },
+  "10034": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is 8.1%.",
+    "The share of employed workers in construction occupations in Vermont is 8.1%.",
+    "The share of employed workers in construction occupations in Vermont is 8.1%.",
+    "The share of employed workers in construction occupations in Vermont is 8.1%.",
+    "The share of employed workers in construction occupations in Vermont is 8.1%.",
+    "Vermont: 8.1",
+    "The share of employed workers in construction occupations in Vermont is 8.1%.",
+    "The share of employed workers in construction occupations in Vermont is 8.1%."
+   ]
+  },
+  "10035": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "Vermont: 11.3",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "The share of employed workers in construction occupations in Vermont is 11.3%.",
+    "Vermont: 11.3",
+    "The share of employed workers in construction occupations in Vermont is 11.3%."
+   ]
+  },
+  "10036": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 11.9",
+    "The share of employed workers in construction occupations in Iowa is 11.9%.",
+    "Iowa: 11.9",
+    "Iowa: 11.9",
+    "The share of employed workers in construction occupations in Iowa is 11.9%.",
+    "The share of employed workers in construction occupations in Iowa is 11.9%.",
+    "The share of employed workers in construction occupations in Iowa is 11.9%.",
+    "The share of employed workers in construction occupations in Iowa is 11.9%.",
+    "Iowa: 11.9",
+    "Iowa: 11.9",
+    "The share of employed workers in construction occupations in Iowa is 11.9%.",
+    "Iowa: 11.9"
+   ]
+  },
+  "10037": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%.",
+    "The share of employed workers in construction occupations in Ohio is 11.4%."
+   ]
+  },
+  "10038": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 10.5%.",
+    "The share of employed workers in construction occupations in Oregon is 10.5%.",
+    "The share of employed workers in construction occupations in Oregon is 10.5%.",
+    "The share of employed workers in construction occupations in Oregon is 10.5%.",
+    "The share of employed workers in construction occupations in Oregon is 10.5%."
+   ]
+  },
+  "10039": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "Maine: 4.2",
+    "Maine: 4.2",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "Maine: 4.2",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "Maine: 4.2",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "Maine: 4.2",
+    "The share of employed workers in construction occupations in Maine is 4.2%.",
+    "Maine: 4.2",
+    "The share of employed workers in construction occupations in Maine is 4.2%."
+   ]
+  },
+  "10040": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2",
+    "Arizona: 5.2"
+   ]
+  },
+  "10041": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "The share of employed workers in construction occupations in Kansas is 7.1%.",
+    "Kansas: 7.1",
+    "The share of employed workers in construction occupations in Kansas is 7.1%.",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1",
+    "Kansas: 7.1"
+   ]
+  },
+  "10042": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4",
+    "Iowa: 5.4"
+   ]
+  },
+  "10043": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 8.7%.",
+    "The share of employed workers in construction occupations in Oregon is 8.7%."
+   ]
+  },
+  "10044": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 8.9",
+    "Maine: 8.9",
+    "Maine: 8.9",
+    "Maine: 8.9",
+    "The share of employed workers in construction occupations in Maine is 8.9%.",
+    "The share of employed workers in construction occupations in Maine is 8.9%.",
+    "Maine: 8.9",
+    "Maine: 8.9",
+    "The share of employed workers in construction occupations in Maine is 8.9%.",
+    "Maine: 8.9",
+    "The share of employed workers in construction occupations in Maine is 8.9%.",
+    "Maine: 8.9",
+    "Maine: 8.9",
+    "Maine: 8.9",
+    "The share of employed workers in construction occupations in Maine is 8.9%.",
+    "Maine: 8.9",
+    "The share of employed workers in construction occupations in Maine is 8.9%."
+   ]
+  },
+  "10045": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "Utah: 10.6",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "Utah: 10.6",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "Utah: 10.6",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%.",
+    "The share of employed workers in construction occupations in Utah is 10.6%."
+   ]
+  },
+  "10046": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 7.8",
+    "Iowa: 7.8",
+    "Iowa: 7.8",
+    "Iowa: 7.8",
+    "Iowa: 7.8",
+    "Iowa: 7.8",
+    "The share of employed workers in construction occupations in Iowa is 7.8%.",
+    "Iowa: 7.8"
+   ]
+  },
+  "10047": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 10.5",
+    "Idaho: 10.5",
+    "Idaho: 10.5",
+    "The share of employed workers in construction occupations in Idaho is 10.5%.",
+    "Idaho: 10.5",
+    "The share of employed workers in construction occupations in Idaho is 10.5%.",
+    "Idaho: 10.5",
+    "Idaho: 10.5",
+    "Idaho: 10.5",
+    "Idaho: 10.5"
+   ]
+  },
+  "10048": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4",
+    "Alabama: 11.4"
+   ]
+  },
+  "10049": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "Nevada: 8.7",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%."
+   ]
+  },
+  "10050": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "Ohio: 5.1",
+    "Ohio: 5.1",
+    "The share of employed workers in construction occupations in Ohio is 5.1%.",
+    "The share of employed workers in construction occupations in Ohio is 5.1%.",
+    "Ohio: 5.1",
+    "Ohio: 5.1",
+    "The share of employed workers in construction occupations in Ohio is 5.1%.",
+    "The share of employed workers in construction occupations in Ohio is 5.1%.",
+    "The share of employed workers in construction occupations in Ohio is 5.1%."
+   ]
+  },
+  "10051": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "Iowa: 11.2",
+    "Iowa: 11.2",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "Iowa: 11.2",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "Iowa: 11.2",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "Iowa: 11.2",
+    "Iowa: 11.2",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "Iowa: 11.2",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "The share of employed workers in construction occupations in Iowa is 11.2%.",
+    "Iowa: 11.2"
+   ]
+  },
+  "10052": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "The share of employed workers in construction occupations in Idaho is 9.9%.",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9",
+    "Idaho: 9.9"
+   ]
+  },
+  "10053": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3",
+    "Idaho: 8.3"
+   ]
+  },
+  "10054": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1",
+    "Arizona: 6.1"
+   ]
+  },
+  "10055": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 9.9",
+    "The share of employed workers in construction occupations in Montana is 9.9%.",
+    "Montana: 9.9",
+    "Montana: 9.9",
+    "Montana: 9.9",
+    "Montana: 9.9",
+    "Montana: 9.9",
+    "Montana: 9.9"
+   ]
+  },
+  "10056": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 11.5%.",
+    "Nevada: 11.5",
+    "The share of employed workers in construction occupations in Nevada is 11.5%.",
+    "The share of employed workers in construction occupations in Nevada is 11.5%.",
+    "Nevada: 11.5",
+    "The share of employed workers in construction occupations in Nevada is 11.5%.",
+    "Nevada: 11.5",
+    "The share of employed workers in construction occupations in Nevada is 11.5%.",
+    "The share of employed workers in construction occupations in Nevada is 11.5%."
+   ]
+  },
+  "10057": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 10.0%.",
+    "The share of employed workers in construction occupations in Oregon is 10.0%.",
+    "The share of employed workers in construction occupations in Oregon is 10.0%.",
+    "The share of employed workers in construction occupations in Oregon is 10.0%.",
+    "The share of employed workers in construction occupations in Oregon is 10.0%.",
+    "The share of employed workers in construction occupations in Oregon is 10.0%.",
+    "The share of employed workers in construction occupations in Oregon is 10.0%."
+   ]
+  },
+  "10058": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is 4.1%.",
+    "Maine: 4.1",
+    "The share of employed workers in construction occupations in Maine is 4.1%.",
+    "Maine: 4.1",
+    "Maine: 4.1",
+    "Maine: 4.1",
+    "Maine: 4.1",
+    "Maine: 4.1",
+    "The share of employed workers in construction occupations in Maine is 4.1%.",
+    "The share of employed workers in construction occupations in Maine is 4.1%.",
+    "Maine: 4.1",
+    "Maine: 4.1",
+    "Maine: 4.1",
+    "Maine: 4.1",
+    "The share of employed workers in construction occupations in Maine is 4.1%.",
+    "Maine: 4.1",
+    "Maine: 4.1"
+   ]
+  },
+  "10059": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%.",
+    "The share of employed workers in construction occupations in Utah is 7.9%."
+   ]
+  },
+  "10060": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6",
+    "Idaho: 9.6"
+   ]
+  },
+  "10061": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5",
+    "Alabama: 8.5"
+   ]
+  },
+  "10062": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9",
+    "Kansas: 5.9"
+   ]
+  },
+  "10063": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 6.4",
+    "The share of employed workers in construction occupations in Maine is 6.4%.",
+    "Maine: 6.4",
+    "Maine: 6.4",
+    "Maine: 6.4",
+    "Maine: 6.4",
+    "Maine: 6.4",
+    "Maine: 6.4",
+    "Maine: 6.4",
+    "Maine: 6.4"
+   ]
+  },
+  "10064": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is 9.5%.",
+    "Montana: 9.5",
+    "The share of employed workers in construction occupations in Montana is 9.5%.",
+    "The share of employed workers in construction occupations in Montana is 9.5%.",
+    "Montana: 9.5",
+    "Montana: 9.5",
+    "Montana: 9.5",
+    "Montana: 9.5",
+    "Montana: 9.5",
+    "Montana: 9.5"
+   ]
+  },
+  "10065": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "Montana: 7.7",
+    "The share of employed workers in construction occupations in Montana is 7.7%.",
+    "Montana: 7.7"
+   ]
+  },
+  "10066": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4",
+    "Iowa: 10.4"
+   ]
+  },
+  "10067": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is 8.1%.",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "The share of employed workers in construction occupations in Iowa is 8.1%.",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "The share of employed workers in construction occupations in Iowa is 8.1%.",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "The share of employed workers in construction occupations in Iowa is 8.1%.",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1",
+    "Iowa: 8.1"
+   ]
+  },
+  "10068": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "Nevada: 8.7",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "The share of employed workers in construction occupations in Nevada is 8.7%.",
+    "Nevada: 8.7",
+    "Nevada: 8.7",
+    "Nevada: 8.7"
+   ]
+  },
+  "10069": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 5.5",
+    "Iowa: 5.5",
+    "Iowa: 5.5",
+    "Iowa: 5.5",
+    "The share of employed workers in construction occupations in Iowa is 5.5%.",
+    "Iowa: 5.5",
+    "Iowa: 5.5",
+    "Iowa: 5.5",
+    "Iowa: 5.5",
+    "The share of employed workers in construction occupations in Iowa is 5.5%.",
+    "Iowa: 5.5",
+    "Iowa: 5.5",
+    "The share of employed workers in construction occupations in Iowa is 5.5%.",
+    "Iowa: 5.5"
+   ]
+  },
+  "10070": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is 10.8%.",
+    "Utah: 10.8",
+    "The share of employed workers in construction occupations in Utah is 10.8%.",
+    "Utah: 10.8",
+    "The share of employed workers in construction occupations in Utah is 10.8%.",
+    "Utah: 10.8",
+    "Utah: 10.8",
+    "Utah: 10.8",
+    "The share of employed workers in construction occupations in Utah is 10.8%.",
+    "Utah: 10.8",
+    "The share of employed workers in construction occupations in Utah is 10.8%.",
+    "The share of employed workers in construction occupations in Utah is 10.8%.",
+    "The share of employed workers in construction occupations in Utah is 10.8%.",
+    "Utah: 10.8",
+    "The share of employed workers in construction occupations in Utah is 10.8%."
+   ]
+  },
+  "10071": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 7.2",
+    "The share of employed workers in construction occupations in Maine is 7.2%.",
+    "The share of employed workers in construction occupations in Maine is 7.2%.",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "The share of employed workers in construction occupations in Maine is 7.2%.",
+    "The share of employed workers in construction occupations in Maine is 7.2%.",
+    "Maine: 7.2",
+    "The share of employed workers in construction occupations in Maine is 7.2%.",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "Maine: 7.2",
+    "The share of employed workers in construction occupations in Maine is 7.2%.",
+    "Maine: 7.2"
+   ]
+  },
+  "10072": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "Nevada: 8.0",
+    "The share of employed workers in construction occupations in Nevada is 8.0%.",
+    "Nevada: 8.0",
+    "Nevada: 8.0",
+    "Nevada: 8.0",
+    "The share of employed workers in construction occupations in Nevada is 8.0%.",
+    "The share of employed workers in construction occupations in Nevada is 8.0%.",
+    "Nevada: 8.0",
+    "Nevada: 8.0",
+    "Nevada: 8.0",
+    "The share of employed workers in construction occupations in Nevada is 8.0%.",
+    "Nevada: 8.0"
+   ]
+  },
+  "10073": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0",
+    "Alabama: 9.0"
+   ]
+  },
+  "10074": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "Nevada: 4.4",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%.",
+    "The share of employed workers in construction occupations in Nevada is 4.4%."
+   ]
+  },
+  "10075": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is 5.1%.",
+    "Montana: 5.1",
+    "Montana: 5.1",
+    "Montana: 5.1",
+    "Montana: 5.1",
+    "Montana: 5.1",
+    "Montana: 5.1",
+    "Montana: 5.1",
+    "The share of employed workers in construction occupations in Montana is 5.1%.",
+    "Montana: 5.1",
+    "Montana: 5.1",
+    "Montana: 5.1"
+   ]
+  },
+  "10076": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is 10.9%.",
+    "The share of employed workers in construction occupations in Montana is 10.9%.",
+    "The share of employed workers in construction occupations in Montana is 10.9%.",
+    "Montana: 10.9",
+    "Montana: 10.9"
+   ]
+  },
+  "10077": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 6.8%.",
+    "The share of employed workers in construction occupations in Oregon is 6.8%.",
+    "The share of employed workers in construction occupations in Oregon is 6.8%.",
+    "The share of employed workers in construction occupations in Oregon is 6.8%.",
+    "The share of employed workers in construction occupations in Oregon is 6.8%.",
+    "The share of employed workers in construction occupations in Oregon is 6.8%.",
+    "The share of employed workers in construction occupations in Oregon is 6.8%.",
+    "The share of employed workers in construction occupations in Oregon is 6.8%."
+   ]
+  },
+  "10078": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 5.2",
+    "Kansas: 5.2",
+    "Kansas: 5.2",
+    "Kansas: 5.2",
+    "Kansas: 5.2",
+    "Kansas: 5.2",
+    "Kansas: 5.2",
+    "Kansas: 5.2",
+    "Kansas: 5.2"
+   ]
+  },
+  "10079": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is 6.3%.",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "The share of employed workers in construction occupations in Iowa is 6.3%.",
+    "The share of employed workers in construction occupations in Iowa is 6.3%.",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "The share of employed workers in construction occupations in Iowa is 6.3%.",
+    "Iowa: 6.3",
+    "The share of employed workers in construction occupations in Iowa is 6.3%.",
+    "The share of employed workers in construction occupations in Iowa is 6.3%.",
+    "Iowa: 6.3",
+    "Iowa: 6.3",
+    "The share of employed workers in construction occupations in Iowa is 6.3%."
+   ]
+  },
+  "10080": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "Nevada: 7.2",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "Nevada: 7.2",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "Nevada: 7.2",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "Nevada: 7.2",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "Nevada: 7.2"
+   ]
+  },
+  "10081": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3",
+    "Maine: 6.3"
+   ]
+  },
+  "10082": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 5.8%.",
+    "Oregon: 5.8",
+    "The share of employed workers in construction occupations in Oregon is 5.8%.",
+    "The share of employed workers in construction occupations in Oregon is 5.8%.",
+    "Oregon: 5.8",
+    "The share of employed workers in construction occupations in Oregon is 5.8%.",
+    "The share of employed workers in construction occupations in Oregon is 5.8%.",
+    "The share of employed workers in construction occupations in Oregon is 5.8%.",
+    "Oregon: 5.8",
+    "The share of employed workers in construction occupations in Oregon is 5.8%."
+   ]
+  },
+  "10083": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 11.0",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "Kansas: 11.0",
+    "Kansas: 11.0",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "Kansas: 11.0",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "Kansas: 11.0",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "The share of employed workers in construction occupations in Kansas is 11.0%.",
+    "Kansas: 11.0"
+   ]
+  },
+  "10084": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is 6.3%.",
+    "The share of employed workers in construction occupations in Montana is 6.3%.",
+    "Montana: 6.3",
+    "The share of employed workers in construction occupations in Montana is 6.3%.",
+    "The share of employed workers in construction occupations in Montana is 6.3%.",
+    "Montana: 6.3",
+    "The share of employed workers in construction occupations in Montana is 6.3%.",
+    "Montana: 6.3",
+    "The share of employed workers in construction occupations in Montana is 6.3%."
+   ]
+  },
+  "10085": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "Vermont: 11.5",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%.",
+    "The share of employed workers in construction occupations in Vermont is 11.5%."
+   ]
+  },
+  "10086": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%.",
+    "The share of employed workers in construction occupations in Nevada is 6.6%."
+   ]
+  },
+  "10087": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 9.3",
+    "Arizona: 9.3",
+    "Arizona: 9.3",
+    "Arizona: 9.3",
+    "Arizona: 9.3",
+    "Arizona: 9.3",
+    "Arizona: 9.3",
+    "Arizona: 9.3"
+   ]
+  },
+  "10088": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 7.4%.",
+    "The share of employed workers in construction occupations in Oregon is 7.4%."
+   ]
+  },
+  "10089": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 7.8%.",
+    "The share of employed workers in construction occupations in Oregon is 7.8%.",
+    "The share of employed workers in construction occupations in Oregon is 7.8%.",
+    "The share of employed workers in construction occupations in Oregon is 7.8%.",
+    "The share of employed workers in construction occupations in Oregon is 7.8%.",
+    "The share of employed workers in construction occupations in Oregon is 7.8%.",
+    "Oregon: 7.8",
+    "The share of employed workers in construction occupations in Oregon is 7.8%."
+   ]
+  },
+  "10090": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 11.5",
+    "Arizona: 11.5",
+    "Arizona: 11.5",
+    "Arizona: 11.5",
+    "Arizona: 11.5",
+    "Arizona: 11.5",
+    "Arizona: 11.5"
+   ]
+  },
+  "10091": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is 10.7%.",
+    "Utah: 10.7",
+    "The share of employed workers in construction occupations in Utah is 10.7%.",
+    "Utah: 10.7",
+    "Utah: 10.7",
+    "The share of employed workers in construction occupations in Utah is 10.7%.",
+    "The share of employed workers in construction occupations in Utah is 10.7%.",
+    "The share of employed workers in construction occupations in Utah is 10.7%.",
+    "Utah: 10.7",
+    "The share of employed workers in construction occupations in Utah is 10.7%.",
+    "Utah: 10.7",
+    "The share of employed workers in construction occupations in Utah is 10.7%.",
+    "The share of employed workers in construction occupations in Utah is 10.7%."
+   ]
+  },
+  "10092": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5",
+    "Kansas: 9.5"
+   ]
+  },
+  "10093": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 8.4%.",
+    "Nevada: 8.4",
+    "Nevada: 8.4",
+    "The share of employed workers in construction occupations in Nevada is 8.4%.",
+    "The share of employed workers in construction occupations in Nevada is 8.4%.",
+    "Nevada: 8.4"
+   ]
+  },
+  "10094": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8",
+    "Alabama: 6.8"
+   ]
+  },
+  "10095": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is 5.7%.",
+    "The share of employed workers in construction occupations in Oregon is 5.7%.",
+    "The share of employed workers in construction occupations in Oregon is 5.7%.",
+    "The share of employed workers in construction occupations in Oregon is 5.7%.",
+    "The share of employed workers in construction occupations in Oregon is 5.7%.",
+    "The share of employed workers in construction occupations in Oregon is 5.7%.",
+    "The share of employed workers in construction occupations in Oregon is 5.7%."
+   ]
+  },
+  "10096": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "The share of employed workers in construction occupations in Iowa is 10.5%.",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5",
+    "Iowa: 10.5"
+   ]
+  },
+  "10097": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "Nevada: 7.2",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "Nevada: 7.2",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "Nevada: 7.2",
+    "The share of employed workers in construction occupations in Nevada is 7.2%.",
+    "The share of employed workers in construction occupations in Nevada is 7.2%."
+   ]
+  },
+  "10098": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5",
+    "Arizona: 4.5"
+   ]
+  },
+  "10099": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "Utah: 9.5",
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "Utah: 9.5",
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "Utah: 9.5",
+    "Utah: 9.5",
+    "Utah: 9.5",
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "Utah: 9.5",
+    "The share of employed workers in construction occupations in Utah is 9.5%.",
+    "The share of employed workers in construction occupations in Utah is 9.5%."
+   ]
+  }
+ }
+}

@@ -1,0 +1,519 @@
+{
+ "observational": {
+  "gemma-3-27b": {
+   "sizes": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+   ],
+   "late_holders": 9500,
+   "per_doubling_answers": 0.04544474105645645,
+   "per_doubling_answers_ci": [
+    -0.005997384156217131,
+    0.10030810536681323
+   ],
+   "per_doubling_requests": 0.09169932290554877,
+   "per_doubling_requests_ci": [
+    0.06654837461252774,
+    0.11576206937131947
+   ],
+   "correlation": 0.8465156208349294,
+   "n64_split": {
+    "answers outnumber requests": {
+     "late_holders": 232,
+     "median_notes": 21.0,
+     "main_title": 0.27586206896551724,
+     "post2": 0.38362068965517243
+    },
+    "otherwise": {
+     "late_holders": 2968,
+     "median_notes": 49.0,
+     "main_title": 0.967654986522911,
+     "post2": 0.6755390835579514
+    }
+   }
+  },
+  "qwen3-8b": {
+   "sizes": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+   ],
+   "late_holders": 9500,
+   "per_doubling_answers": 0.011207463076895685,
+   "per_doubling_answers_ci": [
+    -0.011380862042823292,
+    0.03265642238014976
+   ],
+   "per_doubling_requests": 0.00661703334470912,
+   "per_doubling_requests_ci": [
+    -0.009419674830721042,
+    0.022765408529804344
+   ],
+   "correlation": 0.8313291158788176,
+   "n64_split": {
+    "answers outnumber requests": {
+     "late_holders": 994,
+     "median_notes": 16.0,
+     "main_title": 0.5030181086519114,
+     "post2": 0.7917505030181087
+    },
+    "otherwise": {
+     "late_holders": 2206,
+     "median_notes": 16.0,
+     "main_title": 0.4968268359020852,
+     "post2": 0.8037171350861287
+    }
+   }
+  }
+ },
+ "models": {
+  "gemma-3-27b": {
+   "arms": {
+    "nothing": {
+     "games": 300,
+     "treated": 272,
+     "post2": 0.1875,
+     "post2_ci": [
+      0.14388489208633093,
+      0.23344947735191637
+     ],
+     "post2_all": 0.18666666666666668,
+     "post4": 0.1875,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.0
+    },
+    "answers_q1": {
+     "games": 300,
+     "treated": 274,
+     "post2": 0.4197080291970803,
+     "post2_ci": [
+      0.34532374100719426,
+      0.5
+     ],
+     "post2_all": 0.39666666666666667,
+     "post4": 0.40875912408759124,
+     "took_plant": 1.0,
+     "bare_share_of_posts": 0.0
+    },
+    "answers_other_state": {
+     "games": 591,
+     "treated": 537,
+     "post2": 0.6499068901303539,
+     "post2_ci": [
+      0.5788497217068646,
+      0.7186932849364791
+     ],
+     "post2_all": 0.6091370558375635,
+     "post4": 0.6443202979515829,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.0
+    },
+    "answers_unasked": {
+     "games": 300,
+     "treated": 273,
+     "post2": 0.6666666666666666,
+     "post2_ci": [
+      0.5946969696969697,
+      0.7355072463768116
+     ],
+     "post2_all": 0.6233333333333333,
+     "post4": 0.6556776556776557,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.0
+    },
+    "answers_q3": {
+     "games": 291,
+     "treated": 264,
+     "post2": 0.6325757575757576,
+     "post2_ci": [
+      0.55859375,
+      0.7061068702290076
+     ],
+     "post2_all": 0.5945017182130584,
+     "post4": 0.6325757575757576,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.0
+    },
+    "answers_q1_other": {
+     "games": 300,
+     "treated": 274,
+     "post2": 0.12773722627737227,
+     "post2_ci": [
+      0.08664259927797834,
+      0.17328519855595667
+     ],
+     "post2_all": 0.13,
+     "post4": 0.12773722627737227,
+     "took_plant": 1.0,
+     "bare_share_of_posts": 0.0
+    },
+    "requests_q1": {
+     "games": 300,
+     "treated": 271,
+     "post2": 0.1033210332103321,
+     "post2_ci": [
+      0.06985294117647059,
+      0.1423076923076923
+     ],
+     "post2_all": 0.11,
+     "post4": 0.1033210332103321,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.0
+    },
+    "requests_q2": {
+     "games": 300,
+     "treated": 274,
+     "post2": 0.8832116788321168,
+     "post2_ci": [
+      0.8333333333333334,
+      0.927536231884058
+     ],
+     "post2_all": 0.8233333333333334,
+     "post4": 0.8613138686131386,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.02066115702479339
+    },
+    "answers_q2": {
+     "games": 288,
+     "treated": 263,
+     "post2": 0.9657794676806084,
+     "post2_ci": [
+      0.9409448818897638,
+      0.9883268482490273
+     ],
+     "post2_all": 0.8993055555555556,
+     "post4": 0.870722433460076,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.0
+    }
+   },
+   "differences": {
+    "answers_q1 - answers_other_state": {
+     "d": -0.23019886093327357,
+     "ci": [
+      -0.2989478114478114,
+      -0.16363354706611344
+     ]
+    },
+    "answers_other_state - nothing": {
+     "d": 0.46240689013035385,
+     "ci": [
+      0.3831445693103398,
+      0.5386320996077094
+     ]
+    },
+    "answers_q1 - answers_q1_other": {
+     "d": 0.291970802919708,
+     "ci": [
+      0.208950016772895,
+      0.3814474641096776
+     ]
+    },
+    "answers_q1 - nothing": {
+     "d": 0.23220802919708028,
+     "ci": [
+      0.156328320802005,
+      0.31636363636363635
+     ]
+    },
+    "answers_unasked - nothing": {
+     "d": 0.47916666666666663,
+     "ci": [
+      0.39925373134328357,
+      0.5558273381294964
+     ]
+    },
+    "answers_q1 - answers_unasked": {
+     "d": -0.24695863746958635,
+     "ci": [
+      -0.3190661478599222,
+      -0.17680159256801592
+     ]
+    },
+    "answers_unasked - answers_q3": {
+     "d": 0.03409090909090906,
+     "ci": [
+      -0.016228195596225348,
+      0.08244179564097798
+     ]
+    },
+    "answers_q3 - answers_unasked (post4)": {
+     "d": -0.02310189810189811,
+     "ci": [
+      -0.07499999999999996,
+      0.030618341858668907
+     ]
+    },
+    "requests_q1 - nothing": {
+     "d": -0.0841789667896679,
+     "ci": [
+      -0.13793103448275862,
+      -0.028832686920922224
+     ]
+    },
+    "requests_q2 - nothing": {
+     "d": 0.6957116788321168,
+     "ci": [
+      0.6341792020928712,
+      0.7584151472650771
+     ]
+    },
+    "requests_q2 - requests_q1": {
+     "d": 0.7798906456217847,
+     "ci": [
+      0.7196579679270964,
+      0.8312446816740156
+     ]
+    },
+    "answers_q2 - nothing": {
+     "d": 0.7782794676806084,
+     "ci": [
+      0.7252018936229463,
+      0.828511076630201
+     ]
+    },
+    "answers_other_state - answers_q2": {
+     "d": -0.31587257755025455,
+     "ci": [
+      -0.37806937767961546,
+      -0.25289661319073087
+     ]
+    },
+    "answers_unasked - answers_q2": {
+     "d": -0.2991128010139418,
+     "ci": [
+      -0.3655051946866894,
+      -0.23575369497805154
+     ]
+    }
+   }
+  },
+  "qwen3-8b": {
+   "arms": {
+    "nothing": {
+     "games": 400,
+     "treated": 200,
+     "post2": 0.795,
+     "post2_ci": [
+      0.7303921568627451,
+      0.8578680203045685
+     ],
+     "post2_all": 0.815,
+     "post4": 0.805,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.006289308176100629
+    },
+    "answers_q1": {
+     "games": 400,
+     "treated": 195,
+     "post2": 0.5897435897435898,
+     "post2_ci": [
+      0.49732620320855614,
+      0.680628272251309
+     ],
+     "post2_all": 0.705,
+     "post4": 0.6051282051282051,
+     "took_plant": 0.9846153846153847,
+     "bare_share_of_posts": 0.008695652173913044
+    },
+    "answers_unasked": {
+     "games": 400,
+     "treated": 197,
+     "post2": 0.8274111675126904,
+     "post2_ci": [
+      0.7602040816326531,
+      0.8861386138613861
+     ],
+     "post2_all": 0.83,
+     "post4": 0.8375634517766497,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.006134969325153374
+    },
+    "requests_q1": {
+     "games": 400,
+     "treated": 198,
+     "post2": 0.8686868686868687,
+     "post2_ci": [
+      0.8109452736318408,
+      0.9205607476635514
+     ],
+     "post2_all": 0.855,
+     "post4": 0.8787878787878788,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.011627906976744186
+    },
+    "requests_q2": {
+     "games": 400,
+     "treated": 198,
+     "post2": 0.4797979797979798,
+     "post2_ci": [
+      0.38497652582159625,
+      0.5728643216080402
+     ],
+     "post2_all": 0.665,
+     "post4": 0.6868686868686869,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.010526315789473684
+    },
+    "answers_q2": {
+     "games": 384,
+     "treated": 188,
+     "post2": 0.9361702127659575,
+     "post2_ci": [
+      0.8877005347593583,
+      0.9735449735449735
+     ],
+     "post2_all": 0.8828125,
+     "post4": 0.9414893617021277,
+     "took_plant": 0.0,
+     "bare_share_of_posts": 0.005681818181818182
+    }
+   },
+   "differences": {
+    "requests_q2 - requests_q1": {
+     "d": -0.38888888888888895,
+     "ci": [
+      -0.48395551301335515,
+      -0.3013590118078075
+     ]
+    },
+    "nothing - answers_q2": {
+     "d": -0.14117021276595743,
+     "ci": [
+      -0.2021605352968049,
+      -0.0795635037355138
+     ]
+    },
+    "answers_unasked - answers_q2": {
+     "d": -0.10875904525326707,
+     "ci": [
+      -0.1712813413321027,
+      -0.05650813516896125
+     ]
+    },
+    "answers_q1 - nothing": {
+     "d": -0.20525641025641028,
+     "ci": [
+      -0.29021769082391846,
+      -0.12265668191184598
+     ]
+    },
+    "answers_unasked - nothing": {
+     "d": 0.03241116751269035,
+     "ci": [
+      -0.02398800599700157,
+      0.08667763157894737
+     ]
+    },
+    "answers_q1 - answers_unasked": {
+     "d": -0.23766757776910064,
+     "ci": [
+      -0.3169398907103825,
+      -0.16274744254018858
+     ]
+    },
+    "requests_q1 - nothing": {
+     "d": 0.07368686868686869,
+     "ci": [
+      0.017799352750809128,
+      0.1311389759665621
+     ]
+    },
+    "requests_q2 - nothing": {
+     "d": -0.31520202020202026,
+     "ci": [
+      -0.4055204140310524,
+      -0.22374855426820606
+     ]
+    },
+    "answers_q2 - nothing": {
+     "d": 0.14117021276595743,
+     "ci": [
+      0.07868622112935808,
+      0.20203703703703713
+     ]
+    }
+   }
+  }
+ },
+ "registered": {
+  "a": {
+   "test": "reciprocity: answers that help the late holder in round 1 raise posting more than the same answers about another state",
+   "sides": 1,
+   "d": -0.23019886093327357,
+   "ci": [
+    -0.2989478114478114,
+    -0.16363354706611344
+   ],
+   "met": false
+  },
+  "b": {
+   "test": "norm: answers that do not help the late holder still raise posting",
+   "sides": 1,
+   "d": 0.46240689013035385,
+   "ci": [
+    0.3831445693103398,
+    0.5386320996077094
+   ],
+   "met": true
+  },
+  "c": {
+   "test": "wording: answers to question 1 in Gemma's own words and as bare numbers differ",
+   "sides": 2,
+   "d": 0.291970802919708,
+   "ci": [
+    0.208950016772895,
+    0.3814474641096776
+   ],
+   "met": true
+  },
+  "d": {
+   "test": "targeted demand: requests for the late holder's own question raise posting more than requests for question 1",
+   "sides": 1,
+   "d": -0.38888888888888895,
+   "ci": [
+    -0.48395551301335515,
+    -0.3013590118078075
+   ],
+   "met": false
+  },
+  "e": {
+   "test": "redundancy: the late holder's own answer, already on the page, lowers posting",
+   "sides": 1,
+   "d": -0.14117021276595743,
+   "ci": [
+    -0.2021605352968049,
+    -0.0795635037355138
+   ],
+   "met": false
+  },
+  "f": {
+   "test": "redundancy of its own answer: its own answer lowers posting more than the same answers about another state",
+   "sides": 1,
+   "d": -0.10875904525326707,
+   "ci": [
+    -0.1712813413321027,
+    -0.05650813516896125
+   ],
+   "met": false
+  }
+ },
+ "between_models": {
+  "answers_q2 - nothing, Gemma minus Qwen3-8B": {
+   "d": 0.637109254914651,
+   "ci": [
+    0.5622089648140475,
+    0.7100513080771319
+   ]
+  }
+ }
+}

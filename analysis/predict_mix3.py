@@ -32,7 +32,7 @@ OUT = (_D or HERE) / "predictions_mix3.md"
 JOUT = (_D or HERE / "out") / "predictions_mix3.json"
 if OUT.exists() or JOUT.exists():
     raise SystemExit(f"{OUT.name} exists; it is the registered version. Move it away to recompute.")
-from paths import ROOT, SCALING, STAGE1, RES, RUNS  # noqa: E402
+from paths import ROOT, SCALING, STAGE1, RES  # noqa: E402
 H = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else SCALING
 HACK_COMMIT = subprocess.run(["git", "-C", str(H), "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
 sys.path.insert(0, str(H / "scripts"))
@@ -90,7 +90,7 @@ def measured_cr(path, n=16):
 PURE = {m: measured_cr(p) for m, p in PURE16.items()}
 
 # --------------------------------------------------------------------------------------- prediction from pairs (ykazemi)
-rows = load(H / "results", [RUNS / "swarm4round"])
+rows = load(H / "results", [H.parent / "wiki_game" / "data" / "swarm4round"])
 base_rows = []
 for m in pm.MODELS:
     cm = cells(rows, m, fixed())

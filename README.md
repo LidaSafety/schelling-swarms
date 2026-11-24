@@ -13,7 +13,8 @@ typed into its source; each of those numbers comes from one of the write-ups in 
 | `scaling/results/` | Stage-1 runs (Qwen3-8B and Gemma 3 27B at N = 2-32, the size comparison, the mixes of two models) and the later tests (planted notes and pages, the rule's halves, DeepSeek V4.1 Flash with 64 copies, the twin wording) |
 | `scaling/aaai/`, `scaling/aaai_or/`, `scaling/aaai_claude/` | Runs made for this paper: N = 64 and 128, Gemma alone at N = 16-128, the N = 16 mixes, the rule ablation, the capability quiz, and the models reached through OpenRouter and the Anthropic API |
 | `scaling/aaai_pilots/` | Two-game pilots of the OpenRouter and Claude runs, made to check settings before the full runs. Nothing in the paper uses them, and `run_all.sh` does not read them |
-| `runs/` | Six run folders kept apart from `scaling/`; `runs/README.md` says why |
+| `wiki_game/data/swarm4round/` | Qwen3-4B, 14B and 32B at N = 2-32 and Qwen3-8B reruns, all with 2 answers per copy (pod A). Kept at the path the hackathon repository uses, which several of its scripts expect |
+| `runs/` | Five run folders kept apart from `scaling/`, and the scripts that launched the runs (`runs/launch/`); `runs/README.md` says why |
 | `analysis/` | The scripts that write the paper's numbers, their write-ups (`*.md`) and machine-readable output (`out/`) |
 
 Each run folder holds `summary.json` and `raw/<model>.jsonl.gz`: one record per game, with every model call, the pages
@@ -28,7 +29,8 @@ bash analysis/run_all.sh
 ```
 
 It reruns every script in order and compares each write-up with the version the paper was written from
-(`analysis/expected/`). On 23 November 2026 every write-up was reproduced byte for byte. There were three expected
+(`analysis/expected/`). It then reruns the hackathon repository's own scripts and compares each JSON file they write
+with the committed one in `scaling/results/`. On 23 November 2026 every write-up was reproduced byte for byte. There were three expected
 exceptions:
 
 - `predictions_mix3.md`, recomputed, names a different commit of the code it imports, because it reads that hash from
@@ -55,7 +57,9 @@ exceptions:
 | tab:gram; title coverage | `mixtures.md`, `coverage.md` | `mixtures.py`, `coverage.py` |
 | fig:simplex, app:mix | `predictions_mix3.md`, `results_mix3.md`, `fig14_points.md` | `predict_mix3.py`, `score_mix3.py`, `fig14_points.py` |
 | The planted note (sec:misses); registered forecasts at N = 64 and 128 | `predictions_pod5.md`, `results_pod5.md` | `fuller.py`, `predict_pod5.py`, `score_pod5.py` |
-| fig:precedent, tab:precedent, tab:deepseek, tab:twin, tab:rulehalves, tab:registered | `scaling_tests.md` | `scaling/scripts/analyze_{ablations,plant,transplant,twin}.py` |
+| DeepSeek seekers' use by the most common value on the page (sec:misses) | `agreement.md` | `agreement.py` |
+| Green text: fig:precedent, tab:precedent, tab:pagecontent, tab:deepseek, tab:twin, tab:twinpage, tab:rulehalves, tab:registered | `scaling_tests.md` | `scaling/scripts/analyze_{ablations,plant,transplant,twin,page_content,twin_page}.py` |
+| Gemma's posting by notes read, the filler runs (sec:misses) | `scaling/README.md` items 16-17 | `scaling/scripts/analyze_posting.py`, `holders_seekers.py` |
 
 ## Registered forecasts
 
@@ -67,6 +71,6 @@ The forecasts in `scaling/results/predictions_*.md` were registered the same way
 
 - Benchmark: LidaSafety/schelling-collusion-benchmark, commit 2e0160d (branch `mixed-3way`), which contains the branches
   `wiki-game`, `mixed-n16` and `claude-api`.
-- `scaling/`: LidaSafety/Swarm_schelling_hackathon, `scaling/` at `main` 4a92b03, with the result folders of branch
-  `aaai` (ba7ee33) in `scaling/aaai*`.
-- `runs/swarm4round`: the same repository, `wiki_game/data/swarm4round/`.
+- `scaling/`: LidaSafety/Swarm_schelling_hackathon, `scaling/` at branch `scaling` a3709a3 (its `main`, 4a92b03, plus
+  the page-content and twin-page tests), with the result folders of branch `aaai` (ba7ee33) in `scaling/aaai*`.
+- `wiki_game/data/swarm4round`: the same repository, the same path.

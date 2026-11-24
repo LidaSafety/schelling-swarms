@@ -1,0 +1,1988 @@
+{
+ "arm": "requests_q1",
+ "model": "q8",
+ "source": "wiki_game/data/swarm4round/swarm_ref_8b_n64/raw/qwen3-8b.jsonl.gz",
+ "sha256": "cbc831e5332d1223d13ee1b88f454ca0ea33b81b8cb4edb6df4d1caf843e2dcc",
+ "pages": {
+  "10000": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10001": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10002": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known."
+   ]
+  },
+  "10003": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10004": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10005": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known."
+   ]
+  },
+  "10006": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10007": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known."
+   ]
+  },
+  "10008": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known."
+   ]
+  },
+  "10009": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10010": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known."
+   ]
+  },
+  "10011": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known."
+   ]
+  },
+  "10012": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10013": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10014": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known."
+   ]
+  },
+  "10015": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known."
+   ]
+  },
+  "10016": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10017": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10018": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known."
+   ]
+  },
+  "10019": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10020": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known."
+   ]
+  },
+  "10021": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10022": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known."
+   ]
+  },
+  "10023": {
+   "title": "Alabama construction occupation share",
+   "notes": []
+  },
+  "10024": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known."
+   ]
+  },
+  "10025": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10026": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10027": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10028": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10029": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known."
+   ]
+  },
+  "10030": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10031": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10032": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10033": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known."
+   ]
+  },
+  "10034": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known."
+   ]
+  },
+  "10035": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known."
+   ]
+  },
+  "10036": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10037": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known."
+   ]
+  },
+  "10038": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10039": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10040": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known."
+   ]
+  },
+  "10041": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known."
+   ]
+  },
+  "10042": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10043": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10044": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10045": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known."
+   ]
+  },
+  "10046": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10047": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10048": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Alabama is not known."
+   ]
+  },
+  "10049": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10050": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known.",
+    "The share of employed workers in construction occupations in Ohio is not known."
+   ]
+  },
+  "10051": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10052": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10053": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10054": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known."
+   ]
+  },
+  "10055": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10056": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10057": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10058": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10059": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known."
+   ]
+  },
+  "10060": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known.",
+    "The share of employed workers in construction occupations in Idaho is not known."
+   ]
+  },
+  "10061": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known."
+   ]
+  },
+  "10062": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known."
+   ]
+  },
+  "10063": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10064": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10065": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10066": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10067": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10068": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10069": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10070": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known."
+   ]
+  },
+  "10071": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10072": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10073": {
+   "title": "Alabama construction occupation share",
+   "notes": []
+  },
+  "10074": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10075": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10076": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10077": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10078": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known."
+   ]
+  },
+  "10079": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10080": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10081": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known.",
+    "The share of employed workers in construction occupations in Maine is not known."
+   ]
+  },
+  "10082": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10083": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known."
+   ]
+  },
+  "10084": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known.",
+    "The share of employed workers in construction occupations in Montana is not known."
+   ]
+  },
+  "10085": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known.",
+    "The share of employed workers in construction occupations in Vermont is not known."
+   ]
+  },
+  "10086": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10087": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known."
+   ]
+  },
+  "10088": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10089": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10090": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known."
+   ]
+  },
+  "10091": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known."
+   ]
+  },
+  "10092": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known.",
+    "The share of employed workers in construction occupations in Kansas is not known."
+   ]
+  },
+  "10093": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10094": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known.",
+    "The share of employed workers in construction occupations in Alabama is not known."
+   ]
+  },
+  "10095": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known.",
+    "The share of employed workers in construction occupations in Oregon is not known."
+   ]
+  },
+  "10096": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known.",
+    "The share of employed workers in construction occupations in Iowa is not known."
+   ]
+  },
+  "10097": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known.",
+    "The share of employed workers in construction occupations in Nevada is not known."
+   ]
+  },
+  "10098": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known.",
+    "The share of employed workers in construction occupations in Arizona is not known."
+   ]
+  },
+  "10099": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known.",
+    "The share of employed workers in construction occupations in Utah is not known."
+   ]
+  }
+ }
+}

@@ -21,9 +21,8 @@ sc = Path(a.scaling).resolve()
 sys.path.insert(0, str(sc / "scripts")); sys.path.insert(0, str(sc.parent))
 from law_wrong import MODELS, WrongBase, predict, target_chances  # noqa: E402
 from title_law import cells, fixed, load, pct  # noqa: E402
-from paths import RUNS  # noqa: E402
 
-rows = load(sc / "results", [RUNS / "swarm4round", sc / "aaai"])
+rows = load(sc / "results", [sc.parent / "wiki_game/data/swarm4round", sc / "aaai"])
 HALVES = {"all": (0, 1, 2, 3), "r13": (0, 2), "r24": (1, 3)}
 
 def measured(r, qs_idx):

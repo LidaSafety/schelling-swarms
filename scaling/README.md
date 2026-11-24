@@ -192,6 +192,38 @@ says other copies exist); the aware and twin texts say they do.
     pages with 20 or more answers give 59.6% and pages with fewer 31.6%, while more requests add nothing (29.9% and
     29.0%). Precedent in Gemma is thus mostly the answers other copies posted, with requests adding a little; these
     real answers did more than item 19's in Gemma's usual wording (31.9% with 32).
+26. **What on a crowded page makes a late holder post depends on the model: Gemma follows other copies' answers,
+    whatever they are for; Qwen3-8B repeats what the page says about its own answer.** Item 25 left two questions,
+    which the paper lists as future work: why answers count for more than requests in Gemma, and why planted answers
+    do not raise posting in Qwen3-8B. Here pairs of each model find, on their usual round-1 title, notes built from
+    their own 64-copy game with the same quiz: answers to question 1, the same answers about another state, those
+    answers as bare numbers, requests for question 1 or for the late holder's own question 2, or answers to question 2
+    (the `plant_content` tags, registered in `results/predictions_page_content.md`; 4,800 games). Gemma 3 27B's late
+    holders that read the page post their round-2 answer in round 2 18.8% [14.4, 23.3] of the time with nothing
+    planted, 42.0% with answers to question 1 and 65.0% with the same answers about another state. So other copies'
+    answers raise posting whatever they are for (test (b), +46.2 [38.3, 53.9] points), and not by helping the late
+    holder, since helpful answers raise it less (test (a) reversed, −23.0 [−29.9, −16.4]). Wording matters too (test
+    (c)): the same answers as bare numbers ("Iowa: 8.7") give 12.8%, and 30 identical requests for question 1 give
+    10.3%, both below the rate with nothing planted (item 25's real, varied requests gave 29.6%). Notes about the late
+    holder's own question make nearly all of them post: 88.3% after requests for it, 96.6% after its answer. Qwen3-8B
+    (79.5% [73.0, 85.8] with nothing planted) does the opposite of both registered explanations, and tests (d)–(f) are
+    all reversed. Requests for its own answer lower posting to 48.0%, and a third of its late holders then write that
+    the answer is not known, although it is in their notes. Its answer already posted raises posting to 93.6%, and
+    answers to question 1 lower it to 59.0%. Qwen3-8B's late holders repeat what the page says about their own
+    question, where Gemma's supply what the page asks for.
+27. **Being told the swarm is large removes most of the twin text's boost, and a crowded page's answers remove the
+    rest.** In item 24 the twin text raised Gemma's late holders' posting by 30 points with 4 copies and lowered it by
+    11 with 64, but in those runs the number of copies, the number the sentence states and how crowded the page is all
+    grow together. Here 4-copy Gemma swarms with the aware or twin text are told their true size or 64 copies (`swarm
+    --stated-n`, `patches/stated-size-runner.patch`), and, told 64, find nothing or one of item 25's pages on their
+    usual title (the `plant_twin` tags, registered in `results/predictions_twin_page.md`; 2,000 games). The twin
+    effect on late holders' posting is +21.0 [14.3, 28.0] points with the true size (test (a)), +4.8 [−0.8, 10.5]
+    when told 64 with nothing planted (test (b): −16.2 [−24.5, −7.7]), and −3.1 [−9.2, 3.0] with the 64-copy page
+    (test (c): −8.0 [−15.4, −0.9]). The page's answers alone give −6.5 [−13.1, 0.2] (test (d)), its requests alone
+    +8.8 [2.3, 15.0] (test (e) not met). Told 64 and shown the 64-copy page, the 4-copy swarms post about as the
+    64-copy swarm does (60.7% and 57.6% with the aware and twin texts, against 63.9% and 52.7%). Gemma's twin boost
+    fades in large swarms mainly because the sentence then speaks of many copies, and other copies' answers on the
+    page override what is left.
 
 [docs/findings.html](docs/findings.html) has the details, tables and limits.
 
@@ -216,6 +248,11 @@ says other copies exist); the aware and twin texts say they do.
 | `scripts/make_transplant_pages.py` | The pages of the transplant test (registered in `results/predictions_transplant.md`): Gemma's round-1 pages with 32 and 64 copies from the `aaai` branch, and each kind of note on its own, as files the runner plants (`results/transplant/`) |
 | `scripts/run_transplant_pairs.sh` | That test's runs: Gemma pairs with each page, or none, on the usual title before round 1 |
 | `scripts/analyze_transplant.py` | How often late holders post after reading a planted page, per arm, scored against `results/predictions_transplant.md` (item 25); with `--source`, the swarm rates it compares with |
+| `scripts/make_content_pages.py` | The pages of the page-content test (registered in `results/predictions_page_content.md`): from each model's 64-copy game with the same quiz, answers to question 1, 2 or 3, about a state nobody is asked or as bare numbers, and requests for question 1 or 2, as files the runner plants (`results/page_content/`) |
+| `scripts/run_page_content_pairs.sh` | That test's runs: Gemma or Qwen3-8B pairs with each page, or none, on the usual title before round 1 |
+| `scripts/analyze_page_content.py` | How often late holders post after reading each kind of planted page, per model and arm, scored against `results/predictions_page_content.md`; with `--source`, the observational check it starts from |
+| `scripts/run_twin_page_grid.sh` | The twin-page test's runs (registered in `results/predictions_twin_page.md`): 4-copy Gemma swarms with the aware or twin text, told their true size or 64, and, told 64, nothing or one of item 25's pages before round 1 |
+| `scripts/analyze_twin_page.py` | The twin text's effect on late holders' posting in each of those conditions, scored against `results/predictions_twin_page.md`; with `--reference`, the twin grid's 4- and 64-copy rates by the same definitions |
 | `scripts/run_mixed_grid.sh` | Gemma's 2-copy runs, the mixed-swarm prediction, the mixes, Gemma alone |
 | `scripts/predict_swarm.py` | Predicts any swarm size by replaying recorded copies of smaller runs on one wiki |
 | `scripts/predict_mixed.py` | The same for mixed swarms, from each model's 2-copy runs |
@@ -234,6 +271,7 @@ says other copies exist); the aware and twin texts say they do.
 | `patches/rule-halves-runner.patch` | Adds the rules `share_only` and `use_only`, each half of the rule sentence alone |
 | `patches/twin-text-runner.patch` | Adds `swarm --twin 0 1`: the hackathon runner's twin text, byte for byte (removed from the runner in `107ae64`) |
 | `patches/plant-pages-runner.patch` | Adds `swarm --plant-file`: a recorded page per seed, planted before round 1 like `--plant-notes`; and `--sample-offset`, which plays each seed again with the model resampled |
+| `patches/stated-size-runner.patch` | Adds `swarm --stated-n K`: the aware or twin sentence says the swarm has K copies (K − 1 others), whatever its size; nothing else in the prompt changes |
 | `tests/test_mixed.py` | Tests for the mixed-swarm change and predictor |
 | `results/` | Every run (compressed), summaries, predictions and figures |
 | `docs/findings.html` | The findings page |
@@ -254,8 +292,10 @@ git -C ../../scb-76be3c7 apply "$PWD/patches/filler-count-runner.patch" "$PWD/pa
 git -C ../../scb-76be3c7 apply "$PWD/patches/plant-notes-runner.patch" "$PWD/patches/rule-halves-runner.patch"
 # for the twin test, then also:
 git -C ../../scb-76be3c7 apply "$PWD/patches/twin-text-runner.patch"
-# for the transplant test, then also:
+# for the transplant and page-content tests, then also:
 git -C ../../scb-76be3c7 apply "$PWD/patches/plant-pages-runner.patch"
+# for the twin-page test, then also:
+git -C ../../scb-76be3c7 apply "$PWD/patches/stated-size-runner.patch"
 # a virtual environment in this folder with the runner, matplotlib and pytest
 python3 -m venv .venv && .venv/bin/pip install -e "../../scb-76be3c7[test]" matplotlib
 ```
@@ -353,6 +393,31 @@ python3 scripts/pod.py --model gemma-3-27b down
 .venv/bin/python scripts/analyze_transplant.py results --source aaai   # results/transplant.json
 ```
 
+The page-content test needs the same patch and the same `aaai` folder (Qwen3-8B's source games are in
+`../wiki_game/data/swarm4round`):
+
+```bash
+.venv/bin/python scripts/make_content_pages.py aaai                 # results/page_content/ (already in this folder)
+python3 scripts/pod.py --model gemma-3-27b up && python3 scripts/pod.py --model gemma-3-27b wait 30
+TAG=plant_content_pilot N=2 OFFSETS=0 scripts/run_page_content_pairs.sh gemma-3-27b   # a pilot: 2 games per arm
+scripts/run_page_content_pairs.sh gemma-3-27b                       # tag plant_content_gemma: 8 arms x 300 games
+python3 scripts/pod.py --model gemma-3-27b down
+python3 scripts/pod.py up && python3 scripts/pod.py wait 30         # Qwen3-8B
+scripts/run_page_content_pairs.sh qwen3-8b                          # tag plant_content_q8: 6 arms x 400 games
+python3 scripts/pod.py down
+.venv/bin/python scripts/analyze_page_content.py results --source aaai   # results/page_content.json
+```
+
+The twin-page test needs the stated-size patch, item 25's pages (`results/transplant/`) and the twin grid's runs:
+
+```bash
+python3 scripts/pod.py --model gemma-3-27b up && python3 scripts/pod.py --model gemma-3-27b wait 30
+TAG=plant_twin_pilot N=2 OFFSETS=1 scripts/run_twin_page_grid.sh   # a pilot: 2 games per cell
+scripts/run_twin_page_grid.sh                                      # tags plant_twin_n4 and plant_twin_told64
+python3 scripts/pod.py --model gemma-3-27b down
+.venv/bin/python scripts/analyze_twin_page.py results --reference    # results/twin_page.json
+```
+
 `scripts/pod.py` also reads `POD_CLOUDS` (`SECURE` or `COMMUNITY`: that cloud only), `POD_GPU_COUNT` (the model split
 over that many GPUs) and `POD_START_MIN` (the minutes `wait` gives the container to start, 12 by default; a host that
 has to unpack the image can need more).
@@ -393,6 +458,8 @@ Runs from before the runner renamed its switches carry `hint` and `twin` instead
 | `twin_n2_gemma` … `twin_n64_gemma`, `twinoff_n16_gemma` | Gemma 3 27B with the aware and twin texts in each tag, 2–64 copies; 16 copies without the rule (`twinoff`) |
 | `twin_n64_q8` | The same for Qwen3-8B with 64 copies |
 | `plant_transplant` | Gemma 3 27B pairs with nothing, or a recorded round-1 page (`results/transplant/`), planted before round 1: the 64-copy game's page, its holders' notes, its seekers' notes, the 32-copy game's page; 300 runs per arm (seeds 10000–10099, sample offsets 0–2) |
+| `plant_content_gemma`, `plant_content_q8` | Gemma 3 27B and Qwen3-8B pairs with nothing, or a page built from the model's own 64-copy game (`results/page_content/`), planted before round 1: answers to question 1, 2 or 3, about an unasked state or as bare numbers, and requests for question 1 or 2; 300 Gemma and 400 Qwen3-8B runs per arm (seeds 10000–10099, sample offsets 0–2 and 0–3) |
+| `plant_twin_n4`, `plant_twin_told64` | 4-copy Gemma 3 27B swarms with the aware and twin texts, told their true size (`n4`) or 64 copies (`told64`), and, told 64, nothing or one of item 25's pages planted before round 1; 200 runs per cell (seeds 10000–10099, sample offsets 1–2) |
 
 5,600 runs, about 780,000 model calls; 1 run failed on a network error (8 questions, 32 copies, seed 10030).
 Qwen3-8B ran on vLLM 0.32.0 on an H200 and an H100 NVL; Gemma 3 27B was served from `unsloth/gemma-3-27b-it`, whose
@@ -441,6 +508,13 @@ The `plant_transplant` tag was added on 22 November with `scripts/run_transplant
 model calls, none failed, Gemma 3 27B on vLLM 0.32.0 as before. Like the other planted runs, it is left out of every
 other analysis. Its arm without a plant replays item 19's on seeds 10000–10099 with the same sampling seeds and
 reproduced 47 of the 100 games exactly: the server's sampling is not fully deterministic from one run to the next.
+
+The `plant_content` tags were added on 23 November with `scripts/run_page_content_pairs.sh`, on the runner at
+`76be3c7` with all seven patches, after `results/predictions_page_content.md` was committed: 4,800 runs and 115,200
+model calls, none failed, both models on vLLM 0.32.0 as before. The `plant_twin` tags followed on 23–24 November with
+`scripts/run_twin_page_grid.sh`, on the same runner with `patches/stated-size-runner.patch` added, after
+`results/predictions_twin_page.md` was committed: 2,000 runs and 96,000 model calls, none failed. Like the other
+planted runs, both are left out of every other analysis.
 
 ## Credits
 

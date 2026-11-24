@@ -1,0 +1,10 @@
+# Models for one H200 (141 GB), every model on a single GPU. Names and settings as in configs/models.yaml, except
+# Gemma 3 27B: one GPU instead of two, and served from unsloth's ungated copy of google/gemma-3-27b-it, as in the
+# hackathon's stage 1 (which reports its weights, tokenizer and chat template as byte-identical to Google's).
+#   python scripts/sweep.py --models-file configs/models_h200.yaml --models gemma-3-27b --only wikigame_gemma_small
+models:
+  - {name: qwen3-4b, hf_id: Qwen/Qwen3-4B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 64}
+  - {name: qwen3-8b, hf_id: Qwen/Qwen3-8B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 48}
+  - {name: qwen3-14b, hf_id: Qwen/Qwen3-14B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 48}
+  - {name: qwen3-32b-bf16, hf_id: Qwen/Qwen3-32B, tp: 1, max_len: 16384, extra_body: {chat_template_kwargs: {enable_thinking: false}}, workers: 48}
+  - {name: gemma-3-27b, hf_id: unsloth/gemma-3-27b-it, tp: 1, max_len: 16384, workers: 48}

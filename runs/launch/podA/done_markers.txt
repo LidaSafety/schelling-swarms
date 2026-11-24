@@ -1,0 +1,17 @@
+qwen3-32b-bf16__swarm_ref_32b
+qwen3-32b-bf16__wikigame_models_breadth
+qwen3-32b-bf16__wikigame_models_quiz
+qwen3-32b-bf16__wikigame_models_spread
+qwen3-4b__swarm_ref_4b
+qwen3-4b__wikigame_models_breadth
+qwen3-4b__wikigame_models_quiz
+qwen3-4b__wikigame_models_spread
+qwen3-8b__swarm_ref_8b
+qwen3-8b__swarm_ref_8b_n64
+qwen3-8b__wikigame_control
+qwen3-8b__wikigame_hwcheck
+qwen3-8b__wikigame_quiz
+qwen3-8b__wikigame_quiz_window
+qwen3-8b__wikigame_replay
+qwen3-8b__wikigame_sqrt
+qwen3-8b__wikigame_warning

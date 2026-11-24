@@ -19,7 +19,7 @@ from collections import Counter
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-from paths import ROOT, SCALING, STAGE1, RES, RUNS  # noqa: E402
+from paths import ROOT, SCALING, STAGE1, RES  # noqa: E402
 H = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else SCALING
 sys.path.insert(0, str(H / "scripts"))
 sys.path.insert(0, str(H.parent))
@@ -29,7 +29,7 @@ from predict_swarm import normalize  # noqa: E402
 from scb.io import read_jsonl  # noqa: E402
 from title_law import cells, condition, fixed, load  # noqa: E402
 
-rows = load(H / "results", [RUNS / "swarm4round"])
+rows = load(H / "results", [H.parent / "wiki_game" / "data" / "swarm4round"])
 base_rows = []
 for m in pm.MODELS:
     cm = cells(rows, m, fixed())
