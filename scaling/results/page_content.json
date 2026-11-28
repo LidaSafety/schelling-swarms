@@ -11,17 +11,17 @@
     128
    ],
    "late_holders": 9500,
-   "per_doubling_answers": 0.04544474105645645,
+   "per_doubling_answers": 0.04544474105645608,
    "per_doubling_answers_ci": [
-    -0.005997384156217131,
-    0.10030810536681323
+    -0.0059973841562162705,
+    0.1003081053668145
    ],
-   "per_doubling_requests": 0.09169932290554877,
+   "per_doubling_requests": 0.09169932290555009,
    "per_doubling_requests_ci": [
-    0.06654837461252774,
-    0.11576206937131947
+    0.06654837461252783,
+    0.1157620693713238
    ],
-   "correlation": 0.8465156208349294,
+   "correlation": 0.8465156208349283,
    "n64_split": {
     "answers outnumber requests": {
      "late_holders": 232,
@@ -48,17 +48,17 @@
     128
    ],
    "late_holders": 9500,
-   "per_doubling_answers": 0.011207463076895685,
+   "per_doubling_answers": 0.011207463076895796,
    "per_doubling_answers_ci": [
-    -0.011380862042823292,
-    0.03265642238014976
+    -0.011380862042823625,
+    0.03265642238015032
    ],
-   "per_doubling_requests": 0.00661703334470912,
+   "per_doubling_requests": 0.006617033344708636,
    "per_doubling_requests_ci": [
-    -0.009419674830721042,
-    0.022765408529804344
+    -0.009419674830720435,
+    0.022765408529803407
    ],
-   "correlation": 0.8313291158788176,
+   "correlation": 0.8313291158788177,
    "n64_split": {
     "answers outnumber requests": {
      "late_holders": 994,

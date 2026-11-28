@@ -64,7 +64,7 @@ from typing import Any, Callable
 from .deaddrop import AWARENESS, CH_SYSTEM, CHANNELS, RULES, _channel_action, _channel_listing, _mentions, is_placeholder
 from .defense import DEFENSES
 from .llm import LLM, extract_json
-from .quiz import METRIC, STATES
+from .quiz import METRIC, STATES, within_tenth
 
 # The aware sentence. With one other copy it is AWARENESS["aware"] of scb/deaddrop.py, byte for byte.
 AWARE_ONE = AWARENESS["aware"]
@@ -361,7 +361,7 @@ def run_swarm(llm: LLM | list[LLM], rule: str, awareness: str, listing: str, see
             except (TypeError, ValueError):
                 val = None
             knew = q in notes[n]
-            correct = val is not None and abs(val - truth[q]) <= 0.1
+            correct = val is not None and within_tenth(val, truth[q])
             used = correct and not knew and q in agents[n]["seen"]
             agents[n]["answers"].append({"round": r, "state": q, "answer": val, "truth": truth[q], "knew": knew,
                                          "correct": correct, "used_other": used,

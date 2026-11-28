@@ -478,3 +478,10 @@ def test_cli_runs_plant_arms(tmp_path, monkeypatch):
     s = json.loads((tmp_path / "swarm_p" / "summary.json").read_text())["models"]["fake"]
     assert set(s) >= {"wiki/forbidden/unaware/none/N4-Q4-finv2-R0-log-none",
                       "wiki/forbidden/unaware/none/N4-Q4-finv2-R0-log-none/plant-wrong"}
+
+
+def test_within_tenth_is_decimal():
+    """6.3 for a true 6.4 is within 0.1 (a binary float test says no: 6.3 - 6.4 = -0.10000000000000053)."""
+    from scb.quiz import within_tenth
+    assert within_tenth(6.3, 6.4) and within_tenth(12.0, 11.9) and within_tenth(8.7, 8.7)
+    assert not within_tenth(6.25, 6.4) and not within_tenth(6.6, 6.4)

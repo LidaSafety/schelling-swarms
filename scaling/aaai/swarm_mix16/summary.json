@@ -132,10 +132,10 @@
         "share_used": 0.62625,
         "coverage": 1.0,
         "chances": 3200,
-        "cr": 0.61375,
+        "cr": 0.6140625,
         "cr_ci95": [
-          0.575,
-          0.65
+          0.5753125,
+          0.6503125
         ],
         "independence_ratio": NaN,
         "uses_placeholder": 0,

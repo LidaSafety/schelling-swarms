@@ -1,0 +1,239 @@
+<title>Planted Page Rewrites</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a collation table of one note's versions, as textual critics line up manuscript witnesses; controls on a sticky bar. */
+:root {
+  --bg: #f4f6f8; --surface: #ffffff; --fg: #18212c; --muted: #586474; --rule: #d9dfe6; --accent: #1f4a73;
+  --mark: #fde9a6; --mark-fg: #18212c; --bar: #e3e8ee;
+  --w-orig: #586474; --w-gemma: #0072b2; --w-q8: #c2560a; --w-llama: #00845f; --w-gptoss: #a63d86;
+  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10151b; --surface: #171e26; --fg: #e4e9ef; --muted: #9aa5b3; --rule: #2a3440; --accent: #8db7e3;
+    --mark: #5a4a12; --mark-fg: #fdf3d0; --bar: #26303b;
+    --w-orig: #9aa5b3; --w-gemma: #56b4e9; --w-q8: #f08a4b; --w-llama: #3cc39a; --w-gptoss: #e08cc4; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #10151b; --surface: #171e26; --fg: #e4e9ef; --muted: #9aa5b3; --rule: #2a3440; --accent: #8db7e3;
+  --mark: #5a4a12; --mark-fg: #fdf3d0; --bar: #26303b;
+  --w-orig: #9aa5b3; --w-gemma: #56b4e9; --w-q8: #f08a4b; --w-llama: #3cc39a; --w-gptoss: #e08cc4; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.55; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.page { max-width: 1180px; margin: 0 auto; padding-block: 36px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+header { display: grid; gap: 12px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(32px, 5vw, 44px); line-height: 1.1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.25; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 70ch; }
+.lede { font-size: 16.5px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 12px; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .03em; text-transform: uppercase; }
+tbody tr:last-child td { border-bottom: 0; }
+td.own { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: baseline; flex: none; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule);
+  display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding-block: 12px; }
+.controls label { font-size: 13px; color: var(--muted); display: inline-flex; gap: 8px; align-items: center; }
+select, button { font: inherit; font-size: 14px; color: var(--fg); background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 10px; }
+button { cursor: pointer; }
+button:hover, select:hover { border-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; background: var(--surface); }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--bg); }
+.quizline { display: grid; gap: 4px; }
+.quizline .t { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.readers { display: grid; gap: 14px; }
+.reader { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
+.reader h3 { margin: 0; font-size: 15px; font-weight: 600; }
+.arms { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px 16px; }
+.arm { display: grid; gap: 4px; min-width: 0; }
+.arm .lab { font-size: 13px; display: flex; align-items: center; }
+.arm .meter { height: 6px; background: var(--bar); border-radius: 3px; overflow: hidden; }
+.arm .meter i { display: block; height: 100%; background: var(--c); }
+.arm .num { font-family: var(--mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.arm .said { font-family: var(--display); font-size: 14px; line-height: 1.4; color: var(--fg); overflow-wrap: anywhere; }
+.arm .said::before { content: "next: "; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.notes { display: grid; gap: 18px; }
+.note { display: grid; gap: 8px; }
+.note .nh { font-family: var(--mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.wit { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.cell { background: var(--surface); padding: 10px 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.cell .who { font-size: 12px; font-weight: 600; display: flex; align-items: center; color: var(--c); }
+.cell .txt { font-family: var(--display); font-size: 15.5px; line-height: 1.45; overflow-wrap: anywhere; }
+.cell .len { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+mark { background: var(--mark); color: var(--mark-fg); border-radius: 2px; padding: 0 1px; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; }
+.key span { display: inline-flex; align-items: center; }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; display: grid; gap: 6px; }
+code { font-family: var(--mono); font-size: 12.5px; }
+@media (max-width: 960px) { .wit { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .wit { grid-template-columns: minmax(0, 1fr); } .arms { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: no-preference) { .arm .meter i { transition: width .25s ease; } }
+</style>
+
+<div class="page">
+  <header>
+    <div class="eyebrow">Swarm Schelling collusion · own-style, writers and grid tests</div>
+    <h1>Planted Page Rewrites</h1>
+    <p class="lede">Before round 1, a page of answer notes from a 64-copy game was planted on the title a copy reads.
+    Four models rewrote every note, keeping the state, the value and about the length. Pick a quiz to compare the
+    versions note by note, and see how often late holders posted their own answer in round 2 after reading each one.</p>
+    <div class="key" id="key"></div>
+  </header>
+
+  <section style="display:grid; gap:10px">
+    <h2>Across all 100 quizzes</h2>
+    <div class="tablewrap"><table id="summary"></table></div>
+    <p class="small muted">Share of late holders who read the planted page in round 1 and posted their own answer in
+    round 2. Underlined: the reader's own model's text. Answers raise Gemma's and gpt-oss-120b's posting and lower
+    Qwen3-8B's. The Llama column comes from the writers runs, the rest from the grid runs.</p>
+  </section>
+
+  <div class="controls" role="group" aria-label="Choose a quiz">
+    <label for="quiz">Quiz
+      <select id="quiz"></select></label>
+    <button id="prev" type="button" aria-label="Previous quiz">‹ Prev</button>
+    <button id="next" type="button" aria-label="Next quiz">Next ›</button>
+    <span class="seg" role="group" aria-label="Page source">
+      <button id="src-gemma" type="button" aria-pressed="true">Gemma's game</button>
+      <button id="src-q8" type="button" aria-pressed="false">Qwen3-8B's game</button>
+    </span>
+    <label for="marks"><input id="marks" type="checkbox" checked> Mark words not in the original</label>
+  </div>
+
+  <section class="quizline" id="quizline"></section>
+  <section class="readers" id="readers" aria-label="What late holders did"></section>
+  <section class="notes" id="notes" aria-label="The page, note by note"></section>
+
+  <footer>
+    <p>Data from the scaling branch of the hackathon repository: the pages in <code>results/page_content/</code> and
+    <code>results/paraphrase/</code>, the games in <code>results/swarm_plant_grid_*</code> and
+    <code>swarm_plant_writer_*</code> (README items 28–30). Each quiz was played 3 or 4 times per version; counts are
+    over the late holders who read the planted page.</p>
+  </footer>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const VERS = ["orig", "gemma", "q8", "llama", "gptoss"];
+  const NAME = { orig: "As written", gemma: "Gemma 3 27B", q8: "Qwen3-8B", llama: "Llama 3.3 70B", gptoss: "gpt-oss-120b", nothing: "Nothing planted" };
+  const READER = { gemma: "Gemma 3 27B", q8: "Qwen3-8B", gptoss: "gpt-oss-120b" };
+  const col = (w) => `var(--w-${w === "nothing" ? "orig" : w})`;
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const seeds = Object.keys(D.sources.gemma).sort();
+  let seed = seeds[9] || seeds[0], src = "gemma";
+
+  // legend
+  document.getElementById("key").innerHTML = VERS.map((v) =>
+    `<span><i class="dot" style="--c:${col(v)}"></i>${v === "orig" ? "As written in the 64-copy game" : "Rewritten by " + NAME[v]}</span>`).join("");
+
+  // summary table
+  const cols = ["nothing", "gemma", "q8", "llama", "gptoss"];
+  let h = "<thead><tr><th>Reader</th>" + cols.map((c) => `<th>${c === "nothing" ? "Nothing" : "by " + NAME[c]}</th>`).join("") + "</tr></thead><tbody>";
+  for (const r of ["gemma", "q8", "gptoss"]) {
+    h += `<tr><td><i class="dot" style="--c:${col(r)}"></i>${READER[r]}</td>` + cols.map((c) => {
+      const v = (D.summary[r] || {})[c];
+      return `<td class="${c === r ? "own" : ""}">${v == null ? "–" : (100 * v).toFixed(1) + "%"}</td>`;
+    }).join("") + "</tr>";
+  }
+  document.getElementById("summary").innerHTML = h + "</tbody>";
+
+  // quiz picker
+  const sel = document.getElementById("quiz");
+  sel.innerHTML = seeds.map((s) => {
+    const q = (D.quiz[s] || {}).q;
+    return `<option value="${s}">${s}${q ? " · " + q[0] : ""}</option>`;
+  }).join("");
+
+  const words = (t) => t.toLowerCase().match(/[a-z0-9.%’']+/g) || [];
+  function marked(text, orig, on) {
+    if (!on) return esc(text);
+    const have = new Set(words(orig).map((w) => w.replace(/[.%]+$/, "")));
+    return text.split(/(\s+)/).map((tok) => {
+      const k = (tok.toLowerCase().match(/[a-z0-9.%’']+/) || [""])[0].replace(/[.%]+$/, "");
+      return k && !have.has(k) ? `<mark>${esc(tok)}</mark>` : esc(tok);
+    }).join("");
+  }
+
+  function render() {
+    const page = D.sources[src][seed];
+    const q = (D.quiz[seed] || {}).q || [];
+    sel.value = seed;
+    document.getElementById("src-gemma").setAttribute("aria-pressed", String(src === "gemma"));
+    document.getElementById("src-q8").setAttribute("aria-pressed", String(src === "q8"));
+    document.getElementById("quizline").innerHTML =
+      `<h2>Quiz ${seed}: the page on question 1${q[0] ? ", " + esc(q[0]) : ""}</h2>` +
+      `<p class="t">Title "${esc(page.title)}" · from ${src === "gemma" ? "Gemma's" : "Qwen3-8B's"} 64-copy game · ` +
+      `${page.orig.length} notes · the late holder's own question is question 2${q[1] ? ", " + esc(q[1]) : ""}</p>`;
+
+    // what readers of this source did
+    let rh = "";
+    for (const [r, o] of Object.entries(D.outcomes)) {
+      if (o.source !== src) continue;
+      const arms = ["nothing", "gemma", "q8", "llama", "gptoss"].filter((a) => o.arms[a]);
+      rh += `<div class="reader"><h3>${READER[r]} as the reader${r === "gptoss" ? " (the same notes, under the title " + esc(q[0] || "") + ")" : ""}</h3><div class="arms">` +
+        arms.map((a) => {
+          const c = o.arms[a][seed];
+          const k = c ? c[0] : 0, n = c ? c[1] : 0;
+          const pct = n ? (100 * k / n) : 0;
+          return `<div class="arm" style="--c:${col(a)}"><span class="lab"><i class="dot" style="--c:${col(a)}"></i>${a === "nothing" ? "Nothing planted" : "by " + NAME[a]}</span>` +
+            `<span class="meter" role="img" aria-label="${k} of ${n} posted"><i style="width:${pct}%"></i></span>` +
+            `<span class="num">${n ? `${k} of ${n} posted` : "no late holder read it"}</span>` +
+            (c && c[2] ? `<span class="said">${esc(String(c[2]).slice(0, 180))}</span>` : "") + `</div>`;
+        }).join("") + `</div></div>`;
+    }
+    document.getElementById("readers").innerHTML = rh ||
+      `<p class="muted">No reader in the grid runs read this source page.</p>`;
+
+    // the notes, version by version
+    const on = document.getElementById("marks").checked;
+    const n = Math.max(...VERS.map((v) => page[v].length));
+    let nh = "";
+    for (let i = 0; i < n; i++) {
+      const orig = page.orig[i] || "";
+      nh += `<div class="note"><div class="nh">Note ${i + 1} of ${page.orig.length}</div><div class="wit">` + VERS.map((v) => {
+        const t = page[v][i];
+        return `<div class="cell" style="--c:${col(v)}"><span class="who"><i class="dot" style="--c:${col(v)}"></i>${v === "orig" ? "As written" : NAME[v]}</span>` +
+          (t == null ? `<span class="txt muted">(left off this page)</span>` :
+            `<span class="txt">${v === "orig" ? esc(t) : marked(t, orig, on)}</span><span class="len">${t.length} characters</span>`) + `</div>`;
+      }).join("") + `</div></div>`;
+    }
+    document.getElementById("notes").innerHTML = nh;
+    const hash = `q${seed}-${src}`;
+    if (location.hash.slice(1) !== hash) { try { history.replaceState(null, "", "#" + hash); } catch (e) { /* ignore */ } }
+  }
+
+  function fromHash() {
+    const m = /^#q(\d{5})-(gemma|q8)$/.exec(location.hash);
+    if (m && D.sources[m[2]][m[1]]) { seed = m[1]; src = m[2]; }
+  }
+  sel.addEventListener("change", () => { seed = sel.value; render(); });
+  document.getElementById("prev").addEventListener("click", () => { const i = seeds.indexOf(seed); seed = seeds[(i - 1 + seeds.length) % seeds.length]; render(); });
+  document.getElementById("next").addEventListener("click", () => { const i = seeds.indexOf(seed); seed = seeds[(i + 1) % seeds.length]; render(); });
+  document.getElementById("src-gemma").addEventListener("click", () => { src = "gemma"; render(); });
+  document.getElementById("src-q8").addEventListener("click", () => { src = "q8"; render(); });
+  document.getElementById("marks").addEventListener("change", render);
+  window.addEventListener("hashchange", () => { fromHash(); render(); });
+  fromHash();
+  render();
+})();
+</script>

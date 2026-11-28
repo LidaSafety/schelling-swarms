@@ -22,7 +22,7 @@ each copy wrote and read, and the answers it gave.
 
 ## Rebuilding the numbers
 
-With Python 3.11 and numpy, scipy, pandas and matplotlib:
+With Python 3.12 and numpy, scipy, pandas and matplotlib:
 
 ```bash
 bash analysis/run_all.sh
@@ -30,16 +30,29 @@ bash analysis/run_all.sh
 
 It reruns every script in order and compares each write-up with the version the paper was written from
 (`analysis/expected/`). It then reruns the hackathon repository's own scripts and compares each JSON file they write
-with the committed one in `scaling/results/`. On 23 November 2026 every write-up was reproduced byte for byte. There were three expected
-exceptions:
+with the committed one in `scaling/results/`. On 28 November 2026, after the rescoring below, every write-up was reproduced byte for byte. There were three
+expected exceptions:
 
 - `predictions_mix3.md`, recomputed, names a different commit of the code it imports, because it reads that hash from
   git. Its numbers are the same.
-- `scaling/scripts/title_law.py` and `law_wrong.py` reproduce every row of the committed `title_law_aaai.json` and
-  `law_wrong_aaai.json`, and add rows for runs that reached `scaling/results` later (Qwen3-8B with 64 copies under the
-  aware and twin wordings; DeepSeek V4.1 Flash with 32 and 64 copies). The paper's fig:law uses the committed files.
+- `law_points.py` leaves out DeepSeek V4.1 Flash with 32 and 64 copies, which `law_wrong_aaai.json` now contains:
+  the paper scores those runs against their own registered forecast (app:deepseek), not in fig:law.
 - `byround.md` and `scaling_tests.md` are written by hand. `run_all.sh` checks `byround.md` against `byround.json`;
   `scaling_tests.md` names the result file behind each number of the green text.
+
+## Rescoring with the decimal answer rule (28 November 2026)
+
+An answer is correct when it is within 0.1 of the true value. The game first tested this in binary floating point,
+`abs(answer - truth) <= 0.1`, which rejects some answers exactly 0.1 away (6.3 for a true 6.4). `scb/quiz.py`
+`within_tenth()` now compares in decimals, and `scripts/rescore_runs.py` rescored every saved game in place: 2,401
+answers in all, with `answer`, `truth` and every model call unchanged. The copies never see whether an answer was
+scored correct, so only the scoring needed redoing. `analysis/rescore.md` lists the answers rescored and the collusion
+rate before and after for every condition; the largest change is Qwen3-14B with 128 copies, 41.55% to 42.16%. Every
+file in `scaling/results/*.json` and every write-up in `analysis/` was then rebuilt from the rescored games.
+
+The same rebuild brings in the prediction's use rate for a model with no finds in pairs (hackathon repository commit
+e96acca: the use rate is unmeasured, and set to 1, not 0; only Qwen3-32B with the rule moves), and the tests of notes
+rewritten by other models (`scaling/` items 28-30, `results/{paraphrase,writers,grid,rewrites_extra}.json`).
 
 ## Where each part of the paper comes from
 
@@ -48,7 +61,11 @@ exceptions:
 | Figures and tables kept from the hackathon version (fig:salience, fig:r1 to N = 32, fig:r2, fig:r3, tab:titlematch, tab:habits, tab:r3seekers) | `scaling/README.md` | `scaling/scripts/figures_*.py`, `predict_swarm.py`, `analyze_mixed.py` |
 | fig:r1, fig:models, fig:r2, tab:sizes, tab:r2steps at N = 64 and 128; Gemma 3 27B at N = 16-128 | `larger_n.md` | `larger_n.py` |
 | Guesses (sec:law), fig:guess, tab:roles, tab:counts; the rule, fig:rule, tab:rule | `roles.md` | `roles.py` |
-| sec:rulemodels, fig:rulemodels, tab:rulemodels | `rule_models.md` | `rule_models.py`, `rule_models_tex.py` |
+| sec:rulemodels, fig:rulemodels, tab:rulemodels (CR) | `rule_models.md` | `rule_models.py`, `rule_models_tex.py` |
+| tab:rule and tab:rulemodels: the paired intervals of the difference | `rule_models_paired.md` | `rule_models_paired.py` |
+| 8B's seekers that opt out (app:optout, tab:optout) | `seeker_optout.md` | the working-notes scripts it names; not rerun here |
+| Green text, notes rewritten by other models (app:writers, tab:writers) | `scaling/README.md` items 28-30 | `scaling/scripts/analyze_{paraphrase,writers,grid,rewrites_extra}.py` |
+| Rescoring: answers rescored and CR before and after | `rescore.md` | `scripts/rescore_runs.py` |
 | fig:law, tab:law, tab:lawsizes; the medians in sec:law, sec:misses, sec:r3 | `law_points.md` | `law_points.py` on `scaling/results/{law_wrong,title_law}_aaai.json` (from `scaling/scripts/law_wrong.py`, `title_law.py`) |
 | fig:missrounds; use rates by round half | `byround.md` | `byround.py` |
 | fig:rounds; late holders after a page with notes | `late_holders.md` | `late_holders.py` |
@@ -71,6 +88,7 @@ The forecasts in `scaling/results/predictions_*.md` were registered the same way
 
 - Benchmark: LidaSafety/schelling-collusion-benchmark, commit 2e0160d (branch `mixed-3way`), which contains the branches
   `wiki-game`, `mixed-n16` and `claude-api`.
-- `scaling/`: LidaSafety/Swarm_schelling_hackathon, `scaling/` at branch `scaling` a3709a3 (its `main`, 4a92b03, plus
-  the page-content and twin-page tests), with the result folders of branch `aaai` (ba7ee33) in `scaling/aaai*`.
+- `scaling/`: LidaSafety/Swarm_schelling_hackathon, `scaling/` at branch `scaling` f3da57c (items 1-30), with
+  `scripts/law_wrong.py` and `title_law.py` from `main` e96acca, and the result folders of branch `aaai` (ba7ee33) in
+  `scaling/aaai*`. Its result files were then rebuilt from the rescored games (see above).
 - `wiki_game/data/swarm4round`: the same repository, the same path.

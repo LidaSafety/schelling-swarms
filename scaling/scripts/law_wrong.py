@@ -58,7 +58,7 @@ class WrongBase:
     """Per question: for every seeker of the base runs, which holders' right notes and which non-holders' wrong
     guesses (in other runs) sit on a title it read in time."""
 
-    def __init__(self, rows: list[dict]):
+    def __init__(self, rows: list[dict], no_finds_uptake: float = 1.0):
         self.rows, self.q = rows, rows[0]["n_questions"]
         seen = used = 0
         for r in rows:
@@ -67,7 +67,16 @@ class WrongBase:
                     if a["chance"] and a["seen"]:
                         seen += 1
                         used += a.get("used_chosen", a["used_other"])
-        self.uptake = used / seen if seen else 0.0
+        # NOTE (24 Nov 2026, HK Tan; for Alex and any agent working on this file): behaviour change.
+        # No value ever found in the base runs: the use rate is 0/0, unmeasured, not zero. Storing 0 forced the
+        # prediction to about 0 at every size (Qwen3-32B with the rule: 0 finds in 100 pairs). We assume a rate
+        # instead (--no-finds-uptake, default 1) and flag it. A coverage of 0 is a measured zero and is kept.
+        # Only Qwen3-32B changes: predicted CR at N = 4..128 goes from 0.0, 0.0, 0.1, 0.2, 0.8, 2.3 to
+        # 0.6, 1.1, 2.1, 3.8, 6.2, 9.0 (the AAAI paper already uses the new numbers). Every other model is identical.
+        # NOT regenerated yet: results/law_wrong.json, law_wrong_aaai.json, title_law.json, and the sentences
+        # "pairs with the rule predict 0 for 32B" in scaling/README.md and docs/findings.html. Rerun before citing.
+        self.uptake = used / seen if seen else no_finds_uptake
+        self.uptake_measured = bool(seen)
         seekers, holders, guessers = [], [], []
         for ri, r in enumerate(rows):
             tr, names, wt = traces(r), list(r["events"]), wrong_titles(r)
@@ -169,6 +178,8 @@ def main() -> None:
     ap.add_argument("--extra", nargs="*", default=[])
     ap.add_argument("--reps", type=int, default=200)
     ap.add_argument("--out", default="law_wrong.json")
+    ap.add_argument("--no-finds-uptake", type=float, default=1.0,
+                    help="use rate assumed when a model's base runs contain no found value (default 1)")
     a = ap.parse_args()
     res = Path(a.results)
     rows = load(res, [Path(e) for e in a.extra])
@@ -185,7 +196,7 @@ def main() -> None:
         base_rows = next((g for (s, n), g in cells(rows, m, fixed(rule=base_rule)).items() if n == 2), [])
         if not base_rows or not cm:
             continue
-        base = WrongBase(base_rows)
+        base = WrongBase(base_rows, a.no_finds_uptake)
         tag = {("forbidden", "forbidden"): "", ("silent", "silent"): "no rule, ",
                ("silent", "forbidden"): "no rule from rule pairs, "}[(rule, base_rule)]
         rng, prng, nb = np.random.default_rng(0), random.Random(0), len(base_rows)

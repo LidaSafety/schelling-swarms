@@ -1,0 +1,1764 @@
+{
+ "source": "results/page_content/q8_answers_q1.json",
+ "writer": "gemma-3-27b",
+ "prompt": "Here is a note that someone wrote on a shared wiki page titled \"{title}\":\n\n{note}\n\nRewrite this note in your own words, the way you would write it yourself. Keep its meaning, the state's name and the number {value} exactly, and keep it about the same length (about {n} characters). Reply with the rewritten note only.",
+ "tries": 8,
+ "failed": [],
+ "stats": {
+  "notes": 1246,
+  "calls": 1248,
+  "ok": 1246,
+  "approx": 0,
+  "dropped": 0,
+  "identical": 0,
+  "mean_len_source": 34.97030497592295,
+  "mean_len_rewrite": 37.10192616372392
+ },
+ "pages": {
+  "10000": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 4.8% jobs 👷‍♂️",
+    "Montana: 4.8% jobs.",
+    "In Montana, construction jobs account for 4.8% of total employment.",
+    "Montana: 4.8% jobs 👷‍♂️",
+    "In Montana, construction jobs represent 4.8% of total employment.",
+    "In Montana, construction jobs represent 4.8% of total employment.",
+    "In Montana, 4.8% of all employed people work in construction-related jobs.",
+    "In Montana, construction jobs represent 4.8% of total employment.",
+    "In Montana, construction jobs represent 4.8% of total employment.",
+    "Montana: 4.8% jobs."
+   ]
+  },
+  "10001": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "Iowa: 4.2% jobs",
+    "Iowa: 4.2% jobs",
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "In Iowa, 4.2% of those employed work in construction-related jobs.",
+    "Iowa: 4.2% jobs",
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "Iowa: 4.2% jobs",
+    "Iowa: 4.2% jobs",
+    "Iowa: 4.2% jobs",
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "Iowa: 4.2% jobs",
+    "Iowa: 4.2% jobs",
+    "In Iowa, 4.2% of all employed people work in construction-related jobs.",
+    "Iowa: 4.2% jobs",
+    "Iowa: 4.2% jobs",
+    "Iowa: 4.2% jobs"
+   ]
+  },
+  "10002": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 9.1% construction",
+    "Kansas: 9.1% construction",
+    "Kansas: 9.1% jobs 👷‍♂️",
+    "Kansas: 9.1% construction",
+    "Kansas: 9.1% construction",
+    "Kansas: 9.1% jobs.",
+    "Kansas: 9.1% jobs.",
+    "In Kansas, 9.1% of all employed people work in construction-related jobs.",
+    "Kansas: 9.1% jobs.",
+    "Kansas: 9.1% jobs.",
+    "Kansas: 9.1% jobs.",
+    "Kansas: 9.1% jobs.",
+    "Kansas: 9.1% construction.",
+    "Kansas: 9.1% construction",
+    "Kansas: 9.1% construction.",
+    "Kansas: 9.1% construction.",
+    "Kansas: 9.1% construction.",
+    "Kansas: 9.1% construction.",
+    "Kansas: 9.1% construction",
+    "Kansas: 9.1% construction.",
+    "Kansas: 9.1% jobs 👷‍♂️",
+    "Kansas: 9.1% jobs.",
+    "Kansas: 9.1% jobs."
+   ]
+  },
+  "10003": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 7.8% jobs",
+    "Maine: 7.8% jobs",
+    "In Maine, 7.8% of all employed people work in construction jobs.",
+    "Maine: 7.8% jobs",
+    "Maine: 7.8% jobs",
+    "In Maine, 7.8% of all employed people work in construction jobs.",
+    "In Maine, 7.8% of all employed people work in the construction industry.",
+    "In Maine, 7.8% of all employed people work in construction-related jobs.",
+    "In Maine, 7.8% of all employed people work in construction-related jobs.",
+    "In Maine, 7.8% of all employed people work in construction jobs.",
+    "In Maine, 7.8% of all employed people work in construction jobs.",
+    "In Maine, 7.8% of all employed people work in construction jobs.",
+    "In Maine, 7.8% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10004": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 6.9% jobs.",
+    "Montana: 6.9% jobs"
+   ]
+  },
+  "10005": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "Vermont: 4.6% jobs.",
+    "In Vermont, construction jobs represent 4.6% of total employment.",
+    "Vermont: 4.6% jobs.",
+    "In Vermont, construction jobs represent 4.6% of total employment.",
+    "Vermont: 4.6% jobs.",
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "In Vermont, construction jobs account for 4.6% of all employment.",
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "In Vermont, 4.6% of all employed people work in construction-related jobs.",
+    "Vermont: 4.6% jobs."
+   ]
+  },
+  "10006": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "In Maine, 7.3% of all employed people work in construction-related jobs.",
+    "In Maine, 7.3% of all employed people work in the construction industry.",
+    "Maine: 7.3% jobs",
+    "Maine: 7.3% jobs",
+    "Maine: 7.3% jobs",
+    "Maine's share: 7.3",
+    "Maine: 7.3% jobs",
+    "Maine: 7.3% jobs",
+    "Maine: 7.3% jobs",
+    "Maine's share: 7.3",
+    "Maine: 7.3% jobs"
+   ]
+  },
+  "10007": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "Utah: 11.9% jobs.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "Utah: 11.9% jobs",
+    "Utah: 11.9% jobs.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in construction-related jobs.",
+    "Utah: 11.9% jobs.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in construction-related jobs.",
+    "Utah: 11.9% jobs",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry.",
+    "In Utah, 11.9% of all employed people work in the construction industry."
+   ]
+  },
+  "10008": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10009": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 8.7% jobs",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "Iowa: 8.7% jobs",
+    "Iowa: 8.7% jobs",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "Iowa: 8.7% jobs",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "Iowa: 8.7% jobs",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "Iowa: 8.7% jobs",
+    "Iowa: 8.7% jobs",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "Iowa: 8.7% jobs",
+    "Iowa: 8.7% jobs",
+    "In Iowa, 8.7% of all employed people work in construction-related jobs.",
+    "Iowa: 8.7% jobs"
+   ]
+  },
+  "10010": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "In Vermont, construction jobs represent 10.8% of all employment.",
+    "In Vermont, construction jobs represent 10.8% of all employment.",
+    "In Vermont, construction jobs account for 10.8% of all employment.",
+    "In Vermont, construction jobs represent 10.8% of the state's total employment.",
+    "In Vermont, construction jobs represent 10.8% of the total employment share.",
+    "In Vermont, construction jobs represent 10.8% of total employment.",
+    "In Vermont, construction jobs represent 10.8% of total employment.",
+    "In Vermont, construction jobs account for 10.8% of all employment.",
+    "In Vermont, construction jobs represent 10.8% of total employment.",
+    "In Vermont, construction jobs represent 10.8% of the total workforce.",
+    "In Vermont, construction jobs represent 10.8% of all employment."
+   ]
+  },
+  "10011": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "In Ohio, construction jobs account for 6.9% of total employment.",
+    "In Ohio, construction jobs represent 6.9% of total employment.",
+    "In Ohio, construction jobs represent 6.9% of total employment.",
+    "In Ohio, 6.9% of all employed people work in construction-related jobs.",
+    "In Ohio, construction jobs account for 6.9% of total employment.",
+    "In Ohio, construction jobs account for 6.9% of total employment.",
+    "In Ohio, construction jobs account for 6.9% of total employment.",
+    "In Ohio, construction jobs represent 6.9% of total employment.",
+    "In Ohio, 6.9% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10012": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 5.1% construction",
+    "Idaho: 5.1% jobs.",
+    "Idaho: 5.1% jobs.",
+    "Idaho: 5.1% construction",
+    "Idaho’s: 5.1% 👷‍♂️",
+    "Idaho: 5.1% jobs.",
+    "Idaho: 5.1% jobs.",
+    "Idaho: 5.1% jobs.",
+    "Idaho's: 5.1% 👷‍♂️",
+    "Idaho: 5.1% jobs.",
+    "Idaho's: 5.1% 👷‍♂️"
+   ]
+  },
+  "10013": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs",
+    "Iowa: 7.7% jobs"
+   ]
+  },
+  "10014": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction",
+    "In Kansas, construction jobs employ 10.1% of the state’s workforce.",
+    "Kansas: 10.1% construction",
+    "In Kansas, construction jobs represent 10.1% of total employment.",
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction",
+    "In Kansas, construction jobs represent 10.1% of total employment.",
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction",
+    "Kansas: 10.1% construction"
+   ]
+  },
+  "10015": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "In Ohio, 6.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 6.4% of all employed people work in construction-related jobs.",
+    "In Ohio, construction jobs account for 6.4% of all employment.",
+    "In Ohio, 6.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 6.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 6.4% of all employed people work in construction-related jobs.",
+    "Ohio: 6.4% jobs",
+    "Ohio: 6.4% jobs"
+   ]
+  },
+  "10016": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho's: 10.1% 👷‍♂️",
+    "Idaho's: 10.1% 👷‍♂️",
+    "Idaho's: 10.1% 👷‍♂️",
+    "Idaho’s: 10.1% 👷‍♂️",
+    "Idaho's: 10.1% 👷‍♂️",
+    "In Idaho, construction jobs represent 10.1% of total employment.",
+    "Idaho’s: 10.1%",
+    "Idaho’s: 10.1%",
+    "Idaho’s: 10.1% 👷‍♂️",
+    "Idaho’s: 10.1%",
+    "Idaho’s: 10.1%",
+    "Idaho's: 10.1% 👷‍♂️",
+    "Idaho's: 10.1% 👷‍♂️",
+    "Idaho's: 10.1% 👷‍♂️",
+    "Idaho's: 10.1% 👷‍♂️"
+   ]
+  },
+  "10017": {
+   "title": "Montana construction occupation share",
+   "notes": []
+  },
+  "10018": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "In Vermont, construction jobs represent 8.9% of total employment.",
+    "In Vermont, construction jobs represent 8.9% of total employment.",
+    "In Vermont, construction jobs represent 8.9% of total employment.",
+    "In Vermont, construction jobs represent 8.9% of total employment.",
+    "In Vermont, construction jobs represent 8.9% of all employment.",
+    "In Vermont, 8.9% of all employed people work in construction-related jobs.",
+    "In Vermont, construction jobs account for 8.9% of all employment.",
+    "In Vermont, construction jobs make up 8.9% of all employment.",
+    "In Vermont, construction jobs account for 8.9% of all employment."
+   ]
+  },
+  "10019": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs",
+    "Idaho: 6.0% jobs"
+   ]
+  },
+  "10020": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs",
+    "Arizona: 6.9% jobs",
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs.",
+    "In Arizona, construction jobs account for 6.9% of total employment.",
+    "Arizona: 6.9% jobs",
+    "Arizona: 6.9% jobs.",
+    "In Arizona, construction jobs account for 6.9% of total employment.",
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs",
+    "Arizona: 6.9% jobs",
+    "In Arizona, 6.9% of all employed people work in construction-related jobs.",
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs.",
+    "Arizona: 6.9% jobs."
+   ]
+  },
+  "10021": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "In Montana, construction jobs represent 4.8% of total employment.",
+    "In Montana, construction jobs represent 4.8% of total employment.",
+    "Montana: 4.8% jobs 👷‍♂️",
+    "Montana: 4.8% jobs.",
+    "In Montana, construction jobs represent 4.8% of total employment.",
+    "Montana: 4.8% jobs."
+   ]
+  },
+  "10022": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 5.4% jobs.",
+    "Arizona: 5.4% jobs.",
+    "Arizona: 5.4% jobs.",
+    "Arizona: 5.4% jobs.",
+    "Arizona: 5.4% jobs.",
+    "Arizona: 5.4% jobs.",
+    "Arizona: 5.4% jobs 👷‍♂️",
+    "Arizona: 5.4% jobs.",
+    "Arizona: 5.4% jobs 👷‍♂️",
+    "Arizona: 5.4% jobs."
+   ]
+  },
+  "10023": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 9.4% jobs 👷‍♂️",
+    "Alabama: 9.4% construction",
+    "Alabama: 9.4% jobs.",
+    "Alabama: 9.4% construction",
+    "Alabama: 9.4% construction",
+    "Alabama: 9.4% construction",
+    "Alabama: 9.4% jobs 👷‍♂️",
+    "Alabama: 9.4% jobs.",
+    "Alabama: 9.4% construction",
+    "Alabama: 9.4% construction",
+    "Alabama: 9.4% jobs 👷‍♂️",
+    "Alabama: 9.4% construction",
+    "Alabama: 9.4% construction"
+   ]
+  },
+  "10024": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs.",
+    "In Ohio, 4.7% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10025": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 9.4% jobs.",
+    "Idaho's: 9.4% 👷‍♂️",
+    "Idaho's: 9.4% 👷‍♂️",
+    "Idaho’s: 9.4% 👷‍♂️",
+    "Idaho's: 9.4%",
+    "Idaho's: 9.4%",
+    "Idaho's: 9.4% 👷‍♂️",
+    "Idaho's: 9.4% 👷‍♂️",
+    "Idaho's: 9.4% 👷‍♂️",
+    "Idaho: 9.4% construction.",
+    "Idaho’s: 9.4%",
+    "Idaho's: 9.4% 👷‍♂️",
+    "Idaho: 9.4% construction",
+    "Idaho: 9.4% construction.",
+    "Idaho's: 9.4% 👷‍♂️",
+    "Idaho: 9.4% jobs.",
+    "Idaho’s: 9.4% 👷‍♂️"
+   ]
+  },
+  "10026": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 5.9% jobs 👷‍♂️",
+    "In Montana, construction jobs employ 5.9% of the state's workforce.",
+    "In Montana, 5.9% of all employed people work in construction-related jobs.",
+    "In Montana, construction jobs represent 5.9% of total employment."
+   ]
+  },
+  "10027": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 4.6% jobs",
+    "Maine's share: 4.6",
+    "Maine: 4.6% jobs",
+    "In Maine, 4.6% of all employed people work in construction jobs.",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "Maine's share: 4.6",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "Maine: 4.6% jobs",
+    "In Maine, 4.6% of all employed people work in construction jobs.",
+    "Maine: 4.6% jobs"
+   ]
+  },
+  "10028": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs",
+    "Iowa: 6.1% jobs"
+   ]
+  },
+  "10029": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "In Ohio, construction jobs account for 8.0% of all employment.",
+    "In Ohio, construction jobs make up 8.0% of total employment.",
+    "In Ohio, construction jobs account for 8.0% of total employment.",
+    "In Ohio, construction jobs represent 8.0% of total employment.",
+    "Ohio: 8.0% jobs",
+    "In Ohio, construction jobs account for 8.0% of total employment.",
+    "Ohio: 8.0% jobs",
+    "Ohio: 8.0% share."
+   ]
+  },
+  "10030": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 9.4% jobs.",
+    "Montana: 9.4% jobs 👷‍♂️",
+    "Montana's: 9.4% jobs.",
+    "Montana: 9.4% jobs.",
+    "In Montana, construction jobs represent 9.4% of total employment.",
+    "Montana: 9.4% jobs 👷‍♂️",
+    "Montana: 9.4% jobs.",
+    "Montana: 9.4% construction.",
+    "Montana: 9.4% construction",
+    "Montana's: 9.4% jobs.",
+    "Montana: 9.4% jobs.",
+    "Montana's: 9.4% jobs.",
+    "In Montana, 9.4% of all employed people work in construction-related jobs.",
+    "Montana: 9.4% jobs 👷‍♂️",
+    "Montana's: 9.4% jobs.",
+    "Montana: 9.4% jobs."
+   ]
+  },
+  "10031": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs.",
+    "Iowa: 10.6% jobs.",
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs.",
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs.",
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs.",
+    "In Iowa, 10.6% of all employed people work in construction-related jobs.",
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs",
+    "Iowa: 10.6% jobs."
+   ]
+  },
+  "10032": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, 5.3% of all employed people work in construction-related jobs.",
+    "Nevada's: 5.3% jobs",
+    "In Nevada, 5.3% of all employed people work in construction-related jobs.",
+    "Nevada’s: 5.3% jobs.",
+    "Nevada's: 5.3% 👷‍♂️",
+    "Nevada's: 5.3% 👷‍♂️",
+    "Nevada's: 5.3% 👷‍♂️"
+   ]
+  },
+  "10033": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "In Vermont, 8.7% of all employed people work in construction-related jobs.",
+    "In Vermont, 8.7% of all employed people work in construction-related jobs.",
+    "In Vermont, 8.7% of all employed people work in construction-related jobs.",
+    "In Vermont, construction jobs represent 8.7% of all employment.",
+    "In Vermont, 8.7% of all employed people work in construction-related jobs.",
+    "In Vermont, 8.7% of all employed people work in construction-related jobs.",
+    "In Vermont, 8.7% of all employed people work in construction-related jobs.",
+    "In Vermont, construction jobs represent 8.7% of all employment.",
+    "In Vermont, 8.7% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10034": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "In Vermont, construction jobs represent 8.1% of total employment.",
+    "In Vermont, construction jobs represent 8.1% of all employment.",
+    "In Vermont, construction jobs represent 8.1% of all employment.",
+    "In Vermont, construction jobs account for 8.1% of all employment.",
+    "In Vermont, construction jobs represent 8.1% of all employment.",
+    "Vermont: 8.1% jobs 👷‍♂️",
+    "In Vermont, construction jobs represent 8.1% of all employment.",
+    "In Vermont, construction jobs represent 8.1% of all employment."
+   ]
+  },
+  "10035": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "In Vermont, construction jobs represent 11.3% of all employment.",
+    "In Vermont, construction jobs represent 11.3% of all employment.",
+    "In Vermont, construction jobs account for 11.3% of all employment.",
+    "In Vermont, 11.3% of all employed people work in construction-related jobs.",
+    "In Vermont, 11.3% of all employed people work in construction-related jobs.",
+    "Vermont: 11.3% construction.",
+    "In Vermont, construction jobs represent 11.3% of total employment.",
+    "In Vermont, 11.3% of all employed people work in construction-related jobs.",
+    "In Vermont, 11.3% of all employed people work in construction-related jobs.",
+    "In Vermont, 11.3% of all employed people work in construction-related jobs.",
+    "Vermont's share: 11.3",
+    "In Vermont, 11.3% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10036": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 11.9% jobs",
+    "In Iowa, 11.9% of employed people work in construction-related jobs.",
+    "Iowa: 11.9% jobs",
+    "Iowa: 11.9% jobs 👷‍♂️",
+    "In Iowa, 11.9% of those employed work in construction-related jobs.",
+    "In Iowa, 11.9% of all employed people work in the construction industry.",
+    "In Iowa, construction jobs represent 11.9% of total employment.",
+    "In Iowa, 11.9% of all employed people work in construction jobs.",
+    "Iowa: 11.9% jobs",
+    "Iowa: 11.9% jobs",
+    "In Iowa, 11.9% of all employed people work in the construction industry.",
+    "Iowa: 11.9% jobs."
+   ]
+  },
+  "10037": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "In Ohio, 11.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 11.4% of all employed people work in construction jobs.",
+    "In Ohio, 11.4% of all employed people work in construction jobs.",
+    "In Ohio, 11.4% of all employed people work in construction jobs.",
+    "In Ohio, 11.4% of all employed people work in construction jobs.",
+    "In Ohio, 11.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 11.4% of all employed people work in construction jobs.",
+    "In Ohio, 11.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 11.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 11.4% of all employed people work in construction jobs.",
+    "In Ohio, 11.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 11.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 11.4% of all employed people work in construction-related jobs.",
+    "In Ohio, 11.4% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10038": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, construction jobs represent 10.5% of total employment.",
+    "In Oregon, construction jobs represent 10.5% of total employment.",
+    "In Oregon, construction jobs represent 10.5% of total employment.",
+    "In Oregon, construction jobs represent 10.5% of total employment.",
+    "In Oregon, construction jobs represent 10.5% of total employment."
+   ]
+  },
+  "10039": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "In Maine, 4.2% of all employed people work in construction-related jobs.",
+    "Maine: 4.2% jobs",
+    "Maine: 4.2% jobs",
+    "In Maine, 4.2% of all employed people work in the construction industry.",
+    "In Maine, 4.2% of all employed people work in construction jobs.",
+    "Maine: 4.2% jobs",
+    "In Maine, 4.2% of all employed people work in construction jobs.",
+    "In Maine, 4.2% of all employed people work in construction jobs.",
+    "Maine: 4.2% jobs",
+    "In Maine, 4.2% of all employed people work in construction jobs.",
+    "In Maine, 4.2% of all employed people work in construction jobs.",
+    "In Maine, 4.2% of all employed people work in construction jobs.",
+    "Maine's share: 4.2",
+    "In Maine, 4.2% of all employed people work in construction-related jobs.",
+    "Maine: 4.2% jobs",
+    "In Maine, 4.2% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10040": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs 👷‍♂️",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs.",
+    "Arizona: 5.2% jobs."
+   ]
+  },
+  "10041": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% construction",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "In Kansas, 7.1% of all employed people work in construction-related jobs.",
+    "Kansas: 7.1% jobs.",
+    "In Kansas, 7.1% of all employed people work in construction-related jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs.",
+    "Kansas: 7.1% jobs 👷‍♀️"
+   ]
+  },
+  "10042": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs",
+    "Iowa: 5.4% jobs"
+   ]
+  },
+  "10043": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, construction jobs account for 8.7% of total employment.",
+    "In Oregon, construction jobs account for 8.7% of total employment."
+   ]
+  },
+  "10044": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 8.9% jobs",
+    "Maine: 8.9% jobs",
+    "Maine: 8.9% jobs",
+    "Maine: 8.9% jobs",
+    "In Maine, construction jobs represent 8.9% of total employment.",
+    "In Maine, construction jobs account for 8.9% of all employment.",
+    "Maine: 8.9% jobs",
+    "Maine: 8.9% jobs",
+    "In Maine, construction jobs account for 8.9% of all employment.",
+    "Maine: 8.9% jobs",
+    "In Maine, construction jobs represent 8.9% of total employment.",
+    "Maine: 8.9% jobs",
+    "Maine: 8.9% jobs",
+    "Maine: 8.9% jobs",
+    "In Maine, construction jobs employ 8.9% of the state's workforce.",
+    "Maine: 8.9% jobs",
+    "In Maine, construction jobs represent 8.9% of all employment."
+   ]
+  },
+  "10045": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "In Utah, construction jobs make up 10.6% of total employment.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, 10.6% of all employed people work in the construction industry.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "Utah: 10.6% jobs.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "Utah: 10.6% jobs.",
+    "In Utah, 10.6% of all employed people work in the construction industry.",
+    "Utah: 10.6% jobs",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, 10.6% of all employed people work in construction jobs.",
+    "In Utah, construction jobs represent 10.6% of total employment.",
+    "In Utah, construction jobs account for 10.6% of total employment.",
+    "In Utah, 10.6% of all employed people work in construction jobs.",
+    "In Utah, construction jobs represent 10.6% of total employment."
+   ]
+  },
+  "10046": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 7.8% jobs",
+    "Iowa: 7.8% jobs",
+    "Iowa: 7.8% jobs",
+    "Iowa: 7.8% jobs",
+    "Iowa: 7.8% jobs",
+    "Iowa: 7.8% jobs",
+    "In Iowa, 7.8% of all employed people work in construction-related jobs.",
+    "Iowa: 7.8% jobs"
+   ]
+  },
+  "10047": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho's: 10.5%",
+    "Idaho's: 10.5% 👷‍♂️",
+    "Idaho’s: 10.5% 👷‍♂️",
+    "In Idaho, construction jobs represent 10.5% of total employment.",
+    "Idaho's: 10.5% 👷‍♂️",
+    "In Idaho, construction jobs represent 10.5% of total employment.",
+    "Idaho's: 10.5% 👷‍♂️",
+    "Idaho's: 10.5% 👷‍♂️",
+    "Idaho's: 10.5% 👷‍♂️",
+    "Idaho's: 10.5%"
+   ]
+  },
+  "10048": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 11.4% construction.",
+    "Alabama: 11.4% jobs.",
+    "Alabama's: 11.4% jobs.",
+    "Alabama's: 11.4% jobs.",
+    "Alabama's: 11.4% jobs.",
+    "Alabama's: 11.4% jobs.",
+    "Alabama: 11.4% construction.",
+    "Alabama: 11.4% construction.",
+    "Alabama: 11.4% jobs.",
+    "Alabama: 11.4% construction",
+    "Alabama: 11.4% construction.",
+    "Alabama’s: 11.4% jobs.",
+    "Alabama’s: 11.4% jobs.",
+    "Alabama's: 11.4% jobs.",
+    "Alabama's: 11.4% jobs"
+   ]
+  },
+  "10049": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 8.7% of total employment.",
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 8.7% of total employment.",
+    "In Nevada, construction jobs account for 8.7% of total employment.",
+    "Nevada’s: 8.7% jobs",
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "In Nevada, 8.7% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10050": {
+   "title": "Ohio construction occupation share",
+   "notes": [
+    "Ohio: 5.1% jobs",
+    "Ohio: 5.1% jobs",
+    "In Ohio, 5.1% of all employed people work in construction-related jobs.",
+    "In Ohio, 5.1% of all employed people work in construction-related jobs.",
+    "Ohio: 5.1% jobs",
+    "Ohio: 5.1% jobs",
+    "In Ohio, 5.1% of all employed people work in construction-related jobs.",
+    "In Ohio, 5.1% of all employed people work in construction-related jobs.",
+    "In Ohio, 5.1% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10051": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "In Iowa, 11.2% of those employed work in construction-related jobs.",
+    "Iowa: 11.2% jobs.",
+    "Iowa: 11.2% construction",
+    "In Iowa, 11.2% of all employed people work in construction-related jobs.",
+    "In Iowa, 11.2% of all employed people work in construction jobs.",
+    "In Iowa, 11.2% of all employed people work in construction-related jobs.",
+    "Iowa: 11.2% jobs",
+    "In Iowa, 11.2% of employed people work in construction-related jobs.",
+    "In Iowa, 11.2% of all employed people work in construction-related jobs.",
+    "In Iowa, 11.2% of employed people work in construction-related jobs.",
+    "Iowa: 11.2% jobs.",
+    "In Iowa, 11.2% of all employed people work in construction jobs.",
+    "Iowa: 11.2% jobs",
+    "Iowa: 11.2% jobs.",
+    "In Iowa, 11.2% of all employed people work in construction-related jobs.",
+    "In Iowa, 11.2% of all employed people work in construction jobs.",
+    "In Iowa, 11.2% of all employed people work in construction jobs.",
+    "Iowa: 11.2% jobs",
+    "In Iowa, 11.2% of all employed people work in construction jobs.",
+    "In Iowa, 11.2% of those employed work in construction-related jobs.",
+    "Iowa: 11.2% jobs."
+   ]
+  },
+  "10052": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho: 9.9% jobs.",
+    "Idaho: 9.9% jobs",
+    "Idaho: 9.9% jobs",
+    "Idaho: 9.9% jobs 👷‍♂️",
+    "Idaho: 9.9% jobs.",
+    "In Idaho, construction jobs represent 9.9% of all employment.",
+    "Idaho: 9.9% jobs",
+    "Idaho: 9.9% jobs.",
+    "Idaho’s: 9.9% 👷‍♂️",
+    "Idaho: 9.9% jobs",
+    "Idaho: 9.9% jobs 👷‍♂️",
+    "Idaho: 9.9% jobs.",
+    "Idaho: 9.9% jobs 👷‍♂️",
+    "Idaho: 9.9% jobs",
+    "Idaho: 9.9% jobs",
+    "Idaho: 9.9% jobs",
+    "Idaho: 9.9% jobs."
+   ]
+  },
+  "10053": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho's: 8.3% 👷‍♂️",
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho: 8.3% jobs.",
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho's: 8.3% 👷‍♂️",
+    "Idaho's: 8.3% 👷‍♂️",
+    "Idaho's: 8.3% 👷‍♂️",
+    "Idaho: 8.3% jobs 👷‍♂️",
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho: 8.3% jobs.",
+    "Idaho: 8.3% jobs 👷‍♂️",
+    "Idaho's: 8.3% 👷‍♂️",
+    "Idaho: 8.3% jobs.",
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho’s: 8.3% 👷‍♂️",
+    "Idaho's: 8.3% 👷‍♂️",
+    "Idaho’s: 8.3% 👷‍♂️"
+   ]
+  },
+  "10054": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs 👷‍♂️",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs 👷‍♂️",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs.",
+    "Arizona: 6.1% jobs 👷‍♂️"
+   ]
+  },
+  "10055": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 9.9% jobs 👷‍♂️",
+    "In Montana, construction jobs employ 9.9% of the state's workforce.",
+    "Montana: 9.9% jobs",
+    "Montana: 9.9% jobs.",
+    "Montana: 9.9% jobs.",
+    "Montana: 9.9% jobs 👷‍♂️",
+    "Montana: 9.9% jobs 👷‍♂️",
+    "Montana: 9.9% jobs 👷‍♂️"
+   ]
+  },
+  "10056": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, construction jobs represent 11.5% of total employment.",
+    "Nevada's: 11.5% jobs",
+    "In Nevada, construction jobs represent 11.5% of total employment.",
+    "In Nevada, construction jobs represent 11.5% of total employment.",
+    "Nevada's: 11.5% jobs.",
+    "In Nevada, construction jobs represent 11.5% of total employment.",
+    "Nevada's: 11.5% jobs.",
+    "In Nevada, construction jobs represent 11.5% of total employment.",
+    "In Nevada, construction jobs account for 11.5% of total employment."
+   ]
+  },
+  "10057": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, construction jobs represent 10.0% of total employment.",
+    "In Oregon, construction jobs make up 10.0% of total employment.",
+    "In Oregon, construction jobs represent 10.0% of total employment.",
+    "In Oregon, construction jobs make up 10.0% of total employment.",
+    "In Oregon, construction jobs represent 10.0% of total employment.",
+    "In Oregon, construction jobs make up 10.0% of total employment.",
+    "In Oregon, construction jobs represent 10.0% of total employment."
+   ]
+  },
+  "10058": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "In Maine, 4.1% of all employed people work in construction jobs.",
+    "Maine: 4.1% jobs",
+    "In Maine, construction jobs represent 4.1% of total employment.",
+    "Maine: 4.1% jobs",
+    "Maine: 4.1% jobs",
+    "Maine: 4.1% jobs",
+    "Maine: 4.1% jobs",
+    "Maine: 4.1% jobs",
+    "In Maine, 4.1% of all employed people work in construction jobs.",
+    "In Maine, construction jobs represent 4.1% of total employment.",
+    "Maine’s share: 4.1",
+    "Maine: 4.1% jobs",
+    "Maine: 4.1% jobs",
+    "Maine: 4.1% jobs",
+    "In Maine, 4.1% of all employed people work in construction jobs.",
+    "Maine: 4.1% jobs",
+    "Maine’s share: 4.1"
+   ]
+  },
+  "10059": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, construction jobs represent 7.9% of total employment.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, construction jobs represent 7.9% of total employment.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, construction jobs represent 7.9% of total employment.",
+    "In Utah, construction jobs represent 7.9% of total employment.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs.",
+    "In Utah, 7.9% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10060": {
+   "title": "Idaho construction occupation share",
+   "notes": [
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho: 9.6% jobs.",
+    "Idaho: 9.6% construction",
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho: 9.6% construction.",
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho's: 9.6% 👷‍♂️",
+    "Idaho: 9.6% construction",
+    "Idaho’s: 9.6% 👷‍♂️",
+    "Idaho's: 9.6% 👷‍♂️"
+   ]
+  },
+  "10061": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 8.5% jobs 👷‍♂️",
+    "Alabama: 8.5% jobs.",
+    "Alabama: 8.5% jobs 👷‍♂️",
+    "Alabama: 8.5% jobs 👷‍♂️",
+    "Alabama: 8.5% jobs.",
+    "Alabama: 8.5% jobs 👷‍♂️",
+    "Alabama: 8.5% jobs.",
+    "Alabama: 8.5% jobs.",
+    "Alabama: 8.5% jobs 👷‍♂️",
+    "Alabama: 8.5% jobs.",
+    "Alabama: 8.5% jobs 👷‍♂️",
+    "Alabama: 8.5% jobs"
+   ]
+  },
+  "10062": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs",
+    "Kansas: 5.9% jobs",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs",
+    "Kansas: 5.9% jobs.",
+    "Kansas: 5.9% jobs."
+   ]
+  },
+  "10063": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine's share: 6.4",
+    "In Maine, 6.4% of all employed people work in construction-related jobs.",
+    "Maine: 6.4% jobs 👷‍♂️",
+    "Maine: 6.4% jobs.",
+    "Maine: 6.4% jobs",
+    "Maine: 6.4% jobs",
+    "Maine: 6.4% jobs 👷‍♂️",
+    "Maine: 6.4% jobs",
+    "Maine's share: 6.4",
+    "Maine: 6.4% jobs"
+   ]
+  },
+  "10064": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "In Montana, construction jobs represent 9.5% of all employment.",
+    "Montana: 9.5% jobs 👷‍♂️",
+    "In Montana, construction jobs represent 9.5% of total employment.",
+    "In Montana, 9.5% of all employed people work in construction-related jobs.",
+    "Montana: 9.5% jobs 👷‍♂️",
+    "Montana: 9.5% jobs 👷‍♂️",
+    "Montana's: 9.5% jobs.",
+    "Montana: 9.5% jobs 👷‍♂️",
+    "Montana: 9.5% jobs 👷‍♂️",
+    "Montana: 9.5% jobs 👷‍♂️"
+   ]
+  },
+  "10065": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "Montana: 7.7% jobs 👷‍♂️",
+    "Montana's: 7.7% jobs",
+    "Montana: 7.7% jobs.",
+    "Montana: 7.7% jobs 👷‍♂️",
+    "Montana's share: 7.7%",
+    "Montana: 7.7% jobs.",
+    "Montana's: 7.7% jobs",
+    "Montana: 7.7% jobs 👷‍♂️",
+    "Montana's: 7.7% jobs",
+    "Montana: 7.7% jobs 👷‍♂️",
+    "In Montana, 7.7% of all employed people work in construction-related jobs.",
+    "Montana: 7.7% jobs 👷‍♂️"
+   ]
+  },
+  "10066": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs 👷‍♂️",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs.",
+    "Iowa: 10.4% jobs",
+    "Iowa: 10.4% jobs."
+   ]
+  },
+  "10067": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "In Iowa, construction jobs account for 8.1% of all employment.",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "In Iowa, construction jobs represent 8.1% of total employment.",
+    "Iowa: 8.1% jobs.",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "In Iowa, construction jobs account for 8.1% of all employment.",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "In Iowa, construction jobs represent 8.1% of total employment.",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs",
+    "Iowa: 8.1% jobs"
+   ]
+  },
+  "10068": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "Nevada's: 8.7% jobs.",
+    "In Nevada, 8.7% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs account for 8.7% of total employment.",
+    "Nevada's: 8.7% 👷‍♂️",
+    "Nevada’s: 8.7% jobs.",
+    "Nevada’s: 8.7% jobs."
+   ]
+  },
+  "10069": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 5.5% jobs",
+    "Iowa: 5.5% jobs",
+    "Iowa: 5.5% jobs",
+    "Iowa: 5.5% jobs",
+    "In Iowa, 5.5% of all employed people work in construction-related jobs.",
+    "Iowa: 5.5% jobs",
+    "Iowa: 5.5% jobs",
+    "Iowa: 5.5% jobs",
+    "Iowa: 5.5% jobs",
+    "In Iowa, 5.5% of all employed people work in construction-related jobs.",
+    "Iowa: 5.5% jobs",
+    "Iowa: 5.5% jobs",
+    "In Iowa, 5.5% of all employed people work in construction-related jobs.",
+    "Iowa: 5.5% jobs"
+   ]
+  },
+  "10070": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "In Utah, construction jobs represent 10.8% of total employment.",
+    "Utah: 10.8% jobs",
+    "In Utah, construction jobs represent 10.8% of total employment.",
+    "Utah: 10.8% jobs.",
+    "In Utah, construction jobs represent 10.8% of total employment.",
+    "Utah: 10.8% jobs.",
+    "Utah: 10.8% jobs.",
+    "Utah: 10.8% jobs",
+    "In Utah, 10.8% of all employed people work in the construction industry.",
+    "Utah: 10.8% jobs.",
+    "In Utah, construction jobs make up 10.8% of total employment.",
+    "In Utah, 10.8% of all employed people work in the construction industry.",
+    "In Utah, 10.8% of all employed people work in the construction industry.",
+    "Utah: 10.8% jobs",
+    "In Utah, construction jobs represent 10.8% of total employment."
+   ]
+  },
+  "10071": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 7.2% jobs.",
+    "In Maine, 7.2% of all employed people work in the construction industry.",
+    "In Maine, 7.2% of all employed people work in construction-related jobs.",
+    "Maine: 7.2% jobs.",
+    "Maine: 7.2% jobs.",
+    "Maine: 7.2% jobs.",
+    "In Maine, 7.2% of all employed people work in construction-related jobs.",
+    "In Maine, 7.2% of all employed people work in construction-related jobs.",
+    "Maine: 7.2% jobs",
+    "In Maine, 7.2% of all employed people work in the construction industry.",
+    "Maine: 7.2% jobs.",
+    "Maine: 7.2% jobs",
+    "Maine: 7.2% jobs",
+    "Maine: 7.2% jobs",
+    "Maine: 7.2% jobs.",
+    "Maine: 7.2% jobs.",
+    "Maine: 7.2% jobs",
+    "In Maine, 7.2% of all employed people work in construction-related jobs.",
+    "Maine: 7.2% jobs"
+   ]
+  },
+  "10072": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "Nevada's: 8.0% jobs",
+    "In Nevada, construction jobs represent 8.0% of total employment.",
+    "Nevada's: 8.0% jobs.",
+    "Nevada's: 8.0% jobs",
+    "Nevada's: 8.0% jobs.",
+    "In Nevada, construction jobs make up 8.0% of total employment.",
+    "In Nevada, construction jobs represent 8.0% of total employment.",
+    "Nevada: 8.0% jobs.",
+    "Nevada's: 8.0% jobs",
+    "Nevada’s: 8.0% jobs",
+    "In Nevada, construction jobs make up 8.0% of total employment.",
+    "Nevada's: 8.0% jobs."
+   ]
+  },
+  "10073": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 9.0% jobs 👷‍♂️",
+    "Alabama: 9.0% construction",
+    "Alabama: 9.0% jobs",
+    "Alabama: 9.0% jobs 👷‍♂️",
+    "Alabama: 9.0% construction",
+    "Alabama: 9.0% jobs.",
+    "Alabama: 9.0% jobs",
+    "Alabama: 9.0% jobs 👷‍♂️",
+    "Alabama: 9.0% jobs 👷‍♂️",
+    "Alabama: 9.0% jobs 👷‍♂️",
+    "Alabama: 9.0% jobs",
+    "Alabama: 9.0% jobs.",
+    "Alabama: 9.0% jobs",
+    "Alabama: 9.0% jobs",
+    "Alabama: 9.0% jobs.",
+    "Alabama: 9.0% jobs."
+   ]
+  },
+  "10074": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, construction jobs represent 4.4% of total employment.",
+    "In Nevada, construction jobs represent 4.4% of total employment.",
+    "Nevada's: 4.4% jobs",
+    "In Nevada, construction jobs represent 4.4% of total employment.",
+    "In Nevada, construction jobs represent 4.4% of total employment.",
+    "In Nevada, 4.4% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 4.4% of total employment.",
+    "In Nevada, 4.4% of all employed people work in construction-related jobs.",
+    "In Nevada, 4.4% of all employed people work in construction-related jobs.",
+    "In Nevada, 4.4% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 4.4% of total employment.",
+    "In Nevada, construction jobs represent 4.4% of total employment.",
+    "In Nevada, 4.4% of all employed people work in construction-related jobs.",
+    "In Nevada, 4.4% of all employed people work in construction-related jobs.",
+    "In Nevada, 4.4% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10075": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "In Montana, 5.1% of all employed people work in construction-related jobs.",
+    "Montana: 5.1% jobs 👷‍♂️",
+    "Montana: 5.1% jobs.",
+    "Montana: 5.1% jobs 👷‍♂️",
+    "Montana: 5.1% jobs.",
+    "Montana: 5.1% jobs 👷‍♂️",
+    "Montana: 5.1% jobs.",
+    "Montana: 5.1% jobs.",
+    "In Montana, 5.1% of all employed people work in construction-related jobs.",
+    "Montana: 5.1% jobs.",
+    "Montana: 5.1% jobs 👷‍♂️",
+    "Montana: 5.1% jobs 👷‍♂️"
+   ]
+  },
+  "10076": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "In Montana, construction jobs represent 10.9% of total employment.",
+    "In Montana, construction jobs represent 10.9% of total employment.",
+    "In Montana, construction jobs employ 10.9% of the state's workforce.",
+    "Montana: 10.9% jobs 👷‍♂️",
+    "Montana: 10.9% jobs."
+   ]
+  },
+  "10077": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, construction jobs represent 6.8% of total employment.",
+    "In Oregon, construction jobs represent 6.8% of total employment.",
+    "In Oregon, 6.8% of all employed people work in construction-related jobs.",
+    "In Oregon, construction jobs represent 6.8% of total employment.",
+    "In Oregon, construction jobs represent 6.8% of total employment.",
+    "In Oregon, construction jobs represent 6.8% of total employment.",
+    "In Oregon, construction jobs represent 6.8% of total employment.",
+    "In Oregon, construction jobs represent 6.8% of total employment."
+   ]
+  },
+  "10078": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 5.2% construction",
+    "Kansas: 5.2% jobs.",
+    "Kansas: 5.2% construction.",
+    "Kansas: 5.2% construction.",
+    "Kansas: 5.2% construction.",
+    "Kansas: 5.2% construction.",
+    "Kansas: 5.2% jobs.",
+    "Kansas: 5.2% construction",
+    "Kansas: 5.2% jobs."
+   ]
+  },
+  "10079": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "In Iowa, 6.3% of those employed work in construction-related jobs.",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "In Iowa, 6.3% of all employed people work in construction-related jobs.",
+    "In Iowa, 6.3% of all employed people work in construction-related jobs.",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "In Iowa, 6.3% of all employed people work in construction-related jobs.",
+    "Iowa: 6.3% jobs",
+    "In Iowa, 6.3% of all employed people work in construction-related jobs.",
+    "In Iowa, 6.3% of all employed people work in construction-related jobs.",
+    "Iowa: 6.3% jobs",
+    "Iowa: 6.3% jobs",
+    "In Iowa, 6.3% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10080": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "Nevada's: 7.2% jobs",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "Nevada's: 7.2% jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "Nevada's: 7.2% jobs",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "Nevada's: 7.2% jobs",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "Nevada's: 7.2% jobs."
+   ]
+  },
+  "10081": {
+   "title": "Maine construction occupation share",
+   "notes": [
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs.",
+    "Maine's share: 6.3",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs.",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs",
+    "Maine: 6.3% jobs"
+   ]
+  },
+  "10082": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, construction jobs represent 5.8% of total employment.",
+    "Oregon: 5.8% jobs",
+    "In Oregon, construction jobs make up 5.8% of total employment.",
+    "In Oregon, construction jobs represent 5.8% of total employment.",
+    "Oregon's share: 5.8",
+    "In Oregon, construction jobs represent 5.8% of total employment.",
+    "In Oregon, construction jobs represent 5.8% of total employment.",
+    "In Oregon, 5.8% of all employed people work in construction-related jobs.",
+    "Oregon's share: 5.8",
+    "In Oregon, construction jobs represent 5.8% of total employment."
+   ]
+  },
+  "10083": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 11.0% construction",
+    "In Kansas, construction jobs account for 11.0% of all employment.",
+    "In Kansas, construction jobs account for 11.0% of all employment.",
+    "Kansas: 11.0% construction",
+    "Kansas: 11.0% construction.",
+    "In Kansas, construction jobs account for 11.0% of total employment.",
+    "Kansas: 11.0% construction",
+    "In Kansas, construction jobs account for 11.0% of all employment.",
+    "In Kansas, 11.0% of all employed people work in construction-related jobs.",
+    "In Kansas, construction jobs account for 11.0% of all employment.",
+    "Kansas: 11.0% construction.",
+    "In Kansas, construction jobs account for 11.0% of all employment.",
+    "In Kansas, construction jobs employ 11.0% of the state’s workforce.",
+    "Kansas: 11.0% construction"
+   ]
+  },
+  "10084": {
+   "title": "Montana construction occupation share",
+   "notes": [
+    "In Montana, 6.3% of all employed people work in construction-related jobs.",
+    "In Montana, 6.3% of all employed people work in construction-related jobs.",
+    "Montana: 6.3% jobs.",
+    "In Montana, construction jobs represent 6.3% of total employment.",
+    "In Montana, construction jobs represent 6.3% of total employment.",
+    "Montana: 6.3% jobs 👷‍♂️",
+    "In Montana, construction jobs represent 6.3% of total employment.",
+    "Montana: 6.3% jobs.",
+    "In Montana, 6.3% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10085": {
+   "title": "Vermont construction occupation share",
+   "notes": [
+    "In Vermont, construction jobs represent 11.5% of all employment.",
+    "In Vermont, construction jobs employ 11.5% of the state’s workforce.",
+    "In Vermont, construction jobs represent 11.5% of the total workforce.",
+    "In Vermont, construction jobs represent 11.5% of total employment.",
+    "In Vermont, construction jobs represent 11.5% of all employment.",
+    "Vermont’s share: 11.5",
+    "In Vermont, construction jobs represent 11.5% of all employment.",
+    "In Vermont, 11.5% of all employed people work in construction-related jobs.",
+    "In Vermont, construction jobs account for 11.5% of all employment.",
+    "In Vermont, construction jobs represent 11.5% of all employment.",
+    "In Vermont, 11.5% of all employed people work in construction-related jobs.",
+    "In Vermont, construction jobs represent 11.5% of the total employment share.",
+    "In Vermont, construction jobs represent 11.5% of all employment.",
+    "In Vermont, construction jobs represent 11.5% of all employment."
+   ]
+  },
+  "10086": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, 6.6% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 6.6% of total employment.",
+    "In Nevada, 6.6% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 6.6% of total employment.",
+    "In Nevada, construction jobs represent 6.6% of total employment.",
+    "In Nevada, construction jobs represent 6.6% of total employment.",
+    "In Nevada, 6.6% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 6.6% of total employment.",
+    "In Nevada, 6.6% of all employed people work in construction-related jobs.",
+    "In Nevada, construction jobs represent 6.6% of total employment."
+   ]
+  },
+  "10087": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 9.3% jobs.",
+    "Arizona: 9.3% jobs.",
+    "Arizona: 9.3% jobs 👷‍♂️",
+    "Arizona: 9.3% jobs.",
+    "Arizona: 9.3% jobs.",
+    "Arizona: 9.3% jobs.",
+    "Arizona: 9.3% jobs 👷‍♂️",
+    "Arizona: 9.3% jobs."
+   ]
+  },
+  "10088": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, 7.4% of all employed people work in construction-related jobs.",
+    "In Oregon, 7.4% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10089": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, 7.8% of all employed people work in construction-related jobs.",
+    "In Oregon, 7.8% of all employed people work in construction-related jobs.",
+    "In Oregon, 7.8% of all employed people work in construction-related jobs.",
+    "In Oregon, construction jobs represent 7.8% of total employment.",
+    "In Oregon, 7.8% of all employed people work in construction-related jobs.",
+    "In Oregon, 7.8% of all employed people work in construction-related jobs.",
+    "Oregon's share: 7.8",
+    "In Oregon, 7.8% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10090": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona's share: 11.5",
+    "Arizona: 11.5% jobs.",
+    "Arizona: 11.5% jobs.",
+    "Arizona: 11.5% jobs.",
+    "Arizona: 11.5% jobs.",
+    "Arizona: 11.5% jobs.",
+    "Arizona: 11.5% jobs."
+   ]
+  },
+  "10091": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "In Utah, 10.7% of all employed people work in the construction industry.",
+    "Utah: 10.7% jobs.",
+    "In Utah, 10.7% of all employed people work in the construction industry.",
+    "Utah: 10.7% jobs",
+    "Utah: 10.7% jobs.",
+    "In Utah, 10.7% of all employed people work in the construction industry.",
+    "In Utah, 10.7% of all employed people work in the construction industry.",
+    "In Utah, 10.7% of all employed people work in construction-related jobs.",
+    "Utah: 10.7% jobs.",
+    "In Utah, 10.7% of all employed people work in construction-related jobs.",
+    "Utah: 10.7% jobs",
+    "In Utah, 10.7% of all employed people work in the construction industry.",
+    "In Utah, 10.7% of all employed people work in the construction industry."
+   ]
+  },
+  "10092": {
+   "title": "Kansas construction occupation share",
+   "notes": [
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs 👷‍♂️",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs.",
+    "Kansas: 9.5% jobs"
+   ]
+  },
+  "10093": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, construction jobs represent 8.4% of total employment.",
+    "Nevada's: 8.4% jobs.",
+    "Nevada's: 8.4% jobs.",
+    "In Nevada, construction jobs represent 8.4% of total employment.",
+    "In Nevada, construction jobs account for 8.4% of all employment.",
+    "Nevada's: 8.4% jobs."
+   ]
+  },
+  "10094": {
+   "title": "Alabama construction occupation share",
+   "notes": [
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs 👷‍♂️",
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs.",
+    "Alabama: 6.8% jobs 👷‍♂️",
+    "Alabama: 6.8% jobs."
+   ]
+  },
+  "10095": {
+   "title": "Oregon construction occupation share",
+   "notes": [
+    "In Oregon, 5.7% of all employed people work in construction-related jobs.",
+    "In Oregon, 5.7% of all employed people work in construction-related jobs.",
+    "In Oregon, 5.7% of all employed people work in construction-related jobs.",
+    "In Oregon, 5.7% of all employed people work in construction-related jobs.",
+    "In Oregon, 5.7% of all employed people work in construction-related jobs.",
+    "In Oregon, 5.7% of all employed people work in construction-related jobs.",
+    "In Oregon, 5.7% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10096": {
+   "title": "Iowa construction occupation share",
+   "notes": [
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "In Iowa, construction jobs represent 10.5% of total employment.",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs",
+    "Iowa: 10.5% jobs"
+   ]
+  },
+  "10097": {
+   "title": "Nevada construction occupation share",
+   "notes": [
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "Nevada's: 7.2% jobs",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "Nevada's: 7.2% jobs",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "Nevada's: 7.2% jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs.",
+    "In Nevada, 7.2% of all employed people work in construction-related jobs."
+   ]
+  },
+  "10098": {
+   "title": "Arizona construction occupation share",
+   "notes": [
+    "Arizona: 4.5% jobs",
+    "Arizona: 4.5% jobs 👷‍♂️",
+    "Arizona: 4.5% jobs",
+    "Arizona: 4.5% jobs",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs.",
+    "Arizona: 4.5% jobs."
+   ]
+  },
+  "10099": {
+   "title": "Utah construction occupation share",
+   "notes": [
+    "In Utah, 9.5% of all employed people work in construction-related jobs.",
+    "Utah: 9.5% jobs",
+    "In Utah, 9.5% of all employed people work in the construction industry.",
+    "In Utah, 9.5% of all employed people work in construction-related jobs.",
+    "Utah: 9.5% jobs",
+    "In Utah, 9.5% of all employed people work in the construction industry.",
+    "In Utah, 9.5% of all employed people work in construction-related jobs.",
+    "In Utah, 9.5% of all employed people work in the construction industry.",
+    "Utah: 9.5% jobs",
+    "Utah: 9.5% jobs",
+    "Utah: 9.5% jobs",
+    "In Utah, 9.5% of all employed people work in construction-related jobs.",
+    "Utah: 9.5% jobs",
+    "In Utah, 9.5% of all employed people work in the construction industry.",
+    "In Utah, 9.5% of all employed people work in construction-related jobs."
+   ]
+  }
+ }
+}

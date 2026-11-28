@@ -1,7 +1,7 @@
 # Numbers of the green text (tests on the scaling branch of the hackathon repository)
 
 The green text of `swarm_paper_aaai.tex` (`\addedg`, `addedgblock`) reports the tests that the scaling branch of
-LidaSafety/Swarm_schelling_hackathon ran after the AAAI-27 version: its README items 19-27 and `docs/findings.html`.
+LidaSafety/Swarm_schelling_hackathon ran after the AAAI-27 version: its README items 19-30 and `docs/findings.html`.
 Every number comes from a result file on that branch, written by the script named beside it (run from its `scaling/`
 folder; the README there gives the commands and the patched runner each needs). Each test was registered in
 `scaling/results/predictions_*.md` and committed before its first run.
@@ -18,6 +18,10 @@ folder; the README there gives the commands and the patched runner each needs). 
 | tab:registered, mixes of three models | scored in `sources/results_mix3.md` section 4, on the runs of app:mix | - | `predictions_mix3.md` (acba44a) |
 | app:precedent "What on the page matters", tab:pagecontent; the Gemma and 8B sentences in sec:law; the future-work sentence in sec:discussion | `results/page_content.json` (277f629) | `scripts/analyze_page_content.py results --source aaai` | `predictions_page_content.md` (f9a1c4c) |
 | app:twin "Why the effect fades", tab:twinpage; the twin sentence in sec:discussion | `results/twin_page.json` (5cf6fa8) | `scripts/analyze_twin_page.py results --reference` | `predictions_twin_page.md` (467a167) |
+| app:writers, own style; tab:registered | `results/paraphrase.json` (247c905), `results/paraphrase_authorship.json` (af5eeaa) | `scripts/analyze_paraphrase.py results` | `predictions_paraphrase.md` (71f6997) |
+| app:writers, third writer; tab:registered | `results/writers.json`, `results/writers_authorship.json` (1093e8e) | `scripts/analyze_writers.py results` | `predictions_writers.md` (ef014f8) |
+| app:writers, the grid; tab:writers (post, says it wrote); tab:registered; the wording clause in sec:law | `results/grid.json`, `results/grid_authorship.json` (7a89990) | `scripts/analyze_grid.py results` | `predictions_grid.md` (e13c2a7) |
+| tab:writers "Takes the value" and the sentence on belief in app:writers | `results/rewrites_extra.json` (f3da57c) | `scripts/analyze_rewrites_extra.py` | not registered |
 
 ## 1. Swarms by notes on the page (fig:precedent, gray line)
 
@@ -78,13 +82,13 @@ Qwen3-8B minus the full rule: ban on sharing only +6.3 [-3.0, 15.8]; ban on usin
 
 | Copies | All rounds | Forecast | Rounds 1 and 3 | Forecast | Rounds 2 and 4 | Forecast |
 |---|---|---|---|---|---|---|
-| 32 | 53.7 [50.1, 57.2] | 53.0 [46.8, 57.9] | 52.5 [48.3, 56.7] | 52.7 [45.2, 58.7] | 54.8 [49.5, 60.1] | 53.4 [45.0, 60.1] |
-| 64 | 62.4 [59.7, 64.9] | 54.2 [47.6, 59.4] | 57.7 [53.9, 61.1] | 52.9 [45.4, 59.2] | 67.0 [63.1, 70.8] | 55.4 [46.7, 62.6] |
+| 32 | 53.7 [50.1, 57.3] | 53.0 [46.8, 57.9] | 52.6 [48.4, 56.7] | 52.7 [45.2, 58.7] | 54.9 [49.6, 60.2] | 53.4 [45.0, 60.1] |
+| 64 | 62.5 [59.7, 64.9] | 54.2 [47.6, 59.4] | 57.8 [53.9, 61.1] | 52.9 [45.4, 59.2] | 67.1 [63.2, 70.8] | 55.4 [46.7, 62.6] |
 
-Late holders post 46.5% in pairs, 36.9% with 32 copies, 35.3% with 64. With 64 copies seekers use 82.3% of the true
+Late holders post 46.5% in pairs, 36.9% with 32 copies, 35.3% with 64. With 64 copies seekers use 82.4% of the true
 values they find in rounds 2 and 4 and 73.1% in rounds 1 and 3 (prediction 71.2 and 64.7); they find one 81.5% of
 the time in rounds 2 and 4 (prediction 77.8). Registered test (rounds 2 and 4 at least 10 above, rounds 1 and 3 within
-5): met, 11.7 and 4.8.
+5): met, 11.7 and 4.9 (rescored with the decimal answer rule, 28 November).
 
 ## 6. Gemma's notes length (app:finv)
 
@@ -160,3 +164,67 @@ Registered: (a) +21.0, met. (b) stated 64 minus true, nothing planted: -16.2 [-2
 minus nothing, stated 64: -8.0 [-15.4, -0.9], met. (d) its answers only minus nothing: -11.4 [-19.5, -3.6], met. (e) its
 requests only minus nothing: +4.0 [-3.6, 11.4], not met. Reported: answers only minus requests only -15.3 [-23.4,
 -7.1].
+
+## 10. Own style (item 28; app:writers, tab:registered)
+
+Pairs on the fixed prompt; before round 1, each model's page of answers to question 1 from section 8 sits on the
+pair's usual title as written, rewritten note by note by its own model, or rewritten by the other model
+(`scripts/make_paraphrase_pages.py`: the same state and value, a length within 15 characters or 25% of the original,
+up to 8 tries, else the closest try). Gemma 300 games per arm (sample offsets 0-2), Qwen3-8B 400 (offsets 0-3), seeds
+10000-10099. Late holders that read the planted title (nothing planted: the same title), posting their round-2 answer
+in round 2 (%), 95% intervals resampling quizzes jointly across arms and both models.
+
+| Planted | Gemma | Qwen3-8B |
+|---|---|---|
+| nothing | 18.5 [14.1, 22.8] | 82.0 [76.1, 87.4] |
+| the page as written | 41.3 [33.3, 49.4] | 61.8 [52.5, 70.8] |
+| rewritten by its own model | 49.8 [42.3, 57.3] | 55.1 [45.0, 64.8] |
+| rewritten by the other model | 35.8 [28.6, 43.6] | 42.3 [33.0, 51.7] |
+
+Registered: (a) Gemma, its own model's rewrite minus the other's: +14.1 [6.6, 21.3], met. (b) Qwen3-8B, the two
+rewrites differ: +12.8 [5.5, 19.5] (its own model's above Gemma's), met. Exploratory: Gemma, on the 53 quizzes where
+Qwen3-8B's rewrite has no bare numbers, +7.4 [-2.7, 17.4]. Mean note length on Gemma's page: 93 characters as written,
+89 rewritten by Gemma, 79 by Qwen3-8B (13% bare numbers); on Qwen3-8B's page 35, 35 and 37. Says it wrote the note (150
+notes per page): Gemma 33% as written, 27% of Gemma's rewrite, 20% of Qwen3-8B's; Qwen3-8B 100% of each.
+
+## 11. Third writer (item 29; app:writers, tab:registered)
+
+As section 10, with Llama 3.3 70B (OpenRouter, one host) as a third writer of the same pages, in games new to these
+quizzes: Gemma 300 games per arm (offsets 3-5), Qwen3-8B 400 (offsets 4-7).
+
+| Planted | Gemma | Qwen3-8B |
+|---|---|---|
+| nothing | 24.1 [18.5, 30.2] | 81.5 [76.0, 87.1] |
+| rewritten by Gemma | 51.6 [44.0, 59.4] | 52.6 [43.1, 62.2] |
+| rewritten by Qwen3-8B | 35.8 [28.5, 43.5] | 59.1 [49.3, 68.9] |
+| rewritten by Llama 3.3 70B | 26.4 [20.0, 32.9] | 59.2 [49.3, 69.1] |
+
+Registered: (a) Gemma, Gemma's rewrite minus Llama's: +25.3 [18.2, 32.4], met. (b) Qwen3-8B, Llama's minus Gemma's:
++6.6 [0.7, 13.1], met. (c) Gemma, Gemma's minus Qwen3-8B's: +15.8 [9.0, 22.5], met. (d) Qwen3-8B, its own model's minus
+Gemma's: +6.5 [-0.4, 14.1], not met. Llama's rewrites of Gemma's page average 64 characters (1,264 of 1,907 notes are
+the closest of 8 tries). Says it wrote the note: Gemma 35% of Gemma's rewrite, 19% of Qwen3-8B's, 11% of Llama's;
+Qwen3-8B 99-100% of each.
+
+## 12. Reader by writer (item 30; app:writers, tab:writers, tab:registered)
+
+Pairs of Gemma 3 27B (300 games per arm, offsets 6-8), Qwen3-8B (400, offsets 8-11) and gpt-oss-120B (OpenRouter, as in
+app:rulemodels; 400, offsets 0-3), seeds 10000-10099. Gemma and Qwen3-8B read their own model's answer page;
+gpt-oss-120B reads Gemma's, under its usual round-1 title, the state's name (`scripts/make_reader_pages.py`). Writers:
+Gemma's and Qwen3-8B's rewrites from section 10, gpt-oss-120B's new (`scripts/make_paraphrase_pages.py --writers
+gptoss`). Posting as in section 10; intervals resample quizzes jointly across readers and arms (2,000 resamples).
+
+| Reader | Nothing | By Gemma | By Qwen3-8B | By gpt-oss-120B |
+|---|---|---|---|---|
+| Gemma 3 27B | 20.7 [16.1, 25.2] | 47.6 [40.3, 54.6] | 34.8 [28.3, 41.5] | 41.0 [34.1, 47.7] |
+| Qwen3-8B | 75.3 [68.2, 82.2] | 43.4 [34.8, 52.4] | 58.0 [48.9, 67.4] | 43.7 [35.2, 52.6] |
+| gpt-oss-120B | 38.8 [32.1, 45.4] | 63.3 [57.2, 69.6] | 43.8 [37.4, 50.0] | 47.0 [41.6, 52.4] |
+
+Each reader's effects (rewrite minus nothing) are read in the direction of its mean effect: Gemma +20.5 [14.3, 26.6],
+Qwen3-8B -26.9 [-34.6, -19.7], gpt-oss-120B +12.6 [4.9, 20.4] points. Own-model advantage (its own model's rewrite
+minus the mean of the other two): Gemma +9.7 [4.3, 15.5], Qwen3-8B -14.5 [-21.2, -8.1], gpt-oss-120B -6.6 [-13.1,
+-0.2]. Registered: (a) the mean over readers (own-model index), -3.8 [-7.3, -0.5], not met. (b) gpt-oss-120B's
+own-model advantage above zero, not met. (c) Gemma's rewrite minus the third writer's, for Qwen3-8B and gpt-oss-120B,
++9.9 [4.4, 15.3], met. Says it wrote the note (150 notes per page; by Gemma / Qwen3-8B / gpt-oss-120B): Gemma 37 / 19 /
+19%, Qwen3-8B 100 / 100 / 98%, gpt-oss-120B 27 / 21 / 26%. Not registered (`results/rewrites_extra.json`): late
+holders who saw the planted value answered question 1 with it in 100% of games with every writer, except gpt-oss-120B
+with Qwen3-8B's rewrite (98.9%), and in 100% with every writer in the runs of section 11.

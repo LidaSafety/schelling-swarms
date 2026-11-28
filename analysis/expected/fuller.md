@@ -8,9 +8,9 @@ Every forecast is counted on swarms of N ≤ 8 of the same set and model and app
 |---|---|---|---|---|---|---|
 | Qwen3-8B | main | 93, 77, 98, 78 | 6, 1, 6, 1 | 98.2 | 99.5 | 67.4 (46) |
 | Qwen3-8B | comp | 93, 80, 91, 94 | 3, 2, 6, 4 | 95.4 | 99.3 | 56.6 (159) |
-| Qwen3-4B | ours | 95, 93, 98, 93 | 86, 80, 90, 84 | 59.0 | 74.2 | 50.2 (916) |
+| Qwen3-4B | ours | 95, 93, 98, 93 | 86, 80, 90, 84 | 59.9 | 74.2 | 51.5 (916) |
 | Qwen3-14B | ours | 52, 37, 58, 37 | 28, 62, 28, 64 | 74.4 | 88.4 | 33.3 (129) |
-| Qwen3-32B | ours | 1, 8, 1, 8 | 12, 2, 12, 2 | 78.6 | 91.7 | 91.7 (4) |
+| Qwen3-32B | ours | 1, 8, 1, 8 | 12, 2, 12, 2 | 85.7 | 91.7 | 91.7 (4) |
 | Gemma 3 27B | gemma | 99, 22, 93, 22 | 2, 1, 3, 2 | 98.6 | 99.1 | 87.5 (56) |
 
 With fewer than 20 finders shown a guess, u with a guess shown is set to u with none.
@@ -23,14 +23,14 @@ With fewer than 20 finders shown a guess, u with a guess shown is set to u with 
 | 8B, 2 answers | 32 | 70.0 [66.7, 73.1] | 77.7 | 77.7 | 72.9 | 69.1 | 71.8 | 68.0 | 68.3 |
 | 8B, 2 answers, rerun | 16 | 61.6 [57.8, 65.2] | 63.7 | 63.7 | 63.3 | 60.8 | 63.2 | 60.6 | 60.7 |
 | 8B, 2 answers, rerun | 64 | 78.3 [75.3, 81.0] | 91.6 | 91.6 | 80.9 | 76.5 | 77.8 | 73.6 | 74.2 |
-| 8B, 1 answer | 16 | 66.3 [63.7, 68.7] | 67.3 | 63.7 | 65.9 | 65.8 | 64.0 | 63.9 | 65.5 |
+| 8B, 1 answer | 16 | 66.4 [63.8, 68.8] | 67.3 | 63.7 | 65.9 | 65.8 | 64.0 | 63.9 | 65.5 |
 | 8B, 1 answer | 32 | 76.2 [74.2, 78.3] | 82.7 | 77.7 | 74.5 | 74.3 | 68.3 | 68.2 | 73.1 |
-| 3-4B | 16 | 38.2 [34.2, 42.3] | 38.1 | 63.7 | 47.2 | 44.6 | 41.7 | 39.4 | 39.1 |
-| 3-4B | 32 | 41.5 [38.1, 44.8] | 42.9 | 77.7 | 50.4 | 47.9 | 43.6 | 41.2 | 40.8 |
+| 3-4B | 16 | 38.4 [34.4, 42.4] | 38.8 | 63.7 | 47.8 | 45.3 | 42.7 | 40.3 | 40.0 |
+| 3-4B | 32 | 41.5 [38.1, 44.8] | 43.9 | 77.7 | 51.1 | 48.6 | 44.7 | 42.3 | 41.9 |
 | 3-14B | 16 | 22.0 [19.0, 25.0] | 21.6 | 63.7 | 33.9 | 30.8 | 28.4 | 26.3 | 28.5 |
-| 3-14B | 32 | 29.8 [26.9, 32.8] | 26.9 | 77.7 | 49.1 | 44.4 | 32.5 | 30.6 | 37.8 |
-| 3-32B | 16 | 3.1 [1.7, 4.7] | 1.3 | 63.7 | 3.3 | 2.7 | 3.8 | 3.1 | 3.1 |
-| 3-32B | 32 | 8.6 [6.3, 11.1] | 1.6 | 77.7 | 6.1 | 5.0 | 7.1 | 5.8 | 5.8 |
+| 3-14B | 32 | 29.8 [27.0, 32.9] | 26.9 | 77.7 | 49.1 | 44.4 | 32.5 | 30.6 | 37.8 |
+| 3-32B | 16 | 3.1 [1.7, 4.7] | 1.5 | 63.7 | 3.6 | 2.9 | 3.8 | 3.1 | 3.1 |
+| 3-32B | 32 | 8.6 [6.4, 11.2] | 1.9 | 77.7 | 6.7 | 5.5 | 7.1 | 5.8 | 5.8 |
 
 ## 3. The two halves of each cell
 
@@ -44,22 +44,22 @@ With fewer than 20 finders shown a guess, u with a guess shown is set to u with 
 | 8B, 2 answers, rerun | 16 | rounds 2 and 4 | 57.7 [52.6, 62.5] | 62.2 | 54.6 | 62.3 | 55.1 | 55.2 |
 | 8B, 2 answers, rerun | 64 | rounds 1 and 3 | 76.8 [73.0, 80.7] | 80.7 | 80.5 | 76.6 | 74.8 | 75.8 |
 | 8B, 2 answers, rerun | 64 | rounds 2 and 4 | 79.7 [76.5, 82.7] | 81.2 | 72.5 | 79.0 | 72.3 | 72.5 |
-| 8B, 1 answer | 16 | rounds 1 and 3 | 65.5 [62.2, 68.8] | 65.8 | 66.3 | 64.0 | 63.8 | 65.5 |
+| 8B, 1 answer | 16 | rounds 1 and 3 | 65.7 [62.4, 68.9] | 65.8 | 66.3 | 64.0 | 63.8 | 65.5 |
 | 8B, 1 answer | 16 | rounds 2 and 4 | 67.1 [64.2, 70.1] | 66.0 | 65.3 | 64.1 | 64.0 | 65.4 |
 | 8B, 1 answer | 32 | rounds 1 and 3 | 75.3 [72.6, 77.9] | 74.6 | 75.1 | 68.5 | 67.6 | 73.1 |
 | 8B, 1 answer | 32 | rounds 2 and 4 | 77.2 [75.1, 79.3] | 74.4 | 73.6 | 68.0 | 68.8 | 73.0 |
-| 3-4B | 16 | rounds 1 and 3 | 50.6 [44.7, 56.4] | 46.6 | 45.7 | 41.1 | 39.8 | 39.4 |
-| 3-4B | 16 | rounds 2 and 4 | 25.9 [21.2, 30.9] | 47.7 | 43.5 | 42.4 | 38.9 | 38.7 |
-| 3-4B | 32 | rounds 1 and 3 | 52.6 [47.0, 58.3] | 50.5 | 50.8 | 43.5 | 43.5 | 42.7 |
-| 3-4B | 32 | rounds 2 and 4 | 30.4 [25.8, 35.5] | 50.3 | 45.1 | 43.7 | 39.0 | 39.0 |
+| 3-4B | 16 | rounds 1 and 3 | 50.6 [44.7, 56.4] | 47.3 | 46.4 | 42.0 | 40.8 | 40.4 |
+| 3-4B | 16 | rounds 2 and 4 | 26.3 [21.8, 31.3] | 48.4 | 44.1 | 43.4 | 39.7 | 39.5 |
+| 3-4B | 32 | rounds 1 and 3 | 52.6 [47.1, 58.3] | 51.2 | 51.5 | 44.6 | 44.6 | 43.8 |
+| 3-4B | 32 | rounds 2 and 4 | 30.5 [25.8, 35.5] | 51.0 | 45.7 | 44.7 | 39.9 | 39.9 |
 | 3-14B | 16 | rounds 1 and 3 | 28.6 [23.9, 33.8] | 33.4 | 34.0 | 28.9 | 31.3 | 33.6 |
 | 3-14B | 16 | rounds 2 and 4 | 15.3 [11.4, 19.3] | 34.3 | 27.7 | 28.0 | 21.4 | 23.4 |
-| 3-14B | 32 | rounds 1 and 3 | 37.0 [32.5, 41.7] | 48.3 | 48.6 | 33.7 | 37.5 | 45.7 |
-| 3-14B | 32 | rounds 2 and 4 | 22.6 [18.5, 27.2] | 49.8 | 40.2 | 31.3 | 23.6 | 30.0 |
-| 3-32B | 16 | rounds 1 and 3 | 0.9 [0.1, 2.2] | 2.4 | 0.7 | 2.8 | 0.9 | 0.9 |
-| 3-32B | 16 | rounds 2 and 4 | 5.3 [2.8, 8.3] | 4.1 | 4.6 | 4.8 | 5.4 | 5.4 |
-| 3-32B | 32 | rounds 1 and 3 | 1.2 [0.5, 2.1] | 4.6 | 1.4 | 5.3 | 1.7 | 1.7 |
-| 3-32B | 32 | rounds 2 and 4 | 16.1 [11.6, 20.8] | 7.7 | 8.6 | 9.0 | 10.0 | 10.0 |
+| 3-14B | 32 | rounds 1 and 3 | 37.1 [32.6, 41.8] | 48.3 | 48.6 | 33.7 | 37.5 | 45.7 |
+| 3-14B | 32 | rounds 2 and 4 | 22.6 [18.6, 27.3] | 49.8 | 40.2 | 31.3 | 23.6 | 30.0 |
+| 3-32B | 16 | rounds 1 and 3 | 0.9 [0.1, 2.2] | 2.6 | 0.8 | 2.8 | 0.9 | 0.9 |
+| 3-32B | 16 | rounds 2 and 4 | 5.3 [2.8, 8.3] | 4.5 | 5.0 | 4.8 | 5.4 | 5.4 |
+| 3-32B | 32 | rounds 1 and 3 | 1.2 [0.5, 2.1] | 5.0 | 1.6 | 5.3 | 1.7 | 1.7 |
+| 3-32B | 32 | rounds 2 and 4 | 16.1 [11.6, 20.8] | 8.4 | 9.4 | 9.0 | 10.0 | 10.0 |
 
 ## 4. Errors by group
 
@@ -68,31 +68,31 @@ Error: forecast minus observed, in points.
 | Cells | Forecast | Median error | Largest error | Mean signed error | Inside the observed interval |
 |---|---|---|---|---|---|
 | Qwen3-8B, all rounds (6 cells) | N alone | 5.9 | 13.4 | +6.0 | 2 of 6 |
-| Qwen3-8B, all rounds (6 cells) | One curve | 3.9 | 13.4 | +4.6 | 3 of 6 |
+| Qwen3-8B, all rounds (6 cells) | One curve | 4.0 | 13.4 | +4.5 | 2 of 6 |
 | Qwen3-8B, all rounds (6 cells) | Simple | 2.2 | 4.9 | +1.7 | 5 of 6 |
 | Qwen3-8B, all rounds (6 cells) | + first role | 1.3 | 2.4 | -0.6 | 6 of 6 |
-| Qwen3-8B, all rounds (6 cells) | + guesses | 2.0 | 8.0 | -0.4 | 4 of 6 |
-| Qwen3-8B, all rounds (6 cells) | Fuller | 2.3 | 8.0 | -2.6 | 4 of 6 |
+| Qwen3-8B, all rounds (6 cells) | + guesses | 2.1 | 8.0 | -0.4 | 4 of 6 |
+| Qwen3-8B, all rounds (6 cells) | Fuller | 2.4 | 8.0 | -2.6 | 4 of 6 |
 | Qwen3-8B, all rounds (6 cells) | Fuller, lead | 2.0 | 4.1 | -1.4 | 4 of 6 |
-| 4B, 14B, 32B, all rounds (6 cells) | N alone | 1.6 | 7.0 | -1.8 | 4 of 6 |
-| 4B, 14B, 32B, all rounds (6 cells) | One curve | 44.8 | 69.1 | +46.8 | 0 of 6 |
-| 4B, 14B, 32B, all rounds (6 cells) | Simple | 8.9 | 19.3 | +7.8 | 1 of 6 |
-| 4B, 14B, 32B, all rounds (6 cells) | + first role | 6.4 | 14.6 | +5.4 | 1 of 6 |
-| 4B, 14B, 32B, all rounds (6 cells) | + guesses | 2.4 | 6.5 | +2.3 | 5 of 6 |
-| 4B, 14B, 32B, all rounds (6 cells) | Fuller | 1.0 | 4.4 | +0.5 | 4 of 6 |
-| 4B, 14B, 32B, all rounds (6 cells) | Fuller, lead | 1.8 | 8.1 | +2.0 | 3 of 6 |
-| Every cell, all rounds (12) | N alone | 2.5 | 13.4 | +2.1 | 6 of 12 |
-| Every cell, all rounds (12) | One curve | 19.4 | 69.1 | +25.7 | 3 of 12 |
-| Every cell, all rounds (12) | Simple | 2.8 | 19.3 | +4.7 | 6 of 12 |
-| Every cell, all rounds (12) | + first role | 2.1 | 14.6 | +2.4 | 7 of 12 |
-| Every cell, all rounds (12) | + guesses | 2.2 | 8.0 | +1.0 | 9 of 12 |
-| Every cell, all rounds (12) | Fuller | 2.1 | 8.0 | -1.0 | 8 of 12 |
-| Every cell, all rounds (12) | Fuller, lead | 2.0 | 8.1 | +0.3 | 7 of 12 |
-| Every cell, by half (24) | Simple | 3.4 | 27.2 | +4.7 | 13 of 24 |
-| Every cell, by half (24) | + first role | 3.6 | 17.6 | +2.4 | 13 of 24 |
-| Every cell, by half (24) | + guesses | 3.7 | 16.5 | +1.0 | 11 of 24 |
-| Every cell, by half (24) | Fuller | 2.7 | 12.9 | -1.0 | 13 of 24 |
-| Every cell, by half (24) | Fuller, lead | 3.5 | 12.7 | +0.3 | 13 of 24 |
+| 4B, 14B, 32B, all rounds (6 cells) | N alone | 2.0 | 6.8 | -1.5 | 3 of 6 |
+| 4B, 14B, 32B, all rounds (6 cells) | One curve | 44.8 | 69.0 | +46.8 | 0 of 6 |
+| 4B, 14B, 32B, all rounds (6 cells) | Simple | 9.5 | 19.2 | +8.1 | 2 of 6 |
+| 4B, 14B, 32B, all rounds (6 cells) | + first role | 6.9 | 14.5 | +5.7 | 1 of 6 |
+| 4B, 14B, 32B, all rounds (6 cells) | + guesses | 2.9 | 6.5 | +2.6 | 4 of 6 |
+| 4B, 14B, 32B, all rounds (6 cells) | Fuller | 1.3 | 4.4 | +0.8 | 4 of 6 |
+| 4B, 14B, 32B, all rounds (6 cells) | Fuller, lead | 2.2 | 8.0 | +2.3 | 3 of 6 |
+| Every cell, all rounds (12) | N alone | 2.6 | 13.4 | +2.2 | 5 of 12 |
+| Every cell, all rounds (12) | One curve | 19.3 | 69.0 | +25.7 | 2 of 12 |
+| Every cell, all rounds (12) | Simple | 2.8 | 19.2 | +4.9 | 7 of 12 |
+| Every cell, all rounds (12) | + first role | 2.1 | 14.5 | +2.5 | 7 of 12 |
+| Every cell, all rounds (12) | + guesses | 2.5 | 8.0 | +1.1 | 8 of 12 |
+| Every cell, all rounds (12) | Fuller | 2.1 | 8.0 | -0.9 | 8 of 12 |
+| Every cell, all rounds (12) | Fuller, lead | 2.0 | 8.0 | +0.4 | 7 of 12 |
+| Every cell, by half (24) | Simple | 3.3 | 27.2 | +4.9 | 13 of 24 |
+| Every cell, by half (24) | + first role | 3.6 | 17.8 | +2.5 | 13 of 24 |
+| Every cell, by half (24) | + guesses | 3.7 | 17.1 | +1.1 | 11 of 24 |
+| Every cell, by half (24) | Fuller | 2.7 | 13.4 | -0.9 | 13 of 24 |
+| Every cell, by half (24) | Fuller, lead | 3.5 | 13.2 | +0.4 | 13 of 24 |
 
 ## 5. Mixed swarms, from the pure swarms
 
@@ -124,12 +124,12 @@ The same counts on N ≤ 8, applied to swarms that have not been run. Each block
 | Qwen3-8B | 64 | 80.9 | 76.5 | 77.8 | 73.6 | 74.8 | 72.3 |
 | Qwen3-8B | 128 | 85.6 | 81.5 | 79.1 | 75.7 | 73.7 | 77.8 |
 | Qwen3-8B | 256 | 87.2 | 83.6 | 76.0 | 74.2 | 69.7 | 78.8 |
-| Qwen3-4B | 64 | 52.6 | 49.2 | 45.4 | 42.2 | 44.9 | 39.5 |
-| Qwen3-4B | 128 | 54.6 | 50.3 | 47.1 | 43.1 | 45.5 | 40.7 |
+| Qwen3-4B | 64 | 53.3 | 49.9 | 46.5 | 43.2 | 46.0 | 40.5 |
+| Qwen3-4B | 128 | 55.4 | 51.0 | 48.2 | 44.2 | 46.6 | 41.8 |
 | Qwen3-14B | 64 | 60.7 | 55.2 | 32.9 | 31.4 | 37.6 | 25.1 |
 | Qwen3-14B | 128 | 66.8 | 61.9 | 32.7 | 31.0 | 34.3 | 27.7 |
-| Qwen3-32B | 64 | 10.9 | 8.9 | 12.8 | 10.4 | 3.2 | 17.6 |
-| Qwen3-32B | 128 | 18.1 | 14.5 | 21.1 | 16.9 | 5.5 | 28.2 |
+| Qwen3-32B | 64 | 11.9 | 9.7 | 12.8 | 10.4 | 3.2 | 17.6 |
+| Qwen3-32B | 128 | 19.7 | 15.8 | 21.1 | 16.9 | 5.5 | 28.2 |
 | Gemma 3 27B | 16 | 89.3 | 76.6 | 88.6 | 75.9 | 97.1 | 54.7 |
 | Gemma 3 27B | 32 | 96.1 | 82.4 | 94.4 | 80.6 | 95.7 | 65.6 |
 
@@ -154,9 +154,9 @@ The paper's Section 4.5 removed the rule sentence and kept everything else, pair
 | Model | Rule | Rounds | Holders who post | Seekers who post a guess | Title match | Found | Found → used | CR |
 |---|---|---|---|---|---|---|---|---|
 | Qwen3-4B | yes | 1 and 3 | 97.6 | 86.2 | 0.30 | 75.3 | 67.1 | 50.6 |
-| Qwen3-4B | yes | 2 and 4 | 91.5 | 86.3 | 0.31 | 65.0 | 39.9 | 25.9 |
-| Qwen3-4B | no | 1 and 3 | 91.4 | 78.5 | 0.37 | 85.6 | 72.4 | 62.0 |
-| Qwen3-4B | no | 2 and 4 | 84.9 | 83.4 | 0.40 | 69.3 | 24.0 | 16.8 |
+| Qwen3-4B | yes | 2 and 4 | 91.5 | 86.3 | 0.31 | 65.0 | 40.5 | 26.3 |
+| Qwen3-4B | no | 1 and 3 | 91.4 | 78.5 | 0.37 | 85.6 | 72.6 | 62.2 |
+| Qwen3-4B | no | 2 and 4 | 84.9 | 83.4 | 0.40 | 69.3 | 25.6 | 17.9 |
 | Qwen3-8B | yes | 1 and 3 | 95.8 | 5.4 | 0.26 | 66.1 | 99.1 | 65.4 |
 | Qwen3-8B | yes | 2 and 4 | 82.1 | 0.4 | 0.25 | 57.8 | 99.8 | 57.7 |
 | Qwen3-8B | no | 1 and 3 | 96.1 | 8.0 | 0.52 | 80.1 | 100.0 | 80.1 |
@@ -164,8 +164,8 @@ The paper's Section 4.5 removed the rule sentence and kept everything else, pair
 | Qwen3-14B | yes | 1 and 3 | 55.9 | 26.8 | 0.15 | 39.3 | 72.8 | 28.6 |
 | Qwen3-14B | yes | 2 and 4 | 28.9 | 54.2 | 0.18 | 25.3 | 60.5 | 15.3 |
 | Qwen3-14B | no | 1 and 3 | 47.8 | 48.6 | 0.11 | 30.4 | 39.3 | 11.9 |
-| Qwen3-14B | no | 2 and 4 | 74.1 | 68.4 | 0.15 | 51.4 | 54.5 | 28.0 |
+| Qwen3-14B | no | 2 and 4 | 74.1 | 68.4 | 0.15 | 51.4 | 54.6 | 28.1 |
 | Qwen3-32B | yes | 1 and 3 | 1.1 | 9.3 | 0.15 | 0.9 | 100.0 | 0.9 |
 | Qwen3-32B | yes | 2 and 4 | 5.8 | 3.6 | 0.14 | 5.9 | 90.4 | 5.3 |
 | Qwen3-32B | no | 1 and 3 | 18.8 | 30.1 | 0.11 | 15.1 | 85.1 | 12.8 |
-| Qwen3-32B | no | 2 and 4 | 25.0 | 18.4 | 0.18 | 32.4 | 85.4 | 27.7 |
+| Qwen3-32B | no | 2 and 4 | 25.0 | 18.4 | 0.18 | 32.4 | 85.5 | 27.8 |

@@ -38,10 +38,10 @@ At N = 16 (Gemma at N = 8), percent of chances. The first column is the paper's 
 
 | Model | CR: uses the true value | Takes a wrong number | Anything taken | Keeps its own posted guess | Answer correct |
 |---|---|---|---|---|---|
-| Qwen3-4B | 38.2 [34.3, 42.2] | 22.4 [19.8, 25.1] | 60.7 [57.6, 63.9] | 20.5 | 38.8 |
-| Qwen3-8B | 58.4 [54.2, 62.1] | 1.8 [1.0, 2.8] | 60.2 [56.6, 63.7] | 1.4 | 58.9 |
-| Qwen3-14B | 22.0 [18.9, 24.8] | 20.2 [17.5, 23.0] | 42.2 [38.6, 45.6] | 18.8 | 23.0 |
-| Qwen3-32B | 3.1 [1.8, 4.7] | 8.4 [6.2, 10.8] | 11.6 [8.4, 14.8] | 5.0 | 5.5 |
+| Qwen3-4B | 38.4 [34.5, 42.4] | 22.2 [19.7, 25.0] | 60.7 [57.6, 64.0] | 20.5 | 39.2 |
+| Qwen3-8B | 58.4 [54.2, 62.1] | 1.8 [1.0, 2.8] | 60.2 [56.6, 63.7] | 1.4 | 59.2 |
+| Qwen3-14B | 22.0 [18.9, 24.8] | 20.1 [17.4, 22.9] | 42.1 [38.5, 45.6] | 18.8 | 23.3 |
+| Qwen3-32B | 3.1 [1.8, 4.7] | 8.4 [6.1, 10.8] | 11.5 [8.4, 14.8] | 5.0 | 6.2 |
 | Gemma 3 27B | 61.8 [57.1, 66.2] | 1.1 [0.2, 2.1] | 62.8 [58.3, 67.3] | 0.4 | 61.8 |
 
 CR counts the uses that happen to be right. Qwen3-4B's and Qwen3-14B's seekers take about as many wrong numbers as right ones, and Qwen3-32B's take more wrong than right. Counted as anything taken from another copy, Qwen3-4B is level with Qwen3-8B. What sets Qwen3-8B apart in the paper's §4.4 is that its pages are clean, not that its seekers use the wiki more.
@@ -50,20 +50,20 @@ By N: CR, a wrong number taken, anything taken.
 
 | Model | N = 2 | N = 4 | N = 8 | N = 16 | N = 32 |
 |---|---|---|---|---|---|
-| Qwen3-4B | 24.0 / 0.0 / 24.0 | 27.5 / 15.8 / 43.2 | 33.7 / 19.4 / 53.1 | 38.2 / 22.4 / 60.7 | 41.5 / 24.1 / 65.6 |
+| Qwen3-4B | 24.0 / 0.0 / 24.0 | 28.2 / 15.5 / 43.8 | 34.1 / 19.2 / 53.3 | 38.4 / 22.2 / 60.7 | 41.5 / 23.7 / 65.2 |
 | Qwen3-8B | 21.2 / 0.2 / 21.5 | 36.9 / 1.8 / 38.6 | 49.2 / 2.3 / 51.5 | 58.4 / 1.8 / 60.2 | 70.0 / 4.1 / 74.1 |
-| Qwen3-14B | 6.5 / 0.0 / 6.5 | 9.9 / 8.2 / 18.1 | 17.0 / 13.9 / 30.9 | 22.0 / 20.2 / 42.2 | 29.8 / 23.1 / 52.9 |
-| Qwen3-32B | 0.0 / 0.0 / 0.0 | 1.5 / 1.8 / 3.2 | 0.6 / 2.9 / 3.5 | 3.1 / 8.4 / 11.6 | 8.6 / 12.6 / 21.3 |
+| Qwen3-14B | 6.5 / 0.0 / 6.5 | 9.9 / 8.2 / 18.1 | 17.0 / 13.9 / 30.9 | 22.0 / 20.1 / 42.1 | 29.8 / 23.0 / 52.8 |
+| Qwen3-32B | 0.0 / 0.0 / 0.0 | 1.5 / 1.8 / 3.2 | 0.8 / 2.9 / 3.6 | 3.1 / 8.4 / 11.5 | 8.6 / 12.5 / 21.2 |
 | Gemma 3 27B | 33.5 / 0.0 / 33.5 | 52.0 / 0.8 / 52.8 | 61.8 / 1.1 / 62.8 | – | – |
 
 A seeker takes what the page shows, true or not. All N, by what other copies' notes on the page it read show; seekers that posted a number of their own are kept apart, because a guess anchors:
 
 | Model | Shown the true value only: uses it (had not posted a number) | (had posted a guess) | Shown wrong numbers only: takes one (had not posted) | Shown both: uses the true value | takes a wrong one |
 |---|---|---|---|---|---|
-| Qwen3-4B | 79.6 (n = 221) | 72.0 (n = 647) | 77.8 (n = 239) | 53.6 (n = 7,636) | 35.7 |
+| Qwen3-4B | 79.6 (n = 221) | 72.2 (n = 647) | 77.4 (n = 239) | 53.9 (n = 7,636) | 35.6 |
 | Qwen3-8B | 100.0 (n = 6,861) | 85.9 (n = 92) | 91.4 (n = 257) | 84.1 (n = 685) | 14.7 |
-| Qwen3-14B | 99.9 (n = 1,715) | 66.1 (n = 504) | 95.8 (n = 1,059) | 40.9 (n = 2,297) | 41.5 |
-| Qwen3-32B | 98.6 (n = 641) | 58.8 (n = 17) | 90.6 (n = 1,143) | 43.2 (n = 74) | 21.6 |
+| Qwen3-14B | 99.9 (n = 1,715) | 66.5 (n = 504) | 95.4 (n = 1,059) | 41.0 (n = 2,297) | 41.5 |
+| Qwen3-32B | 98.6 (n = 641) | 58.8 (n = 17) | 90.1 (n = 1,143) | 47.3 (n = 74) | 21.6 |
 | Gemma 3 27B | 99.1 (n = 1,469) | 96.6 (n = 29) | 85.0 (n = 20) | 87.5 (n = 56) | 10.7 |
 
 ## 3. What happens to holders
@@ -74,7 +74,7 @@ At N = 16 (Gemma at N = 8), percent of holders' rounds:
 
 | Model | Shown a wrong number | Ends wrong | Gives a wrong number the page showed | Seekers' CR, for scale |
 |---|---|---|---|---|
-| Qwen3-4B | 68.2 | 12.8 [9.9, 15.6] | 12.2 [9.6, 14.9] | 38.2 |
+| Qwen3-4B | 68.2 | 12.4 [9.6, 15.3] | 11.9 [9.4, 14.6] | 38.4 |
 | Qwen3-8B | 6.0 | 0.8 [0.4, 1.2] | 0.5 [0.2, 0.8] | 58.4 |
 | Qwen3-14B | 30.7 | 10.2 [7.8, 12.9] | 10.1 [7.8, 12.7] | 22.0 |
 | Qwen3-32B | 8.7 | 6.4 [4.5, 8.4] | 5.6 [4.0, 7.5] | 3.1 |
@@ -84,20 +84,20 @@ By N: holders shown a wrong number / holders that end wrong / seekers' CR.
 
 | Model | N = 2 | N = 4 | N = 8 | N = 16 | N = 32 |
 |---|---|---|---|---|---|
-| Qwen3-4B | 24.5 / 21.2 / 24.0 | 38.8 / 18.6 / 27.5 | 56.8 / 16.5 / 33.7 | 68.2 / 12.8 / 38.2 | 75.3 / 11.4 / 41.5 |
+| Qwen3-4B | 24.5 / 21.0 / 24.0 | 38.8 / 18.0 / 28.2 | 56.8 / 16.4 / 34.1 | 68.2 / 12.4 / 38.4 | 75.3 / 11.2 / 41.5 |
 | Qwen3-8B | 0.5 / 2.0 / 21.2 | 0.6 / 1.8 / 36.9 | 2.9 / 1.3 / 49.2 | 6.0 / 0.8 / 58.4 | 8.6 / 0.7 / 70.0 |
-| Qwen3-14B | 6.8 / 5.2 / 6.5 | 10.1 / 5.0 / 9.9 | 21.8 / 10.3 / 17.0 | 30.7 / 10.2 / 22.0 | 44.0 / 9.4 / 29.8 |
-| Qwen3-32B | 1.5 / 1.5 / 0.0 | 1.6 / 1.6 / 1.5 | 4.5 / 3.4 / 0.6 | 8.7 / 6.4 / 3.1 | 14.0 / 9.2 / 8.6 |
+| Qwen3-14B | 6.8 / 5.2 / 6.5 | 10.1 / 5.0 / 9.9 | 21.8 / 10.2 / 17.0 | 30.7 / 10.2 / 22.0 | 44.0 / 9.3 / 29.8 |
+| Qwen3-32B | 1.5 / 1.5 / 0.0 | 1.6 / 1.6 / 1.5 | 4.5 / 3.4 / 0.8 | 8.7 / 6.4 / 3.1 | 14.0 / 8.9 / 8.6 |
 | Gemma 3 27B | 1.8 / 0.0 / 33.5 | 2.4 / 0.2 / 52.0 | 3.2 / 0.0 / 61.8 | – | – |
 
 What decides it is what the page shows and whether the holder's own value is on it. All N, percent of holders that end on their own value:
 
 | Model | Shown nothing | Shown the true value only | Shown both | Shown wrong numbers only, own value on the page | own value not on the page | of those, gives a wrong number shown |
 |---|---|---|---|---|---|---|
-| Qwen3-4B | 96.8 | 99.0 | 84.3 | 48.2 (n = 643) | 7.7 (n = 26) | 88.5 |
+| Qwen3-4B | 96.8 | 99.0 | 84.6 | 49.1 (n = 643) | 7.7 (n = 26) | 88.5 |
 | Qwen3-8B | 98.7 | 100.0 | 97.5 | 47.0 (n = 83) | 42.9 (n = 7) | 57.1 |
-| Qwen3-14B | 99.8 | 100.0 | 96.1 | 75.8 (n = 475) | 34.0 (n = 1,419) | 64.9 |
-| Qwen3-32B | 99.7 | 100.0 | 95.2 | 82.4 (n = 17) | 27.9 (n = 1,141) | 69.5 |
+| Qwen3-14B | 99.8 | 100.0 | 96.1 | 76.0 (n = 475) | 34.1 (n = 1,419) | 64.8 |
+| Qwen3-32B | 99.7 | 100.0 | 95.2 | 82.4 (n = 17) | 29.3 (n = 1,141) | 68.1 |
 | Gemma 3 27B | 99.9 | 100.0 | 100.0 | 100.0 (n = 17) | 100.0 (n = 22) | 0.0 |
 
 A holder that read only wrong numbers, on a page without its own value, gives one of them more than half the time in every Qwen model, although the answer is in its notes. A holder that posted is partly protected, because it usually reads the page it wrote on and finds its own value there. So the holders that keep the rule against sharing are the ones the wiki misleads. Gemma's holders do not give way.
@@ -106,10 +106,10 @@ Answers gained and lost per 100 answers, at f_inv = 2 where half of all answers 
 
 | Model | N = 2 | N = 4 | N = 8 | N = 16 | N = 32 |
 |---|---|---|---|---|---|
-| Qwen3-4B | +12.0 / −8.8 | +13.8 / −7.4 | +16.8 / −7.3 | +19.1 / −6.1 | +20.8 / −5.5 |
+| Qwen3-4B | +12.0 / −8.6 | +14.1 / −7.1 | +17.0 / −7.3 | +19.2 / −5.9 | +20.8 / −5.5 |
 | Qwen3-8B | +10.6 / −0.0 | +18.4 / −0.1 | +24.6 / −0.2 | +29.2 / −0.2 | +35.0 / −0.3 |
 | Qwen3-14B | +3.2 / −2.6 | +4.9 / −2.5 | +8.5 / −5.1 | +11.0 / −5.0 | +14.9 / −4.5 |
-| Qwen3-32B | +0.0 / −0.8 | +0.8 / −0.8 | +0.3 / −1.7 | +1.6 / −2.8 | +4.3 / −4.2 |
+| Qwen3-32B | +0.0 / −0.8 | +0.8 / −0.8 | +0.4 / −1.7 | +1.6 / −2.8 | +4.3 / −4.1 |
 | Gemma 3 27B | +16.8 / −0.0 | +26.0 / −0.0 | +30.9 / −0.0 | – | – |
 
 ## 4. The rule holds back writing, not using
@@ -120,60 +120,60 @@ The rule has two halves: "Sharing answers with, or using answers from, any other
 |---|---|---|---|---|
 | Qwen3-4B, 16 | Holders that post their value | 94.6 | 88.1 | -6.4 [-8.8, -4.3] |
 | Qwen3-4B, 16 | Seekers that post a wrong number | 86.2 | 81.0 | -5.3 [-8.0, -2.7] |
-| Qwen3-4B, 16 | Seekers shown the true value only that use it | 71.2 | 72.3 | +1.1 [-12.6, +13.6] |
-| Qwen3-4B, 16 | Seekers shown wrong numbers only that take one | 80.7 | 74.6 | -6.0 [-13.7, +0.9] |
-| Qwen3-4B, 16 | Holders shown wrong numbers only that give one | 41.6 | 52.7 | +11.1 [-5.0, +25.6] |
-| Qwen3-4B, 16 | CR | 38.2 | 39.4 | +1.1 [-3.9, +5.8] |
-| Qwen3-4B, 16 | Anything taken by seekers | 60.7 | 62.4 | +1.7 [-2.1, +5.3] |
-| Qwen3-4B, 16 | Holders that end wrong | 12.8 | 21.2 | +8.5 [+4.7, +12.4] |
+| Qwen3-4B, 16 | Seekers shown the true value only that use it | 71.8 | 72.8 | +1.0 [-12.2, +13.1] |
+| Qwen3-4B, 16 | Seekers shown wrong numbers only that take one | 80.0 | 74.0 | -6.0 [-13.7, +1.0] |
+| Qwen3-4B, 16 | Holders shown wrong numbers only that give one | 40.9 | 52.7 | +11.8 [-4.8, +26.3] |
+| Qwen3-4B, 16 | CR | 38.4 | 40.0 | +1.6 [-3.5, +6.3] |
+| Qwen3-4B, 16 | Anything taken by seekers | 60.7 | 62.5 | +1.8 [-2.0, +5.5] |
+| Qwen3-4B, 16 | Holders that end wrong | 12.4 | 20.8 | +8.4 [+4.5, +12.3] |
 | Qwen3-8B, 16 | Holders that post their value | 88.9 | 97.2 | +8.3 [+6.2, +10.6] |
 | Qwen3-8B, 16 | Seekers that post a wrong number | 2.9 | 4.3 | +1.5 [+0.0, +2.9] |
 | Qwen3-8B, 16 | Seekers shown the true value only that use it | 99.8 | 100.0 | +0.2 [+0.0, +0.6] |
-| Qwen3-8B, 16 | Seekers shown wrong numbers only that take one | 87.0 | 95.3 | +8.4 [-8.4, +25.7] |
+| Qwen3-8B, 16 | Seekers shown wrong numbers only that take one | 84.8 | 90.7 | +5.9 [-13.5, +24.6] |
 | Qwen3-8B, 16 | Holders shown wrong numbers only that give one | 34.8 | 7.1 | -27.6 [-53.9, +6.7] |
 | Qwen3-8B, 16 | CR | 61.6 | 78.3 | +16.8 [+13.4, +20.1] |
-| Qwen3-8B, 16 | Anything taken by seekers | 62.9 | 79.6 | +16.7 [+13.7, +19.9] |
+| Qwen3-8B, 16 | Anything taken by seekers | 62.8 | 79.6 | +16.7 [+13.7, +20.0] |
 | Qwen3-8B, 16 | Holders that end wrong | 0.7 | 0.2 | -0.5 [-0.9, -0.1] |
 | Qwen3-14B, 16 | Holders that post their value | 42.4 | 60.9 | +18.6 [+15.8, +21.3] |
 | Qwen3-14B, 16 | Seekers that post a wrong number | 40.5 | 58.5 | +18.0 [+13.9, +22.1] |
 | Qwen3-14B, 16 | Seekers shown the true value only that use it | 91.5 | 78.6 | -12.9 [-19.8, -6.5] |
-| Qwen3-14B, 16 | Seekers shown wrong numbers only that take one | 79.7 | 81.2 | +1.5 [-3.5, +7.2] |
-| Qwen3-14B, 16 | Holders shown wrong numbers only that give one | 57.4 | 58.0 | +0.6 [-9.0, +10.1] |
+| Qwen3-14B, 16 | Seekers shown wrong numbers only that take one | 79.3 | 81.2 | +1.9 [-3.4, +7.4] |
+| Qwen3-14B, 16 | Holders shown wrong numbers only that give one | 57.4 | 57.7 | +0.2 [-9.2, +9.7] |
 | Qwen3-14B, 16 | CR | 22.0 | 20.0 | -2.0 [-5.6, +1.7] |
-| Qwen3-14B, 16 | Anything taken by seekers | 42.2 | 44.3 | +2.2 [-1.5, +6.1] |
-| Qwen3-14B, 16 | Holders that end wrong | 10.2 | 10.9 | +0.7 [-2.1, +3.3] |
+| Qwen3-14B, 16 | Anything taken by seekers | 42.1 | 44.3 | +2.3 [-1.4, +6.2] |
+| Qwen3-14B, 16 | Holders that end wrong | 10.2 | 10.9 | +0.6 [-2.2, +3.3] |
 | Qwen3-32B, 4 | Holders that post their value | 6.5 | 23.4 | +16.9 [+11.9, +21.7] |
 | Qwen3-32B, 4 | Seekers that post a wrong number | 8.1 | 32.1 | +24.0 [+19.5, +28.9] |
 | Qwen3-32B, 4 | Seekers shown the true value only that use it | 100.0 | 93.9 | -6.1 [-16.0, +0.0] |
-| Qwen3-32B, 4 | Seekers shown wrong numbers only that take one | 77.8 | 81.6 | +3.9 [-27.3, +28.9] |
+| Qwen3-32B, 4 | Seekers shown wrong numbers only that take one | 77.8 | 79.6 | +1.8 [-29.3, +26.3] |
 | Qwen3-32B, 4 | Holders shown wrong numbers only that give one | 92.3 | 66.7 | -25.6 [-46.3, -1.0] |
 | Qwen3-32B, 4 | CR | 1.5 | 8.0 | +6.5 [+3.2, +9.8] |
-| Qwen3-32B, 4 | Anything taken by seekers | 3.2 | 12.8 | +9.5 [+5.0, +14.0] |
+| Qwen3-32B, 4 | Anything taken by seekers | 3.2 | 12.6 | +9.4 [+5.0, +13.8] |
 | Qwen3-32B, 4 | Holders that end wrong | 1.6 | 6.1 | +4.5 [+1.9, +7.3] |
 | Qwen3-32B, 8 | Holders that post their value | 3.8 | 24.0 | +20.2 [+16.6, +23.7] |
 | Qwen3-32B, 8 | Seekers that post a wrong number | 6.3 | 28.4 | +22.1 [+18.7, +25.3] |
 | Qwen3-32B, 8 | Seekers shown the true value only that use it | 83.3 | 97.4 | +14.0 [-6.3, +64.3] |
-| Qwen3-32B, 8 | Seekers shown wrong numbers only that take one | 81.8 | 85.1 | +3.2 [-15.0, +23.7] |
-| Qwen3-32B, 8 | Holders shown wrong numbers only that give one | 78.6 | 72.8 | -5.7 [-22.2, +16.3] |
-| Qwen3-32B, 8 | CR | 0.6 | 12.4 | +11.8 [+8.8, +15.1] |
-| Qwen3-32B, 8 | Anything taken by seekers | 3.5 | 22.2 | +18.8 [+15.1, +22.8] |
-| Qwen3-32B, 8 | Holders that end wrong | 3.4 | 11.7 | +8.2 [+5.0, +11.5] |
+| Qwen3-32B, 8 | Seekers shown wrong numbers only that take one | 81.8 | 83.5 | +1.7 [-16.3, +22.5] |
+| Qwen3-32B, 8 | Holders shown wrong numbers only that give one | 78.6 | 72.0 | -6.5 [-23.5, +15.3] |
+| Qwen3-32B, 8 | CR | 0.8 | 12.4 | +11.7 [+8.7, +15.0] |
+| Qwen3-32B, 8 | Anything taken by seekers | 3.6 | 22.1 | +18.4 [+14.7, +22.4] |
+| Qwen3-32B, 8 | Holders that end wrong | 3.4 | 11.6 | +8.1 [+4.9, +11.4] |
 | Qwen3-32B, 16 | Holders that post their value | 3.4 | 21.9 | +18.4 [+16.6, +20.4] |
 | Qwen3-32B, 16 | Seekers that post a wrong number | 6.4 | 24.2 | +17.8 [+15.6, +20.2] |
-| Qwen3-32B, 16 | Seekers shown the true value only that use it | 98.0 | 94.8 | -3.1 [-7.2, +2.5] |
-| Qwen3-32B, 16 | Seekers shown wrong numbers only that take one | 84.6 | 78.5 | -6.2 [-16.9, +6.4] |
-| Qwen3-32B, 16 | Holders shown wrong numbers only that give one | 69.2 | 58.0 | -11.2 [-25.6, +3.5] |
-| Qwen3-32B, 16 | CR | 3.1 | 20.2 | +17.1 [+13.8, +20.6] |
-| Qwen3-32B, 16 | Anything taken by seekers | 11.6 | 37.9 | +26.3 [+21.4, +30.8] |
-| Qwen3-32B, 16 | Holders that end wrong | 6.4 | 12.1 | +5.7 [+2.5, +8.6] |
+| Qwen3-32B, 16 | Seekers shown the true value only that use it | 98.0 | 95.0 | -3.0 [-7.1, +2.6] |
+| Qwen3-32B, 16 | Seekers shown wrong numbers only that take one | 84.3 | 78.3 | -6.0 [-16.9, +6.5] |
+| Qwen3-32B, 16 | Holders shown wrong numbers only that give one | 69.2 | 57.9 | -11.3 [-25.9, +3.3] |
+| Qwen3-32B, 16 | CR | 3.1 | 20.3 | +17.2 [+13.8, +20.7] |
+| Qwen3-32B, 16 | Anything taken by seekers | 11.5 | 37.9 | +26.3 [+21.5, +30.8] |
+| Qwen3-32B, 16 | Holders that end wrong | 6.4 | 12.0 | +5.6 [+2.5, +8.6] |
 | Qwen3-32B, 32 | Holders that post their value | 4.2 | 21.5 | +17.3 [+15.6, +19.0] |
 | Qwen3-32B, 32 | Seekers that post a wrong number | 6.1 | 23.2 | +17.0 [+15.0, +18.9] |
 | Qwen3-32B, 32 | Seekers shown the true value only that use it | 97.8 | 94.8 | -3.0 [-6.8, +1.4] |
-| Qwen3-32B, 32 | Seekers shown wrong numbers only that take one | 83.2 | 75.1 | -8.1 [-15.9, +0.3] |
-| Qwen3-32B, 32 | Holders shown wrong numbers only that give one | 66.9 | 40.6 | -26.2 [-35.1, -15.9] |
+| Qwen3-32B, 32 | Seekers shown wrong numbers only that take one | 82.6 | 74.7 | -7.9 [-15.6, +0.6] |
+| Qwen3-32B, 32 | Holders shown wrong numbers only that give one | 64.9 | 40.5 | -24.4 [-33.6, -14.1] |
 | Qwen3-32B, 32 | CR | 8.6 | 30.2 | +21.6 [+17.6, +25.7] |
-| Qwen3-32B, 32 | Anything taken by seekers | 21.3 | 54.6 | +33.4 [+28.2, +38.0] |
-| Qwen3-32B, 32 | Holders that end wrong | 9.2 | 12.2 | +3.1 [+0.2, +5.9] |
+| Qwen3-32B, 32 | Anything taken by seekers | 21.2 | 54.5 | +33.4 [+28.2, +38.0] |
+| Qwen3-32B, 32 | Holders that end wrong | 8.9 | 12.2 | +3.3 [+0.5, +6.1] |
 
 The sentence holds back writing. Without it, Qwen3-14B's and Qwen3-32B's holders post more, and so do their seekers: wrong numbers go up with true ones. Using is hardly touched. With the rule in force a seeker shown only the true value already uses it almost every time in Qwen3-8B and Qwen3-32B, and that share does not rise when the rule goes; a seeker shown only wrong numbers takes one about as often either way. Qwen3-14B's share does fall, by 13 points; section 11 shows that this is seekers that had posted a guess of their own, and that the sentence was removed whole, so the two halves are not separated. The one sign that the rule's second half restrains anyone is in Qwen3-4B's holders, more of whom end wrong without it. For Qwen3-32B, anything taken rises more than CR does, because more of what its seekers now find is wrong. The Qwen3-8B rows use our rerun of its N = 16 cell, which the no-rule runs are paired with.
 
@@ -193,7 +193,7 @@ Rounds 1 and 3 belong to the copies that started as holders, rounds 2 and 4 to t
 
 | Model | CR, rounds 1 and 3 | CR, rounds 2 and 4 | Difference | Holders that end wrong, rounds 1 and 3 | rounds 2 and 4 |
 |---|---|---|---|---|---|
-| Qwen3-4B | 50.6 | 25.9 | -24.6 [-31.9, -17.6] | 4.9 | 20.6 |
+| Qwen3-4B | 50.6 | 26.3 | -24.2 [-31.4, -17.2] | 4.9 | 19.9 |
 | Qwen3-8B | 63.4 | 53.4 | -10.1 [-15.6, -4.6] | 1.4 | 0.1 |
 | Qwen3-14B | 28.6 | 15.3 | -13.3 [-20.1, -6.4] | 8.7 | 11.8 |
 | Qwen3-32B | 0.9 | 5.3 | +4.4 [+1.5, +7.7] | 5.4 | 7.4 |
@@ -217,7 +217,7 @@ What a copy wrote in round 1 as a seeker says how it will act in round 2 as a ho
 |---|---|---|---|---|---|
 | Qwen3-4B | 97.7 (n = 2,626) | 80.9 (n = 356) | 0.0 (n = 105) | 92.9 (n = 1,630) | 90.7 (n = 364) |
 | Qwen3-8B | 72.4 (n = 174) | 79.2 (n = 2,583) | 81.5 (n = 340) | 76.8 (n = 1,939) | 86.8 (n = 931) |
-| Qwen3-14B | 58.4 (n = 862) | 26.5 (n = 1,602) | 0.0 (n = 627) | 23.9 (n = 943) | 35.0 (n = 1,386) |
+| Qwen3-14B | 58.4 (n = 862) | 26.5 (n = 1,602) | 0.0 (n = 627) | 23.9 (n = 944) | 35.0 (n = 1,386) |
 | Qwen3-32B | 49.2 (n = 303) | 14.5 (n = 470) | 0.0 (n = 2,325) | – | 6.4 (n = 2,569) |
 | Gemma 3 27B | – | 20.4 (n = 680) | – | 20.0 (n = 604) | 29.1 (n = 86) |
 
@@ -271,7 +271,7 @@ CR by round at the same holders per answer, percent (2 answers per copy → 1 an
 | h | Round 1 | Round 2 | Round 3 | Round 4 |
 |---|---|---|---|---|
 | 2 | 42.0 → 52.8 | 30.5 → 49.3 | 44.5 → 53.7 | 30.5 → 51.8 |
-| 4 | 53.8 → 65.7 | 43.0 → 65.5 | 57.0 → 65.3 | 43.0 → 68.7 |
+| 4 | 53.8 → 65.7 | 43.0 → 65.5 | 57.0 → 65.7 | 43.0 → 68.7 |
 | 8 | 61.8 → 73.8 | 53.2 → 75.4 | 65.1 → 76.8 | 53.5 → 79.0 |
 
 Holders that post, by round: 93.3, 79.1, 97.9, 80.5% with two answers per copy and 93.9, 84.4, 87.4, 91.1% with one.
@@ -296,7 +296,7 @@ Questions the paper does not ask:
 
 | Question | Answer |
 |---|---|
-| Does it matter which role a copy has first? | Yes. CR in rounds 1 and 3 and in rounds 2 and 4 differs by 10 points for Qwen3-8B, 25 for Qwen3-4B and 60 for Gemma, and runs with random halves show that it is the role and not the round. (section 5) |
+| Does it matter which role a copy has first? | Yes. CR in rounds 1 and 3 and in rounds 2 and 4 differs by 10 points for Qwen3-8B, 24 for Qwen3-4B and 60 for Gemma, and runs with random halves show that it is the role and not the round. (section 5) |
 | What happens to holders? | They read in every round, and a holder shown only wrong numbers gives one of them more than half the time in every Qwen model. 6 to 13% of Qwen3-4B's, 14B's and 32B's holders end wrong at N = 16. (section 3) |
 | How much do seekers take that is wrong? | About as much as they take that is right, in Qwen3-4B and 14B, and more in Qwen3-32B. CR counts the rest. (section 2) |
 | Where do the wrong numbers come from? | Seekers' write steps. (section 1) |
@@ -313,7 +313,7 @@ The collusion rate in rounds 1 and 3 and in rounds 2 and 4, each with its own 95
 
 | Model | N | CR, rounds 1 and 3 | CR, rounds 2 and 4 |
 |---|---|---|---|
-| Qwen3-4B | 16 | 50.6 [44.7, 56.7] | 25.9 [21.2, 31.1] |
+| Qwen3-4B | 16 | 50.6 [44.7, 56.7] | 26.3 [21.7, 31.4] |
 | Qwen3-8B | 16 | 63.4 [58.6, 67.9] | 53.4 [48.1, 58.5] |
 | Qwen3-14B | 16 | 28.6 [23.6, 34.1] | 15.3 [11.5, 19.3] |
 | Qwen3-32B | 16 | 0.9 [0.1, 2.2] | 5.3 [2.7, 8.2] |
@@ -343,7 +343,7 @@ Seekers shown the true value only, in the runs of section 4 (differences paired 
 |---|---|---|---|---|
 | Qwen3-4B, 16 | Had posted a number of their own | 72.9 (n = 177) | 57.4 (n = 202) | -15.5 [-30.3, +1.7] |
 | Qwen3-4B, 16 | Use it, having posted no number | 83.3 (n = 48) | 88.4 (n = 86) | +5.0 [-21.0, +33.2] |
-| Qwen3-4B, 16 | Use it, having posted a number | 66.7 (n = 129) | 60.3 (n = 116) | -6.3 [-19.8, +7.2] |
+| Qwen3-4B, 16 | Use it, having posted a number | 67.4 (n = 129) | 61.2 (n = 116) | -6.2 [-19.4, +6.4] |
 | Qwen3-8B, 16 | Had posted a number of their own | 1.3 (n = 1,818) | 1.7 (n = 2,128) | +0.5 [-0.8, +1.8] |
 | Qwen3-8B, 16 | Use it, having posted no number | 100.0 (n = 1,795) | 100.0 (n = 2,091) | +0.0 [+0.0, +0.0] |
 | Qwen3-8B, 16 | Use it, having posted a number | 82.6 (n = 23) | 100.0 (n = 37) | +17.4 [+0.0, +37.5] |
@@ -352,7 +352,7 @@ Seekers shown the true value only, in the runs of section 4 (differences paired 
 | Qwen3-14B, 16 | Use it, having posted a number | 67.1 (n = 155) | 55.1 (n = 216) | -12.0 [-25.9, +1.7] |
 | Qwen3-32B, 16 | Had posted a number of their own | 6.1 (n = 99) | 15.8 (n = 581) | +9.8 [+0.2, +17.0] |
 | Qwen3-32B, 16 | Use it, having posted no number | 100.0 (n = 93) | 100.0 (n = 489) | +0.0 [+0.0, +0.0] |
-| Qwen3-32B, 16 | Use it, having posted a number | 66.7 (n = 6) | 67.4 (n = 92) | +0.7 [-43.5, +74.7] |
+| Qwen3-32B, 16 | Use it, having posted a number | 66.7 (n = 6) | 68.5 (n = 92) | +1.8 [-42.1, +75.6] |
 | Qwen3-32B, 32 | Had posted a number of their own | 1.7 (n = 535) | 10.8 (n = 1,728) | +9.1 [+6.4, +11.9] |
 | Qwen3-32B, 32 | Use it, having posted no number | 98.3 (n = 526) | 97.8 (n = 1,542) | -0.5 [-4.3, +4.4] |
 | Qwen3-32B, 32 | Use it, having posted a number | 66.7 (n = 9) | 69.9 (n = 186) | +3.2 [-27.8, +51.1] |
@@ -365,10 +365,10 @@ A wrong answer can equal another copy's wrong number by chance: values have one 
 
 | Model | Shown one wrong number: takes it | Not shown, one posted elsewhere: matches it | Shown any: takes one | Not shown, any posted elsewhere: matches one |
 |---|---|---|---|---|
-| Qwen3-4B | 61.8 [57.4, 66.5] (n = 828) | 0.0 [0.0, 0.0] (n = 267) | 55.3 [52.6, 58.2] (n = 2,309) | 1.5 [0.7, 2.3] (n = 1,245) |
-| Qwen3-8B | 90.1 [83.5, 95.5] (n = 223) | 5.4 [2.8, 8.3] (n = 354) | 83.4 [74.1, 90.9] (n = 331) | 6.5 [4.2, 8.9] (n = 570) |
-| Qwen3-14B | 74.6 [70.9, 78.0] (n = 1,594) | 7.7 [5.7, 9.8] (n = 1,078) | 61.9 [58.7, 64.8] (n = 2,914) | 10.5 [8.9, 12.2] (n = 3,433) |
-| Qwen3-32B | 90.1 [86.7, 93.1] (n = 1,059) | 5.7 [4.4, 7.1] (n = 2,067) | 82.5 [76.7, 87.9] (n = 1,362) | 6.1 [5.0, 7.3] (n = 3,112) |
+| Qwen3-4B | 61.4 [56.9, 65.9] (n = 828) | 0.0 [0.0, 0.0] (n = 267) | 54.1 [51.5, 56.9] (n = 2,309) | 1.5 [0.7, 2.3] (n = 1,245) |
+| Qwen3-8B | 90.1 [83.5, 95.5] (n = 223) | 5.1 [2.6, 8.1] (n = 354) | 83.4 [74.1, 90.9] (n = 331) | 6.3 [4.1, 8.7] (n = 570) |
+| Qwen3-14B | 74.5 [70.8, 77.9] (n = 1,594) | 7.7 [5.7, 9.8] (n = 1,078) | 61.6 [58.5, 64.6] (n = 2,914) | 10.5 [8.8, 12.1] (n = 3,433) |
+| Qwen3-32B | 89.4 [85.8, 92.5] (n = 1,059) | 5.7 [4.4, 7.1] (n = 2,067) | 81.9 [76.3, 87.5] (n = 1,362) | 6.1 [5.0, 7.3] (n = 3,112) |
 | Gemma 3 27B | 84.2 [61.5, 96.4] (n = 19) | 0.0 [0.0, 0.0] (n = 3) | 77.3 [53.3, 94.7] (n = 22) | 0.0 [0.0, 0.0] (n = 5) |
 
 ### 11.4 Answers gained less answers lost, with intervals
@@ -377,10 +377,10 @@ The table of section 3 as one number per cell: seekers' uses less holders' wrong
 
 | Model | N = 2 | N = 4 | N = 8 | N = 16 | N = 32 |
 |---|---|---|---|---|---|
-| Qwen3-4B | +3.2 [+1.6, +5.1] | +6.3 [+4.4, +8.2] | +9.5 [+7.5, +11.7] | +13.0 [+10.9, +15.2] | +15.2 [+13.2, +17.2] |
+| Qwen3-4B | +3.4 [+1.7, +5.3] | +7.0 [+4.9, +9.1] | +9.8 [+7.7, +11.9] | +13.3 [+11.1, +15.5] | +15.3 [+13.3, +17.3] |
 | Qwen3-8B | +10.6 [+7.1, +14.4] | +18.4 [+15.1, +21.6] | +24.3 [+21.8, +26.8] | +29.0 [+27.0, +30.8] | +34.7 [+33.1, +36.2] |
-| Qwen3-14B | +0.6 [-1.4, +2.6] | +2.4 [+1.0, +3.8] | +3.4 [+1.6, +5.2] | +6.0 [+4.0, +7.8] | +10.4 [+8.3, +12.4] |
-| Qwen3-32B | -0.8 [-1.8, +0.0] | +0.0 [-0.8, +0.8] | -1.4 [-2.4, -0.6] | -1.2 [-2.3, -0.2] | +0.1 [-1.5, +1.7] |
+| Qwen3-14B | +0.6 [-1.4, +2.6] | +2.4 [+1.0, +3.8] | +3.4 [+1.6, +5.3] | +6.0 [+4.0, +7.8] | +10.4 [+8.4, +12.4] |
+| Qwen3-32B | -0.8 [-1.8, +0.0] | +0.0 [-0.8, +0.8] | -1.3 [-2.3, -0.5] | -1.2 [-2.3, -0.2] | +0.2 [-1.3, +1.8] |
 | Gemma 3 27B | +16.8 [+14.0, +19.4] | +26.0 [+23.4, +28.7] | +30.9 [+28.6, +33.1] | – | – |
 
 ### 11.5 Quiz seeds across sizes

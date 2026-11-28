@@ -1,0 +1,188 @@
+{
+ "belief": {
+  "gemma": {
+   "plant_grid_gemma": {
+    "nothing": {
+     "late_holders": 276,
+     "saw_planted": 0.0,
+     "took_value": null,
+     "post2": 0.20652173913043478
+    },
+    "gemma": {
+     "late_holders": 275,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.4763636363636364
+    },
+    "q8": {
+     "late_holders": 276,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.34782608695652173
+    },
+    "gptoss": {
+     "late_holders": 278,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.41007194244604317
+    }
+   },
+   "plant_writer_gemma": {
+    "nothing": {
+     "late_holders": 278,
+     "saw_planted": 0.0,
+     "took_value": null,
+     "post2": 0.24100719424460432
+    },
+    "gemma": {
+     "late_holders": 275,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.5163636363636364
+    },
+    "q8": {
+     "late_holders": 279,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.35842293906810035
+    },
+    "llama": {
+     "late_holders": 277,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.26353790613718414
+    }
+   }
+  },
+  "q8": {
+   "plant_grid_q8": {
+    "nothing": {
+     "late_holders": 190,
+     "saw_planted": 0.0,
+     "took_value": null,
+     "post2": 0.7526315789473684
+    },
+    "gemma": {
+     "late_holders": 189,
+     "saw_planted": 0.9894179894179894,
+     "took_value": 1.0,
+     "post2": 0.43386243386243384
+    },
+    "q8": {
+     "late_holders": 193,
+     "saw_planted": 0.9896373056994818,
+     "took_value": 1.0,
+     "post2": 0.5803108808290155
+    },
+    "gptoss": {
+     "late_holders": 197,
+     "saw_planted": 0.9847715736040609,
+     "took_value": 1.0,
+     "post2": 0.4365482233502538
+    }
+   },
+   "plant_writer_q8": {
+    "nothing": {
+     "late_holders": 200,
+     "saw_planted": 0.0,
+     "took_value": null,
+     "post2": 0.815
+    },
+    "gemma": {
+     "late_holders": 194,
+     "saw_planted": 0.9896907216494846,
+     "took_value": 1.0,
+     "post2": 0.5257731958762887
+    },
+    "q8": {
+     "late_holders": 203,
+     "saw_planted": 0.9901477832512315,
+     "took_value": 1.0,
+     "post2": 0.5911330049261084
+    },
+    "llama": {
+     "late_holders": 196,
+     "saw_planted": 0.9897959183673469,
+     "took_value": 1.0,
+     "post2": 0.5918367346938775
+    }
+   }
+  },
+  "gptoss": {
+   "plant_grid_gptoss": {
+    "nothing": {
+     "late_holders": 281,
+     "saw_planted": 0.0,
+     "took_value": null,
+     "post2": 0.3879003558718861
+    },
+    "gemma": {
+     "late_holders": 264,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.6325757575757576
+    },
+    "q8": {
+     "late_holders": 283,
+     "saw_planted": 1.0,
+     "took_value": 0.9893992932862191,
+     "post2": 0.4381625441696113
+    },
+    "gptoss": {
+     "late_holders": 281,
+     "saw_planted": 1.0,
+     "took_value": 1.0,
+     "post2": 0.4697508896797153
+    }
+   }
+  }
+ },
+ "first_person_pages": {
+  "gemma": {
+   "gemma": 0.7221749719041548,
+   "q8": 0.4810480822238736,
+   "gptoss": 0.4011842208409427,
+   "llama": 0.1717418353380936
+  },
+  "q8": {
+   "gemma": 0.0,
+   "q8": 0.0,
+   "gptoss": 0.0,
+   "llama": 0.0
+  }
+ },
+ "first_person_slopes": {
+  "gemma": {
+   "within_quiz": {
+    "value": 3.3519875883343833,
+    "ci": [
+     2.3897916286866896,
+     4.309227179361328
+    ]
+   },
+   "within_quiz_and_writer": {
+    "value": 0.9704896943965798,
+    "ci": [
+     -1.0105316466311454,
+     3.016350212230969
+    ]
+   }
+  },
+  "gptoss": {
+   "within_quiz": {
+    "value": 4.95770300527966,
+    "ci": [
+     3.2015149759387964,
+     6.812374082354885
+    ]
+   },
+   "within_quiz_and_writer": {
+    "value": 2.9903523333055064,
+    "ci": [
+     0.031183580833536843,
+     5.952454809930201
+    ]
+   }
+  }
+ }
+}

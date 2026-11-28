@@ -13,13 +13,13 @@
         "path_match": 1.0,
         "used_other": 1.0,
         "mutual": 0.0,
-        "share_used": 0.5303125,
+        "share_used": 0.5325,
         "coverage": 1.0,
         "chances": 12800,
-        "cr": 0.44171875,
+        "cr": 0.443046875,
         "cr_ci95": [
-          0.407734375,
-          0.476796875
+          0.409296875,
+          0.4784375
         ],
         "independence_ratio": NaN,
         "uses_placeholder": 0,
@@ -42,13 +42,13 @@
         "path_match": 1.0,
         "used_other": 1.0,
         "mutual": 0.0,
-        "share_used": 0.40546875,
+        "share_used": 0.4103125,
         "coverage": 1.0,
         "chances": 12800,
-        "cr": 0.36640625,
+        "cr": 0.368984375,
         "cr_ci95": [
-          0.332109375,
-          0.4034375
+          0.334609375,
+          0.406015625
         ],
         "independence_ratio": NaN,
         "uses_placeholder": 0,

@@ -224,6 +224,56 @@ says other copies exist); the aware and twin texts say they do.
     64-copy swarm does (60.7% and 57.6% with the aware and twin texts, against 63.9% and 52.7%). Gemma's twin boost
     fades in large swarms mainly because the sentence then speaks of many copies, and other copies' answers on the
     page override what is left.
+28. **Answers written by Gemma move both models more than answers written by Qwen3-8B; neither model clearly prefers
+    its own style.** Item 26's wording effect in Gemma (its own sentences 42.0%, bare numbers 12.8%) changed both the
+    form of the notes and whose style they were in. Here each model's answer page from item 26 is rewritten note by
+    note by Gemma and by Qwen3-8B, keeping the state, the value and about the length
+    (`scripts/make_paraphrase_pages.py`). Pairs of each model then find, on their usual round-1 title, nothing, the
+    page as written, or either rewrite (the `plant_style` tags, registered in `results/predictions_paraphrase.md`;
+    2,800 games). Gemma's late holders post their round-2 answer 18.5% [14.1, 22.8] of the time with nothing planted,
+    41.3% with the page as written, 49.8% with Gemma's rewrite and 35.8% with Qwen3-8B's (test (a): +14.1 [6.6,
+    21.3]). Qwen3-8B's post 82.0% [76.1, 87.4], 61.8%, 55.1% with its own rewrite and 42.3% with Gemma's (test (b):
+    +12.8 [5.5, 19.5]). So Gemma-written answers move each model further in its own direction, Gemma's posting up and
+    Qwen3-8B's down; matching the reader's own model is not what counts. For Qwen3-8B this holds where both rewrites
+    are full sentences of about the same length (+17.1 [5.3, 32.4] on 18 quizzes). For Gemma, Qwen3-8B's rewrites are
+    shorter (79 against 89 characters) and 13% bare numbers, and on the 53 quizzes without bare numbers the gap is
+    +7.4 [−2.7, 17.4] (both checks exploratory). Asked whether they wrote a note, Gemma says yes for 33% of its own
+    notes, 27% of its rewrites and 20% of Qwen3-8B's, and Qwen3-8B for all of them.
+29. **A third writer confirms that Gemma's text moves both models most, and Gemma's response follows how much a text
+    reads like its own.** Item 28 left two readings: Gemma's text is more influential for any reader, or each reader
+    responds to its own model's text. Here a third writer from another family, Llama 3.3 70B through OpenRouter,
+    rewrites the same answer pages. Both readers play nothing or the page rewritten by Gemma, Qwen3-8B or Llama, in
+    games new to these quizzes (the `plant_writer` tags, registered in `results/predictions_writers.md`; 2,800 games).
+    Gemma's late holders post their round-2 answer 24.1% [18.5, 30.2] of the time with nothing planted, 51.6% after
+    Gemma's rewrite, 35.8% after Qwen3-8B's and 26.4% after Llama's. That meets test (a), Gemma's above Llama's
+    (+25.3 [18.2, 32.4]), and test (c), item 28's finding again (+15.8 [9.0, 22.5]). Qwen3-8B's post 81.5% [76.0,
+    87.1], 52.6% after Gemma's, 59.1% after its own and 59.2% after Llama's, which meets test (b) (+6.6 [0.7, 13.1]).
+    Test (d), its own above Gemma's as in item 28, gives +6.5 [−0.4, 14.1], not met; pooled with item 28 the gap is
+    about 10 points. So Gemma's text moves both models furthest, while Qwen3-8B treats its own text and Llama's alike:
+    a writer effect, as the registration reads (a) and (b) together. Gemma's own response falls from Gemma's text to
+    Qwen3-8B's to Llama's, the order of how often Gemma says it wrote each (35%, 19% and 11%; Qwen3-8B says so of
+    99–100%). Llama's rewrites of Gemma's page are shorter (64 characters against 89 and 79), but within each writer
+    pages with longer notes give no more posting (exploratory).
+30. **In a three-by-three grid no model responds most to its own model's text; Gemma's text moves every reader
+    most.** Items 28–29 left Gemma's response to its own text confounded with Gemma's text being more influential in
+    general. A third model as both reader and writer separates them. Llama 3.3 70B could not be the reader: its late
+    holders read a page in round 1 in 1 of 10 pairs (`plant_reader_llama_smoke10`). gpt-oss-120b could: in its
+    `or_pairs` runs 97% of its late holders read a page in round 1, 68% of them under the state's name. Gemma 3 27B
+    and Qwen3-8B (on the pods) and gpt-oss-120b (through OpenRouter) each read nothing, or an answer page rewritten by
+    each of the three (the `plant_grid` tags, registered in `results/predictions_grid.md`; 4,400 games). Late holders
+    post their round-2 answer as follows: Gemma 20.7% with nothing planted, 47.6% after Gemma's rewrite, 34.8% after
+    Qwen3-8B's and 41.0% after gpt-oss-120b's; Qwen3-8B 75.3, 43.4, 58.0 and 43.7%; gpt-oss-120b 38.8, 63.3, 43.8
+    and 47.0%. In every reader Gemma's text moves posting furthest and Qwen3-8B's least. The diagonal index averages,
+    over readers, each reader's response to its own model's text beyond the other two writers', so a writer's
+    general influence cancels. It is −3.8 points [−7.3, −0.5] (test (a) not met). Qwen3-8B (−14.5) and gpt-oss-120b
+    (−6.6, test (b) not met) respond less to their own text than to the others', and Gemma's +9.7 is its text's
+    general influence. Gemma's text moves the other two readers 9.9 points [4.4, 15.3] more than the third writer's
+    (test (c) met). Only Gemma says it wrote its own model's text more often (37% against 19%); gpt-oss-120b says so
+    of 26% of its own and 21–27% of the others', Qwen3-8B of nearly all. Nor are some writers' notes believed more:
+    every reader answers question 1 with the planted value 99–100% of the time with every writer, so the writers
+    differ in how far their notes make late holders post, not in how far they are believed
+    (`scripts/analyze_rewrites_extra.py`, exploratory). In this game the apparent self-preference
+    of items 28–29 is a writer effect.
 
 [docs/findings.html](docs/findings.html) has the details, tables and limits.
 
@@ -253,6 +303,18 @@ says other copies exist); the aware and twin texts say they do.
 | `scripts/analyze_page_content.py` | How often late holders post after reading each kind of planted page, per model and arm, scored against `results/predictions_page_content.md`; with `--source`, the observational check it starts from |
 | `scripts/run_twin_page_grid.sh` | The twin-page test's runs (registered in `results/predictions_twin_page.md`): 4-copy Gemma swarms with the aware or twin text, told their true size or 64, and, told 64, nothing or one of item 25's pages before round 1 |
 | `scripts/analyze_twin_page.py` | The twin text's effect on late holders' posting in each of those conditions, scored against `results/predictions_twin_page.md`; with `--reference`, the twin grid's 4- and 64-copy rates by the same definitions |
+| `scripts/make_paraphrase_pages.py` | The pages of the own-style test (registered in `results/predictions_paraphrase.md`): each model's answer page from item 26, rewritten note by note by Gemma 3 27B and by Qwen3-8B, with content and length checked (`results/paraphrase/`) |
+| `scripts/check_authorship.py` | That test's manipulation check: whether each model says it wrote its own notes, its own rewrites and the other model's rewrites |
+| `scripts/run_paraphrase_pairs.sh` | That test's runs: Gemma or Qwen3-8B pairs with nothing, the answer page as written, or rewritten by either model |
+| `scripts/analyze_paraphrase.py` | How often late holders post after each version of the page, scored against `results/predictions_paraphrase.md` |
+| `scripts/run_writer_pairs.sh` | The writers test's runs (registered in `results/predictions_writers.md`): Gemma or Qwen3-8B pairs with nothing, or the answer page rewritten by Gemma, Qwen3-8B or Llama 3.3 70B (`make_paraphrase_pages.py --writers llama`) |
+| `scripts/analyze_writers.py` | How often late holders post after each writer's version of the page, scored against `results/predictions_writers.md` |
+| `scripts/make_reader_pages.py` | The grid test's pages for gpt-oss-120b as a reader (registered in `results/predictions_grid.md`): Gemma's answer page rewritten by each writer, moved to gpt-oss-120b's usual title (`results/reader/`) |
+| `scripts/run_grid_pairs.sh`, `scripts/run_reader_pairs.sh` | That test's runs: Gemma and Qwen3-8B pairs on the pods, gpt-oss-120b pairs through OpenRouter, each with nothing or the page rewritten by Gemma, Qwen3-8B or gpt-oss-120b |
+| `scripts/analyze_grid.py` | The reader-by-writer table, each reader's own-text advantage and the diagonal index, scored against `results/predictions_grid.md` |
+| `scripts/analyze_rewrites_extra.py` | Exploratory checks on items 28–30 (`results/rewrites_extra.json`): how often late holders answer question 1 with the planted value, per writer, and whether pages with more first-person notes give more posting |
+| `scripts/compare_pages.py` | Prints the text of items 28–30 side by side in a terminal: one page's notes as written and as rewritten by each writer, or, for one quiz in one run, what each late holder read and then wrote |
+| `scripts/make_rewrite_browser.py` | Builds `docs/planted_page_rewrites.html` from `docs/planted_page_rewrites.template.html`: a single page for browsing every planted page of items 28–30 quiz by quiz, each note in every version, with how often late holders posted after each |
 | `scripts/run_mixed_grid.sh` | Gemma's 2-copy runs, the mixed-swarm prediction, the mixes, Gemma alone |
 | `scripts/predict_swarm.py` | Predicts any swarm size by replaying recorded copies of smaller runs on one wiki |
 | `scripts/predict_mixed.py` | The same for mixed swarms, from each model's 2-copy runs |
@@ -275,6 +337,7 @@ says other copies exist); the aware and twin texts say they do.
 | `tests/test_mixed.py` | Tests for the mixed-swarm change and predictor |
 | `results/` | Every run (compressed), summaries, predictions and figures |
 | `docs/findings.html` | The findings page |
+| `docs/planted_page_rewrites.html` | The rewrite browser (built by `scripts/make_rewrite_browser.py`; open it in a browser) |
 
 ## Rerunning
 
@@ -418,6 +481,43 @@ python3 scripts/pod.py --model gemma-3-27b down
 .venv/bin/python scripts/analyze_twin_page.py results --reference    # results/twin_page.json
 ```
 
+The own-style test needs both pods at once while the pages are rewritten (the plant-pages patch, as for item 26):
+
+```bash
+python3 scripts/pod.py --model gemma-3-27b up && python3 scripts/pod.py up      # then wait for both
+eval "$(python3 scripts/pod.py endpoints)"
+.venv/bin/python scripts/make_paraphrase_pages.py     # results/paraphrase/ (already in this folder)
+.venv/bin/python scripts/check_authorship.py          # results/paraphrase_authorship.json
+scripts/run_paraphrase_pairs.sh gemma-3-27b            # tag plant_style_gemma: 4 arms x 300 games
+scripts/run_paraphrase_pairs.sh qwen3-8b               # tag plant_style_q8: 4 arms x 400 games
+python3 scripts/pod.py --model gemma-3-27b down && python3 scripts/pod.py down
+.venv/bin/python scripts/analyze_paraphrase.py results   # results/paraphrase.json
+```
+
+The writers test adds Llama 3.3 70B through OpenRouter as a third writer:
+
+```bash
+eval "$(python3 scripts/pod.py exports openrouter)"
+.venv/bin/python scripts/make_paraphrase_pages.py --writers llama      # results/paraphrase/*_by_llama.json
+# with both pods up, as above:
+.venv/bin/python scripts/check_authorship.py --by gemma q8 llama --out results/writers_authorship.json
+scripts/run_writer_pairs.sh gemma-3-27b && scripts/run_writer_pairs.sh qwen3-8b
+.venv/bin/python scripts/analyze_writers.py results    # results/writers.json
+```
+
+The grid test adds gpt-oss-120b as a third writer and a third reader:
+
+```bash
+eval "$(python3 scripts/pod.py exports openrouter)"
+.venv/bin/python scripts/make_paraphrase_pages.py --writers gptoss     # results/paraphrase/*_by_gptoss.json
+.venv/bin/python scripts/make_reader_pages.py                          # results/reader/
+# with both pods up and the OpenRouter exports:
+.venv/bin/python scripts/check_authorship.py --by gemma q8 gptoss --with-gptoss --out results/grid_authorship.json
+scripts/run_grid_pairs.sh gemma-3-27b && scripts/run_grid_pairs.sh qwen3-8b && scripts/run_reader_pairs.sh
+.venv/bin/python scripts/analyze_grid.py results       # results/grid.json
+.venv/bin/python scripts/analyze_rewrites_extra.py     # results/rewrites_extra.json (exploratory)
+```
+
 `scripts/pod.py` also reads `POD_CLOUDS` (`SECURE` or `COMMUNITY`: that cloud only), `POD_GPU_COUNT` (the model split
 over that many GPUs) and `POD_START_MIN` (the minutes `wait` gives the container to start, 12 by default; a host that
 has to unpack the image can need more).
@@ -459,6 +559,10 @@ Runs from before the runner renamed its switches carry `hint` and `twin` instead
 | `twin_n64_q8` | The same for Qwen3-8B with 64 copies |
 | `plant_transplant` | Gemma 3 27B pairs with nothing, or a recorded round-1 page (`results/transplant/`), planted before round 1: the 64-copy game's page, its holders' notes, its seekers' notes, the 32-copy game's page; 300 runs per arm (seeds 10000–10099, sample offsets 0–2) |
 | `plant_content_gemma`, `plant_content_q8` | Gemma 3 27B and Qwen3-8B pairs with nothing, or a page built from the model's own 64-copy game (`results/page_content/`), planted before round 1: answers to question 1, 2 or 3, about an unasked state or as bare numbers, and requests for question 1 or 2; 300 Gemma and 400 Qwen3-8B runs per arm (seeds 10000–10099, sample offsets 0–2 and 0–3) |
+| `plant_grid_gemma`, `plant_grid_q8`, `plant_grid_gptoss` | Gemma 3 27B and Qwen3-8B pairs (pods) and gpt-oss-120b pairs (OpenRouter) with nothing, or an answer page rewritten by Gemma, Qwen3-8B or gpt-oss-120b, planted before round 1 (gpt-oss-120b's pages under the state's name, `results/reader/`); 300, 400 and 400 runs per arm (seeds 10000–10099, sample offsets 6–8, 8–11 and 0–3) |
+| `plant_reader_llama_smoke10` | 10 Llama 3.3 70B pairs on the fixed prompt with nothing planted: why Llama is not a reader in the grid test |
+| `plant_writer_gemma`, `plant_writer_q8` | Gemma 3 27B and Qwen3-8B pairs with nothing, or the model's answer page from item 26 rewritten by Gemma, Qwen3-8B or Llama 3.3 70B (`results/paraphrase/`), planted before round 1; 300 Gemma and 400 Qwen3-8B runs per arm (seeds 10000–10099, sample offsets 3–5 and 4–7) |
+| `plant_style_gemma`, `plant_style_q8` | Gemma 3 27B and Qwen3-8B pairs with nothing, or the model's answer page from item 26 (`results/page_content/`) as written or rewritten note by note by Gemma or by Qwen3-8B (`results/paraphrase/`), planted before round 1; 300 Gemma and 400 Qwen3-8B runs per arm (seeds 10000–10099, sample offsets 0–2 and 0–3) |
 | `plant_twin_n4`, `plant_twin_told64` | 4-copy Gemma 3 27B swarms with the aware and twin texts, told their true size (`n4`) or 64 copies (`told64`), and, told 64, nothing or one of item 25's pages planted before round 1; 200 runs per cell (seeds 10000–10099, sample offsets 1–2) |
 
 5,600 runs, about 780,000 model calls; 1 run failed on a network error (8 questions, 32 copies, seed 10030).
@@ -515,6 +619,23 @@ model calls, none failed, both models on vLLM 0.32.0 as before. The `plant_twin`
 `scripts/run_twin_page_grid.sh`, on the same runner with `patches/stated-size-runner.patch` added, after
 `results/predictions_twin_page.md` was committed: 2,000 runs and 96,000 model calls, none failed. Like the other
 planted runs, both are left out of every other analysis.
+
+The `plant_style` tags were added on 24 November with `scripts/run_paraphrase_pairs.sh`, on the same runner as the
+`plant_content` tags, after `results/predictions_paraphrase.md` (`71f6997`) and the rewritten pages (`af5eeaa`) were
+committed: 2,800 runs and 67,200 model calls, none failed, both models on vLLM 0.32.0 as before. The rewrites took
+8,845 calls and the authorship check 900. These runs are also left out of every other analysis.
+
+The `plant_writer` tags followed on 24 November with `scripts/run_writer_pairs.sh`, on the same runner, after
+`results/predictions_writers.md` (`ef014f8`) and Llama's pages (`0a1abd1`) were committed: 2,800 runs and 67,200 model
+calls, none failed. Llama's rewrites took 13,011 calls through OpenRouter (one host, DeepInfra) and the authorship
+check 1,200. These runs are also left out of every other analysis.
+
+The `plant_grid` tags followed on 24 November, after `results/predictions_grid.md` (`e13c2a7`) and gpt-oss-120b's pages
+(`5c09cd8`) were committed: 4,400 runs, none failed. The Gemma and Qwen3-8B readers ran on the pods with
+`scripts/run_grid_pairs.sh` (vLLM 0.32.0 as before), and gpt-oss-120b through OpenRouter with
+`scripts/run_reader_pairs.sh`, with the settings of its `or_pairs` runs (Crusoe, reasoning effort low, 6x the token
+budget). gpt-oss-120b's rewrites took 3,577 calls and the authorship check 1,650. These runs are also left out of
+every other analysis.
 
 ## Credits
 

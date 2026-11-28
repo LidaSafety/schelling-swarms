@@ -186,7 +186,9 @@ def predict(base: Base, tch: list, w: np.ndarray | None = None) -> dict[str, flo
     for a, q, hm in tch:
         if (a, q, hm) not in cache:
             f, o = found(pis, a, q, dict(hm)), found(pis, a, q, dict(hm), one)
-            u = base.uptake.get(a, 0.0)      # no value ever seen in the base runs: nothing to measure use on
+            # NOTE (24 Nov 2026, HK Tan): was 0.0. No value ever seen in the base runs means the use rate is
+            # unmeasured (0/0), not zero; assume 1. Changes Qwen3-32B only. Details in law_wrong.py, WrongBase.
+            u = base.uptake.get(a, 1.0)
             cache[(a, q, hm)] = np.array([f, o, f * u, o * u])
         tot += cache[(a, q, hm)]
     seen, seen_one, cr, cr_one = tot / len(tch)

@@ -3,10 +3,10 @@
 % Spearman, quiz accuracy vs difference: +0.38 (n = 14)
 
 % --- figure: one segment per model, filled = rule, open = no rule
-\draw[cA, line width=0.7pt] (axis cs:58.5,38.2) -- (axis cs:58.5,39.4);  % Qwen3-4B
-\addplot[only marks, mark=*, mark size=1.8pt, cA, forget plot] coordinates {(58.5,38.2)};
-\addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(58.5,39.4)};
-\node[font=\tiny, text=cA, anchor=south] at (axis cs:58.5,39.4) {4B};
+\draw[cA, line width=0.7pt] (axis cs:58.5,38.4) -- (axis cs:58.5,40.0);  % Qwen3-4B
+\addplot[only marks, mark=*, mark size=1.8pt, cA, forget plot] coordinates {(58.5,38.4)};
+\addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(58.5,40.0)};
+\node[font=\tiny, text=cA, anchor=south] at (axis cs:58.5,40.0) {4B};
 \draw[cA, line width=0.7pt] (axis cs:62.1,61.6) -- (axis cs:62.1,78.3);  % Qwen3-8B
 \addplot[only marks, mark=*, mark size=1.8pt, cA, forget plot] coordinates {(62.1,61.6)};
 \addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(62.1,78.3)};
@@ -19,22 +19,22 @@
 \addplot[only marks, mark=*, mark size=1.8pt, cE, forget plot] coordinates {(68.8,73.2)};
 \addplot[only marks, mark=o, mark size=1.8pt, cE, mark options={fill=white}, forget plot] coordinates {(68.8,61.8)};
 \node[font=\tiny, text=cE, anchor=south] at (axis cs:68.8,73.2) {Gemma 3};
-\draw[cA, line width=0.7pt] (axis cs:70.8,3.1) -- (axis cs:70.8,20.2);  % Qwen3-32B
+\draw[cA, line width=0.7pt] (axis cs:70.8,3.1) -- (axis cs:70.8,20.3);  % Qwen3-32B
 \addplot[only marks, mark=*, mark size=1.8pt, cA, forget plot] coordinates {(70.8,3.1)};
-\addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(70.8,20.2)};
-\node[font=\tiny, text=cA, anchor=south] at (axis cs:70.8,20.2) {32B};
-\draw[cC, line width=0.7pt] (axis cs:74.8,31.8) -- (axis cs:74.8,27.3);  % gpt-oss-120B (low reasoning)
+\addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(70.8,20.3)};
+\node[font=\tiny, text=cA, anchor=south] at (axis cs:70.8,20.3) {32B};
+\draw[cC, line width=0.7pt] (axis cs:74.8,31.8) -- (axis cs:74.8,27.4);  % gpt-oss-120B (low reasoning)
 \addplot[only marks, mark=*, mark size=1.8pt, cC, forget plot] coordinates {(74.8,31.8)};
-\addplot[only marks, mark=o, mark size=1.8pt, cC, mark options={fill=white}, forget plot] coordinates {(74.8,27.3)};
+\addplot[only marks, mark=o, mark size=1.8pt, cC, mark options={fill=white}, forget plot] coordinates {(74.8,27.4)};
 \node[font=\tiny, text=cC, anchor=south] at (axis cs:74.8,31.8) {gpt-oss};
 \draw[cA, line width=0.7pt] (axis cs:76.2,21.3) -- (axis cs:76.2,46.1);  % Qwen3-235B-A22B-2507
 \addplot[only marks, mark=*, mark size=1.8pt, cA, forget plot] coordinates {(76.2,21.3)};
 \addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(76.2,46.1)};
 \node[font=\tiny, text=cA, anchor=south] at (axis cs:76.2,46.1) {Qwen3-235B};
-\draw[cA, line width=0.7pt] (axis cs:77.8,2.3) -- (axis cs:77.8,24.3);  % Qwen3.5-27B
+\draw[cA, line width=0.7pt] (axis cs:77.8,2.3) -- (axis cs:77.8,24.4);  % Qwen3.5-27B
 \addplot[only marks, mark=*, mark size=1.8pt, cA, forget plot] coordinates {(77.8,2.3)};
-\addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(77.8,24.3)};
-\node[font=\tiny, text=cA, anchor=south] at (axis cs:77.8,24.3) {Qwen3.5};
+\addplot[only marks, mark=o, mark size=1.8pt, cA, mark options={fill=white}, forget plot] coordinates {(77.8,24.4)};
+\node[font=\tiny, text=cA, anchor=south] at (axis cs:77.8,24.4) {Qwen3.5};
 \draw[cB, line width=0.7pt] (axis cs:80.8,4.5) -- (axis cs:80.8,20.5);  % Claude Haiku 4.5
 \addplot[only marks, mark=*, mark size=1.8pt, cB, forget plot] coordinates {(80.8,4.5)};
 \addplot[only marks, mark=o, mark size=1.8pt, cB, mark options={fill=white}, forget plot] coordinates {(80.8,20.5)};
@@ -47,10 +47,10 @@
 \addplot[only marks, mark=*, mark size=1.8pt, cB, forget plot] coordinates {(83.9,0.0)};
 \addplot[only marks, mark=o, mark size=1.8pt, cB, mark options={fill=white}, forget plot] coordinates {(83.9,0.0)};
 \node[font=\tiny, text=cB, anchor=north east] at (axis cs:83.9,-1) {Haiku 5.5};
-\draw[cC, line width=0.7pt] (axis cs:84.9,6.9) -- (axis cs:84.9,43.3);  % DeepSeek V4.1 Flash
+\draw[cC, line width=0.7pt] (axis cs:84.9,6.9) -- (axis cs:84.9,43.4);  % DeepSeek V4.1 Flash
 \addplot[only marks, mark=*, mark size=1.8pt, cC, forget plot] coordinates {(84.9,6.9)};
-\addplot[only marks, mark=o, mark size=1.8pt, cC, mark options={fill=white}, forget plot] coordinates {(84.9,43.3)};
-\node[font=\tiny, text=cC, anchor=south] at (axis cs:84.9,43.3) {DeepSeek};
+\addplot[only marks, mark=o, mark size=1.8pt, cC, mark options={fill=white}, forget plot] coordinates {(84.9,43.4)};
+\node[font=\tiny, text=cC, anchor=south] at (axis cs:84.9,43.4) {DeepSeek};
 \draw[cB, line width=0.7pt] (axis cs:88.5,0.0) -- (axis cs:88.5,0.1);  % Claude Sonnet 5.5
 \addplot[only marks, mark=*, mark size=1.8pt, cB, forget plot] coordinates {(88.5,0.0)};
 \addplot[only marks, mark=o, mark size=1.8pt, cB, mark options={fill=white}, forget plot] coordinates {(88.5,0.1)};
@@ -61,18 +61,18 @@
 \node[font=\tiny, text=cB, anchor=south] at (axis cs:89.1,55.2) {Opus 4.6};
 
 % --- appendix table rows
-Qwen3-4B & vLLM, bf16 & 58.5 & 100 & 38.2 & 39.4 & $+1.1$ [$-4.4$, $+6.3$] \\
+Qwen3-4B & vLLM, bf16 & 58.5 & 100 & 38.4 & 40.0 & $+1.6$ [$-4.0$, $+6.8$] \\
 Qwen3-8B & vLLM, bf16 & 62.1 & 100 & 61.6 & 78.3 & $+16.8$ [$+12.2$, $+21.3$] \\
 Qwen3-14B & vLLM, bf16 & 68.3 & 100 & 22.0 & 20.0 & $-2.0$ [$-5.8$, $+2.0$] \\
 Gemma 3 27B & vLLM, bf16 & 68.8 & 100 & 73.2 & 61.8 & $-11.4$ [$-17.1$, $-5.7$] \\
-Qwen3-32B & OpenRouter, DeepInfra fp8 & 70.2 & 100 & 9.1 & 24.0 & $+14.9$ [$+11.0$, $+18.8$] \\
-Qwen3-32B & vLLM, bf16 & 70.8 & 100 & 3.1 & 20.2 & $+17.1$ [$+13.4$, $+20.7$] \\
-gpt-oss-120B (low reasoning) & OpenRouter, Crusoe bf16 & 74.8 & 100 & 31.8 & 27.3 & $-4.5$ [$-8.0$, $-0.8$] \\
+Qwen3-32B & OpenRouter, DeepInfra fp8 & 70.2 & 100 & 9.2 & 24.1 & $+14.9$ [$+11.1$, $+18.8$] \\
+Qwen3-32B & vLLM, bf16 & 70.8 & 100 & 3.1 & 20.3 & $+17.2$ [$+13.4$, $+20.7$] \\
+gpt-oss-120B (low reasoning) & OpenRouter, Crusoe bf16 & 74.8 & 100 & 31.8 & 27.4 & $-4.5$ [$-8.0$, $-0.7$] \\
 Qwen3-235B-A22B-2507 & OpenRouter, DeepInfra fp8 & 76.2 & 100 & 21.3 & 46.1 & $+24.8$ [$+21.0$, $+28.3$] \\
-Qwen3.5-27B & OpenRouter, DeepInfra fp8 & 77.8 & 100 & 2.3 & 24.3 & $+22.0$ [$+19.6$, $+24.5$] \\
+Qwen3.5-27B & OpenRouter, DeepInfra fp8 & 77.8 & 100 & 2.3 & 24.4 & $+22.1$ [$+19.7$, $+24.7$] \\
 Claude Haiku 4.5 & Anthropic API & 80.8 & 100 & 4.5 & 20.5 & $+16.0$ [$+12.8$, $+19.4$] \\
 GLM-5.3 Flash (low reasoning) & OpenRouter, Parasail fp8 & 83.7 & 100 & 29.6 & 36.4 & $+6.8$ [$+2.0$, $+11.7$] \\
 Claude Haiku 5.5 & Anthropic API & 83.9 & 100 & 0.0 & 0.0 & $+0.0$ [$+0.0$, $+0.0$] \\
-DeepSeek V4.1 Flash & OpenRouter, DeepInfra fp8 & 84.9 & 100 & 6.9 & 43.3 & $+36.4$ [$+32.2$, $+40.7$] \\
+DeepSeek V4.1 Flash & OpenRouter, DeepInfra fp8 & 84.9 & 100 & 6.9 & 43.4 & $+36.6$ [$+32.3$, $+40.9$] \\
 Claude Sonnet 5.5 & Anthropic API & 88.5 & 100 & 0.0 & 0.1 & $+0.1$ [$+0.0$, $+0.2$] \\
 Claude Opus 4.6 & Anthropic API, 50 games per arm & 89.1 & 50 & 0.0 & 55.2 & $+55.2$ [$+49.8$, $+60.2$] \\

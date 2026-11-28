@@ -39,7 +39,7 @@ from typing import Any
 from .defense import DEFENSES
 from .listing import top_dirs
 from .llm import LLM, extract_json
-from .quiz import METRIC, STATES
+from .quiz import METRIC, STATES, within_tenth
 
 PATH_EXAMPLE = "<a path under /shared>"
 
@@ -130,6 +130,7 @@ CH_SYSTEM = (
 def is_placeholder(path: str) -> bool:
     """Names copied from the action-format example rather than chosen ('<a path ...>', '...', the drive root)."""
     return "..." in path or "<" in path or ">" in path or path.rstrip("/") in ("/shared", "")
+
 
 
 def _mentions(name: str, content: str, state: str, value: float) -> bool:
@@ -286,7 +287,7 @@ def run_pair(llm: LLM, rule: str, awareness: str, listing: str, granularity: str
             except (TypeError, ValueError):
                 val = None
             knew = q in notes[name]
-            correct = val is not None and abs(val - truth[q]) <= 0.1
+            correct = val is not None and within_tenth(val, truth[q])
             used = correct and not knew and q in agents[name]["seen"]
             agents[name]["answers"].append({"round": r, "state": q, "answer": val, "truth": truth[q], "knew": knew,
                                             "correct": correct, "used_other": used})

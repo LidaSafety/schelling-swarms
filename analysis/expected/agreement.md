@@ -17,8 +17,8 @@ Chances: 12,800; with a true value read: 10,271. R >= 1 agrees with the logged `
 
 | Page | Chances | Used, % [95%] | Proportional, % |
 |---|---|---|---|
-| True value most common (R > Wmax) | 8,582 | 79.8 [76.6, 82.5] | 62.2 |
-| ... although wrong notes outnumber true ones (W > R) | 1,213 | 52.8 [41.0, 63.8] | 40.3 |
+| True value most common (R > Wmax) | 8,582 | 79.9 [76.6, 82.5] | 62.2 |
+| ... although wrong notes outnumber true ones (W > R) | 1,213 | 53.1 [41.5, 64.2] | 40.3 |
 | Tied with a wrong value (R = Wmax) | 432 | 17.1 [10.0, 26.2] | 37.6 |
 | A wrong value more common (R < Wmax) | 157 | 8.3 [0.6, 20.3] | 25.1 |
 
@@ -29,9 +29,9 @@ Chances: 12,800; with a true value read: 10,271. R >= 1 agrees with the logged `
 | -2 or less | 26 | 0.0 [0.0, 0.0] | 21.9 |
 | -1 | 131 | 9.9 [0.7, 22.2] | 25.7 |
 | 0 | 432 | 17.1 [10.0, 26.2] | 37.6 |
-| +1 | 764 | 36.8 [28.2, 45.4] | 48.7 |
-| +2 to +3 | 2,051 | 74.0 [67.9, 79.8] | 55.5 |
-| +4 or more | 5,767 | 87.5 [84.3, 89.7] | 66.3 |
+| +1 | 764 | 37.3 [28.5, 46.4] | 48.7 |
+| +2 to +3 | 2,051 | 74.1 [67.9, 79.9] | 55.5 |
+| +4 or more | 5,767 | 87.6 [84.3, 89.7] | 66.3 |
 
 **With no wrong value on the page, by true notes R**
 
@@ -45,8 +45,8 @@ Chances: 12,800; with a true value read: 10,271. R >= 1 agrees with the logged `
 
 | Rounds | Chances | Used, % [95%] | Proportional, % |
 |---|---|---|---|
-| 1 and 3 | 5,056 | 73.1 [68.3, 76.9] | 60.1 |
-| 2 and 4 | 5,215 | 82.3 [77.7, 87.1] | 69.0 |
+| 1 and 3 | 5,056 | 73.1 [68.4, 77.0] | 60.1 |
+| 2 and 4 | 5,215 | 82.4 [77.8, 87.1] | 69.0 |
 
 ## Qwen3-4B, rule in force, 64 copies (100 games)
 
@@ -56,41 +56,41 @@ Chances: 12,800; with a true value read: 10,437. R >= 1 agrees with the logged `
 
 | Page | Chances | Used, % [95%] | Proportional, % |
 |---|---|---|---|
-| True value most common (R > Wmax) | 7,539 | 59.4 [55.2, 63.1] | 51.8 |
-| ... although wrong notes outnumber true ones (W > R) | 3,294 | 52.9 [45.3, 59.5] | 37.4 |
-| Tied with a wrong value (R = Wmax) | 647 | 37.6 [26.4, 50.4] | 27.7 |
-| A wrong value more common (R < Wmax) | 2,081 | 38.4 [28.7, 47.6] | 17.8 |
+| True value most common (R > Wmax) | 7,539 | 59.5 [55.3, 63.3] | 51.8 |
+| ... although wrong notes outnumber true ones (W > R) | 3,294 | 53.0 [45.5, 59.6] | 37.4 |
+| Tied with a wrong value (R = Wmax) | 647 | 37.7 [26.5, 50.7] | 27.7 |
+| A wrong value more common (R < Wmax) | 2,081 | 38.5 [28.8, 47.7] | 17.8 |
 
 **By the true value's lead over the largest wrong group, R - Wmax** (chances with R >= 1 and W >= 1)
 
 | R - Wmax | Chances | Used, % [95%] | Proportional, % |
 |---|---|---|---|
-| -2 or less | 1,540 | 39.4 [28.6, 49.7] | 16.4 |
+| -2 or less | 1,540 | 39.5 [28.7, 50.0] | 16.4 |
 | -1 | 541 | 35.7 [21.5, 47.8] | 21.6 |
-| 0 | 647 | 37.6 [26.4, 50.4] | 27.7 |
+| 0 | 647 | 37.7 [26.5, 50.7] | 27.7 |
 | +1 | 479 | 40.9 [29.2, 53.2] | 34.2 |
 | +2 to +3 | 855 | 48.7 [37.5, 57.8] | 37.0 |
-| +4 or more | 6,205 | 62.3 [57.8, 66.6] | 55.1 |
+| +4 or more | 6,205 | 62.5 [58.0, 66.8] | 55.1 |
 
 **With no wrong value on the page, by true notes R**
 
 | R | Chances | Used, % [95%] | Proportional, % |
 |---|---|---|---|
-| 1 | 54 | 75.9 [63.0, 90.6] | 100.0 |
-| 2 | 22 | 59.1 [25.0, 85.0] | 100.0 |
+| 1 | 54 | 77.8 [63.0, 90.7] | 100.0 |
+| 2 | 22 | 63.6 [35.0, 90.0] | 100.0 |
 | 3 or more | 94 | 87.2 [77.3, 95.7] | 100.0 |
 
 **By round half** (all chances with R >= 1)
 
 | Rounds | Chances | Used, % [95%] | Proportional, % |
 |---|---|---|---|
-| 1 and 3 | 5,538 | 67.8 [62.4, 72.8] | 41.5 |
-| 2 and 4 | 4,899 | 38.8 [31.8, 44.2] | 47.4 |
+| 1 and 3 | 5,538 | 67.9 [62.4, 72.9] | 41.5 |
+| 2 and 4 | 4,899 | 39.0 [32.1, 44.5] | 47.4 |
 
 ## Reading (written by hand, not by the script)
 
 - **DeepSeek follows the most common value.** Beside wrong values, its seekers use the true value far more often than
-  the proportional rule when it is the most common value on the page (79.8% against 62.2%), and far less when a wrong
+  the proportional rule when it is the most common value on the page (79.9% against 62.2%), and far less when a wrong
   value ties or leads (17.1% and 8.3%, against 37.6% and 25.1%). Use rises steeply with the true value's lead.
   Its guesses rarely agree with one another (4.2 wrong notes carry 3.5 distinct values), while holders all post the
   same true value, so the true value is the most common value in 93.6% of these chances. This is the mechanism that

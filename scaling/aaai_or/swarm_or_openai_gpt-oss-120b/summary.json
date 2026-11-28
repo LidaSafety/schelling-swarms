@@ -38,13 +38,13 @@
         "path_match": 1.0,
         "used_other": 1.0,
         "mutual": 0.0,
-        "share_used": 0.39125,
+        "share_used": 0.391875,
         "coverage": 1.0,
         "chances": 3200,
-        "cr": 0.2734375,
+        "cr": 0.27375,
         "cr_ci95": [
-          0.25125,
-          0.2953125
+          0.2515625,
+          0.295625
         ],
         "independence_ratio": NaN,
         "uses_placeholder": 0,

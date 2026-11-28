@@ -54,7 +54,7 @@ from typing import Any
 
 from .defense import DEFENSES
 from .llm import LLM, extract_json
-from .quiz import METRIC, STATES
+from .quiz import METRIC, STATES, within_tenth
 
 WIKIS = ["publictestwiki", "dsewiki", "sandboxwiki"]
 
@@ -262,7 +262,7 @@ def run_live(llm: LLM, n_agents: int, rule: str, awareness: str, recent: str, se
                     val = None
                 ev["value"] = val
                 a.answers.append({"round": a.round, "state": state, "answer": val, "truth": truth[state],
-                                  "correct": val is not None and abs(val - truth[state]) <= 0.1})
+                                  "correct": val is not None and within_tenth(val, truth[state])})
                 a.events.append(ev)
                 a.steps_in_round = 0
                 a.user(f"Round {a.round} submitted.")

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Rebuild every write-up the paper's numbers come from, in dependency order, then compare each with the copy in
 # expected/ (the files the paper's source comment block cites). Run from anywhere:  bash analysis/run_all.sh
-# Needs Python 3.11+ with numpy, scipy, pandas and matplotlib.
+# Needs Python 3.12+ with numpy, scipy, pandas and matplotlib.
 set -u
 A="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(dirname "$A")"
@@ -36,7 +36,8 @@ step "predict_pod5.py (registered forecast, recomputed)";  RECOMPUTE_INTO=out/ch
 step "score_pod5.py";    "$PY" score_pod5.py
 step "rounds.py";        "$PY" rounds.py "$SC/results" "$ROOT/wiki_game/data/swarm4round" "$SC/aaai" > rounds.md
 step "late_holders.py";  "$PY" late_holders.py "$SC/results" "$ROOT/wiki_game/data/swarm4round" "$SC/aaai" "$ROOT/runs" > late_holders.md
-step "law_points.py";    "$PY" law_points.py "$SC/results/law_wrong_aaai.json" "$SC/results/title_law_aaai.json" > law_points.md
+step "law_points.py";    "$PY" law_points.py "$SC"   # writes law_points.md; needs law_wrong.py with the use-rate fix (e96acca)
+step "rule_models_paired.py"; "$PY" rule_models_paired.py > rule_models_paired.md
 step "byround.py";       "$PY" byround.py "$SC" > out/byround.txt   # writes byround.json
 step "agreement.py";     "$PY" agreement.py "$SC" > out/check/agreement.md   # agreement.md adds a hand-written reading
 
@@ -83,6 +84,9 @@ rerun twin.json            scripts/analyze_twin.py results
 rerun transplant.json      scripts/analyze_transplant.py results --source aaai
 rerun page_content.json    scripts/analyze_page_content.py results --source aaai
 rerun twin_page.json       scripts/analyze_twin_page.py results --reference
-for f in predict_swarm posting holders_seekers plant ablations twin transplant page_content twin_page; do
+rerun paraphrase.json      scripts/analyze_paraphrase.py results
+rerun writers.json         scripts/analyze_writers.py results
+rerun grid.json            scripts/analyze_grid.py results
+for f in predict_swarm posting holders_seekers plant ablations twin transplant page_content twin_page paraphrase writers grid; do
   "$PY" check_json.py "$SC/results/$f.json" "$SC/results/${f}_rerun.json"
 done

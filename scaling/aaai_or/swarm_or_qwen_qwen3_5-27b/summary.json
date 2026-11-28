@@ -38,15 +38,15 @@
         "path_match": 1.0,
         "used_other": 0.97,
         "mutual": 0.0,
-        "share_used": 0.291875,
+        "share_used": 0.29375,
         "coverage": 1.0,
         "chances": 3200,
-        "cr": 0.243125,
+        "cr": 0.2440625,
         "cr_ci95": [
-          0.219375,
-          0.2675
+          0.2203125,
+          0.268125
         ],
-        "independence_ratio": 0.39338400941575347,
+        "independence_ratio": 0.39164143823667213,
         "uses_placeholder": 0,
         "seen_rate": 0.333125,
         "r1_write_rate": 0.615,

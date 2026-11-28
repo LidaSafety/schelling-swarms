@@ -13,15 +13,15 @@
         "path_match": 1.0,
         "used_other": 0.98,
         "mutual": 0.0,
-        "share_used": 0.3209375,
+        "share_used": 0.32125,
         "coverage": 1.0,
         "chances": 6400,
-        "cr": 0.30203125,
+        "cr": 0.3025,
         "cr_ci95": [
-          0.27015625,
-          0.3321875
+          0.27078125,
+          0.333125
         ],
-        "independence_ratio": 0.16999053982291398,
+        "independence_ratio": 0.1696735330017066,
         "uses_placeholder": 0,
         "seen_rate": 0.38265625,
         "r1_write_rate": 0.4734375,
@@ -92,15 +92,15 @@
         "path_match": 1.0,
         "used_other": 0.97,
         "mutual": 0.0,
-        "share_used": 0.448125,
+        "share_used": 0.460625,
         "coverage": 1.0,
         "chances": 3200,
-        "cr": 0.39375,
+        "cr": 0.4003125,
         "cr_ci95": [
-          0.354375,
-          0.4271875
+          0.36125,
+          0.4346875
         ],
-        "independence_ratio": 0.21895718572660086,
+        "independence_ratio": 0.21429679172296626,
         "uses_placeholder": 0,
         "seen_rate": 0.7778125,
         "r1_write_rate": 0.91125,
