@@ -30,11 +30,14 @@ bash analysis/run_all.sh
 
 It reruns every script in order and compares each write-up with the version the paper was written from
 (`analysis/expected/`). It then reruns the hackathon repository's own scripts and compares each JSON file they write
-with the committed one in `scaling/results/`. On 28 November 2026, after the rescoring below, every write-up was reproduced byte for byte. There were three
+with the committed one in `scaling/results/`. On 28 November 2026, after the rescoring below, every write-up was reproduced byte for byte. There are three
 expected exceptions:
 
-- `predictions_mix3.md`, recomputed, names a different commit of the code it imports, because it reads that hash from
-  git. Its numbers are the same.
+- `predictions_mix3.md` and `predictions_pod5.md`, recomputed into `out/check/`, differ from the committed files.
+  These are forecasts registered before their runs, computed from the smaller swarms as first scored; recomputed from
+  the rescored games, the inputs for Qwen3-4B and 32B move slightly (for example 4B with 64 copies, 42.2 to 43.2). The
+  committed files stay as registered, and `results_*.md` score the rescored runs against them. `predictions_mix3.md`
+  also names the commit of the code it imports, which it reads from git.
 - `law_points.py` leaves out DeepSeek V4.1 Flash with 32 and 64 copies, which `law_wrong_aaai.json` now contains:
   the paper scores those runs against their own registered forecast (app:deepseek), not in fig:law.
 - `byround.md` and `scaling_tests.md` are written by hand. `run_all.sh` checks `byround.md` against `byround.json`;
